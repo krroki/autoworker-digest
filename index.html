@@ -218,6 +218,95 @@
   /* Scroll animate */
   .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.5s cubic-bezier(0.16,1,0.3,1), transform 0.5s cubic-bezier(0.16,1,0.3,1); }
   .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* Sticky tab bar */
+  .tab-bar { position: sticky; top: 0; z-index: 50; }
+
+  /* Q&A answer hint */
+  .qa-hint { font-size: 12px; color: var(--sub); margin-top: 2px; flex-shrink: 0; }
+
+  /* Quote copy button */
+  .quote-copy {
+    position: absolute; top: 12px; right: 14px; z-index: 2;
+    background: rgba(255,255,255,0.12); border: none; color: rgba(255,255,255,0.5);
+    border-radius: 8px; padding: 6px 10px; font-size: 12px; cursor: pointer;
+    font-family: inherit; transition: all 0.2s;
+  }
+  .quote-copy:hover { background: rgba(255,255,255,0.25); color: #fff; }
+
+  /* Glossary search */
+  .glossary-search {
+    width: 100%; padding: 12px 16px 12px 42px; border: 1px solid var(--border);
+    border-radius: 12px; font-size: 14px; font-family: inherit; outline: none;
+    background: var(--card) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='%236b7684' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3C/svg%3E") 14px center no-repeat;
+    transition: border-color 0.2s, box-shadow 0.2s; margin-bottom: 16px;
+  }
+  .glossary-search:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-light); }
+  .glossary-card.hidden { display: none; }
+
+  /* Share FAB */
+  .fab-share {
+    position: fixed; bottom: 24px; right: 24px; z-index: 90;
+    width: 52px; height: 52px; border-radius: 50%; border: none;
+    background: var(--accent); color: #fff; font-size: 22px;
+    box-shadow: 0 4px 16px rgba(49,130,246,0.35);
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: all 0.3s; font-family: inherit;
+  }
+  .fab-share:hover { transform: scale(1.08); box-shadow: 0 6px 24px rgba(49,130,246,0.45); }
+  .fab-share:active { transform: scale(0.95); }
+
+  /* Back to top FAB */
+  .fab-top {
+    position: fixed; bottom: 86px; right: 24px; z-index: 90;
+    width: 44px; height: 44px; border-radius: 50%; border: none;
+    background: var(--card); color: var(--sub); font-size: 18px;
+    box-shadow: var(--shadow); cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.3s; opacity: 0; pointer-events: none; font-family: inherit;
+  }
+  .fab-top.show { opacity: 1; pointer-events: auto; }
+  .fab-top:hover { color: var(--accent); box-shadow: var(--shadow-hover); }
+
+  /* MVP card */
+  .mvp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .mvp-card {
+    background: var(--card); border-radius: 14px; padding: 16px; border: 1px solid var(--border);
+    text-align: center; transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .mvp-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+  .mvp-avatar { font-size: 32px; margin-bottom: 8px; }
+  .mvp-name { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+  .mvp-desc { font-size: 12px; color: var(--sub); line-height: 1.4; }
+
+  /* Nav link */
+  .page-nav {
+    display: flex; gap: 8px; justify-content: center; margin-bottom: 16px; flex-wrap: wrap;
+  }
+  .page-nav a {
+    font-size: 13px; font-weight: 600; color: var(--accent); text-decoration: none;
+    padding: 6px 14px; border-radius: 10px; background: var(--accent-light);
+    transition: all 0.2s;
+  }
+  .page-nav a:hover { background: var(--accent); color: #fff; }
+
+  /* Updated timestamp */
+  .updated-at { font-size: 11px; color: var(--sub); text-align: center; margin-top: 4px; }
+
+  /* Links collection */
+  .link-card {
+    background: var(--card); border-radius: 12px; padding: 14px 16px;
+    border: 1px solid var(--border); margin-bottom: 8px;
+    display: flex; align-items: center; gap: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .link-card:hover { transform: translateY(-1px); box-shadow: var(--shadow-hover); }
+  .link-icon { font-size: 20px; flex-shrink: 0; }
+  .link-body { flex: 1; min-width: 0; }
+  .link-title { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+  .link-url { font-size: 12px; color: var(--accent); word-break: break-all; }
+  .link-url a { color: var(--accent); text-decoration: none; }
+  .link-url a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -228,6 +317,10 @@
     <div class="hero-badge">📋 사담방 다이제스트</div>
     <h1>오토워커 1기<br>핵심 정리</h1>
     <p>(사담방) 오토워커 1기 [개발남노씨] · 526명</p>
+  </div>
+
+  <div class="page-nav fade-in">
+    <a href="cheonsamgye.html">천상계 영드짜 2기 보기 →</a>
   </div>
 
   <div class="notice-banner fade-in">
@@ -244,6 +337,7 @@
     <button class="tab-btn" onclick="switchTab('mar24')">3/24 (월)</button>
     <button class="tab-btn" onclick="switchTab('faq')">자주 묻는 질문</button>
     <button class="tab-btn" onclick="switchTab('glossary')">용어사전</button>
+    <button class="tab-btn" onclick="switchTab('links')">🔗 링크 모음</button>
     <button class="tab-btn" onclick="switchTab('zoom')">🎥 Zoom</button>
   </div>
 
@@ -301,7 +395,7 @@
           <div class="qa-q-icon">Q</div>
           <div class="qa-question">튜브워커 아이디/비번은 어디서 받나요?</div>
           <div class="qa-count">21회</div>
-          <div class="qa-toggle">▼</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
         </div>
         <div class="qa-body">
           <div class="qa-answer">
@@ -316,7 +410,7 @@
           <div class="qa-q-icon">Q</div>
           <div class="qa-question">크레딧 소모가 너무 빨라요 / 충전은 어떻게?</div>
           <div class="qa-count">38회</div>
-          <div class="qa-toggle">▼</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
         </div>
         <div class="qa-body">
           <div class="qa-answer">
@@ -331,7 +425,7 @@
           <div class="qa-q-icon">Q</div>
           <div class="qa-question">이미지 생성 시 비율이 잘려요 / 스타일 변경하면?</div>
           <div class="qa-count">26회</div>
-          <div class="qa-toggle">▼</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
         </div>
         <div class="qa-body">
           <div class="qa-answer">
@@ -350,7 +444,7 @@
           <div class="qa-q-icon">Q</div>
           <div class="qa-question">script.txt가 안 생기고 .md 파일만 나와요</div>
           <div class="qa-count">12회</div>
-          <div class="qa-toggle">▼</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
         </div>
         <div class="qa-body">
           <div class="qa-answer">
@@ -365,7 +459,7 @@
           <div class="qa-q-icon">Q</div>
           <div class="qa-question">일레븐랩스 개인 구독 vs 강사님 API 뭐가 나아요?</div>
           <div class="qa-count">11회</div>
-          <div class="qa-toggle">▼</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
         </div>
         <div class="qa-body">
           <div class="qa-answer">
@@ -380,7 +474,7 @@
           <div class="qa-q-icon">Q</div>
           <div class="qa-question">그록/플로우 자동화는 언제 되나요?</div>
           <div class="qa-count">50회</div>
-          <div class="qa-toggle">▼</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
         </div>
         <div class="qa-body">
           <div class="qa-answer">
@@ -395,7 +489,7 @@
           <div class="qa-q-icon">Q</div>
           <div class="qa-question">캡컷 프로젝트 연결이 안 돼요</div>
           <div class="qa-count">15회</div>
-          <div class="qa-toggle">▼</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
         </div>
         <div class="qa-body">
           <div class="qa-answer">
@@ -410,7 +504,7 @@
           <div class="qa-q-icon">Q</div>
           <div class="qa-question">대본에 장면 전환/타임코드가 섞여 나와요</div>
           <div class="qa-count">27회</div>
-          <div class="qa-toggle">▼</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
         </div>
         <div class="qa-body">
           <div class="qa-answer">
@@ -521,7 +615,7 @@
           <div class="qa-q-icon">Q</div>
           <div class="qa-question">그록 유료 결제해야 하나요?</div>
           <div class="qa-count">6회</div>
-          <div class="qa-toggle">▼</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
         </div>
         <div class="qa-body">
           <div class="qa-answer">
@@ -536,7 +630,7 @@
           <div class="qa-q-icon">Q</div>
           <div class="qa-question">채널 링크 여기 공유해도 되나요?</div>
           <div class="qa-count">4회</div>
-          <div class="qa-toggle">▼</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
         </div>
         <div class="qa-body">
           <div class="qa-answer">
@@ -555,7 +649,7 @@
           <div class="qa-q-icon">Q</div>
           <div class="qa-question">그록 자동화는 안 되나요?</div>
           <div class="qa-count">8회</div>
-          <div class="qa-toggle">▼</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
         </div>
         <div class="qa-body">
           <div class="qa-answer">
@@ -570,7 +664,7 @@
           <div class="qa-q-icon">Q</div>
           <div class="qa-question">스킬 파일이 사라졌어요</div>
           <div class="qa-count">3회</div>
-          <div class="qa-toggle">▼</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
         </div>
         <div class="qa-body">
           <div class="qa-answer">
@@ -585,7 +679,7 @@
           <div class="qa-q-icon">Q</div>
           <div class="qa-question">영상 1개 올렸는데 노출이 0이에요</div>
           <div class="qa-count">5회</div>
-          <div class="qa-toggle">▼</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
         </div>
         <div class="qa-body">
           <div class="qa-answer">
@@ -628,13 +722,40 @@
       </div>
     </div>
 
+    <!-- MVP -->
+    <div class="section fade-in">
+      <div class="section-header">
+        <div class="section-icon" style="background:var(--green-light);">🏅</div>
+        <div class="section-title">오늘의 MVP</div>
+      </div>
+      <div class="mvp-grid">
+        <div class="mvp-card">
+          <div class="mvp-avatar">📊</div>
+          <div class="mvp-name">온도도</div>
+          <div class="mvp-desc">클로드 시각화(Show Me) 기능 발견 & 공유. 벽타기 요약 HTML 직접 제작</div>
+        </div>
+        <div class="mvp-card">
+          <div class="mvp-avatar">🧠</div>
+          <div class="mvp-name">쇼츠코인</div>
+          <div class="mvp-desc">클로드 스킬/에이전트 폴더 구조 공유. "결과물만 받지 마세요" 명언</div>
+        </div>
+        <div class="mvp-card">
+          <div class="mvp-avatar">💡</div>
+          <div class="mvp-name">업고기</div>
+          <div class="mvp-desc">스킬 파일 삭제 원인 규명. 클로드 코드 복원 팁 공유</div>
+        </div>
+      </div>
+    </div>
+
     <!-- 명언 -->
     <div class="section fade-in">
-      <div class="quote-card">
+      <div class="quote-card" style="position:relative;">
+        <button class="quote-copy" onclick="event.stopPropagation();copyToClipboard('진짜 내가 생각 하나도 안하고 그냥 결과물만 받지 마세요!! 제발 생각하고 공부하고 하세요~~~~ — 쇼츠코인')">📋 복사</button>
         <div class="quote-text">진짜 내가 생각 하나도 안하고<br>그냥 결과물만 받지 마세요!!<br>제발 생각하고 공부하고 하세요~~~~</div>
         <div class="quote-author">— 쇼츠코인</div>
       </div>
-      <div class="quote-card" style="background:linear-gradient(135deg,#0c2d48,#145374);">
+      <div class="quote-card" style="background:linear-gradient(135deg,#0c2d48,#145374);position:relative;">
+        <button class="quote-copy" onclick="event.stopPropagation();copyToClipboard('저는 첫 3개 영상 조회수 총 150 ㅋㅋ 2달동안 유튜브 무료강의 다 섭렵하고 자동화 이후 5일만에 수익창출 달성! — 개발남 노씨')">📋 복사</button>
         <div class="quote-text">저는 첫 3개 영상 조회수 총 150 ㅋㅋ<br>2달동안 유튜브 무료강의 다 섭렵하고<br>자동화 이후 5일만에 수익창출 달성!</div>
         <div class="quote-author">— 개발남 노씨 (강사)</div>
       </div>
@@ -730,9 +851,10 @@
         <div class="section-icon" style="background:var(--purple-light);">📖</div>
         <div class="section-title">오토워커 용어사전</div>
       </div>
-      <p style="color:var(--sub);font-size:14px;margin-bottom:18px;padding:0 4px;">사담방에서 자주 등장하는 용어를 정리했어요</p>
+      <p style="color:var(--sub);font-size:14px;margin-bottom:12px;padding:0 4px;">사담방에서 자주 등장하는 용어를 정리했어요</p>
+      <input type="text" class="glossary-search" placeholder="용어 검색..." oninput="filterGlossary(this.value)">
 
-      <div class="glossary-grid">
+      <div class="glossary-grid" id="glossaryGrid">
         <div class="glossary-card">
           <div class="glossary-term"><span class="emoji">🤖</span> 튜브워커 (TubeWorker)</div>
           <div class="glossary-def">오토워커 자동 영상 제작 프로그램. 대본 → 이미지 → 음성 → 편집을 자동화. 크레딧 차감 방식</div>
@@ -809,6 +931,26 @@
     </div>
   </div>
 
+  <!-- ==================== LINKS TAB ==================== -->
+  <div id="tab-links" class="tab-content">
+    <div class="section fade-in">
+      <div class="section-header">
+        <div class="section-icon" style="background:var(--accent-light);">🔗</div>
+        <div class="section-title">유용한 링크 모음</div>
+      </div>
+      <p style="color:var(--sub);font-size:13px;margin-bottom:14px;padding:0 4px;">대화에서 공유된 주요 링크를 모았어요</p>
+
+      <div class="link-card"><div class="link-icon">📓</div><div class="link-body"><div class="link-title">오토워커 공식 노션 (위키)</div><div class="link-url"><a href="https://wiki.autoworkers.ai/" target="_blank">wiki.autoworkers.ai</a></div></div></div>
+      <div class="link-card"><div class="link-icon">☕</div><div class="link-body"><div class="link-title">오토워커 1기 네이버 카페</div><div class="link-url"><a href="https://naver.me/GrgwwKt2" target="_blank">naver.me/GrgwwKt2</a></div></div></div>
+      <div class="link-card"><div class="link-icon">🎬</div><div class="link-body"><div class="link-title">1강부터 바로보기 (카페)</div><div class="link-url"><a href="https://cafe.naver.com/f-e/cafes/31687042/menus/7?viewType=L" target="_blank">cafe.naver.com/.../menus/7</a></div></div></div>
+      <div class="link-card"><div class="link-icon">💳</div><div class="link-body"><div class="link-title">크레딧 충전 구글 폼</div><div class="link-url"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdCDEHo-5pyERwQPzy9wDOj7dHMHY8-ihDr5ffJUVEARoyOwA/viewform" target="_blank">구글 폼 바로가기</a></div></div></div>
+      <div class="link-card"><div class="link-icon">🍪</div><div class="link-body"><div class="link-title">Cookie Editor (크롬 확장)</div><div class="link-url"><a href="https://chromewebstore.google.com/detail/cookie-editor/ookdjilphngeeeghgngjabigmpepanpl" target="_blank">Chrome Web Store</a></div></div></div>
+      <div class="link-card"><div class="link-icon">📋</div><div class="link-body"><div class="link-title">카톡방 질의응답 정리본 (카페)</div><div class="link-url"><a href="https://cafe.naver.com/f-e/cafes/31687042/menus/31?viewType=L" target="_blank">cafe.naver.com/.../menus/31</a></div></div></div>
+      <div class="link-card"><div class="link-icon">🐙</div><div class="link-body"><div class="link-title">오토워커 1기 GitHub (스킬/에이전트)</div><div class="link-url"><a href="https://github.com/nossssi/autoworkers-1st" target="_blank">github.com/nossssi/autoworkers-1st</a></div></div></div>
+      <div class="link-card"><div class="link-icon">📊</div><div class="link-body"><div class="link-title">크레딧 사용량 스프레드시트</div><div class="link-url"><a href="https://cafe.naver.com/autoworker1/272" target="_blank">cafe.naver.com/autoworker1/272</a></div></div></div>
+    </div>
+  </div>
+
   <!-- ==================== ZOOM TAB ==================== -->
   <div id="tab-zoom" class="tab-content">
 
@@ -859,32 +1001,54 @@
   <div id="toast" class="toast">✅ 복사 완료!</div>
 
   <!-- Footer -->
+  <div class="page-nav fade-in" style="margin-top:24px;">
+    <a href="cheonsamgye.html">천상계 영드짜 2기 보기 →</a>
+  </div>
   <div class="page-footer fade-in">
     <div><span class="live-dot"></span>오토워커 1기 사담방</div>
     <div style="margin-top:4px;">자동 생성 · 2026.03.24 · 총 2,113건 분석</div>
+    <div class="updated-at">마지막 업데이트: 2026-03-24 18:56 KST</div>
   </div>
 </div>
+
+<!-- FABs -->
+<button class="fab-top" id="fabTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<button class="fab-share" onclick="copyToClipboard(location.href)" title="이 페이지 링크 복사">🔗</button>
 
 <script>
 function switchTab(id) {
   document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
   const tab = document.getElementById('tab-' + id);
-  if (tab) { tab.classList.add('active'); }
-  // Activate button
+  if (tab) tab.classList.add('active');
   const btns = document.querySelectorAll('.tab-btn');
-  const map = { mar23: 0, mar24: 1, faq: 2, glossary: 3, zoom: 4 };
+  const map = { mar23: 0, mar24: 1, faq: 2, glossary: 3, links: 4, zoom: 5 };
   if (map[id] !== undefined && btns[map[id]]) btns[map[id]].classList.add('active');
-  // Re-trigger fade-in for new tab
   tab?.querySelectorAll('.fade-in').forEach(el => { el.classList.remove('visible'); void el.offsetWidth; observer.observe(el); });
-  // Animate FAQ bars
-  if (id === 'faq') setTimeout(animateBars, 200);
+  if (id === 'faq') { resetBars(); setTimeout(animateBars, 200); }
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+function resetBars() {
+  document.querySelectorAll('.faq-bar-fill').forEach(el => { el.style.transition = 'none'; el.style.width = '0'; void el.offsetWidth; el.style.transition = ''; });
+}
 function animateBars() {
-  document.querySelectorAll('.faq-bar-fill').forEach(el => {
-    el.style.width = el.dataset.width + '%';
+  document.querySelectorAll('.faq-bar-fill').forEach(el => { el.style.width = el.dataset.width + '%'; });
+}
+
+function filterGlossary(q) {
+  const cards = document.querySelectorAll('#glossaryGrid .glossary-card');
+  const query = q.toLowerCase().trim();
+  cards.forEach(card => {
+    const text = card.textContent.toLowerCase();
+    card.classList.toggle('hidden', query.length > 0 && !text.includes(query));
+  });
+}
+
+function copyToClipboard(text) {
+  const show = () => { const t = document.getElementById('toast'); t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 1800); };
+  navigator.clipboard.writeText(text).then(show).catch(() => {
+    const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); show();
   });
 }
 
@@ -894,24 +1058,14 @@ const observer = new IntersectionObserver(
   { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
 );
 document.querySelectorAll('.fade-in').forEach((el, i) => {
-  el.style.transitionDelay = `${Math.min(i * 0.05, 0.3)}s`;
+  el.style.transitionDelay = Math.min(i * 0.05, 0.3) + 's';
   observer.observe(el);
 });
 
-function copyToClipboard(text) {
-  navigator.clipboard.writeText(text).then(() => {
-    const t = document.getElementById('toast');
-    t.classList.add('show');
-    setTimeout(() => t.classList.remove('show'), 1800);
-  }).catch(() => {
-    const ta = document.createElement('textarea');
-    ta.value = text; document.body.appendChild(ta); ta.select();
-    document.execCommand('copy'); document.body.removeChild(ta);
-    const t = document.getElementById('toast');
-    t.classList.add('show');
-    setTimeout(() => t.classList.remove('show'), 1800);
-  });
-}
+// Back to top FAB
+window.addEventListener('scroll', () => {
+  document.getElementById('fabTop').classList.toggle('show', window.scrollY > 400);
+}, { passive: true });
 
 // Auto-open first QA
 setTimeout(() => {
