@@ -190,12 +190,42 @@
   .zoom-btn.primary:hover { background: #1b6ef3; }
   .zoom-btn.secondary { background: #f2f4f6; color: var(--text); }
   .zoom-btn.secondary:hover { background: #e5e8eb; }
-  .zoom-card.past { opacity: 0.6; }
-  .zoom-card.past:hover { opacity: 1; }
+  .zoom-card.past { position: relative; }
+  .zoom-card.past .zoom-card-header { opacity: 0.45; }
+  .zoom-card.past .zoom-info { opacity: 0.45; }
+  .zoom-card.past:hover .zoom-card-header,
+  .zoom-card.past:hover .zoom-info { opacity: 0.75; }
+  .zoom-card.past .zoom-actions { opacity: 0.6; }
+  .zoom-stamp {
+    position: absolute; top: 20px; right: 20px; z-index: 2;
+    font-size: 14px; font-weight: 800; color: var(--red); padding: 6px 14px;
+    border: 3px solid var(--red); border-radius: 10px;
+    transform: rotate(12deg); letter-spacing: 2px; opacity: 0.7;
+    background: rgba(255,255,255,0.85);
+  }
   .past-badge {
     font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px;
-    background: #f2f4f6; color: var(--sub); margin-left: 8px;
+    background: var(--red-light); color: var(--red); margin-left: 8px;
   }
+  .zoom-bulk-copy {
+    display: block; width: 100%; padding: 14px; border: 2px dashed var(--border);
+    border-radius: 14px; background: transparent; font-size: 14px; font-weight: 600;
+    color: var(--accent); cursor: pointer; font-family: inherit;
+    transition: all 0.2s; margin-top: 12px; text-align: center;
+  }
+  .zoom-bulk-copy:hover { border-color: var(--accent); background: var(--accent-light); }
+
+  /* Link status badges */
+  .link-status {
+    font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 6px;
+    flex-shrink: 0; margin-left: auto;
+  }
+  .link-status.ok { background: var(--green-light); color: var(--green); }
+  .link-status.outdated { background: var(--orange-light); color: var(--orange); }
+  .link-status.broken { background: var(--red-light); color: var(--red); }
+  .link-card.is-broken { opacity: 0.55; border-style: dashed; }
+  .link-card.is-broken:hover { opacity: 0.8; }
+  .link-card.is-outdated { border-left: 3px solid var(--orange); }
   .notice-banner {
     background: #fffbe6; border: 1px solid #ffe58f; border-radius: 14px;
     padding: 16px 18px; margin-bottom: 24px; display: flex; gap: 12px;
@@ -307,6 +337,152 @@
   .link-url { font-size: 12px; color: var(--accent); word-break: break-all; }
   .link-url a { color: var(--accent); text-decoration: none; }
   .link-url a:hover { text-decoration: underline; }
+
+  /* === Enhancement 1: Hero visual === */
+  .hero {
+    position: relative; overflow: hidden;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    margin: -24px -16px 24px; padding: 56px 24px 36px;
+    border-radius: 0 0 32px 32px;
+  }
+  .hero h1 { color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.15); }
+  .hero p { color: rgba(255,255,255,0.8); }
+  .hero-badge { background: rgba(255,255,255,0.2); color: #fff; backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.25); }
+
+  /* Animated mesh blobs */
+  .hero::before, .hero::after {
+    content: ''; position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.4;
+    animation: blobFloat 8s ease-in-out infinite alternate;
+  }
+  .hero::before {
+    width: 300px; height: 300px; top: -80px; right: -60px;
+    background: rgba(255,255,255,0.3);
+  }
+  .hero::after {
+    width: 250px; height: 250px; bottom: -60px; left: -40px;
+    background: rgba(96,165,250,0.35);
+    animation-delay: -4s; animation-duration: 10s;
+  }
+  .hero > * { position: relative; z-index: 1; }
+  @keyframes blobFloat {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(30px, -20px) scale(1.15); }
+  }
+
+  /* Floating particles in hero */
+  .hero-particle {
+    position: absolute; z-index: 0; pointer-events: none;
+    width: var(--sz); height: var(--sz); border-radius: 50%;
+    background: rgba(255,255,255,0.25);
+    animation: particleRise var(--dur) linear infinite;
+    animation-delay: var(--delay);
+  }
+  @keyframes particleRise {
+    0% { transform: translateY(0) scale(0); opacity: 0; }
+    15% { opacity: 1; transform: scale(1); }
+    85% { opacity: 0.6; }
+    100% { transform: translateY(-180px) scale(0.3); opacity: 0; }
+  }
+
+  /* === Enhancement 3: MVP medal shine === */
+  .mvp-avatar { position: relative; display: inline-block; }
+  @keyframes medalShine {
+    0%, 80%, 100% { filter: brightness(1); transform: scale(1); }
+    90% { filter: brightness(1.4); transform: scale(1.15); }
+  }
+  .mvp-card:nth-child(1) .mvp-avatar { animation: medalShine 4s ease infinite 0s; }
+  .mvp-card:nth-child(2) .mvp-avatar { animation: medalShine 4s ease infinite 0.5s; }
+  .mvp-card:nth-child(3) .mvp-avatar { animation: medalShine 4s ease infinite 1s; }
+
+  /* === Enhancement 4: Q&A staggered slide-in === */
+  .qa-card.fade-in-qa {
+    opacity: 0; transition: opacity 0.5s cubic-bezier(0.16,1,0.3,1), transform 0.5s cubic-bezier(0.16,1,0.3,1);
+  }
+  .qa-card.fade-in-qa:nth-child(odd) { transform: translateX(-30px); }
+  .qa-card.fade-in-qa:nth-child(even) { transform: translateX(30px); }
+  .qa-card.fade-in-qa.visible { opacity: 1; transform: translateX(0); }
+
+  /* === Enhancement 6: Confetti particles === */
+  .confetti-particle {
+    position: fixed; pointer-events: none; z-index: 200;
+    font-size: 16px; animation: confettiFall 1s cubic-bezier(0.25,0.46,0.45,0.94) forwards;
+  }
+  @keyframes confettiFall {
+    0% { opacity: 1; transform: translate(0, 0) rotate(0deg) scale(1); }
+    100% { opacity: 0; transform: translate(var(--cx), var(--cy)) rotate(var(--cr)) scale(0.3); }
+  }
+
+  /* === Enhancement 7: Scroll progress bar === */
+  .scroll-progress {
+    position: fixed; top: 0; left: 0; height: 3px; z-index: 200;
+    background: linear-gradient(90deg, #3182f6, #60a5fa, #8b5cf6);
+    width: 0; transition: none;
+  }
+
+  /* === Enhancement 8: Tab bar glassmorphism === */
+  .tab-bar {
+    background: rgba(255,255,255,0.72);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* === Enhancement 9: Timeline pulse === */
+  @keyframes tlPulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 2px var(--accent-light); }
+    50% { transform: scale(1.6); box-shadow: 0 0 8px 3px rgba(49,130,246,0.4); }
+  }
+  .tl-item.tl-pulse::before { animation: tlPulse 0.6s ease; }
+
+  /* === Enhancement 10: FAQ bar tooltip === */
+  .faq-bar-item { position: relative; }
+  .faq-tooltip {
+    position: absolute; top: -8px; right: 0; transform: translateY(-100%);
+    background: #333d4b; color: #fff; font-size: 12px; font-weight: 600;
+    padding: 4px 10px; border-radius: 6px; white-space: nowrap;
+    pointer-events: none; opacity: 0; transition: opacity 0.2s;
+    z-index: 10;
+  }
+  .faq-tooltip::after {
+    content: ''; position: absolute; bottom: -4px; right: 16px;
+    width: 8px; height: 8px; background: #333d4b;
+    transform: rotate(45deg);
+  }
+  .faq-bar-item:hover .faq-tooltip { opacity: 1; }
+
+  /* Enhancement 11 merged into hero particles above */
+
+  /* === Enhancement 12: Dark mode === */
+  .dark-toggle {
+    position: fixed; top: 16px; right: 16px; z-index: 150;
+    width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border);
+    background: var(--card); color: var(--text); font-size: 20px;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    box-shadow: var(--shadow); transition: all 0.3s;
+    font-family: inherit; line-height: 1;
+  }
+  .dark-toggle:hover { box-shadow: var(--shadow-hover); transform: scale(1.08); }
+
+  body.dark {
+    --bg: #1a1b1e; --card: #25262b; --text: #c9cdd1; --sub: #8b949e;
+    --border: #373a40; --shadow: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-hover: 0 2px 8px rgba(0,0,0,0.4);
+  }
+  body.dark .tab-bar { background: rgba(37,38,43,0.82); }
+  body.dark .qa-answer { background: #1e1f23; }
+  body.dark .qa-answer p { color: var(--text); }
+  body.dark .faq-bar-track { background: #373a40; }
+  body.dark .glossary-search { background-color: var(--card); color: var(--text); }
+  body.dark .zoom-btn.secondary { background: #373a40; color: var(--text); }
+  body.dark .notice-banner { background: #332d1a; border-color: #5c4f1f; color: #d4c56a; }
+  body.dark .stat-pill { background: var(--card); border-color: var(--border); }
+  body.dark .insight-card { background: var(--card); }
+  body.dark .insight-body p { color: var(--sub); }
+  body.dark .hero { background: linear-gradient(135deg, #3b4fa8 0%, #4a3080 50%, #7c3d8f 100%); }
+
+  /* === Enhancement 5: Quote typing cursor === */
+  .quote-text.typing-active::after {
+    content: '|'; animation: blink 0.7s step-end infinite; margin-left: 1px;
+  }
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 </style>
 </head>
 <body>
@@ -726,17 +902,17 @@
       </div>
       <div class="mvp-grid">
         <div class="mvp-card">
-          <div class="mvp-avatar">📊</div>
+          <div class="mvp-avatar">🥇</div>
           <div class="mvp-name">온도도</div>
           <div class="mvp-desc">클로드 시각화(Show Me) 기능 발견 & 공유. 벽타기 요약 HTML 직접 제작</div>
         </div>
         <div class="mvp-card">
-          <div class="mvp-avatar">🧠</div>
+          <div class="mvp-avatar">🥈</div>
           <div class="mvp-name">쇼츠코인</div>
           <div class="mvp-desc">클로드 스킬/에이전트 폴더 구조 공유. "결과물만 받지 마세요" 명언</div>
         </div>
         <div class="mvp-card">
-          <div class="mvp-avatar">💡</div>
+          <div class="mvp-avatar">🥉</div>
           <div class="mvp-name">업고기</div>
           <div class="mvp-desc">스킬 파일 삭제 원인 규명. 클로드 코드 복원 팁 공유</div>
         </div>
@@ -934,16 +1110,18 @@
         <div class="section-icon" style="background:var(--accent-light);">🔗</div>
         <div class="section-title">유용한 링크 모음</div>
       </div>
-      <p style="color:var(--sub);font-size:13px;margin-bottom:14px;padding:0 4px;">대화에서 공유된 주요 링크를 모았어요</p>
+      <p style="color:var(--sub);font-size:13px;margin-bottom:6px;padding:0 4px;">대화에서 공유된 주요 링크를 모았어요</p>
+      <p style="color:var(--sub);font-size:11px;margin-bottom:14px;padding:0 4px;">⚠️ 구버전 = 링크가 바뀌었을 수 있음 · ❌ 깨진 링크 = 접속 안 될 수 있음</p>
 
-      <div class="link-card"><div class="link-icon">📓</div><div class="link-body"><div class="link-title">오토워커 공식 노션 (위키)</div><div class="link-url"><a href="https://wiki.autoworkers.ai/" target="_blank">wiki.autoworkers.ai</a></div></div></div>
-      <div class="link-card"><div class="link-icon">☕</div><div class="link-body"><div class="link-title">오토워커 1기 네이버 카페</div><div class="link-url"><a href="https://naver.me/GrgwwKt2" target="_blank">naver.me/GrgwwKt2</a></div></div></div>
-      <div class="link-card"><div class="link-icon">🎬</div><div class="link-body"><div class="link-title">1강부터 바로보기 (카페)</div><div class="link-url"><a href="https://cafe.naver.com/f-e/cafes/31687042/menus/7?viewType=L" target="_blank">cafe.naver.com/.../menus/7</a></div></div></div>
-      <div class="link-card"><div class="link-icon">💳</div><div class="link-body"><div class="link-title">크레딧 충전 구글 폼</div><div class="link-url"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdCDEHo-5pyERwQPzy9wDOj7dHMHY8-ihDr5ffJUVEARoyOwA/viewform" target="_blank">구글 폼 바로가기</a></div></div></div>
-      <div class="link-card"><div class="link-icon">🍪</div><div class="link-body"><div class="link-title">Cookie Editor (크롬 확장)</div><div class="link-url"><a href="https://chromewebstore.google.com/detail/cookie-editor/ookdjilphngeeeghgngjabigmpepanpl" target="_blank">Chrome Web Store</a></div></div></div>
-      <div class="link-card"><div class="link-icon">📋</div><div class="link-body"><div class="link-title">카톡방 질의응답 정리본 (카페)</div><div class="link-url"><a href="https://cafe.naver.com/f-e/cafes/31687042/menus/31?viewType=L" target="_blank">cafe.naver.com/.../menus/31</a></div></div></div>
-      <div class="link-card"><div class="link-icon">🐙</div><div class="link-body"><div class="link-title">오토워커 1기 GitHub (스킬/에이전트)</div><div class="link-url"><a href="https://github.com/nossssi/autoworkers-1st" target="_blank">github.com/nossssi/autoworkers-1st</a></div></div></div>
-      <div class="link-card"><div class="link-icon">📊</div><div class="link-body"><div class="link-title">크레딧 사용량 스프레드시트</div><div class="link-url"><a href="https://cafe.naver.com/autoworker1/272" target="_blank">cafe.naver.com/autoworker1/272</a></div></div></div>
+      <div class="link-card"><div class="link-icon">📓</div><div class="link-body"><div class="link-title">오토워커 공식 노션 (위키)</div><div class="link-url"><a href="https://wiki.autoworkers.ai/" target="_blank">wiki.autoworkers.ai</a></div></div><span class="link-status ok">정상</span></div>
+      <div class="link-card"><div class="link-icon">☕</div><div class="link-body"><div class="link-title">오토워커 1기 네이버 카페</div><div class="link-url"><a href="https://naver.me/GrgwwKt2" target="_blank">naver.me/GrgwwKt2</a></div></div><span class="link-status ok">정상</span></div>
+      <div class="link-card"><div class="link-icon">🎬</div><div class="link-body"><div class="link-title">1강부터 바로보기 (카페)</div><div class="link-url"><a href="https://cafe.naver.com/f-e/cafes/31687042/menus/7?viewType=L" target="_blank">cafe.naver.com/.../menus/7</a></div></div><span class="link-status ok">정상</span></div>
+      <div class="link-card is-outdated"><div class="link-icon">💳</div><div class="link-body"><div class="link-title">크레딧 충전 구글 폼</div><div class="link-url"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdCDEHo-5pyERwQPzy9wDOj7dHMHY8-ihDr5ffJUVEARoyOwA/viewform" target="_blank">구글 폼 바로가기</a></div></div><span class="link-status outdated">⚠️ 구버전</span></div>
+      <div class="link-card"><div class="link-icon">🍪</div><div class="link-body"><div class="link-title">Cookie Editor (크롬 확장)</div><div class="link-url"><a href="https://chromewebstore.google.com/detail/cookie-editor/ookdjilphngeeeghgngjabigmpepanpl" target="_blank">Chrome Web Store</a></div></div><span class="link-status ok">정상</span></div>
+      <div class="link-card"><div class="link-icon">📋</div><div class="link-body"><div class="link-title">카톡방 질의응답 정리본 (카페)</div><div class="link-url"><a href="https://cafe.naver.com/f-e/cafes/31687042/menus/31?viewType=L" target="_blank">cafe.naver.com/.../menus/31</a></div></div><span class="link-status ok">정상</span></div>
+      <div class="link-card"><div class="link-icon">🐙</div><div class="link-body"><div class="link-title">오토워커 1기 GitHub (스킬/에이전트)</div><div class="link-url"><a href="https://github.com/nossssi/autoworkers-1st" target="_blank">github.com/nossssi/autoworkers-1st</a></div></div><span class="link-status ok">정상</span></div>
+      <div class="link-card is-broken"><div class="link-icon">📊</div><div class="link-body"><div class="link-title">크레딧 사용량 안내 (카페)</div><div class="link-url"><a href="https://cafe.naver.com/autoworker1/272" target="_blank">cafe.naver.com/autoworker1/272</a></div></div><span class="link-status broken">❌ 깨진 링크</span></div>
+      <div class="link-card is-broken"><div class="link-icon">🔧</div><div class="link-body"><div class="link-title">튜브워커 오류 재충전 게시판 (카페)</div><div class="link-url"><a href="https://cafe.naver.com/f-e/cafes/31687042/articles/13" target="_blank">cafe.naver.com/.../articles/13</a></div></div><span class="link-status broken">❌ 깨진 링크</span></div>
     </div>
   </div>
 
@@ -956,7 +1134,8 @@
         <div class="section-title">Zoom 링크 모음</div>
       </div>
 
-      <div class="zoom-card past fade-in">
+      <div class="zoom-card past fade-in" data-zoom-url="https://us06web.zoom.us/j/83939555607?pwd=u30Bt4sV4pTHP3odZhGFjA7dlRa3S9.1" data-zoom-id="839 3955 5607" data-zoom-pw="375531">
+        <div class="zoom-stamp">종 료</div>
         <div class="zoom-card-header">
           <div class="zoom-date">2026. 3. 23 (일) 오후 8:30</div>
           <span class="past-badge">종료됨</span>
@@ -982,14 +1161,18 @@
           </div>
         </div>
         <div class="zoom-actions">
-          <a href="https://us06web.zoom.us/j/83939555607?pwd=u30Bt4sV4pTHP3odZhGFjA7dlRa3S9.1" target="_blank" class="zoom-btn primary">Zoom 입장하기</a>
-          <button class="zoom-btn secondary" onclick="copyToClipboard('839 3955 5607')">회의 ID 복사</button>
+          <button class="zoom-btn secondary" onclick="copyToClipboard('회의 ID: 839 3955 5607\n비밀번호: 375531\nhttps://us06web.zoom.us/j/83939555607?pwd=u30Bt4sV4pTHP3odZhGFjA7dlRa3S9.1')">📋 링크+ID+PW 복사</button>
         </div>
       </div>
 
-      <div style="text-align:center;padding:32px 20px;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);margin-top:8px;" class="fade-in">
-        <div style="font-size:40px;margin-bottom:10px;">📅</div>
-        <p style="color:var(--sub);font-size:14px;">새로운 Zoom 링크가 올라오면<br>여기에 추가돼요!</p>
+      <!-- 여기에 새 Zoom 링크가 추가됩니다 (data-zoom-url 속성 포함) -->
+
+      <button class="zoom-bulk-copy fade-in" onclick="copyAllZoomLinks()">📋 전체 Zoom 링크 일괄 복사</button>
+
+      <div style="text-align:center;padding:28px 20px;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);margin-top:12px;" class="fade-in">
+        <div style="font-size:36px;margin-bottom:8px;">📡</div>
+        <p style="color:var(--sub);font-size:13px;">채팅방에서 Zoom 링크가 감지되면<br>자동으로 여기에 추가돼요</p>
+        <p style="color:var(--sub);font-size:11px;margin-top:6px;">마지막 스캔: 2026-03-24 18:56 KST</p>
       </div>
     </div>
   </div>
@@ -1004,11 +1187,18 @@
   </div>
 </div>
 
+<!-- Scroll progress bar (Enhancement 7) -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Dark mode toggle (Enhancement 12) -->
+<button class="dark-toggle" id="darkToggle" title="다크모드 전환">🌙</button>
+
 <!-- FABs -->
 <button class="fab-top" id="fabTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 <button class="fab-share" onclick="copyToClipboard(location.href)" title="이 페이지 링크 복사">🔗</button>
 
 <script>
+/* ===== Original functionality (preserved) ===== */
 function switchTab(id) {
   document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
@@ -1018,6 +1208,14 @@ function switchTab(id) {
   const map = { mar23: 0, mar24: 1, faq: 2, glossary: 3, links: 4, zoom: 5 };
   if (map[id] !== undefined && btns[map[id]]) btns[map[id]].classList.add('active');
   tab?.querySelectorAll('.fade-in').forEach(el => { el.classList.remove('visible'); void el.offsetWidth; observer.observe(el); });
+  // Re-trigger Q&A slide-in on tab switch
+  tab?.querySelectorAll('.qa-card.fade-in-qa').forEach(el => { el.classList.remove('visible'); void el.offsetWidth; qaObserver.observe(el); });
+  // Re-trigger stat count-up
+  tab?.querySelectorAll('.stat-pill .num').forEach(el => { el._counted = false; statObserver.observe(el); });
+  // Re-trigger timeline pulse
+  tab?.querySelectorAll('.timeline').forEach(tl => { tl._pulsed = false; tlObserver.observe(tl); });
+  // Re-trigger quote typing
+  tab?.querySelectorAll('.quote-text').forEach(el => { el._typed = false; el.textContent = el._originalText || el.textContent; quoteObserver.observe(el); });
   if (id === 'faq') { resetBars(); setTimeout(animateBars, 200); }
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -1038,14 +1236,56 @@ function filterGlossary(q) {
   });
 }
 
-function copyToClipboard(text) {
+function copyToClipboard(text, evt) {
   const show = () => { const t = document.getElementById('toast'); t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 1800); };
-  navigator.clipboard.writeText(text).then(show).catch(() => {
-    const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); show();
+  const doCopy = () => {
+    show();
+    // Enhancement 6: Confetti on copy
+    spawnConfetti(evt);
+  };
+  navigator.clipboard.writeText(text).then(doCopy).catch(() => {
+    const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); doCopy();
   });
 }
 
-// Intersection Observer
+/* ===== Enhancement 6: Confetti ===== */
+function spawnConfetti(evt) {
+  const emojis = ['\u{1F389}','\u{2728}','\u{2B50}','\u{1F4AB}'];
+  let cx = window.innerWidth / 2, cy = window.innerHeight / 2;
+  if (evt) {
+    if (evt.clientX) { cx = evt.clientX; cy = evt.clientY; }
+    else if (evt.touches && evt.touches[0]) { cx = evt.touches[0].clientX; cy = evt.touches[0].clientY; }
+  }
+  for (let i = 0; i < 20; i++) {
+    const el = document.createElement('span');
+    el.className = 'confetti-particle';
+    el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    const angle = (Math.random() * Math.PI * 2);
+    const dist = 60 + Math.random() * 100;
+    const dx = Math.cos(angle) * dist;
+    const dy = Math.sin(angle) * dist + 40; // gravity bias downward
+    el.style.left = cx + 'px';
+    el.style.top = cy + 'px';
+    el.style.setProperty('--cx', dx + 'px');
+    el.style.setProperty('--cy', dy + 'px');
+    el.style.setProperty('--cr', (Math.random() * 720 - 360) + 'deg');
+    el.style.fontSize = (12 + Math.random() * 10) + 'px';
+    document.body.appendChild(el);
+    el.addEventListener('animationend', () => el.remove());
+  }
+}
+
+// Patch existing onclick handlers that call copyToClipboard to pass event
+document.addEventListener('click', function(e) {
+  window._lastClickEvent = e;
+}, true);
+// Wrap original copyToClipboard to capture event
+const _origCopy = copyToClipboard;
+copyToClipboard = function(text, evt) {
+  _origCopy.call(this, text, evt || window._lastClickEvent);
+};
+
+/* ===== Intersection Observer (original, preserved) ===== */
 const observer = new IntersectionObserver(
   entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
   { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
@@ -1055,12 +1295,168 @@ document.querySelectorAll('.fade-in').forEach((el, i) => {
   observer.observe(el);
 });
 
-// Back to top FAB
+/* ===== Enhancement 2: Stats count-up ===== */
+const statObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting || e.target._counted) return;
+    e.target._counted = true;
+    const raw = e.target.textContent.trim();
+    const suffix = raw.replace(/^[\d,]+/, ''); // e.g. "h" from "17h"
+    const numStr = raw.replace(/[^\d]/g, '');
+    const target = parseInt(numStr, 10);
+    if (isNaN(target) || target === 0) return;
+    const hasComma = raw.includes(',');
+    const duration = 1200;
+    const start = performance.now();
+    function step(ts) {
+      const p = Math.min((ts - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3); // easeOutCubic
+      const current = Math.round(target * eased);
+      let display = hasComma ? current.toLocaleString() : String(current);
+      e.target.textContent = display + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.stat-pill .num').forEach(el => statObserver.observe(el));
+
+/* ===== Enhancement 4: Q&A staggered slide-in ===== */
+const qaObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); qaObserver.unobserve(e.target); } });
+}, { threshold: 0.05 });
+document.querySelectorAll('.qa-card').forEach((card, i) => {
+  // Only add to expandable Q&A cards (not the always-open FAQ ones)
+  if (!card.closest('#tab-faq')) {
+    card.classList.add('fade-in-qa');
+    card.style.transitionDelay = (i * 0.08) + 's';
+    qaObserver.observe(card);
+  }
+});
+
+/* ===== Enhancement 5: Quote typing effect ===== */
+const quoteObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting || e.target._typed) return;
+    e.target._typed = true;
+    quoteObserver.unobserve(e.target);
+    const full = e.target._originalText;
+    e.target.textContent = '';
+    e.target.classList.add('typing-active');
+    let idx = 0;
+    function typeChar() {
+      if (idx < full.length) {
+        e.target.textContent += full[idx];
+        idx++;
+        setTimeout(typeChar, 18 + Math.random() * 12);
+      } else {
+        e.target.classList.remove('typing-active');
+      }
+    }
+    typeChar();
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.quote-text').forEach(el => {
+  el._originalText = el.textContent;
+  quoteObserver.observe(el);
+});
+
+/* ===== Enhancement 7: Scroll progress bar ===== */
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  document.getElementById('scrollProgress').style.width = pct + '%';
+}, { passive: true });
+
+/* ===== Enhancement 9: Timeline pulse ===== */
+const tlObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting || e.target._pulsed) return;
+    e.target._pulsed = true;
+    const items = e.target.querySelectorAll('.tl-item');
+    items.forEach((item, i) => {
+      setTimeout(() => {
+        item.classList.add('tl-pulse');
+        item.addEventListener('animationend', () => {
+          // keep class so it doesn't re-trigger
+        }, { once: true });
+      }, i * 150);
+    });
+  });
+}, { threshold: 0.2 });
+document.querySelectorAll('.timeline').forEach(tl => tlObserver.observe(tl));
+
+/* ===== Enhancement 10: FAQ bar chart hover tooltip ===== */
+document.querySelectorAll('.faq-bar-item').forEach(item => {
+  const cntEl = item.querySelector('.cnt');
+  if (!cntEl) return;
+  const count = parseInt(cntEl.textContent, 10);
+  const maxCount = 50; // known max from data
+  const pct = Math.round((count / maxCount) * 100);
+  const tooltip = document.createElement('div');
+  tooltip.className = 'faq-tooltip';
+  tooltip.textContent = pct + '%';
+  item.appendChild(tooltip);
+});
+
+/* ===== Enhancement 11: Hero particles ===== */
+(function() {
+  const hero = document.querySelector('.hero');
+  if (!hero) return;
+  for (let i = 0; i < 12; i++) {
+    const el = document.createElement('span');
+    el.className = 'hero-particle';
+    const size = 4 + Math.random() * 8;
+    el.style.setProperty('--sz', size + 'px');
+    el.style.setProperty('--dur', (5 + Math.random() * 8) + 's');
+    el.style.setProperty('--delay', (-Math.random() * 10) + 's');
+    el.style.left = (Math.random() * 100) + '%';
+    el.style.bottom = (Math.random() * 40) + '%';
+    hero.appendChild(el);
+  }
+})();
+
+/* ===== Enhancement 12: Dark mode toggle ===== */
+(function() {
+  const btn = document.getElementById('darkToggle');
+  const saved = localStorage.getItem('darkMode');
+  if (saved === 'true') { document.body.classList.add('dark'); btn.textContent = '\u{2600}\u{FE0F}'; }
+  btn.addEventListener('click', () => {
+    const isDark = document.body.classList.toggle('dark');
+    btn.textContent = isDark ? '\u{2600}\u{FE0F}' : '\u{1F319}';
+    localStorage.setItem('darkMode', isDark);
+  });
+})();
+
+/* ===== Zoom bulk copy ===== */
+function copyAllZoomLinks() {
+  const cards = document.querySelectorAll('.zoom-card[data-zoom-url]');
+  const lines = [];
+  cards.forEach(card => {
+    const url = card.dataset.zoomUrl || '';
+    const id = card.dataset.zoomId || '';
+    const pw = card.dataset.zoomPw || '';
+    const title = card.querySelector('.zoom-title');
+    const date = card.querySelector('.zoom-date');
+    if (url) {
+      lines.push((date ? date.textContent.trim() : '') + ' ' + (title ? title.textContent.trim() : ''));
+      if (id) lines.push('회의 ID: ' + id);
+      if (pw) lines.push('비밀번호: ' + pw);
+      lines.push(url);
+      lines.push('');
+    }
+  });
+  if (lines.length === 0) { copyToClipboard('등록된 Zoom 링크가 없습니다.'); return; }
+  copyToClipboard(lines.join('\n').trim());
+}
+
+/* ===== Back to top FAB (original, preserved) ===== */
 window.addEventListener('scroll', () => {
   document.getElementById('fabTop').classList.toggle('show', window.scrollY > 400);
 }, { passive: true });
 
-// Auto-open first QA
+/* ===== Auto-open first QA (original, preserved) ===== */
 setTimeout(() => {
   const first = document.querySelector('#tab-mar23 .qa-card');
   if (first) first.classList.add('open');

@@ -190,12 +190,42 @@
   .zoom-btn.primary:hover { background: #1b6ef3; }
   .zoom-btn.secondary { background: #f2f4f6; color: var(--text); }
   .zoom-btn.secondary:hover { background: #e5e8eb; }
-  .zoom-card.past { opacity: 0.6; }
-  .zoom-card.past:hover { opacity: 1; }
+  .zoom-card.past { position: relative; }
+  .zoom-card.past .zoom-card-header { opacity: 0.45; }
+  .zoom-card.past .zoom-info { opacity: 0.45; }
+  .zoom-card.past:hover .zoom-card-header,
+  .zoom-card.past:hover .zoom-info { opacity: 0.75; }
+  .zoom-card.past .zoom-actions { opacity: 0.6; }
+  .zoom-stamp {
+    position: absolute; top: 20px; right: 20px; z-index: 2;
+    font-size: 14px; font-weight: 800; color: var(--red); padding: 6px 14px;
+    border: 3px solid var(--red); border-radius: 10px;
+    transform: rotate(12deg); letter-spacing: 2px; opacity: 0.7;
+    background: rgba(255,255,255,0.85);
+  }
   .past-badge {
     font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px;
-    background: #f2f4f6; color: var(--sub); margin-left: 8px;
+    background: var(--red-light); color: var(--red); margin-left: 8px;
   }
+  .zoom-bulk-copy {
+    display: block; width: 100%; padding: 14px; border: 2px dashed var(--border);
+    border-radius: 14px; background: transparent; font-size: 14px; font-weight: 600;
+    color: var(--accent); cursor: pointer; font-family: inherit;
+    transition: all 0.2s; margin-top: 12px; text-align: center;
+  }
+  .zoom-bulk-copy:hover { border-color: var(--accent); background: var(--accent-light); }
+
+  /* Link status badges */
+  .link-status {
+    font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 6px;
+    flex-shrink: 0; margin-left: auto;
+  }
+  .link-status.ok { background: var(--green-light); color: var(--green); }
+  .link-status.outdated { background: var(--orange-light); color: var(--orange); }
+  .link-status.broken { background: var(--red-light); color: var(--red); }
+  .link-card.is-broken { opacity: 0.55; border-style: dashed; }
+  .link-card.is-broken:hover { opacity: 0.8; }
+  .link-card.is-outdated { border-left: 3px solid var(--orange); }
   .notice-banner {
     background: #fffbe6; border: 1px solid #ffe58f; border-radius: 14px;
     padding: 16px 18px; margin-bottom: 24px; display: flex; gap: 12px;
@@ -307,6 +337,152 @@
   .link-url { font-size: 12px; color: var(--accent); word-break: break-all; }
   .link-url a { color: var(--accent); text-decoration: none; }
   .link-url a:hover { text-decoration: underline; }
+
+  /* === Enhancement 1: Hero visual === */
+  .hero {
+    position: relative; overflow: hidden;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    margin: -24px -16px 24px; padding: 56px 24px 36px;
+    border-radius: 0 0 32px 32px;
+  }
+  .hero h1 { color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.15); }
+  .hero p { color: rgba(255,255,255,0.8); }
+  .hero-badge { background: rgba(255,255,255,0.2); color: #fff; backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.25); }
+
+  /* Animated mesh blobs */
+  .hero::before, .hero::after {
+    content: ''; position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.4;
+    animation: blobFloat 8s ease-in-out infinite alternate;
+  }
+  .hero::before {
+    width: 300px; height: 300px; top: -80px; right: -60px;
+    background: rgba(255,255,255,0.3);
+  }
+  .hero::after {
+    width: 250px; height: 250px; bottom: -60px; left: -40px;
+    background: rgba(96,165,250,0.35);
+    animation-delay: -4s; animation-duration: 10s;
+  }
+  .hero > * { position: relative; z-index: 1; }
+  @keyframes blobFloat {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(30px, -20px) scale(1.15); }
+  }
+
+  /* Floating particles in hero */
+  .hero-particle {
+    position: absolute; z-index: 0; pointer-events: none;
+    width: var(--sz); height: var(--sz); border-radius: 50%;
+    background: rgba(255,255,255,0.25);
+    animation: particleRise var(--dur) linear infinite;
+    animation-delay: var(--delay);
+  }
+  @keyframes particleRise {
+    0% { transform: translateY(0) scale(0); opacity: 0; }
+    15% { opacity: 1; transform: scale(1); }
+    85% { opacity: 0.6; }
+    100% { transform: translateY(-180px) scale(0.3); opacity: 0; }
+  }
+
+  /* === Enhancement 3: MVP medal shine === */
+  .mvp-avatar { position: relative; display: inline-block; }
+  @keyframes medalShine {
+    0%, 80%, 100% { filter: brightness(1); transform: scale(1); }
+    90% { filter: brightness(1.4); transform: scale(1.15); }
+  }
+  .mvp-card:nth-child(1) .mvp-avatar { animation: medalShine 4s ease infinite 0s; }
+  .mvp-card:nth-child(2) .mvp-avatar { animation: medalShine 4s ease infinite 0.5s; }
+  .mvp-card:nth-child(3) .mvp-avatar { animation: medalShine 4s ease infinite 1s; }
+
+  /* === Enhancement 4: Q&A staggered slide-in === */
+  .qa-card.fade-in-qa {
+    opacity: 0; transition: opacity 0.5s cubic-bezier(0.16,1,0.3,1), transform 0.5s cubic-bezier(0.16,1,0.3,1);
+  }
+  .qa-card.fade-in-qa:nth-child(odd) { transform: translateX(-30px); }
+  .qa-card.fade-in-qa:nth-child(even) { transform: translateX(30px); }
+  .qa-card.fade-in-qa.visible { opacity: 1; transform: translateX(0); }
+
+  /* === Enhancement 6: Confetti particles === */
+  .confetti-particle {
+    position: fixed; pointer-events: none; z-index: 200;
+    font-size: 16px; animation: confettiFall 1s cubic-bezier(0.25,0.46,0.45,0.94) forwards;
+  }
+  @keyframes confettiFall {
+    0% { opacity: 1; transform: translate(0, 0) rotate(0deg) scale(1); }
+    100% { opacity: 0; transform: translate(var(--cx), var(--cy)) rotate(var(--cr)) scale(0.3); }
+  }
+
+  /* === Enhancement 7: Scroll progress bar === */
+  .scroll-progress {
+    position: fixed; top: 0; left: 0; height: 3px; z-index: 200;
+    background: linear-gradient(90deg, #3182f6, #60a5fa, #8b5cf6);
+    width: 0; transition: none;
+  }
+
+  /* === Enhancement 8: Tab bar glassmorphism === */
+  .tab-bar {
+    background: rgba(255,255,255,0.72);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* === Enhancement 9: Timeline pulse === */
+  @keyframes tlPulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 2px var(--accent-light); }
+    50% { transform: scale(1.6); box-shadow: 0 0 8px 3px rgba(49,130,246,0.4); }
+  }
+  .tl-item.tl-pulse::before { animation: tlPulse 0.6s ease; }
+
+  /* === Enhancement 10: FAQ bar tooltip === */
+  .faq-bar-item { position: relative; }
+  .faq-tooltip {
+    position: absolute; top: -8px; right: 0; transform: translateY(-100%);
+    background: #333d4b; color: #fff; font-size: 12px; font-weight: 600;
+    padding: 4px 10px; border-radius: 6px; white-space: nowrap;
+    pointer-events: none; opacity: 0; transition: opacity 0.2s;
+    z-index: 10;
+  }
+  .faq-tooltip::after {
+    content: ''; position: absolute; bottom: -4px; right: 16px;
+    width: 8px; height: 8px; background: #333d4b;
+    transform: rotate(45deg);
+  }
+  .faq-bar-item:hover .faq-tooltip { opacity: 1; }
+
+  /* Enhancement 11 merged into hero particles above */
+
+  /* === Enhancement 12: Dark mode === */
+  .dark-toggle {
+    position: fixed; top: 16px; right: 16px; z-index: 150;
+    width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border);
+    background: var(--card); color: var(--text); font-size: 20px;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    box-shadow: var(--shadow); transition: all 0.3s;
+    font-family: inherit; line-height: 1;
+  }
+  .dark-toggle:hover { box-shadow: var(--shadow-hover); transform: scale(1.08); }
+
+  body.dark {
+    --bg: #1a1b1e; --card: #25262b; --text: #c9cdd1; --sub: #8b949e;
+    --border: #373a40; --shadow: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-hover: 0 2px 8px rgba(0,0,0,0.4);
+  }
+  body.dark .tab-bar { background: rgba(37,38,43,0.82); }
+  body.dark .qa-answer { background: #1e1f23; }
+  body.dark .qa-answer p { color: var(--text); }
+  body.dark .faq-bar-track { background: #373a40; }
+  body.dark .glossary-search { background-color: var(--card); color: var(--text); }
+  body.dark .zoom-btn.secondary { background: #373a40; color: var(--text); }
+  body.dark .notice-banner { background: #332d1a; border-color: #5c4f1f; color: #d4c56a; }
+  body.dark .stat-pill { background: var(--card); border-color: var(--border); }
+  body.dark .insight-card { background: var(--card); }
+  body.dark .insight-body p { color: var(--sub); }
+  body.dark .hero { background: linear-gradient(135deg, #3b4fa8 0%, #4a3080 50%, #7c3d8f 100%); }
+
+  /* === Enhancement 5: Quote typing cursor === */
+  .quote-text.typing-active::after {
+    content: '|'; animation: blink 0.7s step-end infinite; margin-left: 1px;
+  }
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 </style>
 </head>
 <body>
