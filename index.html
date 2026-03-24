@@ -158,6 +158,58 @@
   .faq-bar-track { height: 8px; background: #edf0f3; border-radius: 4px; overflow: hidden; }
   .faq-bar-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--accent), #60a5fa); transition: width 1s cubic-bezier(0.16,1,0.3,1); width: 0; }
 
+  /* Zoom card */
+  .zoom-card {
+    background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+    margin-bottom: 14px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .zoom-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+  .zoom-card-header { padding: 20px 22px 16px; }
+  .zoom-date {
+    font-size: 12px; font-weight: 600; color: var(--accent);
+    background: var(--accent-light); display: inline-block;
+    padding: 3px 10px; border-radius: 8px; margin-bottom: 10px;
+  }
+  .zoom-title { font-size: 17px; font-weight: 700; line-height: 1.4; margin-bottom: 6px; }
+  .zoom-desc { font-size: 14px; color: var(--sub); line-height: 1.5; }
+  .zoom-info { padding: 0 22px 18px; display: flex; flex-direction: column; gap: 8px; }
+  .zoom-info-row { display: flex; align-items: center; gap: 10px; font-size: 13px; }
+  .zoom-info-row .zl { color: var(--sub); min-width: 65px; flex-shrink: 0; font-weight: 500; }
+  .zoom-info-row .zv { font-weight: 600; word-break: break-all; }
+  .zoom-info-row .zv a { color: var(--accent); text-decoration: none; }
+  .zoom-info-row .zv a:hover { text-decoration: underline; }
+  .zoom-actions {
+    border-top: 1px solid var(--border); padding: 14px 22px; display: flex; gap: 10px;
+  }
+  .zoom-btn {
+    flex: 1; padding: 12px; border: none; border-radius: 12px;
+    font-size: 14px; font-weight: 700; cursor: pointer; font-family: inherit;
+    transition: all 0.2s; text-decoration: none; text-align: center; display: block;
+  }
+  .zoom-btn.primary { background: var(--accent); color: #fff; }
+  .zoom-btn.primary:hover { background: #1b6ef3; }
+  .zoom-btn.secondary { background: #f2f4f6; color: var(--text); }
+  .zoom-btn.secondary:hover { background: #e5e8eb; }
+  .zoom-card.past { opacity: 0.6; }
+  .zoom-card.past:hover { opacity: 1; }
+  .past-badge {
+    font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px;
+    background: #f2f4f6; color: var(--sub); margin-left: 8px;
+  }
+  .notice-banner {
+    background: #fffbe6; border: 1px solid #ffe58f; border-radius: 14px;
+    padding: 16px 18px; margin-bottom: 24px; display: flex; gap: 12px;
+    align-items: flex-start; font-size: 14px; line-height: 1.6; color: #7c6a0a;
+  }
+  .notice-banner .nb-emoji { font-size: 22px; flex-shrink: 0; }
+  .toast {
+    position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(80px);
+    background: #333d4b; color: #fff; padding: 12px 24px; border-radius: 12px;
+    font-size: 14px; font-weight: 600; opacity: 0;
+    transition: all 0.3s cubic-bezier(0.16,1,0.3,1); z-index: 100; pointer-events: none;
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
   /* Footer */
   .page-footer { text-align: center; padding: 28px 0; color: var(--sub); font-size: 13px; border-top: 1px solid var(--border); margin-top: 20px; }
   @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
@@ -184,6 +236,7 @@
     <button class="tab-btn" onclick="switchTab('mar24')">3/24 (월)</button>
     <button class="tab-btn" onclick="switchTab('faq')">자주 묻는 질문</button>
     <button class="tab-btn" onclick="switchTab('glossary')">용어사전</button>
+    <button class="tab-btn" onclick="switchTab('zoom')">🎥 Zoom</button>
   </div>
 
   <!-- ==================== 3/23 TAB ==================== -->
@@ -748,6 +801,63 @@
     </div>
   </div>
 
+  <!-- ==================== ZOOM TAB ==================== -->
+  <div id="tab-zoom" class="tab-content">
+
+    <div class="notice-banner fade-in">
+      <div class="nb-emoji">🤖</div>
+      <div>
+        귀여운 끌로가 정리한 거라 틀릴 수도 있어요!<br>
+        틀린 부분은 <strong>나물쓰</strong>에게 말씀해주시면 빠르게 수정할게요!
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <div class="section-header">
+        <div class="section-icon" style="background:var(--accent-light);">🎥</div>
+        <div class="section-title">Zoom 링크 모음</div>
+      </div>
+
+      <div class="zoom-card past fade-in">
+        <div class="zoom-card-header">
+          <div class="zoom-date">2026. 3. 23 (일) 오후 8:30</div>
+          <span class="past-badge">종료됨</span>
+          <div class="zoom-title">🎬 쇼츠대폭발님의 'AI스위칭쇼츠' 앵콜 미니특강</div>
+          <div class="zoom-desc">AI올인원앱 개발 · 유튜브 쇼츠/롱폼/미드폼 수익화<br>전날 12시간 라이브(실시간 3,850명)의 앵콜 세션</div>
+        </div>
+        <div class="zoom-info">
+          <div class="zoom-info-row">
+            <span class="zl">🔗 Zoom</span>
+            <span class="zv"><a href="https://us06web.zoom.us/j/83939555607?pwd=u30Bt4sV4pTHP3odZhGFjA7dlRa3S9.1" target="_blank">입장 링크</a></span>
+          </div>
+          <div class="zoom-info-row">
+            <span class="zl">🆔 회의 ID</span>
+            <span class="zv">839 3955 5607</span>
+          </div>
+          <div class="zoom-info-row">
+            <span class="zl">🔑 비밀번호</span>
+            <span class="zv">375531</span>
+          </div>
+          <div class="zoom-info-row">
+            <span class="zl">📺 유튜브</span>
+            <span class="zv"><a href="https://youtube.com/live/lpmSgjKb_l4" target="_blank">동시 라이브 스트림</a></span>
+          </div>
+        </div>
+        <div class="zoom-actions">
+          <a href="https://us06web.zoom.us/j/83939555607?pwd=u30Bt4sV4pTHP3odZhGFjA7dlRa3S9.1" target="_blank" class="zoom-btn primary">Zoom 입장하기</a>
+          <button class="zoom-btn secondary" onclick="copyToClipboard('839 3955 5607')">회의 ID 복사</button>
+        </div>
+      </div>
+
+      <div style="text-align:center;padding:32px 20px;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);margin-top:8px;" class="fade-in">
+        <div style="font-size:40px;margin-bottom:10px;">📅</div>
+        <p style="color:var(--sub);font-size:14px;">새로운 Zoom 링크가 올라오면<br>여기에 추가돼요!</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast">✅ 복사 완료!</div>
+
   <!-- Footer -->
   <div class="page-footer fade-in">
     <div><span class="live-dot"></span>오토워커 1기 사담방</div>
@@ -763,7 +873,7 @@ function switchTab(id) {
   if (tab) { tab.classList.add('active'); }
   // Activate button
   const btns = document.querySelectorAll('.tab-btn');
-  const map = { mar23: 0, mar24: 1, faq: 2, glossary: 3 };
+  const map = { mar23: 0, mar24: 1, faq: 2, glossary: 3, zoom: 4 };
   if (map[id] !== undefined && btns[map[id]]) btns[map[id]].classList.add('active');
   // Re-trigger fade-in for new tab
   tab?.querySelectorAll('.fade-in').forEach(el => { el.classList.remove('visible'); void el.offsetWidth; observer.observe(el); });
@@ -787,6 +897,21 @@ document.querySelectorAll('.fade-in').forEach((el, i) => {
   el.style.transitionDelay = `${Math.min(i * 0.05, 0.3)}s`;
   observer.observe(el);
 });
+
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(() => {
+    const t = document.getElementById('toast');
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 1800);
+  }).catch(() => {
+    const ta = document.createElement('textarea');
+    ta.value = text; document.body.appendChild(ta); ta.select();
+    document.execCommand('copy'); document.body.removeChild(ta);
+    const t = document.getElementById('toast');
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 1800);
+  });
+}
 
 // Auto-open first QA
 setTimeout(() => {
