@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>천상계 영드짜 2기 사담방 다이제스트</title>
+<style>
+  @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #f7f8fa; --card: #fff; --text: #191f28; --sub: #6b7684;
+    --accent: #3182f6; --accent-light: #e8f3ff;
+    --green: #20c997; --green-light: #e3faf1;
+    --orange: #f97316; --orange-light: #fff4e6;
+    --red: #ef4444; --red-light: #fee2e2;
+    --purple: #8b5cf6; --purple-light: #ede9fe;
+    --border: #e5e8eb; --radius: 16px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.06);
+    --shadow-hover: 0 2px 8px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.1);
+  }
+  body {
+    font-family: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 80px; }
+
+  /* Hero */
+  .hero { text-align: center; padding: 48px 0 28px; }
+  .hero-badge {
+    display: inline-block; background: var(--accent-light); color: var(--accent);
+    font-size: 13px; font-weight: 600; padding: 6px 14px; border-radius: 20px; margin-bottom: 16px;
+  }
+  .hero h1 { font-size: 28px; font-weight: 800; line-height: 1.3; letter-spacing: -0.5px; }
+  .hero p { color: var(--sub); font-size: 15px; margin-top: 8px; }
+
+  /* Tabs */
+  .tab-bar {
+    display: flex; gap: 6px; margin-bottom: 24px; background: var(--card);
+    border-radius: 14px; padding: 4px; border: 1px solid var(--border);
+    overflow-x: auto; scrollbar-width: none;
+  }
+  .tab-bar::-webkit-scrollbar { display: none; }
+  .tab-btn {
+    flex: 1; min-width: 80px; padding: 10px 14px; border: none; background: transparent;
+    border-radius: 10px; font-size: 14px; font-weight: 600; color: var(--sub);
+    cursor: pointer; transition: all 0.25s; white-space: nowrap; font-family: inherit;
+  }
+  .tab-btn.active { background: var(--accent); color: #fff; box-shadow: 0 2px 8px rgba(49,130,246,0.3); }
+  .tab-btn:hover:not(.active) { background: var(--accent-light); color: var(--accent); }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; animation: fadeUp 0.4s cubic-bezier(0.16,1,0.3,1); }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* Stats bar */
+  .stats-bar { display: flex; gap: 8px; margin-bottom: 28px; overflow-x: auto; scrollbar-width: none; }
+  .stats-bar::-webkit-scrollbar { display: none; }
+  .stat-pill {
+    flex-shrink: 0; background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 14px 18px; min-width: 120px; text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .stat-pill:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+  .stat-pill .num { font-size: 22px; font-weight: 800; color: var(--accent); display: block; }
+  .stat-pill .label { font-size: 12px; color: var(--sub); margin-top: 2px; }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; padding: 0 4px; }
+  .section-icon {
+    width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center;
+    justify-content: center; font-size: 18px; flex-shrink: 0;
+  }
+  .section-title { font-size: 18px; font-weight: 700; letter-spacing: -0.3px; }
+
+  /* Q&A Card */
+  .qa-card {
+    background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+    margin-bottom: 10px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; cursor: pointer;
+  }
+  .qa-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+  .qa-header { padding: 16px 20px; display: flex; align-items: flex-start; gap: 12px; }
+  .qa-q-icon {
+    width: 28px; height: 28px; background: var(--accent-light); color: var(--accent);
+    border-radius: 8px; display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 14px; flex-shrink: 0; margin-top: 1px;
+  }
+  .qa-question { font-size: 15px; font-weight: 600; line-height: 1.5; flex: 1; }
+  .qa-count {
+    font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 10px;
+    background: var(--orange-light); color: var(--orange); flex-shrink: 0; margin-top: 2px; white-space: nowrap;
+  }
+  .qa-toggle { color: var(--sub); font-size: 16px; transition: transform 0.3s; flex-shrink: 0; margin-top: 3px; user-select: none; }
+  .qa-card.open .qa-toggle { transform: rotate(180deg); }
+  .qa-body { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), padding 0.3s; }
+  .qa-card.open .qa-body { max-height: 700px; padding: 0 20px 16px; }
+  .qa-answer { background: #f8f9fb; border-radius: 12px; padding: 14px 16px; margin-left: 40px; margin-top: 6px; }
+  .qa-answer-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+  .qa-answer-badge { font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; background: var(--accent); color: #fff; }
+  .qa-answer-badge.sub { background: var(--green); }
+  .qa-answer-badge.member { background: var(--sub); }
+  .qa-answer-name { font-size: 13px; font-weight: 600; color: var(--sub); }
+  .qa-answer p { font-size: 14px; line-height: 1.7; color: #333d4b; }
+
+  /* Insight card */
+  .insight-card {
+    background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+    padding: 20px 22px; margin-bottom: 10px; display: flex; gap: 14px; align-items: flex-start;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .insight-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+  .insight-emoji { font-size: 26px; flex-shrink: 0; line-height: 1; margin-top: 2px; }
+  .insight-body h3 { font-size: 15px; font-weight: 700; margin-bottom: 5px; }
+  .insight-body p { font-size: 14px; color: var(--sub); line-height: 1.6; }
+  .insight-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 6px; margin-top: 6px; }
+  .tag-revenue { background: var(--green-light); color: #0ca678; }
+  .tag-caution { background: var(--orange-light); color: #e8590c; }
+  .tag-tip { background: var(--purple-light); color: var(--purple); }
+  .tag-tool { background: var(--accent-light); color: var(--accent); }
+
+  /* Timeline */
+  .timeline { position: relative; padding-left: 24px; }
+  .timeline::before { content: ''; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; background: var(--border); border-radius: 1px; }
+  .tl-item { position: relative; margin-bottom: 16px; padding-left: 16px; }
+  .tl-item::before {
+    content: ''; position: absolute; left: -20px; top: 8px; width: 10px; height: 10px;
+    border-radius: 50%; background: var(--accent); border: 2px solid var(--card); box-shadow: 0 0 0 2px var(--accent-light);
+  }
+  .tl-time { font-size: 12px; color: var(--sub); font-weight: 500; margin-bottom: 3px; }
+  .tl-text { font-size: 14px; font-weight: 500; line-height: 1.5; }
+
+  /* Quote card */
+  .quote-card {
+    background: linear-gradient(135deg, #1b1d1f, #26292d); border-radius: var(--radius);
+    padding: 26px 24px; margin-bottom: 10px; position: relative; overflow: hidden;
+  }
+  .quote-card::before { content: '"'; position: absolute; top: -10px; left: 14px; font-size: 80px; color: rgba(255,255,255,0.06); font-family: Georgia, serif; }
+  .quote-text { font-size: 16px; font-weight: 600; color: #fff; line-height: 1.6; position: relative; z-index: 1; }
+  .quote-author { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 10px; position: relative; z-index: 1; }
+
+  /* Glossary */
+  .glossary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px; }
+  .glossary-card {
+    background: var(--card); border-radius: 14px; padding: 16px 18px; border: 1px solid var(--border);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .glossary-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+  .glossary-term { font-size: 15px; font-weight: 700; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+  .glossary-term .emoji { font-size: 18px; }
+  .glossary-def { font-size: 13px; color: var(--sub); line-height: 1.5; }
+
+  /* FAQ bar chart */
+  .faq-bar-list { list-style: none; }
+  .faq-bar-item { margin-bottom: 10px; }
+  .faq-bar-label { font-size: 13px; font-weight: 600; margin-bottom: 4px; display: flex; justify-content: space-between; }
+  .faq-bar-label .cnt { color: var(--accent); font-weight: 800; }
+  .faq-bar-track { height: 8px; background: #edf0f3; border-radius: 4px; overflow: hidden; }
+  .faq-bar-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--accent), #60a5fa); transition: width 1s cubic-bezier(0.16,1,0.3,1); width: 0; }
+
+  /* Zoom card */
+  .zoom-card {
+    background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+    margin-bottom: 14px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .zoom-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+  .zoom-card-header { padding: 20px 22px 16px; }
+  .zoom-date {
+    font-size: 12px; font-weight: 600; color: var(--accent);
+    background: var(--accent-light); display: inline-block;
+    padding: 3px 10px; border-radius: 8px; margin-bottom: 10px;
+  }
+  .zoom-title { font-size: 17px; font-weight: 700; line-height: 1.4; margin-bottom: 6px; }
+  .zoom-desc { font-size: 14px; color: var(--sub); line-height: 1.5; }
+  .zoom-info { padding: 0 22px 18px; display: flex; flex-direction: column; gap: 8px; }
+  .zoom-info-row { display: flex; align-items: center; gap: 10px; font-size: 13px; }
+  .zoom-info-row .zl { color: var(--sub); min-width: 65px; flex-shrink: 0; font-weight: 500; }
+  .zoom-info-row .zv { font-weight: 600; word-break: break-all; }
+  .zoom-info-row .zv a { color: var(--accent); text-decoration: none; }
+  .zoom-info-row .zv a:hover { text-decoration: underline; }
+  .zoom-actions {
+    border-top: 1px solid var(--border); padding: 14px 22px; display: flex; gap: 10px;
+  }
+  .zoom-btn {
+    flex: 1; padding: 12px; border: none; border-radius: 12px;
+    font-size: 14px; font-weight: 700; cursor: pointer; font-family: inherit;
+    transition: all 0.2s; text-decoration: none; text-align: center; display: block;
+  }
+  .zoom-btn.primary { background: var(--accent); color: #fff; }
+  .zoom-btn.primary:hover { background: #1b6ef3; }
+  .zoom-btn.secondary { background: #f2f4f6; color: var(--text); }
+  .zoom-btn.secondary:hover { background: #e5e8eb; }
+  .zoom-card.past { opacity: 0.6; }
+  .zoom-card.past:hover { opacity: 1; }
+  .past-badge {
+    font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px;
+    background: #f2f4f6; color: var(--sub); margin-left: 8px;
+  }
+  .notice-banner {
+    background: #fffbe6; border: 1px solid #ffe58f; border-radius: 14px;
+    padding: 16px 18px; margin-bottom: 24px; display: flex; gap: 12px;
+    align-items: flex-start; font-size: 14px; line-height: 1.6; color: #7c6a0a;
+  }
+  .notice-banner .nb-emoji { font-size: 22px; flex-shrink: 0; }
+  .toast {
+    position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(80px);
+    background: #333d4b; color: #fff; padding: 12px 24px; border-radius: 12px;
+    font-size: 14px; font-weight: 600; opacity: 0;
+    transition: all 0.3s cubic-bezier(0.16,1,0.3,1); z-index: 100; pointer-events: none;
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  /* Footer */
+  .page-footer { text-align: center; padding: 28px 0; color: var(--sub); font-size: 13px; border-top: 1px solid var(--border); margin-top: 20px; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+  .live-dot { display: inline-block; width: 8px; height: 8px; background: var(--green); border-radius: 50%; margin-right: 6px; animation: pulse 2s infinite; }
+
+  /* Scroll animate */
+  .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.5s cubic-bezier(0.16,1,0.3,1), transform 0.5s cubic-bezier(0.16,1,0.3,1); }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="hero fade-in">
+    <div class="hero-badge">📋 사담방 다이제스트</div>
+    <h1>천상계 영드짜 2기<br>핵심 정리</h1>
+    <p>(사담방) 천상계영드 2기 [아모르] · 2/22~3/24 · 31일간</p>
+  </div>
+  <div class="notice-banner fade-in">
+    <div class="nb-emoji">🤖</div>
+    <div>귀여운 끌로가 정리한 거라 틀릴 수도 있어요!<br>틀린 부분은 <strong>나물쓰</strong>에게 말씀해주시면 빠르게 수정할게요!</div>
+  </div>
+  <div class="stats-bar fade-in">
+    <div class="stat-pill"><span class="num">10,927</span><span class="label">전체 메시지</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--green);">3,264</span><span class="label">강사 답변</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--orange);">568</span><span class="label">Q&A 쌍</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--purple);">31일</span><span class="label">운영 기간</span></div>
+  </div>
+  <div class="tab-bar fade-in">
+    <button class="tab-btn active" onclick="switchTab('qa')">주요 Q&A</button>
+    <button class="tab-btn" onclick="switchTab('faq')">자주 묻는 질문</button>
+    <button class="tab-btn" onclick="switchTab('glossary')">용어사전</button>
+  </div>
+
+  <div id="tab-qa" class="tab-content active">
+    <div class="section fade-in">
+      <div class="section-header"><div class="section-icon" style="background:var(--accent-light);">💬</div><div class="section-title">주요 Q&A</div></div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')"><div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">OTT 영상 저작권 괜찮나요?</div><div class="qa-count">24회</div><div class="qa-toggle">▼</div></div><div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge">강사</span><span class="qa-answer-name">아모르</span></div><p>개인채널에서 100만뷰 이상이 반년 이상 살아남았다 → 해볼만함. 방송사 채널만 있다면 위험할 수도. 배급사 어딘지 잘 보세요. OTT꺼여도 방송사/배급사 묻어있을 수 있어요.</p></div></div></div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')"><div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">조회수 떨어졌는데 비공개해야 하나요?</div><div class="qa-count">34회</div><div class="qa-toggle">▼</div></div><div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge">강사</span><span class="qa-answer-name">아모르</span></div><p>가이드라인 위반한 게 없으면 비공개 안 하고 쭉 가도 돼요. 공개했다 비공개했다 반복하면 유튜브가 의심할 수 있어요. 비공개한 건 그냥 두고 다음 영상부터 반영하세요.</p></div></div></div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')"><div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">심정지 기준이 뭔가요? 몇만 이상?</div><div class="qa-count">30회</div><div class="qa-toggle">▼</div></div><div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge">강사</span><span class="qa-answer-name">아모르</span></div><p>100만 뷰 이상이 기본. 40만 이상이면 충분히 할만해요. 떡상한 영상 없는 작품으로 떡상시키면 블루오션이 될 수 있죠!</p></div></div></div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')"><div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">프리미어에서 내보내기하면 빈 영상이 10초 붙어요</div><div class="qa-count">72회</div><div class="qa-toggle">▼</div></div><div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge">강사</span><span class="qa-answer-name">아모르</span></div><p>소스 종료 범위가 끝까지 잡혀있어서 그래요. 마지막 부분에 재생헤드 두고 방향키 ← 한번 → O 누르면 원하는 구간까지만 내보내기됩니다. 또는 내보내기 설정에서 범위를 소스시작/종료로 잡으세요.</p></div></div></div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')"><div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">타입캐스트 추천 캐릭터? 컷백 요금제?</div><div class="qa-count">9회</div><div class="qa-toggle">▼</div></div><div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge">강사</span><span class="qa-answer-name">아모르</span></div><p>김건 많이 쓰고 필재도 좋아요. 컷백은 라이트 요금제(만원짜리)로도 쇼츠 만들기 충분합니다.</p></div></div></div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')"><div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">중복도에 걸리면 어떻게 하나요?</div><div class="qa-count">31회</div><div class="qa-toggle">▼</div></div><div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">갓대두</span></div><p>다른 지표가 좋은데 조회수만 안 나오면 같은 장면/작품으로 다른 채널이 조회 받는 중일 수 있어요. 중복도 확률이 가장 높습니다.</p></div></div></div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')"><div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">영상 올렸는데 조회수가 안 나와요</div><div class="qa-count">70회</div><div class="qa-toggle">▼</div></div><div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge">강사</span><span class="qa-answer-name">아모르</span></div><p>신채널이면 하루이틀 지켜보세요. 1000대면 영상 퀄을 더 올리셔야 해요. 고민 길게 하지 말고 올려보세요. 우리 재시험 기회가 무제한입니다!</p></div></div></div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')"><div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">편집 퀄리티를 어떻게 올리나요?</div><div class="qa-count">72회</div><div class="qa-toggle">▼</div></div><div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">갓대두</span></div><p>더더더 잘게 자르시고 흐름 속도 올리고 사운드 비는 부분 최대한 줄이세요! 400만~500만 간 영상도 합치고 자르고 비틀면 또 떡상할 수 있어요.</p></div></div></div>
+    </div>
+
+    <div class="section fade-in">
+      <div class="quote-card"><div class="quote-text">고민 너무 길게하지 마시고 올려보시고<br>성적표는 시청자한테 받으시죠.<br>우리 재시험 기회가 무제한입니다.<br>오픈북 + 리스크없는 무한 재시험.<br>이만한 꿀이 어딨나요</div><div class="quote-author">— 아모르 (강사)</div></div>
+      <div class="quote-card" style="background:linear-gradient(135deg,#0c2d48,#145374);"><div class="quote-text">왜 난 안나오지 ㅠ →<br>이쯤 했으면 포기할까 →<br>좀만 더 해보자 →<br>오 떡상하네? 신기하다 →<br>와 개꿀 ㅋㅋ</div><div class="quote-author">— 아모르 (강사)</div></div>
+    </div>
+  </div>
+
+  <div id="tab-faq" class="tab-content">
+    <div class="section fade-in">
+      <div class="section-header"><div class="section-icon" style="background:var(--orange-light);">📊</div><div class="section-title">질문 주제별 빈도 (31일 합산)</div></div>
+      <div style="background:var(--card);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);">
+        <ul class="faq-bar-list">
+          <li class="faq-bar-item"><div class="faq-bar-label"><span>채널운영 / 카테고리</span><span class="cnt">93회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="100"></div></div></li>
+          <li class="faq-bar-item"><div class="faq-bar-label"><span>편집 / 프리미어 / 캡컷</span><span class="cnt">72회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="77"></div></div></li>
+          <li class="faq-bar-item"><div class="faq-bar-label"><span>수익화 / 조회수 / 알고리즘</span><span class="cnt">70회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="75"></div></div></li>
+          <li class="faq-bar-item"><div class="faq-bar-label"><span>저품질 / 비공개</span><span class="cnt">34회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="37"></div></div></li>
+          <li class="faq-bar-item"><div class="faq-bar-label"><span>음원 / TTS / 타입캐스트</span><span class="cnt">31회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="33"></div></div></li>
+          <li class="faq-bar-item"><div class="faq-bar-label"><span>심정지 / 비드아이큐</span><span class="cnt">30회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="32"></div></div></li>
+          <li class="faq-bar-item"><div class="faq-bar-label"><span>과제 / 피드백</span><span class="cnt">30회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="32"></div></div></li>
+          <li class="faq-bar-item"><div class="faq-bar-label"><span>저작권 / 클레임</span><span class="cnt">24회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="26"></div></div></li>
+          <li class="faq-bar-item"><div class="faq-bar-label"><span>후킹 / 썸네일</span><span class="cnt">16회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="17"></div></div></li>
+          <li class="faq-bar-item"><div class="faq-bar-label"><span>핀트 (Pint)</span><span class="cnt">6회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="6"></div></div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="section fade-in" style="margin-top:28px;">
+      <div class="section-header"><div class="section-icon" style="background:var(--accent-light);">⚡</div><div class="section-title">한줄 답변 모음</div></div>
+      <div class="qa-card open"><div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">타입캐스트 추천?</div><div class="qa-count">9회</div></div><div class="qa-body" style="max-height:200px;padding:0 20px 14px;"><div class="qa-answer"><p>김건, 필재. 컷백 라이트 만원이면 충분</p></div></div></div>
+      <div class="qa-card open"><div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">심정지 기준?</div><div class="qa-count">30회</div></div><div class="qa-body" style="max-height:200px;padding:0 20px 14px;"><div class="qa-answer"><p>100만 뷰 이상 기본, 40만도 OK. 비드아이큐로 확인</p></div></div></div>
+      <div class="qa-card open"><div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">비공개 해야하나?</div><div class="qa-count">34회</div></div><div class="qa-body" style="max-height:200px;padding:0 20px 14px;"><div class="qa-answer"><p>가이드라인 위반 없으면 냅두세요. 공개/비공개 반복은 더 위험</p></div></div></div>
+      <div class="qa-card open"><div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">프리미어 빈 영상 붙음</div><div class="qa-count">72회</div></div><div class="qa-body" style="max-height:200px;padding:0 20px 14px;"><div class="qa-answer"><p>소스 종료 범위 확인 → 재생헤드 + ← + O</p></div></div></div>
+      <div class="qa-card open"><div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">중복도 걸렸나?</div><div class="qa-count">31회</div></div><div class="qa-body" style="max-height:200px;padding:0 20px 14px;"><div class="qa-answer"><p>같은 장면을 다른 채널이 쓰는 중일 수 있음. 비틀기 강화 필요</p></div></div></div>
+      <div class="qa-card open"><div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">핀트 앱 있나요?</div><div class="qa-count">6회</div></div><div class="qa-body" style="max-height:200px;padding:0 20px 14px;"><div class="qa-answer"><p>아직 웹만 있음. 앱 없음</p></div></div></div>
+      <div class="qa-card open"><div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">저품질 걸렸나?</div><div class="qa-count">3회</div></div><div class="qa-body" style="max-height:200px;padding:0 20px 14px;"><div class="qa-answer"><p>진짜 저품질 걸리는 비율은 1%도 안 됨. 조회수 0이면 의심해볼 만</p></div></div></div>
+    </div>
+  </div>
+
+  <div id="tab-glossary" class="tab-content">
+    <div class="section fade-in">
+      <div class="section-header"><div class="section-icon" style="background:var(--purple-light);">📖</div><div class="section-title">영드짜 용어사전</div></div>
+      <p style="color:var(--sub);font-size:14px;margin-bottom:18px;padding:0 4px;">사담방에서 자주 등장하는 용어를 정리했어요</p>
+      <div class="glossary-grid">
+        <div class="glossary-card"><div class="glossary-term"><span class="emoji">🎬</span> 심정지</div><div class="glossary-def">조회수가 폭발적으로 나온 영상. 비드아이큐에서 그래프가 심장 박동처럼 튀는 모양에서 유래</div></div>
+        <div class="glossary-card"><div class="glossary-term"><span class="emoji">📊</span> 비드아이큐 (VidIQ)</div><div class="glossary-def">유튜브 채널/영상 분석 도구. 심정지 영상 찾기에 필수. 크롬 확장 프로그램</div></div>
+        <div class="glossary-card"><div class="glossary-term"><span class="emoji">🔄</span> 중복도</div><div class="glossary-def">같은 소스/장면을 여러 채널이 사용할 때 유튜브가 노출을 줄이는 현상</div></div>
+        <div class="glossary-card"><div class="glossary-term"><span class="emoji">✂️</span> 비틀기</div><div class="glossary-def">원본 영상의 구성을 바꿔 재편집. 장면 순서, 자막, 효과음 등 변경</div></div>
+        <div class="glossary-card"><div class="glossary-term"><span class="emoji">🎙️</span> 타입캐스트</div><div class="glossary-def">AI 음성 합성(TTS) 서비스. 추천 캐릭터: 김건, 필재</div></div>
+        <div class="glossary-card"><div class="glossary-term"><span class="emoji">✂️</span> 컷백 (Cutback)</div><div class="glossary-def">영상 편집 도구. 라이트 요금제(만원)로 쇼츠 충분</div></div>
+        <div class="glossary-card"><div class="glossary-term"><span class="emoji">📹</span> 오캠 (oCam)</div><div class="glossary-def">화면 녹화 프로그램 (Windows). 맥은 Downie 추천</div></div>
+        <div class="glossary-card"><div class="glossary-term"><span class="emoji">🔍</span> 핀트 (Pint)</div><div class="glossary-def">영드짜 작품별 쇼츠 추이/모아보기 도구. 나물쓰 개발. 웹 전용</div></div>
+        <div class="glossary-card"><div class="glossary-term"><span class="emoji">🌿</span> 가지치기</div><div class="glossary-def">조회수 안 나오는 영상을 비공개 처리. 아모르: 냅두고 다음 영상에 집중</div></div>
+        <div class="glossary-card"><div class="glossary-term"><span class="emoji">🎣</span> 후킹</div><div class="glossary-def">영상 초반 시청자 잡기. 체류시간 → 알고리즘 노출 결정</div></div>
+        <div class="glossary-card"><div class="glossary-term"><span class="emoji">📺</span> 영드짜</div><div class="glossary-def">영화/드라마 짜집기. OTT 콘텐츠를 쇼츠/숏폼으로 만드는 장르</div></div>
+        <div class="glossary-card"><div class="glossary-term"><span class="emoji">💀</span> 저품질</div><div class="glossary-def">유튜브 노출 극감 상태. 실제 걸릴 확률은 1% 미만</div></div>
+        <div class="glossary-card"><div class="glossary-term"><span class="emoji">🎵</span> 음협</div><div class="glossary-def">음원 저작권 클레임. 1분 이하 영상에서는 써도 됨</div></div>
+        <div class="glossary-card"><div class="glossary-term"><span class="emoji">🏆</span> 떡상</div><div class="glossary-def">조회수 폭발. 꾸준히 하면 온다</div></div>
+        <div class="glossary-card"><div class="glossary-term"><span class="emoji">📐</span> 발골</div><div class="glossary-def">영상 피드백에서 강점/약점 세밀 분석. 천상계 수요일 특강</div></div>
+        <div class="glossary-card"><div class="glossary-term"><span class="emoji">🎯</span> 니치</div><div class="glossary-def">틈새시장. 경쟁 적은 니치 = 블루오션</div></div>
+        <div class="glossary-card"><div class="glossary-term"><span class="emoji">📊</span> 시트</div><div class="glossary-def">영상 기획/분석용 스프레드시트. 심정지 리스팅에 사용</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer fade-in">
+    <div><span class="live-dot"></span>천상계 영드짜 2기 사담방</div>
+    <div style="margin-top:4px;">자동 생성 · 2026.03.24 · 총 10,927건 분석</div>
+  </div>
+</div>
+
+<script>
+function switchTab(id) {
+  document.querySelectorAll('.tab-content').forEach(function(el) { el.classList.remove('active'); });
+  document.querySelectorAll('.tab-btn').forEach(function(el) { el.classList.remove('active'); });
+  var tab = document.getElementById('tab-' + id);
+  if (tab) tab.classList.add('active');
+  var map = { qa: 0, faq: 1, glossary: 2 };
+  var btns = document.querySelectorAll('.tab-btn');
+  if (map[id] !== undefined && btns[map[id]]) btns[map[id]].classList.add('active');
+  if (tab) tab.querySelectorAll('.fade-in').forEach(function(el) { el.classList.remove('visible'); observer.observe(el); });
+  if (id === 'faq') setTimeout(animateBars, 200);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+function animateBars() {
+  document.querySelectorAll('.faq-bar-fill').forEach(function(el) { el.style.width = el.dataset.width + '%'; });
+}
+var observer = new IntersectionObserver(
+  function(entries) { entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); }); },
+  { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
+);
+document.querySelectorAll('.fade-in').forEach(function(el, i) {
+  el.style.transitionDelay = Math.min(i * 0.05, 0.3) + 's';
+  observer.observe(el);
+});
+setTimeout(function() {
+  var first = document.querySelector('#tab-qa .qa-card');
+  if (first) first.classList.add('open');
+}, 600);
+</script>
+</body>
+
+</html>
