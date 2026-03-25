@@ -1,0 +1,1733 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>오토워커 1기 사담방 다이제스트</title>
+<style>
+  @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #f7f8fa; --card: #fff; --text: #191f28; --sub: #6b7684;
+    --accent: #3182f6; --accent-light: #e8f3ff;
+    --green: #20c997; --green-light: #e3faf1;
+    --orange: #f97316; --orange-light: #fff4e6;
+    --red: #ef4444; --red-light: #fee2e2;
+    --purple: #8b5cf6; --purple-light: #ede9fe;
+    --border: #e5e8eb; --radius: 16px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.06);
+    --shadow-hover: 0 2px 8px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.1);
+  }
+  body {
+    font-family: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 80px; }
+
+  /* Hero */
+  .hero { text-align: center; padding: 48px 0 28px; }
+  .hero-badge {
+    display: inline-block; background: var(--accent-light); color: var(--accent);
+    font-size: 13px; font-weight: 600; padding: 6px 14px; border-radius: 20px; margin-bottom: 16px;
+  }
+  .hero h1 { font-size: 28px; font-weight: 800; line-height: 1.3; letter-spacing: -0.5px; }
+  .hero p { color: var(--sub); font-size: 15px; margin-top: 8px; }
+
+  /* Tabs */
+  .tab-bar-wrap {
+    position: sticky; top: 0; z-index: 50;
+    margin-bottom: 24px; position: relative;
+  }
+  .tab-bar-wrap::after {
+    content: '→'; position: absolute; right: 0; top: 0; bottom: 0;
+    width: 36px; display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(90deg, transparent, var(--bg) 60%);
+    color: var(--sub); font-size: 14px; pointer-events: none;
+    opacity: 1; transition: opacity 0.3s;
+  }
+  .tab-bar-wrap.scroll-end::after { opacity: 0; }
+  .tab-bar {
+    display: flex; gap: 6px; background: var(--card);
+    border-radius: 14px; padding: 5px; border: 1px solid var(--border);
+    overflow-x: auto; scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+  .tab-bar::-webkit-scrollbar { display: none; }
+  .tab-btn {
+    flex-shrink: 0; padding: 10px 18px; border: none; background: transparent;
+    border-radius: 10px; font-size: 14px; font-weight: 600; color: var(--sub);
+    cursor: pointer; transition: all 0.25s; white-space: nowrap; font-family: inherit;
+    scroll-snap-align: start;
+  }
+  .tab-btn.active {
+    background: var(--accent); color: #fff;
+    box-shadow: 0 2px 12px rgba(49,130,246,0.35);
+    transform: scale(1.02);
+  }
+  .tab-btn:hover:not(.active) { background: var(--accent-light); color: var(--accent); }
+
+  @media (max-width: 520px) {
+    .tab-btn { padding: 9px 14px; font-size: 13px; }
+    .tab-btn.active { padding: 9px 16px; }
+  }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; animation: fadeUp 0.4s cubic-bezier(0.16,1,0.3,1); }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* Stats bar */
+  .stats-bar { display: flex; gap: 8px; margin-bottom: 28px; overflow-x: auto; scrollbar-width: none; }
+  .stats-bar::-webkit-scrollbar { display: none; }
+  .stat-pill {
+    flex-shrink: 0; background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 14px 18px; min-width: 120px; text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .stat-pill:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+  .stat-pill .num { font-size: 22px; font-weight: 800; color: var(--accent); display: block; }
+  .stat-pill .label { font-size: 12px; color: var(--sub); margin-top: 2px; }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; padding: 0 4px; }
+  .section-icon {
+    width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center;
+    justify-content: center; font-size: 18px; flex-shrink: 0;
+  }
+  .section-title { font-size: 18px; font-weight: 700; letter-spacing: -0.3px; }
+
+  /* Q&A Card */
+  .qa-card {
+    background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+    margin-bottom: 10px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; cursor: pointer;
+  }
+  .qa-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+  .qa-header { padding: 16px 20px; display: flex; align-items: flex-start; gap: 12px; }
+  .qa-q-icon {
+    width: 28px; height: 28px; background: var(--accent-light); color: var(--accent);
+    border-radius: 8px; display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 14px; flex-shrink: 0; margin-top: 1px;
+  }
+  .qa-question { font-size: 15px; font-weight: 600; line-height: 1.5; flex: 1; }
+  .qa-count {
+    font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 10px;
+    background: var(--orange-light); color: var(--orange); flex-shrink: 0; margin-top: 2px; white-space: nowrap;
+  }
+  .qa-toggle { color: var(--sub); font-size: 16px; transition: transform 0.3s; flex-shrink: 0; margin-top: 3px; user-select: none; }
+  .qa-card.open .qa-toggle { transform: rotate(180deg); }
+  .qa-body { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), padding 0.3s; }
+  .qa-card.open .qa-body { max-height: 700px; padding: 0 20px 16px; }
+  .qa-answer { background: #f8f9fb; border-radius: 12px; padding: 14px 16px; margin-left: 40px; margin-top: 6px; }
+  .qa-answer-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+  .qa-answer-badge { font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; background: var(--accent); color: #fff; }
+  .qa-answer-badge.sub { background: var(--green); }
+  .qa-answer-badge.member { background: var(--sub); }
+  .qa-answer-name { font-size: 13px; font-weight: 600; color: var(--sub); }
+  .qa-answer p { font-size: 14px; line-height: 1.7; color: #333d4b; }
+
+  /* Insight card */
+  .insight-card {
+    background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+    padding: 20px 22px; margin-bottom: 10px; display: flex; gap: 14px; align-items: flex-start;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .insight-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+  .insight-emoji { font-size: 26px; flex-shrink: 0; line-height: 1; margin-top: 2px; }
+  .insight-body h3 { font-size: 15px; font-weight: 700; margin-bottom: 5px; }
+  .insight-body p { font-size: 14px; color: var(--sub); line-height: 1.6; }
+  .insight-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 6px; margin-top: 6px; }
+  .tag-revenue { background: var(--green-light); color: #0ca678; }
+  .tag-caution { background: var(--orange-light); color: #e8590c; }
+  .tag-tip { background: var(--purple-light); color: var(--purple); }
+  .tag-tool { background: var(--accent-light); color: var(--accent); }
+
+  /* Timeline */
+  .timeline { position: relative; padding-left: 24px; }
+  .timeline::before { content: ''; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; background: var(--border); border-radius: 1px; }
+  .tl-item { position: relative; margin-bottom: 16px; padding-left: 16px; }
+  .tl-item::before {
+    content: ''; position: absolute; left: -20px; top: 8px; width: 10px; height: 10px;
+    border-radius: 50%; background: var(--accent); border: 2px solid var(--card); box-shadow: 0 0 0 2px var(--accent-light);
+  }
+  .tl-time { font-size: 12px; color: var(--sub); font-weight: 500; margin-bottom: 3px; }
+  .tl-text { font-size: 14px; font-weight: 500; line-height: 1.5; }
+
+  /* Quote card */
+  .quote-card {
+    background: linear-gradient(135deg, #1b1d1f, #26292d); border-radius: var(--radius);
+    padding: 26px 24px; margin-bottom: 10px; position: relative; overflow: hidden;
+  }
+  .quote-card::before { content: '"'; position: absolute; top: -10px; left: 14px; font-size: 80px; color: rgba(255,255,255,0.06); font-family: Georgia, serif; }
+  .quote-text { font-size: 16px; font-weight: 600; color: #fff; line-height: 1.6; position: relative; z-index: 1; }
+  .quote-author { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 10px; position: relative; z-index: 1; }
+
+  /* Glossary */
+  .glossary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px; }
+  .glossary-card {
+    background: var(--card); border-radius: 14px; padding: 16px 18px; border: 1px solid var(--border);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .glossary-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+  .glossary-term { font-size: 15px; font-weight: 700; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+  .glossary-term .emoji { font-size: 18px; }
+  .glossary-def { font-size: 13px; color: var(--sub); line-height: 1.5; }
+
+  /* FAQ bar chart */
+  .faq-bar-list { list-style: none; }
+  .faq-bar-item { margin-bottom: 10px; }
+  .faq-bar-label { font-size: 13px; font-weight: 600; margin-bottom: 4px; display: flex; justify-content: space-between; }
+  .faq-bar-label .cnt { color: var(--accent); font-weight: 800; }
+  .faq-bar-track { height: 8px; background: #edf0f3; border-radius: 4px; overflow: hidden; }
+  .faq-bar-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--accent), #60a5fa); transition: width 1s cubic-bezier(0.16,1,0.3,1); width: 0; }
+
+  /* Zoom card */
+  .zoom-card {
+    background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+    margin-bottom: 14px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .zoom-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+  .zoom-card-header { padding: 20px 22px 16px; }
+  .zoom-date {
+    font-size: 12px; font-weight: 600; color: var(--accent);
+    background: var(--accent-light); display: inline-block;
+    padding: 3px 10px; border-radius: 8px; margin-bottom: 10px;
+  }
+  .zoom-title { font-size: 17px; font-weight: 700; line-height: 1.4; margin-bottom: 6px; }
+  .zoom-desc { font-size: 14px; color: var(--sub); line-height: 1.5; }
+  .zoom-info { padding: 0 22px 18px; display: flex; flex-direction: column; gap: 8px; }
+  .zoom-info-row { display: flex; align-items: center; gap: 10px; font-size: 13px; }
+  .zoom-info-row .zl { color: var(--sub); min-width: 65px; flex-shrink: 0; font-weight: 500; }
+  .zoom-info-row .zv { font-weight: 600; word-break: break-all; }
+  .zoom-info-row .zv a { color: var(--accent); text-decoration: none; }
+  .zoom-info-row .zv a:hover { text-decoration: underline; }
+  .zoom-actions {
+    border-top: 1px solid var(--border); padding: 14px 22px; display: flex; gap: 10px;
+  }
+  .zoom-btn {
+    flex: 1; padding: 12px; border: none; border-radius: 12px;
+    font-size: 14px; font-weight: 700; cursor: pointer; font-family: inherit;
+    transition: all 0.2s; text-decoration: none; text-align: center; display: block;
+  }
+  .zoom-btn.primary { background: var(--accent); color: #fff; }
+  .zoom-btn.primary:hover { background: #1b6ef3; }
+  .zoom-btn.secondary { background: #f2f4f6; color: var(--text); }
+  .zoom-btn.secondary:hover { background: #e5e8eb; }
+  .zoom-card.past { position: relative; }
+  .zoom-card.past .zoom-card-header { opacity: 0.45; }
+  .zoom-card.past .zoom-info { opacity: 0.45; }
+  .zoom-card.past:hover .zoom-card-header,
+  .zoom-card.past:hover .zoom-info { opacity: 0.75; }
+  .zoom-card.past .zoom-actions { opacity: 0.6; }
+  .zoom-stamp {
+    position: absolute; top: 20px; right: 20px; z-index: 2;
+    font-size: 14px; font-weight: 800; color: var(--red); padding: 6px 14px;
+    border: 3px solid var(--red); border-radius: 10px;
+    transform: rotate(12deg); letter-spacing: 2px; opacity: 0.7;
+    background: rgba(255,255,255,0.85);
+  }
+  .past-badge {
+    font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px;
+    background: var(--red-light); color: var(--red); margin-left: 8px;
+  }
+  .zoom-bulk-copy {
+    display: block; width: 100%; padding: 14px; border: 2px dashed var(--border);
+    border-radius: 14px; background: transparent; font-size: 14px; font-weight: 600;
+    color: var(--accent); cursor: pointer; font-family: inherit;
+    transition: all 0.2s; margin-top: 12px; text-align: center;
+  }
+  .zoom-bulk-copy:hover { border-color: var(--accent); background: var(--accent-light); }
+
+  /* Link status badges */
+  .link-status {
+    font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 6px;
+    flex-shrink: 0; margin-left: auto;
+  }
+  .link-status.ok { background: var(--green-light); color: var(--green); }
+  .link-status.outdated { background: var(--orange-light); color: var(--orange); }
+  .link-status.broken { background: var(--red-light); color: var(--red); }
+  .link-card.is-broken { opacity: 0.55; border-style: dashed; }
+  .link-card.is-broken:hover { opacity: 0.8; }
+  .link-card.is-outdated { border-left: 3px solid var(--orange); }
+  .notice-banner {
+    background: #fffbe6; border: 1px solid #ffe58f; border-radius: 14px;
+    padding: 16px 18px; margin-bottom: 24px; display: flex; gap: 12px;
+    align-items: flex-start; font-size: 14px; line-height: 1.6; color: #7c6a0a;
+  }
+  .notice-banner .nb-emoji { font-size: 22px; flex-shrink: 0; }
+  .toast {
+    position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(80px);
+    background: #333d4b; color: #fff; padding: 12px 24px; border-radius: 12px;
+    font-size: 14px; font-weight: 600; opacity: 0;
+    transition: all 0.3s cubic-bezier(0.16,1,0.3,1); z-index: 100; pointer-events: none;
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  /* Footer */
+  .page-footer { text-align: center; padding: 28px 0; color: var(--sub); font-size: 13px; border-top: 1px solid var(--border); margin-top: 20px; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+  .live-dot { display: inline-block; width: 8px; height: 8px; background: var(--green); border-radius: 50%; margin-right: 6px; animation: pulse 2s infinite; }
+
+  /* Scroll animate */
+  .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.5s cubic-bezier(0.16,1,0.3,1), transform 0.5s cubic-bezier(0.16,1,0.3,1); }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* Sticky tab bar - handled by .tab-bar-wrap */
+
+  /* Mobile responsive */
+  @media (max-width: 520px) {
+    .container { padding: 16px 12px 80px; }
+    .hero { margin: -16px -12px 20px; padding: 44px 16px 28px; border-radius: 0 0 24px 24px; }
+    .hero h1 { font-size: 24px; }
+    .hero p { font-size: 13px; }
+    .hero-badge { font-size: 12px; padding: 5px 12px; }
+    .stats-bar { gap: 6px; margin-bottom: 20px; }
+    .stat-pill { padding: 12px 14px; min-width: 100px; }
+    .stat-pill .num { font-size: 19px; }
+    .stat-pill .label { font-size: 11px; }
+    .section { margin-bottom: 24px; }
+    .section-title { font-size: 16px; }
+    .qa-header { padding: 14px 16px; gap: 10px; }
+    .qa-question { font-size: 14px; }
+    .qa-count { font-size: 10px; padding: 2px 6px; }
+    .qa-hint { font-size: 11px; }
+    .qa-answer { margin-left: 0; padding: 12px 14px; }
+    .qa-answer p { font-size: 13px; }
+    .insight-card { padding: 16px; gap: 12px; }
+    .insight-emoji { font-size: 22px; }
+    .insight-body h3 { font-size: 14px; }
+    .insight-body p { font-size: 13px; }
+    .quote-card { padding: 22px 20px; }
+    .quote-text { font-size: 14px; }
+    .glossary-grid { grid-template-columns: 1fr; gap: 8px; }
+    .glossary-card { padding: 14px 16px; }
+    .mvp-grid { grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+    .mvp-card { padding: 14px 10px; }
+    .mvp-avatar { font-size: 28px; }
+    .mvp-name { font-size: 13px; }
+    .mvp-desc { font-size: 11px; }
+    .link-card { padding: 12px 14px; gap: 10px; }
+    .link-title { font-size: 13px; }
+    .link-url { font-size: 11px; }
+    .link-status { font-size: 9px; padding: 2px 6px; }
+    .notice-banner { padding: 14px 14px; font-size: 13px; gap: 10px; }
+    .tl-text { font-size: 13px; }
+    .zoom-card-header { padding: 16px 16px 12px; }
+    .zoom-title { font-size: 15px; }
+    .zoom-desc { font-size: 13px; }
+    .zoom-info { padding: 0 16px 14px; }
+    .zoom-actions { padding: 12px 16px; }
+    .zoom-stamp { font-size: 12px; padding: 4px 10px; top: 14px; right: 14px; }
+    .fab-share { width: 46px; height: 46px; font-size: 18px; bottom: 20px; right: 16px; }
+    .fab-top { width: 38px; height: 38px; font-size: 16px; bottom: 74px; right: 16px; }
+    .dark-toggle { width: 36px; height: 36px; font-size: 17px; top: 12px; right: 12px; }
+    .page-footer { font-size: 12px; }
+    .faq-bar-label { font-size: 12px; }
+  }
+
+  /* Q&A answer hint */
+  .qa-hint { font-size: 12px; color: var(--sub); margin-top: 2px; flex-shrink: 0; }
+
+  /* Quote copy button */
+  .quote-copy {
+    position: absolute; top: 12px; right: 14px; z-index: 2;
+    background: rgba(255,255,255,0.12); border: none; color: rgba(255,255,255,0.5);
+    border-radius: 8px; padding: 6px 10px; font-size: 12px; cursor: pointer;
+    font-family: inherit; transition: all 0.2s;
+  }
+  .quote-copy:hover { background: rgba(255,255,255,0.25); color: #fff; }
+
+  /* Glossary search */
+  .glossary-search {
+    width: 100%; padding: 12px 16px 12px 42px; border: 1px solid var(--border);
+    border-radius: 12px; font-size: 14px; font-family: inherit; outline: none;
+    background: var(--card) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='%236b7684' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3C/svg%3E") 14px center no-repeat;
+    transition: border-color 0.2s, box-shadow 0.2s; margin-bottom: 16px;
+  }
+  .glossary-search:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-light); }
+  .glossary-card.hidden { display: none; }
+
+  /* Share FAB */
+  .fab-share {
+    position: fixed; bottom: 24px; right: 24px; z-index: 90;
+    width: 52px; height: 52px; border-radius: 50%; border: none;
+    background: var(--accent); color: #fff; font-size: 22px;
+    box-shadow: 0 4px 16px rgba(49,130,246,0.35);
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: all 0.3s; font-family: inherit;
+  }
+  .fab-share:hover { transform: scale(1.08); box-shadow: 0 6px 24px rgba(49,130,246,0.45); }
+  .fab-share:active { transform: scale(0.95); }
+
+  /* Back to top FAB */
+  .fab-top {
+    position: fixed; bottom: 86px; right: 24px; z-index: 90;
+    width: 44px; height: 44px; border-radius: 50%; border: none;
+    background: var(--card); color: var(--sub); font-size: 18px;
+    box-shadow: var(--shadow); cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.3s; opacity: 0; pointer-events: none; font-family: inherit;
+  }
+  .fab-top.show { opacity: 1; pointer-events: auto; }
+  .fab-top:hover { color: var(--accent); box-shadow: var(--shadow-hover); }
+
+  /* MVP card */
+  .mvp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .mvp-card {
+    background: var(--card); border-radius: 14px; padding: 16px; border: 1px solid var(--border);
+    text-align: center; transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .mvp-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+  .mvp-avatar { font-size: 32px; margin-bottom: 8px; }
+  .mvp-name { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+  .mvp-desc { font-size: 12px; color: var(--sub); line-height: 1.4; }
+
+  /* Nav link */
+  .page-nav {
+    display: flex; gap: 8px; justify-content: center; margin-bottom: 16px; flex-wrap: wrap;
+  }
+  .page-nav a {
+    font-size: 13px; font-weight: 600; color: var(--accent); text-decoration: none;
+    padding: 6px 14px; border-radius: 10px; background: var(--accent-light);
+    transition: all 0.2s;
+  }
+  .page-nav a:hover { background: var(--accent); color: #fff; }
+
+  /* Updated timestamp */
+  .updated-at { font-size: 11px; color: var(--sub); text-align: center; margin-top: 4px; }
+
+  /* Links collection */
+  .link-card {
+    background: var(--card); border-radius: 12px; padding: 14px 16px;
+    border: 1px solid var(--border); margin-bottom: 8px;
+    display: flex; align-items: center; gap: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .link-card:hover { transform: translateY(-1px); box-shadow: var(--shadow-hover); }
+  .link-icon { font-size: 20px; flex-shrink: 0; }
+  .link-body { flex: 1; min-width: 0; }
+  .link-title { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+  .link-url { font-size: 12px; color: var(--accent); word-break: break-all; }
+  .link-url a { color: var(--accent); text-decoration: none; }
+  .link-url a:hover { text-decoration: underline; }
+
+  /* === Enhancement 1: Hero visual === */
+  .hero {
+    position: relative; overflow: hidden;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    margin: -24px -16px 24px; padding: 56px 24px 36px;
+    border-radius: 0 0 32px 32px;
+  }
+  .hero h1 { color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.15); }
+  .hero p { color: rgba(255,255,255,0.8); }
+  .hero-badge { background: rgba(255,255,255,0.2); color: #fff; backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.25); }
+
+  /* Animated mesh blobs */
+  .hero::before, .hero::after {
+    content: ''; position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.4;
+    animation: blobFloat 8s ease-in-out infinite alternate;
+  }
+  .hero::before {
+    width: 300px; height: 300px; top: -80px; right: -60px;
+    background: rgba(255,255,255,0.3);
+  }
+  .hero::after {
+    width: 250px; height: 250px; bottom: -60px; left: -40px;
+    background: rgba(96,165,250,0.35);
+    animation-delay: -4s; animation-duration: 10s;
+  }
+  .hero > * { position: relative; z-index: 1; }
+  @keyframes blobFloat {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(30px, -20px) scale(1.15); }
+  }
+
+  /* Floating particles in hero */
+  .hero-particle {
+    position: absolute; z-index: 0; pointer-events: none;
+    width: var(--sz); height: var(--sz); border-radius: 50%;
+    background: rgba(255,255,255,0.25);
+    animation: particleRise var(--dur) linear infinite;
+    animation-delay: var(--delay);
+  }
+  @keyframes particleRise {
+    0% { transform: translateY(0) scale(0); opacity: 0; }
+    15% { opacity: 1; transform: scale(1); }
+    85% { opacity: 0.6; }
+    100% { transform: translateY(-180px) scale(0.3); opacity: 0; }
+  }
+
+  /* === Enhancement 3: MVP medal shine === */
+  .mvp-avatar { position: relative; display: inline-block; }
+  @keyframes medalShine {
+    0%, 80%, 100% { filter: brightness(1); transform: scale(1); }
+    90% { filter: brightness(1.4); transform: scale(1.15); }
+  }
+  .mvp-card:nth-child(1) .mvp-avatar { animation: medalShine 4s ease infinite 0s; }
+  .mvp-card:nth-child(2) .mvp-avatar { animation: medalShine 4s ease infinite 0.5s; }
+  .mvp-card:nth-child(3) .mvp-avatar { animation: medalShine 4s ease infinite 1s; }
+
+  /* === Enhancement 4: Q&A staggered slide-in === */
+  .qa-card.fade-in-qa {
+    opacity: 0; transition: opacity 0.5s cubic-bezier(0.16,1,0.3,1), transform 0.5s cubic-bezier(0.16,1,0.3,1);
+  }
+  .qa-card.fade-in-qa:nth-child(odd) { transform: translateX(-30px); }
+  .qa-card.fade-in-qa:nth-child(even) { transform: translateX(30px); }
+  .qa-card.fade-in-qa.visible { opacity: 1; transform: translateX(0); }
+
+  /* === Enhancement 6: Confetti particles === */
+  .confetti-particle {
+    position: fixed; pointer-events: none; z-index: 200;
+    font-size: 16px; animation: confettiFall 1s cubic-bezier(0.25,0.46,0.45,0.94) forwards;
+  }
+  @keyframes confettiFall {
+    0% { opacity: 1; transform: translate(0, 0) rotate(0deg) scale(1); }
+    100% { opacity: 0; transform: translate(var(--cx), var(--cy)) rotate(var(--cr)) scale(0.3); }
+  }
+
+  /* === Enhancement 7: Scroll progress bar === */
+  .scroll-progress {
+    position: fixed; top: 0; left: 0; height: 3px; z-index: 200;
+    background: linear-gradient(90deg, #3182f6, #60a5fa, #8b5cf6);
+    width: 0; transition: none;
+  }
+
+  /* === Enhancement 8: Tab bar glassmorphism === */
+  .tab-bar {
+    background: rgba(255,255,255,0.72);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* === Enhancement 9: Timeline pulse === */
+  @keyframes tlPulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 2px var(--accent-light); }
+    50% { transform: scale(1.6); box-shadow: 0 0 8px 3px rgba(49,130,246,0.4); }
+  }
+  .tl-item.tl-pulse::before { animation: tlPulse 0.6s ease; }
+
+  /* === Enhancement 10: FAQ bar tooltip === */
+  .faq-bar-item { position: relative; }
+  .faq-tooltip {
+    position: absolute; top: -8px; right: 0; transform: translateY(-100%);
+    background: #333d4b; color: #fff; font-size: 12px; font-weight: 600;
+    padding: 4px 10px; border-radius: 6px; white-space: nowrap;
+    pointer-events: none; opacity: 0; transition: opacity 0.2s;
+    z-index: 10;
+  }
+  .faq-tooltip::after {
+    content: ''; position: absolute; bottom: -4px; right: 16px;
+    width: 8px; height: 8px; background: #333d4b;
+    transform: rotate(45deg);
+  }
+  .faq-bar-item:hover .faq-tooltip { opacity: 1; }
+
+  /* Enhancement 11 merged into hero particles above */
+
+  /* === Enhancement 12: Dark mode === */
+  .dark-toggle {
+    position: fixed; top: 16px; right: 16px; z-index: 150;
+    width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border);
+    background: var(--card); color: var(--text); font-size: 20px;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    box-shadow: var(--shadow); transition: all 0.3s;
+    font-family: inherit; line-height: 1;
+  }
+  .dark-toggle:hover { box-shadow: var(--shadow-hover); transform: scale(1.08); }
+
+  body.dark {
+    --bg: #1a1b1e; --card: #25262b; --text: #c9cdd1; --sub: #8b949e;
+    --border: #373a40; --shadow: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-hover: 0 2px 8px rgba(0,0,0,0.4);
+  }
+  body.dark .tab-bar { background: rgba(37,38,43,0.82); }
+  body.dark .qa-answer { background: #1e1f23; }
+  body.dark .qa-answer p { color: var(--text); }
+  body.dark .faq-bar-track { background: #373a40; }
+  body.dark .glossary-search { background-color: var(--card); color: var(--text); }
+  body.dark .zoom-btn.secondary { background: #373a40; color: var(--text); }
+  body.dark .notice-banner { background: #332d1a; border-color: #5c4f1f; color: #d4c56a; }
+  body.dark .stat-pill { background: var(--card); border-color: var(--border); }
+  body.dark .insight-card { background: var(--card); }
+  body.dark .insight-body p { color: var(--sub); }
+  body.dark .hero { background: linear-gradient(135deg, #3b4fa8 0%, #4a3080 50%, #7c3d8f 100%); }
+
+  /* === Enhancement 5: Quote typing cursor === */
+  .quote-text.typing-active::after {
+    content: '|'; animation: blink 0.7s step-end infinite; margin-left: 1px;
+  }
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Hero -->
+  <div class="hero fade-in">
+    <div class="hero-badge">📋 사담방 다이제스트</div>
+    <h1>오토워커 1기<br>핵심 정리</h1>
+    <p>(사담방) 오토워커 1기 [개발남노씨] · 526명</p>
+  </div>
+
+  <div class="notice-banner fade-in">
+    <div class="nb-emoji">🤖</div>
+    <div>
+      귀여운 끌로가 정리한 거라 틀릴 수도 있어요!<br>
+      틀린 부분은 <strong>나물쓰</strong>에게 말씀해주시면 빠르게 수정할게요!
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tab-bar-wrap fade-in" id="tabBarWrap">
+    <div class="tab-bar" id="tabBar">
+      <button class="tab-btn active" onclick="switchTab('mar23')">3/23 (일)</button>
+      <button class="tab-btn" onclick="switchTab('mar24')">3/24 (월)</button>
+      <button class="tab-btn" onclick="switchTab('faq')">자주 묻는 질문</button>
+      <button class="tab-btn" onclick="switchTab('glossary')">용어사전</button>
+      <button class="tab-btn" onclick="switchTab('links')">🔗 링크 모음</button>
+      <button class="tab-btn" onclick="switchTab('zoom')">🎥 Zoom</button>
+    </div>
+  </div>
+
+  <!-- ==================== 3/23 TAB ==================== -->
+  <div id="tab-mar23" class="tab-content active">
+
+    <div class="stats-bar fade-in">
+      <div class="stat-pill"><span class="num">1,828</span><span class="label">전체 메시지</span></div>
+      <div class="stat-pill"><span class="num" style="color:var(--green);">240</span><span class="label">강사·조교 답변</span></div>
+      <div class="stat-pill"><span class="num" style="color:var(--orange);">176</span><span class="label">Q&A 쌍</span></div>
+      <div class="stat-pill"><span class="num" style="color:var(--purple);">17h</span><span class="label">활동 시간</span></div>
+    </div>
+
+    <!-- 공지 -->
+    <div class="section fade-in">
+      <div class="section-header">
+        <div class="section-icon" style="background:var(--red-light);">🚨</div>
+        <div class="section-title">3/23 주요 공지</div>
+      </div>
+      <div class="insight-card" style="border-left:3px solid var(--orange);">
+        <div class="insight-emoji">🔧</div>
+        <div class="insight-body">
+          <h3>튜브워커 사이트 점검</h3>
+          <p><strong>목요일 저녁 7시까지 점검</strong>으로 안내됐고,<br>점검 중 크레딧 차감은 카페에 글 남기면 조치된다고 안내됨</p>
+          <span class="insight-tag tag-caution">점검 안내</span>
+        </div>
+      </div>
+      <div class="insight-card" style="border-left:3px solid var(--accent);">
+        <div class="insight-emoji">💳</div>
+        <div class="insight-body">
+          <h3>크레딧 충전 시스템 구현 중</h3>
+          <p>결제 시스템 준비 중. 바로 충전하려면 구글 폼 작성 → 약 1시간 주기로 순차 지급</p>
+          <span class="insight-tag tag-tool">운영 안내</span>
+        </div>
+      </div>
+      <div class="insight-card" style="border-left:3px solid var(--green);">
+        <div class="insight-emoji">📋</div>
+        <div class="insight-body">
+          <h3>카톡방 질의응답 정리본 업로드 시작</h3>
+          <p>비빔 조교 — 매일 카톡방 대화를 정리해 카페 & 노션에 업로드 예정. 18, 19일자 업로드 완료</p>
+          <span class="insight-tag tag-tip">신규</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q&A -->
+    <div class="section fade-in">
+      <div class="section-header">
+        <div class="section-icon" style="background:var(--accent-light);">💬</div>
+        <div class="section-title">주요 Q&A</div>
+      </div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">튜브워커 아이디/비번은 어디서 받나요?</div>
+          <div class="qa-count">21회</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">비빔</span></div>
+            <p>카페에서 과제 제출 → 구글 폼 작성하면 아이디/비번이 담긴 메일이 와요!<br><a href="https://cafe.naver.com/autoworker1/33" style="color:var(--accent);">카페 구글폼 바로가기</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">크레딧 소모가 너무 빨라요 / 충전은 어떻게?</div>
+          <div class="qa-count">38회</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge">강사</span><span class="qa-answer-name">개발남 노씨</span></div>
+            <p>크레딧 관련은 카페 글로 올려주세요! 충전 될 겁니다. 결제 시스템 구현 중이니, 지금은 구글 폼 작성하면 약 1시간 주기로 순차 지급해드려요.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">이미지 생성 시 비율이 잘려요 / 스타일 변경하면?</div>
+          <div class="qa-count">26회</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">봄동</span></div>
+            <p>비율 문제 같아요. 튜브워커 기능 관련 문의는 네이버 카페 게시판에 올려주시면 기능 개발에 참고됩니다!</p>
+          </div>
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">버터떡</span></div>
+            <p>이미지 프롬프트는 연필 모양(수정) 버튼 누르면 그 안에 있어요. 전체 드래그해서 클로드에서 다운시킬 수도 있습니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">script.txt가 안 생기고 .md 파일만 나와요</div>
+          <div class="qa-count">12회</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge">강사</span><span class="qa-answer-name">개발남 노씨</span></div>
+            <p>컴퓨터에 따라 .md로 생성되는 경우가 있어요. 클로드한테 "script.txt에 텍스트만 담아서 저장해줘" 하고, "앞으로도 이렇게 출력하게 스킬을 수정해보자" 하면 됩니다!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">일레븐랩스 개인 구독 vs 강사님 API 뭐가 나아요?</div>
+          <div class="qa-count">11회</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">나물쓰</span></div>
+            <p>비용 절감 목적이면 강사님이 대량 구매해서 제공하는 API가 더 싸요! 일레븐랩스 개인 구독도 API 사용량만큼 비용이 나가니까요.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">그록/플로우 자동화는 언제 되나요?</div>
+          <div class="qa-count">50회</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge">강사</span><span class="qa-answer-name">개발남 노씨</span></div>
+            <p>그록, 플로우 기능은 시간이 더 걸릴 수 있어요. 우선 사용 편의성 개선 먼저 → 이후 플로우 → 그록 순으로 추가합니다. 목요일에 따라오시면 쉽게 결과 받으실 수 있게 준비해놓겠습니다!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">캡컷 프로젝트 연결이 안 돼요</div>
+          <div class="qa-count">15회</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">나물쓰</span></div>
+            <p>폴더 안에 하나 더 있는 폴더를 CapCut Drafts 폴더에 직접 넣어주세요! 또는 클로드에게 "캡컷 zip 주면서 연결해달라"고 하면 됩니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">대본에 장면 전환/타임코드가 섞여 나와요</div>
+          <div class="qa-count">27회</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">구스범스</span></div>
+            <p>강사님이 이번 주에 업그레이드된 대본 작성 스킬을 알려줄 예정이에요. 그 스킬을 만들어가는 과정을 여러 번 같이 해보시면 원하는 결과 얻으실 수 있을 거예요!</p>
+          </div>
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">나물쓰</span></div>
+            <p>대본 내용이 변하는 건 아니고, 영상에서 강조할 부분을 찾아서 적용해주는 거예요. 순수하게 나레이션/대사만 이어져야 해요!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 인사이트 -->
+    <div class="section fade-in">
+      <div class="section-header">
+        <div class="section-icon" style="background:var(--purple-light);">💡</div>
+        <div class="section-title">인사이트</div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-emoji">🎙️</div>
+        <div class="insight-body">
+          <h3>TTS 음성 싱크 밀림 원인</h3>
+          <p>대본에 일레븐랩스가 인식 못 하는 문자나 따옴표가 너무 많으면 싱크가 밀림. 목요일 스킬에서 대본 포맷 정리 예정</p>
+          <span class="insight-tag tag-tip">강사 직접 설명</span>
+        </div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-emoji">🎹</div>
+        <div class="insight-body">
+          <h3>V2 vs V3 음성 모델</h3>
+          <p>V3는 발음 좋지만 중간에 일관성 깨질 수 있음. 쭉 이어지는 목소리 원하면 V2 추천</p>
+          <span class="insight-tag tag-tool">조교 대국밥</span>
+        </div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-emoji">💰</div>
+        <div class="insight-body">
+          <h3>클로드 맥스(100달러) 필수?</h3>
+          <p>본격적으로 대본 많이 뽑으려면 맥스 구독 추천. 젠스파크 결제한 분은 취소 가능</p>
+          <span class="insight-tag tag-revenue">비용</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 타임라인 -->
+    <div class="section fade-in">
+      <div class="section-header">
+        <div class="section-icon" style="background:var(--green-light);">⏰</div>
+        <div class="section-title">타임라인</div>
+      </div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-time">05:00</div><div class="tl-text">📢 개발남 노씨 — 크레딧 충전 바로 가능 안내</div></div>
+        <div class="tl-item"><div class="tl-time">06:09</div><div class="tl-text">💡 버터떡 조교 — 카페 게시판 Q&A 댓글 운영 제안</div></div>
+        <div class="tl-item"><div class="tl-time">07:16</div><div class="tl-text">💳 개발남 노씨 — 크레딧 충전 구글 폼 공유</div></div>
+        <div class="tl-item"><div class="tl-time">08:14</div><div class="tl-text">⏸️ 개발남 노씨 — "대본 비축하고, 수요일부터 제대로 가죠"</div></div>
+        <div class="tl-item"><div class="tl-time">10:22</div><div class="tl-text">🗺️ 개발남 노씨 — 그록/플로우 로드맵 공유</div></div>
+        <div class="tl-item"><div class="tl-time">12:49</div><div class="tl-text">📋 비빔 조교 — 질의응답 정리본 카페·노션 업로드 시작</div></div>
+        <div class="tl-item"><div class="tl-time">13:38</div><div class="tl-text">🔧 개발남 노씨 — TTS 싱크 밀림 원인 설명 (대본 포맷)</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== 3/24 TAB ==================== -->
+  <div id="tab-mar24" class="tab-content">
+
+    <div class="stats-bar fade-in">
+      <div class="stat-pill"><span class="num">385</span><span class="label">전체 메시지</span></div>
+      <div class="stat-pill"><span class="num" style="color:var(--green);">63</span><span class="label">강사·조교 답변</span></div>
+      <div class="stat-pill"><span class="num" style="color:var(--orange);">13</span><span class="label">주요 Q&A</span></div>
+      <div class="stat-pill"><span class="num" style="color:var(--purple);">12h</span><span class="label">활동 시간</span></div>
+    </div>
+
+    <!-- 공지 -->
+    <div class="section fade-in">
+      <div class="section-header">
+        <div class="section-icon" style="background:var(--red-light);">🚨</div>
+        <div class="section-title">3/24 주요 공지</div>
+      </div>
+      <div class="insight-card" style="border-left:3px solid var(--orange);">
+        <div class="insight-emoji">🔄</div>
+        <div class="insight-body">
+          <h3>튜브워커 사이트 점검 — 목요일 저녁 7시까지</h3>
+          <p>점검 기한이 <strong>목요일 저녁 7시</strong>까지로 안내됨</p>
+          <span class="insight-tag tag-caution">점검 안내</span>
+        </div>
+      </div>
+      <div class="insight-card" style="border-left:3px solid var(--red);">
+        <div class="insight-emoji">⛔</div>
+        <div class="insight-body">
+          <h3>일레븐랩스 개인 결제 금지</h3>
+          <p>개발남 노씨 직접 안내: "구독 최대한 빨리 취소하고 저희 통해서 하는 게 더 저렴하고 편합니다"</p>
+          <span class="insight-tag tag-caution">강사 직접 안내</span>
+        </div>
+      </div>
+      <div class="insight-card" style="border-left:3px solid var(--accent);">
+        <div class="insight-emoji">🔧</div>
+        <div class="insight-body">
+          <h3>튜브워커 업그레이드 중 → 목요일 7시 라이브</h3>
+          <p>온세상 — 튜브워커는 현재 업그레이드 중이라 안 됨. <strong>목요일 저녁 7시</strong> 강의 시간에 다같이 해볼 예정</p>
+          <span class="insight-tag tag-tool">일정 안내</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q&A -->
+    <div class="section fade-in">
+      <div class="section-header">
+        <div class="section-icon" style="background:var(--accent-light);">💬</div>
+        <div class="section-title">주요 Q&A</div>
+      </div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">그록 유료 결제해야 하나요?</div>
+          <div class="qa-count">6회</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge">강사</span><span class="qa-answer-name">개발남 노씨</span></div>
+            <p>지금은 그록이 가성비 최고! 바로 하지 말고 이것저것 익숙해지면 추천. 유튜브 조회수 수익 포맷은 그록으로 충분해요.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">채널 링크 여기 공유해도 되나요?</div>
+          <div class="qa-count">4회</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge">강사</span><span class="qa-answer-name">개발남 노씨</span></div>
+            <p>채널 공유하면 알고리즘 안 좋아져요. 대부분 잠깐 보고 꺼버리니까 유튜브가 노출을 줄입니다.</p>
+          </div>
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge member">멤버</span><span class="qa-answer-name">제우스힐</span></div>
+            <p>설명에 내용/타임스탬프/#검색어 모두 넣고 알고리즘 노출 설정부터 세팅하세요. 체류시간이 길어지면 더 밀어줍니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">그록 자동화는 안 되나요?</div>
+          <div class="qa-count">8회</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">구스범스</span></div>
+            <p>그록이 자동화를 막아서 수동으로 해야 해요. 이미지 다운 → 그록에서 영상 생성 → 튜브워커 업로드하면 편집은 자동화 가능! 뚫는 시도 계속 중입니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">스킬 파일이 사라졌어요</div>
+          <div class="qa-count">3회</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge member">멤버</span><span class="qa-answer-name">업고기</span></div>
+            <p>클로드 코드한테 물어보면 복원해줘요. 채널 영어/프리셋 한글 충돌로 맘대로 지운 거였는데, "삭제한 흔적이 있다" 하면 살려냅니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">영상 1개 올렸는데 노출이 0이에요</div>
+          <div class="qa-count">5회</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge">강사</span><span class="qa-answer-name">개발남 노씨</span></div>
+            <p>저도 첫 3개 영상 조회수 합쳐 150이었어요 ㅋㅋ 2달간 공부하고, 자동화로 하루 3~4개씩 올리니까 5일 만에 수익창출! 비슷한 포맷 많이 참고하세요.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">하루에 영상 몇 개까지 올려도 되나요? 대량 제재 안 받나요?</div>
+          <div class="qa-count">7회</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">구스범스</span></div>
+            <p>1개 채널에 4개를 올릴 수도 있고, 각각의 채널에 1개씩 올릴 수도 있어요. 그때그때 다르지만 하루에 4개 정도를 생성했다고 보시면 됩니다.</p>
+          </div>
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge member">멤버</span><span class="qa-answer-name">도비프</span></div>
+            <p>1개 채널에 2~3개 올리셨다고 합니다.</p>
+          </div>
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge member">멤버</span><span class="qa-answer-name">bnf</span></div>
+            <p>⚠️ 저는 쇼츠로 하루에 10개 올렸다가 채널이 삭제됐어요 ㅠㅠ 롱폼도 하루에 적정 수를 지키는 게 좋습니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">스킬 zip 파일명이 강의 영상과 다른데요?</div>
+          <div class="qa-count">2회</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge member">멤버</span><span class="qa-answer-name">아는아이</span></div>
+            <p>같은 파일이에요! 한글 폴더가 인식이 잘 안 돼서 영어로 바꾸셨어요. autoworkers-1st.zip을 받으시면 됩니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">프리미엄 강의 다시보기는 언제 올라오나요?</div>
+          <div class="qa-count">3회</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge member">멤버</span><span class="qa-answer-name">옥빛소리</span></div>
+            <p>보통 다음 날 점심쯤 올라와요. 강의 끝나자마자 인코딩 시작하는데 고화질 × 5시간 이상 조합이라 시간이 걸린다고 합니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">그록 구독료 얼마인가요? 할인 꿀팁?</div>
+          <div class="qa-count">5회</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge member">멤버</span><span class="qa-answer-name">아는아이</span></div>
+            <p>월 30달러예요. 결제하고 바로 취소 누르면 <strong>3개월에 30달러</strong>(한달 가격으로 3달) 제안이 와요!</p>
+          </div>
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge member">멤버</span><span class="qa-answer-name">효은이</span></div>
+            <p>결제하고 취소 누르면 3개월에 30달러 하게 해준대요.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">오토워커 1기 스킬 zip 파일이 영상과 다른데요?</div>
+          <div class="qa-count">3회</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge member">멤버</span><span class="qa-answer-name">아는아이</span></div>
+            <p>같은 파일이에요! 한글 폴더가 인식이 잘 안 돼서 영어로 바꾸셨어요. autoworkers-1st.zip을 받으시면 됩니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 인사이트 -->
+    <div class="section fade-in">
+      <div class="section-header">
+        <div class="section-icon" style="background:var(--purple-light);">💡</div>
+        <div class="section-title">인사이트</div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-emoji">📈</div>
+        <div class="insight-body">
+          <h3>개발남 노씨의 수익 여정 공개</h3>
+          <p>첫 3개 조회수 150 → 2달 독학 → 자동화 후 5일 만에 1차 수익창출<br>이후: 6→14→15→30→50→95만원 월수익 성장</p>
+          <span class="insight-tag tag-revenue">수익 사례</span>
+        </div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-emoji">🎨</div>
+        <div class="insight-body">
+          <h3>클로드 시각화 (Show Me) 발견</h3>
+          <p>온도도 — 클로드 채팅에서 "~시각화해줘" 또는 "Show Me" 붙이면 인터랙티브 차트 생성. 코드 필요 없음!</p>
+          <span class="insight-tag tag-tool">도구 팁</span>
+        </div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-emoji">⚠️</div>
+        <div class="insight-body">
+          <h3>AI 콘텐츠 채널 정지 리스크</h3>
+          <p>AI 콘텐츠 고유의 어려움 + 영상 짜집기는 저작권 문제. 카테고리마다 장단점, 강사님들도 정지 경험 있음</p>
+          <span class="insight-tag tag-caution">주의사항</span>
+        </div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-emoji">🚫</div>
+        <div class="insight-body">
+          <h3>유사 자동화 프로그램 주의</h3>
+          <p>달빛 — 지인이 '딸깍 자동화' 프로그램 강의를 결제했는데, 이미지·영상만 자동이고 결국 캡컷에서 직접 합쳐야 해서 돈 날렸다는 후기. 충사마 — Spark Studio라는 프로그램의 인터페이스로 추정. 우리 오토워커는 캡컷까지 자동!</p>
+          <span class="insight-tag tag-caution">비교 주의</span>
+        </div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-emoji">💻</div>
+        <div class="insight-body">
+          <h3>맥 사용자 추천 사양</h3>
+          <p>접속종료 — 맥북 M1 8기가도 충분. 집에서만 쓸 거면 맥미니 추천, 맥북 사실 거면 15인치 추천. 서버 처리 방식이라 사양을 크게 요구하지 않음</p>
+          <span class="insight-tag tag-tip">장비 팁</span>
+        </div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-emoji">🔥</div>
+        <div class="insight-body">
+          <h3>노교수님 자동화, 외부에서도 화제</h3>
+          <p>쇼츠코인 — 다른 단톡방에서도 노교수님 자동화가 엄청 핫했다며, 다들 따라하려고 공부 중이라는 외부 반응 공유</p>
+          <span class="insight-tag tag-revenue">외부 반응</span>
+        </div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-emoji">🎬</div>
+        <div class="insight-body">
+          <h3>프리미엄 피드백 영상 업로드 예정</h3>
+          <p>버터떡(조교) — 오늘 프리미엄 피드백 못 들은 분들을 위해 영상으로 올려주신다고 안내</p>
+          <span class="insight-tag tag-tip">강의 안내</span>
+        </div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-emoji">💰</div>
+        <div class="insight-body">
+          <h3>그록 구독 3개월 할인 꿀팁</h3>
+          <p>충사마/아는아이/효은이 — 그록 월 30달러 결제 후 바로 취소 누르면 3개월에 30달러(한달 가격으로 3달) 할인 제안이 온다는 팁 공유</p>
+          <span class="insight-tag tag-revenue">비용 절약</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MVP -->
+    <div class="section fade-in">
+      <div class="section-header">
+        <div class="section-icon" style="background:var(--green-light);">🏅</div>
+        <div class="section-title">오늘의 MVP</div>
+      </div>
+      <div class="mvp-grid">
+        <div class="mvp-card">
+          <div class="mvp-avatar">🥇</div>
+          <div class="mvp-name">온도도</div>
+          <div class="mvp-desc">클로드 시각화(Show Me) 기능 발견 & 공유. 벽타기 요약 HTML 직접 제작</div>
+        </div>
+        <div class="mvp-card">
+          <div class="mvp-avatar">🥈</div>
+          <div class="mvp-name">쇼츠코인</div>
+          <div class="mvp-desc">클로드 스킬/에이전트 폴더 구조 공유. 결과물보다 과정을 같이 이해하자는 취지의 팁 공유</div>
+        </div>
+        <div class="mvp-card">
+          <div class="mvp-avatar">🥉</div>
+          <div class="mvp-name">업고기</div>
+          <div class="mvp-desc">스킬 파일 삭제 원인 규명. 클로드 코드 복원 팁 공유</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 명언 -->
+    <div class="section fade-in">
+      <div class="quote-card" style="position:relative;">
+        <button class="quote-copy" onclick="event.stopPropagation();copyToClipboard('결과물을 받는 것도 좋지만, 과정을 같이 이해해두면 다음 작업이 훨씬 쉬워져요. — 쇼츠코인')">📋 복사</button>
+        <div class="quote-text">결과물을 받는 것도 좋지만,<br>과정을 같이 이해해두면<br>다음 작업이 훨씬 쉬워져요.</div>
+        <div class="quote-author">— 쇼츠코인</div>
+      </div>
+      <div class="quote-card" style="background:linear-gradient(135deg,#0c2d48,#145374);position:relative;">
+        <button class="quote-copy" onclick="event.stopPropagation();copyToClipboard('저는 첫 3개 영상 조회수 총 150 ㅋㅋ 2달동안 유튜브 무료강의 다 섭렵하고 자동화 이후 5일만에 수익창출 달성! — 개발남 노씨')">📋 복사</button>
+        <div class="quote-text">저는 첫 3개 영상 조회수 총 150 ㅋㅋ<br>2달동안 유튜브 무료강의 다 섭렵하고<br>자동화 이후 5일만에 수익창출 달성!</div>
+        <div class="quote-author">— 개발남 노씨 (강사)</div>
+      </div>
+    </div>
+
+    <!-- 타임라인 -->
+    <div class="section fade-in">
+      <div class="section-header">
+        <div class="section-icon" style="background:var(--green-light);">⏰</div>
+        <div class="section-title">타임라인</div>
+      </div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-time">01:29</div><div class="tl-text">📢 봄동 조교 — 재오픈 일정 변경 공지</div></div>
+        <div class="tl-item"><div class="tl-time">02:05</div><div class="tl-text">⛔ 개발남 노씨 — 일레븐랩스 결제 금지</div></div>
+        <div class="tl-item"><div class="tl-time">03:17</div><div class="tl-text">🎨 온도도 — 클로드 시각화 기능 공유</div></div>
+        <div class="tl-item"><div class="tl-time">06:03</div><div class="tl-text">💬 유튜브 노출/알고리즘 대토론</div></div>
+        <div class="tl-item"><div class="tl-time">06:31</div><div class="tl-text">📈 개발남 노씨 — 수익 여정 공개</div></div>
+        <div class="tl-item"><div class="tl-time">07:37</div><div class="tl-text">🧠 쇼츠코인 — 스킬/에이전트 구조 공유</div></div>
+        <div class="tl-item"><div class="tl-time">07:46</div><div class="tl-text">✅ 구스범스 — 튜브워커 영상 업로드 버튼 추가</div></div>
+        <div class="tl-item"><div class="tl-time">08:16</div><div class="tl-text">📋 비빔 조교 — 3/20~21 정리본 업로드</div></div>
+        <div class="tl-item"><div class="tl-time">21:27</div><div class="tl-text">📅 김포트 — 튜브워커 목요일 진행 확인</div></div>
+        <div class="tl-item"><div class="tl-time">21:29</div><div class="tl-text">💬 bnf — 영상 업로드 빈도 & 대량 제재 토론</div></div>
+        <div class="tl-item"><div class="tl-time">22:06</div><div class="tl-text">🚫 달빛 — 유사 자동화 프로그램 주의 경험 공유</div></div>
+        <div class="tl-item"><div class="tl-time">22:26</div><div class="tl-text">📢 봄동 조교 — 목요일 9시 일정 안내</div></div>
+        <div class="tl-item"><div class="tl-time">23:17</div><div class="tl-text">💻 접속종료 — 맥 사양 추천 (M1/맥미니/맥북)</div></div>
+        <div class="tl-item"><div class="tl-time">00:05</div><div class="tl-text">🔥 쇼츠코인 — 노교수님 자동화 다른 단톡에서 화제 공유</div></div>
+        <div class="tl-item"><div class="tl-time">00:08</div><div class="tl-text">💬 월억누님/충사마 — 클로드 앱 일시 장애 보고</div></div>
+        <div class="tl-item"><div class="tl-time">00:53</div><div class="tl-text">❓ 라벤다 — 스킬 zip 파일명 변경 문의 → 해결</div></div>
+        <div class="tl-item"><div class="tl-time">01:24</div><div class="tl-text">🎬 파이팅코리아 — 프리미엄 다시보기 업로드 시간 문의</div></div>
+        <div class="tl-item"><div class="tl-time">07:34</div><div class="tl-text">📋 해퐁/굼자동화 — 오토워커 메일 실행 + 과제 제출 문의</div></div>
+        <div class="tl-item"><div class="tl-time">07:36</div><div class="tl-text">🔧 온세상 — 튜브워커 업그레이드 중, 목요일 7시 라이브 안내</div></div>
+        <div class="tl-item"><div class="tl-time">08:10</div><div class="tl-text">💰 충사마/아는아이 — 그록 3개월 30달러 할인 꿀팁 공유</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== FAQ TAB ==================== -->
+  <div id="tab-faq" class="tab-content">
+
+    <div class="section fade-in">
+      <div class="section-header">
+        <div class="section-icon" style="background:var(--orange-light);">📊</div>
+        <div class="section-title">질문 주제별 빈도 (3/23~25 합산)</div>
+      </div>
+      <div style="background:var(--card);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);">
+        <ul class="faq-bar-list">
+          <li class="faq-bar-item"><div class="faq-bar-label"><span>그록 / 영상 생성</span><span class="cnt">55회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="100"></div></div></li>
+          <li class="faq-bar-item"><div class="faq-bar-label"><span>강의 일정 / 과제</span><span class="cnt">42회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="76"></div></div></li>
+          <li class="faq-bar-item"><div class="faq-bar-label"><span>크레딧 충전 / 소모</span><span class="cnt">38회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="69"></div></div></li>
+          <li class="faq-bar-item"><div class="faq-bar-label"><span>스킬 / 에이전트 설정</span><span class="cnt">34회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="68"></div></div></li>
+          <li class="faq-bar-item"><div class="faq-bar-label"><span>대본 / 스크립트</span><span class="cnt">27회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="54"></div></div></li>
+          <li class="faq-bar-item"><div class="faq-bar-label"><span>이미지 생성 / 비율</span><span class="cnt">26회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="52"></div></div></li>
+          <li class="faq-bar-item"><div class="faq-bar-label"><span>유튜브 노출 / 업로드 빈도</span><span class="cnt">28회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="56"></div></div></li>
+          <li class="faq-bar-item"><div class="faq-bar-label"><span>점검 / 오류</span><span class="cnt">20회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="40"></div></div></li>
+          <li class="faq-bar-item"><div class="faq-bar-label"><span>컴퓨터 사양 / 장비</span><span class="cnt">18회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="36"></div></div></li>
+          <li class="faq-bar-item"><div class="faq-bar-label"><span>캡컷 편집</span><span class="cnt">15회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="30"></div></div></li>
+          <li class="faq-bar-item"><div class="faq-bar-label"><span>닉네임 / 카페 가입</span><span class="cnt">12회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="24"></div></div></li>
+          <li class="faq-bar-item"><div class="faq-bar-label"><span>튜브워커 로그인 / 계정</span><span class="cnt">11회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="22"></div></div></li>
+          <li class="faq-bar-item"><div class="faq-bar-label"><span>일레븐랩스 / TTS</span><span class="cnt">11회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="22"></div></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section fade-in" style="margin-top:28px;">
+      <div class="section-header">
+        <div class="section-icon" style="background:var(--accent-light);">⚡</div>
+        <div class="section-title">한줄 답변 모음</div>
+      </div>
+
+      <div class="qa-card open">
+        <div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">튜브워커 아이디/비번?</div><div class="qa-count">21회</div></div>
+        <div class="qa-body" style="max-height:200px;padding:0 20px 14px;"><div class="qa-answer"><p>카페 과제 제출 → 구글 폼 작성 → 메일로 옴</p></div></div>
+      </div>
+      <div class="qa-card open">
+        <div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">크레딧 충전 어떻게?</div><div class="qa-count">38회</div></div>
+        <div class="qa-body" style="max-height:200px;padding:0 20px 14px;"><div class="qa-answer"><p>구글 폼 작성 → 1시간 주기 순차 지급. 카페에 글 올려도 됨</p></div></div>
+      </div>
+      <div class="qa-card open">
+        <div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">일레븐랩스 결제해야?</div><div class="qa-count">11회</div></div>
+        <div class="qa-body" style="max-height:200px;padding:0 20px 14px;"><div class="qa-answer"><p>❌ 하지 마세요. 강사님 API가 더 저렴. 이미 결제했으면 빨리 취소</p></div></div>
+      </div>
+      <div class="qa-card open">
+        <div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">그록 결제해야?</div><div class="qa-count">6회</div></div>
+        <div class="qa-body" style="max-height:200px;padding:0 20px 14px;"><div class="qa-answer"><p>바로 하지 말고 익숙해진 뒤에. 가성비는 최고</p></div></div>
+      </div>
+      <div class="qa-card open">
+        <div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">script.txt가 안 생겨요</div><div class="qa-count">12회</div></div>
+        <div class="qa-body" style="max-height:200px;padding:0 20px 14px;"><div class="qa-answer"><p>클로드한테 "script.txt에 텍스트만 담아서 저장해줘" + 스킬 수정 요청</p></div></div>
+      </div>
+      <div class="qa-card open">
+        <div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">캡컷 연결이 안 돼요</div><div class="qa-count">15회</div></div>
+        <div class="qa-body" style="max-height:200px;padding:0 20px 14px;"><div class="qa-answer"><p>안쪽 폴더를 CapCut Drafts에 직접 넣기. 또는 클로드에 zip 주면서 요청</p></div></div>
+      </div>
+      <div class="qa-card open">
+        <div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">채널 링크 공유해도 되나요?</div><div class="qa-count">4회</div></div>
+        <div class="qa-body" style="max-height:200px;padding:0 20px 14px;"><div class="qa-answer"><p>❌ 알고리즘에 안 좋음. 잠깐 보고 꺼버려서 노출 줄어듦</p></div></div>
+      </div>
+      <div class="qa-card open">
+        <div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">하루 영상 몇 개까지?</div><div class="qa-count">7회</div></div>
+        <div class="qa-body" style="max-height:200px;padding:0 20px 14px;"><div class="qa-answer"><p>롱폼 2~4개가 적정. 쇼츠 10개 올려서 채널 삭제된 사례 있음 ⚠️</p></div></div>
+      </div>
+      <div class="qa-card open">
+        <div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">스킬 zip 파일명이 달라요</div><div class="qa-count">2회</div></div>
+        <div class="qa-body" style="max-height:200px;padding:0 20px 14px;"><div class="qa-answer"><p>같은 파일! 한글 폴더 인식 문제로 영어명으로 변경됨</p></div></div>
+      </div>
+      <div class="qa-card open">
+        <div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">프리미엄 다시보기 언제?</div><div class="qa-count">3회</div></div>
+        <div class="qa-body" style="max-height:200px;padding:0 20px 14px;"><div class="qa-answer"><p>보통 다음 날 점심. 고화질 5시간 인코딩이라 시간 소요</p></div></div>
+      </div>
+      <div class="qa-card open">
+        <div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">그록 구독료 할인 꿀팁?</div><div class="qa-count">5회</div></div>
+        <div class="qa-body" style="max-height:200px;padding:0 20px 14px;"><div class="qa-answer"><p>월 30달러. 결제 후 바로 취소 누르면 3개월 30달러 제안 옴!</p></div></div>
+      </div>
+      <div class="qa-card open">
+        <div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">스킬 zip이 영상과 다른데요?</div><div class="qa-count">3회</div></div>
+        <div class="qa-body" style="max-height:200px;padding:0 20px 14px;"><div class="qa-answer"><p>같은 파일! 한글 폴더 인식 문제로 영어명 변경. autoworkers-1st.zip 받으면 됨</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== GLOSSARY TAB ==================== -->
+  <div id="tab-glossary" class="tab-content">
+
+    <div class="section fade-in">
+      <div class="section-header">
+        <div class="section-icon" style="background:var(--purple-light);">📖</div>
+        <div class="section-title">오토워커 용어사전</div>
+      </div>
+      <p style="color:var(--sub);font-size:14px;margin-bottom:12px;padding:0 4px;">사담방에서 자주 등장하는 용어를 정리했어요</p>
+      <input type="text" class="glossary-search" placeholder="용어 검색..." oninput="filterGlossary(this.value)">
+
+      <div class="glossary-grid" id="glossaryGrid">
+        <div class="glossary-card">
+          <div class="glossary-term"><span class="emoji">🤖</span> 튜브워커 (TubeWorker)</div>
+          <div class="glossary-def">오토워커 자동 영상 제작 프로그램. 대본 → 이미지 → 음성 → 편집을 자동화. 크레딧 차감 방식</div>
+        </div>
+        <div class="glossary-card">
+          <div class="glossary-term"><span class="emoji">🎨</span> 위스크 (Whisk)</div>
+          <div class="glossary-def">Google AI 이미지 생성 도구. 튜브워커에서 이미지 생성에 사용 중. 서비스 종료 예정 → 플로우로 전환</div>
+        </div>
+        <div class="glossary-card">
+          <div class="glossary-term"><span class="emoji">🌊</span> 플로우 (Flow)</div>
+          <div class="glossary-def">Google 차세대 이미지 생성 도구. 위스크의 후속. 튜브워커에 통합 예정</div>
+        </div>
+        <div class="glossary-card">
+          <div class="glossary-term"><span class="emoji">🎬</span> 그록 (Grok)</div>
+          <div class="glossary-def">xAI의 AI 영상 생성 도구. 가성비 최고지만 자동화를 막아놔서 수동 사용 필요. 유료 전환됨</div>
+        </div>
+        <div class="glossary-card">
+          <div class="glossary-term"><span class="emoji">🎙️</span> 일레븐랩스 (ElevenLabs)</div>
+          <div class="glossary-def">AI 음성 합성(TTS) 서비스. 개인 구독보다 강사 제공 API가 저렴. V2(일관성) / V3(발음) 모델 선택 가능</div>
+        </div>
+        <div class="glossary-card">
+          <div class="glossary-term"><span class="emoji">✂️</span> 캡컷 (CapCut)</div>
+          <div class="glossary-def">영상 편집 프로그램. 튜브워커에서 생성한 프로젝트를 CapCut Drafts 폴더에 넣어 편집</div>
+        </div>
+        <div class="glossary-card">
+          <div class="glossary-term"><span class="emoji">🧠</span> 클로드 코드 (Claude Code)</div>
+          <div class="glossary-def">Anthropic의 AI 코딩/작업 도구. 스킬과 에이전트를 사용해 대본 작성, 파일 관리 등을 자동화</div>
+        </div>
+        <div class="glossary-card">
+          <div class="glossary-term"><span class="emoji">⚡</span> 스킬 (Skill)</div>
+          <div class="glossary-def">클로드에서 반복 작업을 자동화하는 사전 정의 명령. SKILL.md 파일에 워크플로 정의. 게임 스킬처럼 장착해서 사용</div>
+        </div>
+        <div class="glossary-card">
+          <div class="glossary-term"><span class="emoji">👤</span> 에이전트 (Agent)</div>
+          <div class="glossary-def">특정 역할을 수행하는 AI 서브워커. 예: video-analyst(영상 분석), data-researcher(팩트체크), strategist(전략)</div>
+        </div>
+        <div class="glossary-card">
+          <div class="glossary-term"><span class="emoji">🪙</span> 크레딧</div>
+          <div class="glossary-def">튜브워커 내 사용량 단위. 대본 길이/이미지 수에 따라 차감. 구글 폼으로 충전 신청 (결제 시스템 준비 중)</div>
+        </div>
+        <div class="glossary-card">
+          <div class="glossary-term"><span class="emoji">🎥</span> 롱폼</div>
+          <div class="glossary-def">5분 이상의 긴 유튜브 영상. 수익창출의 주 포맷. 하루 2~4개 업로드 권장</div>
+        </div>
+        <div class="glossary-card">
+          <div class="glossary-term"><span class="emoji">📱</span> 숏폼 / 숏츠</div>
+          <div class="glossary-def">60초 이내의 짧은 영상. 롱폼 보조 수단으로 병행 권장. 수익화 집중 시 하루 10개까지도</div>
+        </div>
+        <div class="glossary-card">
+          <div class="glossary-term"><span class="emoji">💰</span> 수창 / 수익창출</div>
+          <div class="glossary-def">유튜브 파트너 프로그램 수익화 조건 달성. 1차: 구독 500 + 시청 3000시간, 2차: 구독 1000 + 시청 4000시간</div>
+        </div>
+        <div class="glossary-card">
+          <div class="glossary-term"><span class="emoji">🎣</span> 후킹 인트로</div>
+          <div class="glossary-def">시청자를 잡아두는 영상 도입부 (처음 3~5초). 체류시간에 직접적 영향 → 알고리즘 노출 결정</div>
+        </div>
+        <div class="glossary-card">
+          <div class="glossary-term"><span class="emoji">🎞️</span> 스토리보드</div>
+          <div class="glossary-def">영상의 장면별 구성 계획. 튜브워커에서 자동 생성되나, AI가 문맥에 맞는 씬을 못 찾는 경우도 있음</div>
+        </div>
+        <div class="glossary-card">
+          <div class="glossary-term"><span class="emoji">🧱</span> 벽타기</div>
+          <div class="glossary-def">카카오톡 채팅방에서 지나간 대화를 위로 스크롤하며 읽는 것. 사담방 특성상 메시지가 많아 벽타기가 힘듦</div>
+        </div>
+        <div class="glossary-card">
+          <div class="glossary-term"><span class="emoji">👑</span> 프프 / 프리미엄반</div>
+          <div class="glossary-def">추가 심화 강의반. 별도 참여 코드 필요. 오토워커 1기 기본반과 별개 운영</div>
+        </div>
+        <div class="glossary-card">
+          <div class="glossary-term"><span class="emoji">📓</span> 노션 (wiki.autoworkers.ai)</div>
+          <div class="glossary-def">오토워커 공식 위키/가이드 문서. 강의 자료, 일정, FAQ 등 정리. 필수 북마크</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== LINKS TAB ==================== -->
+  <div id="tab-links" class="tab-content">
+    <div class="section fade-in">
+      <div class="section-header">
+        <div class="section-icon" style="background:var(--accent-light);">🔗</div>
+        <div class="section-title">유용한 링크 모음</div>
+      </div>
+      <p style="color:var(--sub);font-size:13px;margin-bottom:6px;padding:0 4px;">대화에서 공유된 주요 링크를 모았어요</p>
+      <p style="color:var(--sub);font-size:11px;margin-bottom:14px;padding:0 4px;">⚠️ 구버전 = 링크가 바뀌었을 수 있음 · ❌ 깨진 링크 = 접속 안 될 수 있음</p>
+
+      <div class="link-card"><div class="link-icon">📓</div><div class="link-body"><div class="link-title">오토워커 공식 노션 (위키)</div><div class="link-url"><a href="https://wiki.autoworkers.ai/" target="_blank">wiki.autoworkers.ai</a></div></div><span class="link-status ok">정상</span></div>
+      <div class="link-card"><div class="link-icon">☕</div><div class="link-body"><div class="link-title">오토워커 1기 네이버 카페</div><div class="link-url"><a href="https://naver.me/GrgwwKt2" target="_blank">naver.me/GrgwwKt2</a></div></div><span class="link-status ok">정상</span></div>
+      <div class="link-card is-broken"><div class="link-icon">🎬</div><div class="link-body"><div class="link-title">1강부터 바로보기 (카페)</div><div class="link-url"><a href="https://cafe.naver.com/f-e/cafes/31687042/menus/7?viewType=L" target="_blank">cafe.naver.com/.../menus/7</a></div></div><span class="link-status broken">❌ 깨진 링크</span></div>
+      <div class="link-card is-outdated"><div class="link-icon">💳</div><div class="link-body"><div class="link-title">크레딧 충전 구글 폼</div><div class="link-url"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdCDEHo-5pyERwQPzy9wDOj7dHMHY8-ihDr5ffJUVEARoyOwA/viewform" target="_blank">구글 폼 바로가기</a></div></div><span class="link-status outdated">⚠️ 구버전</span></div>
+      <div class="link-card"><div class="link-icon">🍪</div><div class="link-body"><div class="link-title">Cookie Editor (크롬 확장)</div><div class="link-url"><a href="https://chromewebstore.google.com/detail/cookie-editor/ookdjilphngeeeghgngjabigmpepanpl" target="_blank">Chrome Web Store</a></div></div><span class="link-status ok">정상</span></div>
+      <div class="link-card is-broken"><div class="link-icon">📋</div><div class="link-body"><div class="link-title">카톡방 질의응답 정리본 (카페)</div><div class="link-url"><a href="https://cafe.naver.com/f-e/cafes/31687042/menus/31?viewType=L" target="_blank">cafe.naver.com/.../menus/31</a></div></div><span class="link-status broken">❌ 깨진 링크</span></div>
+      <div class="link-card"><div class="link-icon">🐙</div><div class="link-body"><div class="link-title">오토워커 1기 GitHub (스킬/에이전트)</div><div class="link-url"><a href="https://github.com/nossssi/autoworkers-1st" target="_blank">github.com/nossssi/autoworkers-1st</a></div></div><span class="link-status ok">정상</span></div>
+      <div class="link-card"><div class="link-icon">📊</div><div class="link-body"><div class="link-title">크레딧 사용량 안내 (카페)</div><div class="link-url"><a href="https://cafe.naver.com/autoworker1/272" target="_blank">cafe.naver.com/autoworker1/272</a></div></div><span class="link-status ok">정상</span></div>
+      <div class="link-card is-broken"><div class="link-icon">🔧</div><div class="link-body"><div class="link-title">튜브워커 오류 재충전 게시판 (카페)</div><div class="link-url"><a href="https://cafe.naver.com/f-e/cafes/31687042/articles/13" target="_blank">cafe.naver.com/.../articles/13</a></div></div><span class="link-status broken">❌ 깨진 링크</span></div>
+    </div>
+  </div>
+
+  <!-- ==================== ZOOM TAB ==================== -->
+  <div id="tab-zoom" class="tab-content">
+
+    <div class="section fade-in">
+      <div class="section-header">
+        <div class="section-icon" style="background:var(--accent-light);">🎥</div>
+        <div class="section-title">Zoom 링크 모음</div>
+      </div>
+
+      <div class="zoom-card past fade-in" data-zoom-url="https://us06web.zoom.us/j/83939555607?pwd=u30Bt4sV4pTHP3odZhGFjA7dlRa3S9.1" data-zoom-id="839 3955 5607" data-zoom-pw="375531">
+        <div class="zoom-stamp">종 료</div>
+        <div class="zoom-card-header">
+          <div class="zoom-date">2026. 3. 23 (일) 오후 8:30</div>
+          <span class="past-badge">종료됨</span>
+          <div class="zoom-title">🎬 쇼츠대폭발님의 'AI스위칭쇼츠' 앵콜 미니특강</div>
+          <div class="zoom-desc">AI올인원앱 개발 · 유튜브 쇼츠/롱폼/미드폼 수익화<br>전날 12시간 라이브(실시간 3,850명)의 앵콜 세션</div>
+        </div>
+        <div class="zoom-info">
+          <div class="zoom-info-row">
+            <span class="zl">🔗 Zoom</span>
+            <span class="zv"><a href="https://us06web.zoom.us/j/83939555607?pwd=u30Bt4sV4pTHP3odZhGFjA7dlRa3S9.1" target="_blank">입장 링크</a></span>
+          </div>
+          <div class="zoom-info-row">
+            <span class="zl">🆔 회의 ID</span>
+            <span class="zv">839 3955 5607</span>
+          </div>
+          <div class="zoom-info-row">
+            <span class="zl">🔑 비밀번호</span>
+            <span class="zv">375531</span>
+          </div>
+          <div class="zoom-info-row">
+            <span class="zl">📺 유튜브</span>
+            <span class="zv"><a href="https://youtube.com/live/lpmSgjKb_l4" target="_blank">동시 라이브 스트림</a></span>
+          </div>
+        </div>
+        <div class="zoom-actions">
+          <button class="zoom-btn secondary" onclick="copyToClipboard('회의 ID: 839 3955 5607\n비밀번호: 375531\nhttps://us06web.zoom.us/j/83939555607?pwd=u30Bt4sV4pTHP3odZhGFjA7dlRa3S9.1')">📋 링크+ID+PW 복사</button>
+        </div>
+      </div>
+
+      <!-- 여기에 새 Zoom 링크가 추가됩니다 (data-zoom-url 속성 포함) -->
+
+      <button class="zoom-bulk-copy fade-in" onclick="copyAllZoomLinks()">📋 전체 Zoom 링크 일괄 복사</button>
+
+      <div style="text-align:center;padding:28px 20px;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);margin-top:12px;" class="fade-in">
+        <div style="font-size:36px;margin-bottom:8px;">📡</div>
+        <p style="color:var(--sub);font-size:13px;">채팅방에서 Zoom 링크가 감지되면<br>자동으로 여기에 추가돼요</p>
+        <p style="color:var(--sub);font-size:11px;margin-top:6px;">마지막 스캔: 2026-03-25 08:40 KST</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast">✅ 복사 완료!</div>
+
+  <!-- Footer -->
+  <div class="page-footer fade-in">
+    <div><span class="live-dot"></span>오토워커 1기 사담방</div>
+    <div style="margin-top:4px;">자동 생성 · 2026.03.25 · 총 2,213건 분석</div>
+    <div class="updated-at">마지막 업데이트: 2026-03-25 08:40 KST</div>
+  </div>
+</div>
+
+<!-- Scroll progress bar (Enhancement 7) -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Dark mode toggle (Enhancement 12) -->
+<button class="dark-toggle" id="darkToggle" title="다크모드 전환">🌙</button>
+
+<!-- FABs -->
+<button class="fab-top" id="fabTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<button class="fab-share" onclick="copyToClipboard(location.href)" title="이 페이지 링크 복사">🔗</button>
+
+<script>
+/* ===== Original functionality (preserved) ===== */
+function switchTab(id) {
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+  const tab = document.getElementById('tab-' + id);
+  if (tab) tab.classList.add('active');
+  const btns = document.querySelectorAll('.tab-btn');
+  const map = { mar23: 0, mar24: 1, faq: 2, glossary: 3, links: 4, zoom: 5 };
+  if (map[id] !== undefined && btns[map[id]]) btns[map[id]].classList.add('active');
+  tab?.querySelectorAll('.fade-in').forEach(el => { el.classList.remove('visible'); void el.offsetWidth; observer.observe(el); });
+  // Re-trigger Q&A slide-in on tab switch
+  tab?.querySelectorAll('.qa-card.fade-in-qa').forEach(el => { el.classList.remove('visible'); void el.offsetWidth; qaObserver.observe(el); });
+  // Re-trigger stat count-up
+  tab?.querySelectorAll('.stat-pill .num').forEach(el => { el._counted = false; statObserver.observe(el); });
+  // Re-trigger timeline pulse
+  tab?.querySelectorAll('.timeline').forEach(tl => { tl._pulsed = false; tlObserver.observe(tl); });
+  // Re-trigger quote typing
+  tab?.querySelectorAll('.quote-text').forEach(el => { el._typed = false; el.textContent = el._originalText || el.textContent; quoteObserver.observe(el); });
+  if (id === 'faq') { resetBars(); setTimeout(animateBars, 200); }
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function resetBars() {
+  document.querySelectorAll('.faq-bar-fill').forEach(el => { el.style.transition = 'none'; el.style.width = '0'; void el.offsetWidth; el.style.transition = ''; });
+}
+function animateBars() {
+  document.querySelectorAll('.faq-bar-fill').forEach(el => { el.style.width = el.dataset.width + '%'; });
+}
+
+function filterGlossary(q) {
+  const cards = document.querySelectorAll('#glossaryGrid .glossary-card');
+  const query = q.toLowerCase().trim();
+  cards.forEach(card => {
+    const text = card.textContent.toLowerCase();
+    card.classList.toggle('hidden', query.length > 0 && !text.includes(query));
+  });
+}
+
+function copyToClipboard(text, evt) {
+  const show = () => { const t = document.getElementById('toast'); t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 1800); };
+  const doCopy = () => {
+    show();
+    // Enhancement 6: Confetti on copy
+    spawnConfetti(evt);
+  };
+  navigator.clipboard.writeText(text).then(doCopy).catch(() => {
+    const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); doCopy();
+  });
+}
+
+/* ===== Enhancement 6: Confetti ===== */
+function spawnConfetti(evt) {
+  const emojis = ['\u{1F389}','\u{2728}','\u{2B50}','\u{1F4AB}'];
+  let cx = window.innerWidth / 2, cy = window.innerHeight / 2;
+  if (evt) {
+    if (evt.clientX) { cx = evt.clientX; cy = evt.clientY; }
+    else if (evt.touches && evt.touches[0]) { cx = evt.touches[0].clientX; cy = evt.touches[0].clientY; }
+  }
+  for (let i = 0; i < 20; i++) {
+    const el = document.createElement('span');
+    el.className = 'confetti-particle';
+    el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    const angle = (Math.random() * Math.PI * 2);
+    const dist = 60 + Math.random() * 100;
+    const dx = Math.cos(angle) * dist;
+    const dy = Math.sin(angle) * dist + 40; // gravity bias downward
+    el.style.left = cx + 'px';
+    el.style.top = cy + 'px';
+    el.style.setProperty('--cx', dx + 'px');
+    el.style.setProperty('--cy', dy + 'px');
+    el.style.setProperty('--cr', (Math.random() * 720 - 360) + 'deg');
+    el.style.fontSize = (12 + Math.random() * 10) + 'px';
+    document.body.appendChild(el);
+    el.addEventListener('animationend', () => el.remove());
+  }
+}
+
+// Patch existing onclick handlers that call copyToClipboard to pass event
+document.addEventListener('click', function(e) {
+  window._lastClickEvent = e;
+}, true);
+// Wrap original copyToClipboard to capture event
+const _origCopy = copyToClipboard;
+copyToClipboard = function(text, evt) {
+  _origCopy.call(this, text, evt || window._lastClickEvent);
+};
+
+/* ===== Intersection Observer (original, preserved) ===== */
+const observer = new IntersectionObserver(
+  entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+  { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
+);
+document.querySelectorAll('.fade-in').forEach((el, i) => {
+  el.style.transitionDelay = Math.min(i * 0.05, 0.3) + 's';
+  observer.observe(el);
+});
+
+/* ===== Enhancement 2: Stats count-up ===== */
+const statObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting || e.target._counted) return;
+    e.target._counted = true;
+    const raw = e.target.textContent.trim();
+    const suffix = raw.replace(/^[\d,]+/, ''); // e.g. "h" from "17h"
+    const numStr = raw.replace(/[^\d]/g, '');
+    const target = parseInt(numStr, 10);
+    if (isNaN(target) || target === 0) return;
+    const hasComma = raw.includes(',');
+    const duration = 1200;
+    const start = performance.now();
+    function step(ts) {
+      const p = Math.min((ts - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3); // easeOutCubic
+      const current = Math.round(target * eased);
+      let display = hasComma ? current.toLocaleString() : String(current);
+      e.target.textContent = display + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.stat-pill .num').forEach(el => statObserver.observe(el));
+
+/* ===== Enhancement 4: Q&A staggered slide-in ===== */
+const qaObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); qaObserver.unobserve(e.target); } });
+}, { threshold: 0.05 });
+document.querySelectorAll('.qa-card').forEach((card, i) => {
+  // Only add to expandable Q&A cards (not the always-open FAQ ones)
+  if (!card.closest('#tab-faq')) {
+    card.classList.add('fade-in-qa');
+    card.style.transitionDelay = (i * 0.08) + 's';
+    qaObserver.observe(card);
+  }
+});
+
+/* ===== Enhancement 5: Quote typing effect ===== */
+const quoteObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting || e.target._typed) return;
+    e.target._typed = true;
+    quoteObserver.unobserve(e.target);
+    const full = e.target._originalText;
+    e.target.textContent = '';
+    e.target.classList.add('typing-active');
+    let idx = 0;
+    function typeChar() {
+      if (idx < full.length) {
+        e.target.textContent += full[idx];
+        idx++;
+        setTimeout(typeChar, 18 + Math.random() * 12);
+      } else {
+        e.target.classList.remove('typing-active');
+      }
+    }
+    typeChar();
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.quote-text').forEach(el => {
+  el._originalText = el.textContent;
+  quoteObserver.observe(el);
+});
+
+/* ===== Enhancement 7: Scroll progress bar ===== */
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  document.getElementById('scrollProgress').style.width = pct + '%';
+}, { passive: true });
+
+/* ===== Enhancement 9: Timeline pulse ===== */
+const tlObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting || e.target._pulsed) return;
+    e.target._pulsed = true;
+    const items = e.target.querySelectorAll('.tl-item');
+    items.forEach((item, i) => {
+      setTimeout(() => {
+        item.classList.add('tl-pulse');
+        item.addEventListener('animationend', () => {
+          // keep class so it doesn't re-trigger
+        }, { once: true });
+      }, i * 150);
+    });
+  });
+}, { threshold: 0.2 });
+document.querySelectorAll('.timeline').forEach(tl => tlObserver.observe(tl));
+
+/* ===== Enhancement 10: FAQ bar chart hover tooltip ===== */
+document.querySelectorAll('.faq-bar-item').forEach(item => {
+  const cntEl = item.querySelector('.cnt');
+  if (!cntEl) return;
+  const count = parseInt(cntEl.textContent, 10);
+  const maxCount = 55; // known max from data
+  const pct = Math.round((count / maxCount) * 100);
+  const tooltip = document.createElement('div');
+  tooltip.className = 'faq-tooltip';
+  tooltip.textContent = pct + '%';
+  item.appendChild(tooltip);
+});
+
+/* ===== Enhancement 11: Hero particles ===== */
+(function() {
+  const hero = document.querySelector('.hero');
+  if (!hero) return;
+  for (let i = 0; i < 12; i++) {
+    const el = document.createElement('span');
+    el.className = 'hero-particle';
+    const size = 4 + Math.random() * 8;
+    el.style.setProperty('--sz', size + 'px');
+    el.style.setProperty('--dur', (5 + Math.random() * 8) + 's');
+    el.style.setProperty('--delay', (-Math.random() * 10) + 's');
+    el.style.left = (Math.random() * 100) + '%';
+    el.style.bottom = (Math.random() * 40) + '%';
+    hero.appendChild(el);
+  }
+})();
+
+/* ===== Enhancement 12: Dark mode toggle ===== */
+(function() {
+  const btn = document.getElementById('darkToggle');
+  const saved = localStorage.getItem('darkMode');
+  if (saved === 'true') { document.body.classList.add('dark'); btn.textContent = '\u{2600}\u{FE0F}'; }
+  btn.addEventListener('click', () => {
+    const isDark = document.body.classList.toggle('dark');
+    btn.textContent = isDark ? '\u{2600}\u{FE0F}' : '\u{1F319}';
+    localStorage.setItem('darkMode', isDark);
+  });
+})();
+
+/* ===== Zoom bulk copy ===== */
+function copyAllZoomLinks() {
+  const cards = document.querySelectorAll('.zoom-card[data-zoom-url]');
+  const lines = [];
+  cards.forEach(card => {
+    const url = card.dataset.zoomUrl || '';
+    const id = card.dataset.zoomId || '';
+    const pw = card.dataset.zoomPw || '';
+    const title = card.querySelector('.zoom-title');
+    const date = card.querySelector('.zoom-date');
+    if (url) {
+      lines.push((date ? date.textContent.trim() : '') + ' ' + (title ? title.textContent.trim() : ''));
+      if (id) lines.push('회의 ID: ' + id);
+      if (pw) lines.push('비밀번호: ' + pw);
+      lines.push(url);
+      lines.push('');
+    }
+  });
+  if (lines.length === 0) { copyToClipboard('등록된 Zoom 링크가 없습니다.'); return; }
+  copyToClipboard(lines.join('\n').trim());
+}
+
+/* ===== Back to top FAB (original, preserved) ===== */
+window.addEventListener('scroll', () => {
+  document.getElementById('fabTop').classList.toggle('show', window.scrollY > 400);
+}, { passive: true });
+
+/* ===== Tab scroll hint ===== */
+(function() {
+  const bar = document.getElementById('tabBar');
+  const wrap = document.getElementById('tabBarWrap');
+  if (!bar || !wrap) return;
+  function checkScroll() {
+    const atEnd = bar.scrollLeft + bar.clientWidth >= bar.scrollWidth - 8;
+    wrap.classList.toggle('scroll-end', atEnd);
+  }
+  bar.addEventListener('scroll', checkScroll, { passive: true });
+  checkScroll();
+  // Scroll active tab into view on switch
+  const origSwitch = window.switchTab;
+  window.switchTab = function(id) {
+    origSwitch(id);
+    const active = bar.querySelector('.tab-btn.active');
+    if (active) active.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    setTimeout(checkScroll, 300);
+  };
+})();
+
+/* ===== Auto-open first QA (original, preserved) ===== */
+setTimeout(() => {
+  const first = document.querySelector('#tab-mar23 .qa-card');
+  if (first) first.classList.add('open');
+}, 600);
+</script>
+</body>
+</html>
