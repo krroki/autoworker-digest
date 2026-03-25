@@ -78,6 +78,88 @@
   .tab-content { display: none; }
   .tab-content.active { display: block; animation: fadeUp 0.4s cubic-bezier(0.16,1,0.3,1); }
   @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  .tab-content.digest-source { display: none !important; }
+
+  .day-accordion {
+    margin-bottom: 14px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--card);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+  }
+  .day-accordion-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 18px 20px;
+    border: none;
+    background: var(--card);
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.25s ease;
+  }
+  .day-accordion-header:hover { background: var(--accent-light); }
+  .day-accordion.open .day-accordion-header {
+    background: var(--accent-light);
+    border-bottom: 1px solid var(--border);
+  }
+  .day-accordion-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+  }
+  .day-accordion-arrow {
+    font-size: 14px;
+    color: var(--sub);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+  }
+  .day-accordion.open .day-accordion-arrow { transform: rotate(180deg); }
+  .day-accordion-date {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+  }
+  .day-accordion-badge {
+    flex-shrink: 0;
+    font-size: 10px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--accent);
+    border-radius: 999px;
+    padding: 4px 8px;
+  }
+  .day-accordion-summary {
+    font-size: 12px;
+    color: var(--sub);
+    font-weight: 600;
+    text-align: right;
+  }
+  .day-accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s cubic-bezier(0.4,0,0.2,1);
+    background: var(--card);
+  }
+  .day-accordion.open .day-accordion-body { max-height: 10000px; }
+  .day-accordion-content { padding: 24px 22px; }
+
+  @media (max-width: 720px) {
+    .day-accordion-header {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 8px;
+      padding: 16px 16px 14px;
+    }
+    .day-accordion-left { width: 100%; }
+    .day-accordion-summary { text-align: left; }
+    .day-accordion-content { padding: 20px 16px; }
+    .day-accordion-date { font-size: 15px; }
+  }
 
   /* Stats bar */
   .stats-bar { display: flex; gap: 8px; margin-bottom: 28px; overflow-x: auto; scrollbar-width: none; }
@@ -582,8 +664,7 @@
   <!-- Tabs -->
   <div class="tab-bar-wrap fade-in" id="tabBarWrap">
     <div class="tab-bar" id="tabBar">
-      <button class="tab-btn active" onclick="switchTab('mar23')">3/23 (일)</button>
-      <button class="tab-btn" onclick="switchTab('mar24')">3/24 (월)</button>
+      <button class="tab-btn active" onclick="switchTab('daily')">📅 일자별</button>
       <button class="tab-btn" onclick="switchTab('faq')">자주 묻는 질문</button>
       <button class="tab-btn" onclick="switchTab('glossary')">용어사전</button>
       <button class="tab-btn" onclick="switchTab('links')">🔗 링크 모음</button>
@@ -591,8 +672,10 @@
     </div>
   </div>
 
+  <div id="tab-daily" class="tab-content active"></div>
+
   <!-- ==================== 3/23 TAB ==================== -->
-  <div id="tab-mar23" class="tab-content active">
+  <div id="tab-mar23" class="tab-content digest-source">
 
     <div class="stats-bar fade-in">
       <div class="stat-pill"><span class="num">1,828</span><span class="label">전체 메시지</span></div>
@@ -820,7 +903,7 @@
   </div>
 
   <!-- ==================== 3/24 TAB ==================== -->
-  <div id="tab-mar24" class="tab-content">
+  <div id="tab-mar24" class="tab-content digest-source">
 
     <div class="stats-bar fade-in">
       <div class="stat-pill"><span class="num">385</span><span class="label">전체 메시지</span></div>
@@ -1451,7 +1534,7 @@ function switchTab(id) {
   const tab = document.getElementById('tab-' + id);
   if (tab) tab.classList.add('active');
   const btns = document.querySelectorAll('.tab-btn');
-  const map = { mar23: 0, mar24: 1, faq: 2, glossary: 3, links: 4, zoom: 5 };
+  const map = { daily: 0, faq: 1, glossary: 2, links: 3, zoom: 4 };
   if (map[id] !== undefined && btns[map[id]]) btns[map[id]].classList.add('active');
   tab?.querySelectorAll('.fade-in').forEach(el => { el.classList.remove('visible'); void el.offsetWidth; observer.observe(el); });
   // Re-trigger Q&A slide-in on tab switch
@@ -1465,6 +1548,59 @@ function switchTab(id) {
   if (id === 'faq') { resetBars(); setTimeout(animateBars, 200); }
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+function buildDailyDigestSummary(sourceTab) {
+  const pills = Array.from(sourceTab.querySelectorAll('.stats-bar .stat-pill')).slice(0, 3);
+  const parts = pills.map(pill => {
+    const num = pill.querySelector('.num')?.textContent?.trim();
+    const label = pill.querySelector('.label')?.textContent?.trim();
+    return num && label ? `${label} ${num}` : '';
+  }).filter(Boolean);
+  return parts.join(' · ') || '주요 공지 · 주요 Q&A · 타임라인 정리';
+}
+
+function toggleAccordion(panel) {
+  const next = !panel.classList.contains('open');
+  panel.classList.toggle('open', next);
+  const header = panel.querySelector('.day-accordion-header');
+  if (header) header.setAttribute('aria-expanded', String(next));
+}
+
+function mountDailyAccordion() {
+  const dailyTab = document.getElementById('tab-daily');
+  if (!dailyTab) return;
+  const daySources = [
+    { id: 'mar24', label: '3/24 (월)', badge: '최신' },
+    { id: 'mar23', label: '3/23 (일)', badge: '' },
+  ].map(meta => ({ ...meta, source: document.getElementById('tab-' + meta.id) }))
+   .filter(meta => meta.source);
+
+  dailyTab.innerHTML = '';
+  daySources.forEach((meta, index) => {
+    const panel = document.createElement('section');
+    panel.className = 'day-accordion fade-in' + (index === 0 ? ' open' : '');
+    panel.dataset.dayId = meta.id;
+    panel.innerHTML = `
+      <button class="day-accordion-header" type="button" aria-expanded="${index === 0}">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">${meta.label}</span>
+          ${meta.badge ? `<span class="day-accordion-badge">${meta.badge}</span>` : ''}
+        </div>
+        <div class="day-accordion-summary">${buildDailyDigestSummary(meta.source)}</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content"></div>
+      </div>
+    `;
+    panel.querySelector('.day-accordion-header')?.addEventListener('click', () => toggleAccordion(panel));
+    const content = panel.querySelector('.day-accordion-content');
+    if (content) content.innerHTML = meta.source.innerHTML;
+    dailyTab.appendChild(panel);
+  });
+}
+
+mountDailyAccordion();
 
 function resetBars() {
   document.querySelectorAll('.faq-bar-fill').forEach(el => { el.style.transition = 'none'; el.style.width = '0'; void el.offsetWidth; el.style.transition = ''; });
@@ -1573,7 +1709,7 @@ const qaObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.05 });
 document.querySelectorAll('.qa-card').forEach((card, i) => {
   // Only add to expandable Q&A cards (not the always-open FAQ ones)
-  if (!card.closest('#tab-faq')) {
+  if (!card.closest('#tab-faq') && !card.closest('.digest-source')) {
     card.classList.add('fade-in-qa');
     card.style.transitionDelay = (i * 0.08) + 's';
     qaObserver.observe(card);
@@ -1725,7 +1861,7 @@ window.addEventListener('scroll', () => {
 
 /* ===== Auto-open first QA (original, preserved) ===== */
 setTimeout(() => {
-  const first = document.querySelector('#tab-mar23 .qa-card');
+  const first = document.querySelector('#tab-daily .day-accordion.open .qa-card');
   if (first) first.classList.add('open');
 }, 600);
 </script>
