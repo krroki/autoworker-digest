@@ -678,10 +678,10 @@
   <div id="tab-mar26" class="tab-content digest-source">
 
     <div class="stats-bar fade-in">
-      <div class="stat-pill"><span class="num">70</span><span class="label">전체 메시지</span></div>
-      <div class="stat-pill"><span class="num" style="color:var(--green);">18</span><span class="label">조교 답변</span></div>
-      <div class="stat-pill"><span class="num" style="color:var(--orange);">3</span><span class="label">주요 Q&A</span></div>
-      <div class="stat-pill"><span class="num" style="color:var(--purple);">0.5h</span><span class="label">활동 시간</span></div>
+      <div class="stat-pill"><span class="num">140</span><span class="label">전체 메시지</span></div>
+      <div class="stat-pill"><span class="num" style="color:var(--green);">28</span><span class="label">조교 답변</span></div>
+      <div class="stat-pill"><span class="num" style="color:var(--orange);">5</span><span class="label">주요 Q&A</span></div>
+      <div class="stat-pill"><span class="num" style="color:var(--purple);">2h</span><span class="label">활동 시간</span></div>
     </div>
 
     <!-- Q&A -->
@@ -689,6 +689,29 @@
       <div class="section-header">
         <div class="section-icon" style="background:var(--accent-light);">💬</div>
         <div class="section-title">주요 Q&A</div>
+      </div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">VS Code / 클로드 코드에서 빨간 오류가 사라지지 않아요 — 폴더명 문제</div>
+          <div class="qa-count">8회</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge member">멤버</span><span class="qa-answer-name">도비프</span></div>
+            <p>폴더명에 <strong>띄어쓰기나 한글</strong>이 포함되면 인식이 안 됩니다! 폴더명을 영문으로 바꾸세요. 저도 "2 ㅈ ㅜ ㅊ ㅏ" 같은 폴더명을 "2주차"로 바꾸니까 바로 됐어요.</p>
+          </div>
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge member">멤버</span><span class="qa-answer-name">maid</span></div>
+            <p>폴더명이 띄어쓰기 포함된 한글이면 안 됩니다.</p>
+          </div>
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">나물쓰</span></div>
+            <p>클로드코드 설치하시면 되는 거라서요! 안 되시면 VS Code 껐다 켜보시거나, 바탕화면을 폴더로 열어서 해보세요.</p>
+          </div>
+        </div>
       </div>
 
       <div class="qa-card" onclick="this.classList.toggle('open')">
@@ -702,6 +725,21 @@
           <div class="qa-answer">
             <div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">구스범스</span></div>
             <p>설정 → 기본 앱에서 "파일 형식 또는 링크 형식 입력" 검색창에 <strong>Google Chrome</strong>을 검색/복붙하세요. 크롬이 뜨면 선택 후 "기본값 설정"에 체크하면 됩니다!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">튜브워커 로그인이 안 돼요</div>
+          <div class="qa-count">3회</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">대국밥</span></div>
+            <p>계정 정보(메일, 비밀번호)를 확인해드립니다. 기존에 접속한 기록이 있는지 먼저 체크 → 본인 확인 후 안내. 비밀번호 변경 여부도 확인해주세요!</p>
           </div>
         </div>
       </div>
@@ -744,6 +782,14 @@
         <div class="section-title">인사이트</div>
       </div>
       <div class="insight-card">
+        <div class="insight-emoji">📁</div>
+        <div class="insight-body">
+          <h3>폴더명 = 영문/숫자만! 한글·띄어쓰기 금지</h3>
+          <p>도비프/maid/마린키노/버디코이사 — VS Code에서 클로드 코드가 안 되는 원인의 대부분이 폴더명 문제. "2 ㅈ ㅜ ㅊ ㅏ" 같은 이름을 영문으로 바꾸니 바로 해결됨</p>
+          <span class="insight-tag tag-tip">필수 팁</span>
+        </div>
+      </div>
+      <div class="insight-card">
         <div class="insight-emoji">🛠️</div>
         <div class="insight-body">
           <h3>구스범스 조교의 새벽 1:1 기술 지원</h3>
@@ -774,6 +820,14 @@
         <div class="tl-item"><div class="tl-time">01:19</div><div class="tl-text">⌨️ 추@영 — 윈도우 키 없는 키보드 문의 → 대체 키 안내</div></div>
         <div class="tl-item"><div class="tl-time">01:24</div><div class="tl-text">🖥️ 추@영 — 듀얼 모니터 방향 문의 → 디스플레이 설정으로 해결</div></div>
         <div class="tl-item"><div class="tl-time">01:29</div><div class="tl-text">📋 추@영 — 프로그램 접속 정보 재발급 문의 → 기존 정보 유지 안내</div></div>
+        <div class="tl-item"><div class="tl-time">20:30</div><div class="tl-text">🔴 유후후후 — 빨간 오류가 안 없어진다는 문의</div></div>
+        <div class="tl-item"><div class="tl-time">20:31</div><div class="tl-text">📁 도비프 — 폴더명 한글/띄어쓰기 문제 발견 → 영문으로 변경하면 해결</div></div>
+        <div class="tl-item"><div class="tl-time">20:35</div><div class="tl-text">🛠️ 비빔(조교) — VS Code 껐다 켜보세요!</div></div>
+        <div class="tl-item"><div class="tl-time">20:49</div><div class="tl-text">✅ 마린키노 — 폴더명 바꿔서 해결 확인</div></div>
+        <div class="tl-item"><div class="tl-time">20:56</div><div class="tl-text">💡 maid — 폴더명이 띄어쓰기 포함된 한글이면 안 된다고 정리</div></div>
+        <div class="tl-item"><div class="tl-time">21:04</div><div class="tl-text">📢 나물쓰(조교) — 강의 집중 요청, 끝나고 해결 안내</div></div>
+        <div class="tl-item"><div class="tl-time">21:16</div><div class="tl-text">🔐 김팀장 — 튜브워커 로그인 문의 → 대국밥 조교 계정 확인</div></div>
+        <div class="tl-item"><div class="tl-time">21:32</div><div class="tl-text">✅ 김팀장 — 본인 착각 확인, 문제 해결</div></div>
       </div>
     </div>
   </div>
@@ -1580,9 +1634,10 @@
           <li class="faq-bar-item"><div class="faq-bar-label"><span>유튜브 노출 / 채널 운영</span><span class="cnt">42회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="76"></div></div></li>
           <li class="faq-bar-item"><div class="faq-bar-label"><span>점검 / 오류</span><span class="cnt">20회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="40"></div></div></li>
           <li class="faq-bar-item"><div class="faq-bar-label"><span>PC 기본 설정 / 기기</span><span class="cnt">29회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="53"></div></div></li>
-          <li class="faq-bar-item"><div class="faq-bar-label"><span>캡컷 편집</span><span class="cnt">15회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="30"></div></div></li>
+          <li class="faq-bar-item"><div class="faq-bar-label"><span>VS Code / 폴더 설정</span><span class="cnt">16회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="29"></div></div></li>
+          <li class="faq-bar-item"><div class="faq-bar-label"><span>캡컷 편집</span><span class="cnt">15회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="27"></div></div></li>
           <li class="faq-bar-item"><div class="faq-bar-label"><span>닉네임 / 카페 가입</span><span class="cnt">12회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="24"></div></div></li>
-          <li class="faq-bar-item"><div class="faq-bar-label"><span>튜브워커 로그인 / 계정</span><span class="cnt">11회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="22"></div></div></li>
+          <li class="faq-bar-item"><div class="faq-bar-label"><span>튜브워커 로그인 / 계정</span><span class="cnt">14회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="25"></div></div></li>
           <li class="faq-bar-item"><div class="faq-bar-label"><span>일레븐랩스 / TTS</span><span class="cnt">11회</span></div><div class="faq-bar-track"><div class="faq-bar-fill" data-width="22"></div></div></li>
         </ul>
       </div>
@@ -1653,6 +1708,14 @@
       <div class="qa-card open">
         <div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">롱폼 쿠키작업 필요?</div><div class="qa-count">2회</div></div>
         <div class="qa-body" style="max-height:200px;padding:0 20px 14px;"><div class="qa-answer"><p>의견 분분. 카테고리 검색만으로 자연 쿠키 형성된다는 팁도</p></div></div>
+      </div>
+      <div class="qa-card open">
+        <div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">VS Code 빨간 오류 / 클로드 코드 안 됨</div><div class="qa-count">8회</div></div>
+        <div class="qa-body" style="max-height:200px;padding:0 20px 14px;"><div class="qa-answer"><p>폴더명에 한글·띄어쓰기 포함 시 인식 안 됨. 영문으로 변경 → VS Code 재시작</p></div></div>
+      </div>
+      <div class="qa-card open">
+        <div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">튜브워커 로그인 안 돼요</div><div class="qa-count">3회</div></div>
+        <div class="qa-body" style="max-height:200px;padding:0 20px 14px;"><div class="qa-answer"><p>조교에게 개인메세지로 계정 확인 요청. 메일·비번 확인 후 안내</p></div></div>
       </div>
     </div>
   </div>
@@ -1764,6 +1827,7 @@
       <div class="link-card"><div class="link-icon">🎨</div><div class="link-body"><div class="link-title">Google Whisk (AI 이미지 생성)</div><div class="link-url"><a href="https://labs.google/fx/ko/tools/whisk" target="_blank">labs.google/fx/ko/tools/whisk</a></div></div><span class="link-status ok">정상</span></div>
       <div class="link-card"><div class="link-icon">🐙</div><div class="link-body"><div class="link-title">오토워커 1기 GitHub (스킬/에이전트)</div><div class="link-url"><a href="https://github.com/nossssi/autoworkers-1st" target="_blank">github.com/nossssi/autoworkers-1st</a></div></div><span class="link-status ok">정상</span></div>
       <div class="link-card"><div class="link-icon">📊</div><div class="link-body"><div class="link-title">크레딧 사용량 안내 (카페)</div><div class="link-url"><a href="https://cafe.naver.com/autoworker1/272" target="_blank">cafe.naver.com/autoworker1/272</a></div></div><span class="link-status ok">정상</span></div>
+      <div class="link-card"><div class="link-icon">🤖</div><div class="link-body"><div class="link-title">튜브워커 (TubeWorker)</div><div class="link-url"><a href="https://tube.autoworkers.ai/" target="_blank">tube.autoworkers.ai</a></div></div><span class="link-status ok">정상</span></div>
       <div class="link-card is-broken"><div class="link-icon">🔧</div><div class="link-body"><div class="link-title">튜브워커 오류 재충전 게시판 (카페)</div><div class="link-url"><a href="https://cafe.naver.com/f-e/cafes/31687042/articles/13" target="_blank">cafe.naver.com/.../articles/13</a></div></div><span class="link-status broken">❌ 깨진 링크</span></div>
     </div>
   </div>
@@ -1815,7 +1879,7 @@
       <div style="text-align:center;padding:28px 20px;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);margin-top:12px;" class="fade-in">
         <div style="font-size:36px;margin-bottom:8px;">📡</div>
         <p style="color:var(--sub);font-size:13px;">채팅방에서 Zoom 링크가 감지되면<br>자동으로 여기에 추가돼요</p>
-        <p style="color:var(--sub);font-size:11px;margin-top:6px;">마지막 스캔: 2026-03-26 08:40 KST</p>
+        <p style="color:var(--sub);font-size:11px;margin-top:6px;">마지막 스캔: 2026-03-26 21:40 KST</p>
       </div>
     </div>
   </div>
@@ -1825,8 +1889,8 @@
   <!-- Footer -->
   <div class="page-footer fade-in">
     <div><span class="live-dot"></span>오토워커 1기 사담방</div>
-    <div style="margin-top:4px;">자동 생성 · 2026.03.26 · 총 2,355건 분석</div>
-    <div class="updated-at">마지막 업데이트: 2026-03-26 08:40 KST</div>
+    <div style="margin-top:4px;">자동 생성 · 2026.03.26 · 총 2,425건 분석</div>
+    <div class="updated-at">마지막 업데이트: 2026-03-26 21:40 KST</div>
   </div>
 </div>
 
