@@ -674,6 +674,151 @@
 
   <div id="tab-daily" class="tab-content active"></div>
 
+  <!-- ==================== 3/27 TAB ==================== -->
+  <div id="tab-mar27" class="tab-content digest-source">
+
+    <div class="stats-bar fade-in">
+      <div class="stat-pill"><span class="num">70</span><span class="label">전체 메시지</span></div>
+      <div class="stat-pill"><span class="num" style="color:var(--green);">18</span><span class="label">조교 답변</span></div>
+      <div class="stat-pill"><span class="num" style="color:var(--orange);">4</span><span class="label">주요 Q&A</span></div>
+      <div class="stat-pill"><span class="num" style="color:var(--purple);">1h</span><span class="label">활동 시간</span></div>
+    </div>
+
+    <!-- Q&A -->
+    <div class="section fade-in">
+      <div class="section-header">
+        <div class="section-icon" style="background:var(--accent-light);">💬</div>
+        <div class="section-title">주요 Q&A</div>
+      </div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">클로드 서버 오류(529)가 떠요 — 서버 불안정</div>
+          <div class="qa-count">5회</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">나물쓰</span></div>
+            <p>529는 <strong>클로드 서버 자체가 불안정</strong>한 거예요. 우리가 할 수 있는 건 없고, 잠시 기다렸다가 다시 시도해보세요.</p>
+          </div>
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge member">멤버</span><span class="qa-answer-name">아는아이</span></div>
+            <p>클로드 상태는 <strong>status.anthropic.com</strong>에서 실시간으로 확인할 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">캡컷에서 영상 전체 배속을 하고 싶어요</div>
+          <div class="qa-count">4회</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">나물쓰</span></div>
+            <p>영상을 먼저 <strong>내보내기(저장)</strong>한 뒤, 저장된 영상을 다시 불러와서 배속하는 게 제일 빠릅니다. 다음에는 작업할 때 <strong>음성 속도를 미리 조절</strong>해보세요.</p>
+          </div>
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge member">멤버</span><span class="qa-answer-name">아는아이</span></div>
+            <p><strong>Ctrl+A → Alt+G</strong>로 복합클립 설정 후 속도 조절 항목에서 변경. 내보내기 전에 소리가 나오는지 꼭 체크하세요.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">유튜브 영상 길이는 몇 분이 좋을까요?</div>
+          <div class="qa-count">3회</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge member">멤버</span><span class="qa-answer-name">까실까실</span></div>
+            <p>15분 하고 있어요.</p>
+          </div>
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge member">멤버</span><span class="qa-answer-name">미줌마파워</span></div>
+            <p>저두 <strong>15분</strong> 정도요.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="qa-card" onclick="this.classList.toggle('open')">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">채널 마스코트를 꼭 만들어야 하나요?</div>
+          <div class="qa-count">2회</div>
+          <div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">나물쓰</span></div>
+            <p><strong>선택사항</strong>입니다. 필수가 아니니 부담 갖지 마세요!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 인사이트 -->
+    <div class="section fade-in">
+      <div class="section-header">
+        <div class="section-icon" style="background:var(--purple-light);">💡</div>
+        <div class="section-title">인사이트</div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-emoji">🤖</div>
+        <div class="insight-body">
+          <h3>클로드 서버 상태 확인법</h3>
+          <p>529 오류가 뜨면 서버 불안정 — status.anthropic.com에서 실시간 상태 확인 가능. 기다렸다 재시도가 최선</p>
+          <span class="insight-tag tag-tip">필수 팁</span>
+        </div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-emoji">🎬</div>
+        <div class="insight-body">
+          <h3>캡컷 배속 — 복합클립 활용</h3>
+          <p>Ctrl+A → Alt+G로 복합클립 후 속도 조절. 또는 영상 내보내기 후 다시 불러와서 배속하는 2단계 방법도 있음</p>
+          <span class="insight-tag tag-tool">도구 팁</span>
+        </div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-emoji">📊</div>
+        <div class="insight-body">
+          <h3>2주차 과제 릴레이 활발</h3>
+          <p>과제 완료 릴레이가 74번까지 누적 — 동기부여 효과가 큰 자발적 참여 문화</p>
+          <span class="insight-tag tag-tip">커뮤니티</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 타임라인 -->
+    <div class="section fade-in">
+      <div class="section-header">
+        <div class="section-icon" style="background:var(--green-light);">⏰</div>
+        <div class="section-title">타임라인</div>
+      </div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-time">20:54</div><div class="tl-text">🛠️ 봄동(조교) — 원격 지원 종료, 양@원 문제 해결</div></div>
+        <div class="tl-item"><div class="tl-time">20:56</div><div class="tl-text">💬 maid — VS Code에서 클로드 작업이 안 되는 것 같다고 보고</div></div>
+        <div class="tl-item"><div class="tl-time">20:57</div><div class="tl-text">🐌 까실까실 — 클로드 코드 느림 체감, 대본 만드는 데 오래 걸림</div></div>
+        <div class="tl-item"><div class="tl-time">20:58</div><div class="tl-text">🎙️ 브리 노마드 — 커스텀 목소리 사용 시 자연스러움 공유</div></div>
+        <div class="tl-item"><div class="tl-time">21:02</div><div class="tl-text">📋 2주차 과제 릴레이 계속 — 62~74번 누적</div></div>
+        <div class="tl-item"><div class="tl-time">21:10</div><div class="tl-text">🎬 추@영 — 캡컷 전체 배속 문의 → 나물쓰/아는아이 답변</div></div>
+        <div class="tl-item"><div class="tl-time">21:12</div><div class="tl-text">🌙 김@구 — 다크모드에서 글자가 안 보인다고 피드백</div></div>
+        <div class="tl-item"><div class="tl-time">21:18</div><div class="tl-text">🎨 선@영 — 채널 마스코트 필수 여부 문의 → 선택사항 안내</div></div>
+        <div class="tl-item"><div class="tl-time">21:20</div><div class="tl-text">🔴 파랑파랑파랑새 — 클로드 오류 529 → 나물쓰 서버 불안정 안내</div></div>
+        <div class="tl-item"><div class="tl-time">21:27</div><div class="tl-text">🔗 아는아이 — 클로드 상태 확인 사이트(status.anthropic.com) 공유</div></div>
+        <div class="tl-item"><div class="tl-time">21:31</div><div class="tl-text">❓ 배꽃정원 — 과제 제출자들이 그록으로 영상까지 만든 건지 문의</div></div>
+        <div class="tl-item"><div class="tl-time">21:34</div><div class="tl-text">😴 gogo dino — 오늘은 일찍 자고 새벽에 다시 하겠다며 마무리</div></div>
+      </div>
+    </div>
+  </div>
+
   <!-- ==================== 3/26 TAB ==================== -->
   <div id="tab-mar26" class="tab-content digest-source">
 
@@ -1948,7 +2093,8 @@ function mountDailyAccordion() {
   const dailyTab = document.getElementById('tab-daily');
   if (!dailyTab) return;
   const daySources = [
-    { id: 'mar26', label: '3/26 (수)', badge: '최신' },
+    { id: 'mar27', label: '3/27 (목)', badge: '최신' },
+    { id: 'mar26', label: '3/26 (수)', badge: '' },
     { id: 'mar25', label: '3/25 (화)', badge: '' },
     { id: 'mar24', label: '3/24 (월)', badge: '' },
     { id: 'mar23', label: '3/23 (일)', badge: '' },
