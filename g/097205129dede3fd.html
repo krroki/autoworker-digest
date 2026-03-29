@@ -2411,18 +2411,72 @@ function toggleAccordion(panel) {
   if (header) header.setAttribute('aria-expanded', String(next));
 }
 
+const DIGEST_MONTHS = {
+  jan: 1,
+  feb: 2,
+  mar: 3,
+  apr: 4,
+  may: 5,
+  jun: 6,
+  jul: 7,
+  aug: 8,
+  sep: 9,
+  oct: 10,
+  nov: 11,
+  dec: 12,
+};
+
+function getDigestCalendarBase() {
+  const stamp = document.querySelector('.updated-at');
+  const raw = stamp ? stamp.textContent || '' : '';
+  const match = raw.match(/(\d{4})-(\d{2})-(\d{2})/);
+  if (!match) {
+    const now = new Date();
+    return { year: now.getFullYear(), month: now.getMonth() + 1 };
+  }
+  return {
+    year: Number(match[1]),
+    month: Number(match[2]),
+  };
+}
+
+function buildDigestDayLabel(dayId) {
+  const match = String(dayId || '').match(/^([a-z]{3})(\d{1,2})$/i);
+  if (!match) return String(dayId || '');
+  const month = DIGEST_MONTHS[match[1].toLowerCase()];
+  const day = Number(match[2]);
+  if (!month || !day) return String(dayId || '');
+
+  const base = getDigestCalendarBase();
+  let year = base.year;
+  if (month - base.month >= 6) {
+    year -= 1;
+  } else if (base.month - month >= 6) {
+    year += 1;
+  }
+
+  const date = new Date(year, month - 1, day);
+  const weekdays = ['일', '월', '화', '수', '목', '금', '토'];
+  const weekday = weekdays[date.getDay()] || '';
+  return `${month}/${day}${weekday ? ` (${weekday})` : ''}`;
+}
+
 function mountDailyAccordion() {
   const dailyTab = document.getElementById('tab-daily');
   if (!dailyTab) return;
   const daySources = [
-    { id: 'mar29', label: '3/29 (토)', badge: '최신' },
-    { id: 'mar28', label: '3/28 (금)', badge: '' },
-    { id: 'mar27', label: '3/27 (목)', badge: '' },
-    { id: 'mar26', label: '3/26 (수)', badge: '' },
-    { id: 'mar25', label: '3/25 (화)', badge: '' },
-    { id: 'mar24', label: '3/24 (월)', badge: '' },
-    { id: 'mar23', label: '3/23 (일)', badge: '' },
-  ].map(meta => ({ ...meta, source: document.getElementById('tab-' + meta.id) }))
+    { id: 'mar29', badge: '최신' },
+    { id: 'mar28', badge: '' },
+    { id: 'mar27', badge: '' },
+    { id: 'mar26', badge: '' },
+    { id: 'mar25', badge: '' },
+    { id: 'mar24', badge: '' },
+    { id: 'mar23', badge: '' },
+  ].map(meta => ({
+    ...meta,
+    label: buildDigestDayLabel(meta.id),
+    source: document.getElementById('tab-' + meta.id),
+  }))
    .filter(meta => meta.source);
 
   dailyTab.innerHTML = '';
