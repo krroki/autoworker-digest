@@ -576,16 +576,17 @@
   <div class="hero fade-in">
     <div class="hero-badge">📋 사담방 다이제스트</div>
     <h1>노멀쇼츠 1기<br>핵심 정리</h1>
-    <p>(사담방) 노멀쇼츠 1기 [시도남] · 초기 대화기록 반영 준비 중</p>
+    <p>(사담방) 노멀쇼츠 1기 [시도남] · 5/19~6/30 초기 백필</p>
   </div>
   <div class="notice-banner fade-in">
     <div class="nb-emoji">🤖</div>
-    <div>뒤늦게 합류하기 전 대화기록을 받아 정리 중이에요.<br>오늘 밤 자동 갱신 후 핵심 Q&amp;A와 링크가 누적됩니다.</div>
+    <div>지난 대화를 봇이 핵심만 추려 정리했어요.<br>잘못된 부분은 조교(운영진)께 알려주시면 바로 고칠게요!</div>
   </div>
   <div class="stats-bar fade-in">
-    <div class="stat-pill"><span class="num">5/19~6/30</span><span class="label">백필 범위</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--green);">3</span><span class="label">원본 파일</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--orange);">오늘</span><span class="label">발송 시작</span></div>
+    <div class="stat-pill"><span class="num">5/19~6/30</span><span class="label">정리 기간</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--green);">12</span><span class="label">대표 일자</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--orange);">36</span><span class="label">핵심 Q&amp;A</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--purple);">6</span><span class="label">운영 링크</span></div>
   </div>
   <div class="tab-bar-wrap fade-in" id="tabBarWrap">
     <div class="tab-bar" id="tabBar">
@@ -594,38 +595,529 @@
       <button class="tab-btn" onclick="switchTab('links')">🔗 링크 모음</button>
     </div>
   </div>
+
   <div id="tab-daily" class="tab-content active">
+
     <section class="day-accordion fade-in open" data-day-id="0630">
       <button class="day-accordion-header" type="button" aria-expanded="true" onclick="toggleAccordion(this.parentElement)">
         <div class="day-accordion-left">
           <span class="day-accordion-arrow">▼</span>
           <span class="day-accordion-date">6/30 (화)</span>
-          <span class="day-accordion-badge">준비 중</span>
+          <span class="day-accordion-badge">최신</span>
         </div>
-        <div class="day-accordion-summary">초기 대화기록 백필 대기</div>
+        <div class="day-accordion-summary">오늘 합류 후 확인할 Q&A 3개</div>
       </button>
       <div class="day-accordion-body">
         <div class="day-accordion-content">
           <div class="section fade-in">
-            <div class="section-header"><div class="section-icon" style="background:var(--accent-light);">💬</div><div class="section-title">초기 반영 상태</div></div>
-            <div class="qa-card open">
-              <div class="qa-header"><div class="qa-q-icon">Q</div><div class="qa-question">이 페이지는 언제부터 내용이 채워지나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
-              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge">운영</span><span class="qa-answer-name">다이제스트</span></div><p>6/30에 제공된 과거 대화기록과 오늘 이후 live 로그를 근거로 자동 갱신됩니다. 원문을 그대로 노출하지 않고, 날짜별 핵심 Q&amp;A·공지·링크만 정리합니다.</p></div></div>
+            <div class="section-header"><div class="section-icon" style="background:var(--accent-light);">💬</div><div class="section-title">핵심 Q&amp;A</div></div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">캡컷에서 편집 중 빨리보기는 어떻게 하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">멤버</span><span class="qa-answer-name">방 참여자</span></div><p>편집 중 미리보기 속도 조절은 캡컷의 재생/타임라인 조작을 먼저 확인하고, 작업 화면에서 단축키가 안 보이면 메뉴 기능으로 처리하세요. 반복 작업은 자막·화면비·음원 길이부터 먼저 잠그는 편이 실수를 줄입니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">레한에게 채널 구매 문의 후 답장이 늦으면 어떻게 보나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">멤버</span><span class="qa-answer-name">방 참여자</span></div><p>하루 안에 바로 답이 안 오는 경우가 있어요. 결제/문의 후 온라인 상태만 보고 바로 재촉하기보다, 주문 상태와 초대 메일 여부를 확인하고 다음 날까지 여유를 두는 흐름이 자주 공유됐습니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">일본/한국 채널을 동시에 올릴 때 자막만 바꾸면 되나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>방에서는 자막만 바꿔 올리는 케이스가 질문으로 반복됐고, 핵심은 채널 언어·소스·편집 차별화·중복도 관리입니다. 같은 원본을 쓰더라도 화면 구성, 자막, 컷 순서, 업로드 채널의 성격을 분리해서 봐야 합니다.</p></div></div>
+            </div>
+          </div>
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--orange-light);">📢</div><div class="section-title">공지 · 안내</div></div>
+
+            <div class="insight-card">
+              <div class="insight-emoji">📌</div>
+              <div class="insight-body"><h3>오늘부터 이 방도 다이제스트 발송 대상</h3><p>6/30 이전 대화는 백필 요약으로 묶고, 오늘 이후 대화는 live 로그 delta로 누적합니다. 원문 전체를 노출하지 않고 질문/답변과 공지 중심으로 정리합니다.</p><span class="insight-tag tag-tip">운영</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="day-accordion fade-in" data-day-id="0629">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">6/29 (월)</span>
+          
+        </div>
+        <div class="day-accordion-summary">채널 구매·관리자 위임·7일 확인</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--accent-light);">💬</div><div class="section-title">핵심 Q&amp;A</div></div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">채널 구매 후 관리자 위임을 받으면 바로 올려도 되나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">멤버</span><span class="qa-answer-name">방 참여자</span></div><p>7일 안에 도달/피드가 살아 있는지 확인하려는 흐름이 많았습니다. 다만 채널명·핸들·로고 같은 큰 변경은 소유권 이전 전후를 구분하고, 계정/애드센스 연결 상태를 먼저 확인하는 쪽이 안전합니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">암호화폐로 결제한 뒤에는 무엇을 확인하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">멤버</span><span class="qa-answer-name">방 참여자</span></div><p>실제 전송 금액, 네트워크, 판매자 수락 여부를 확인합니다. 결제가 끝났다고 즉시 초대가 오는 것은 아니어서, 거래 상태와 메일 수신 여부를 함께 봐야 합니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">구매한 채널에 기존 영상이 있으면 어떻게 판단하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>기존 영상으로 수익창출이 된 채널인지, 내용이 너무 위험한지, 연결된 애드센스/소유자 이력이 있는지를 봅니다. 찜찜한 소재가 있으면 다른 채널을 고르는 쪽이 보수적인 선택입니다.</p></div></div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="day-accordion fade-in" data-day-id="0628">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">6/28 (일)</span>
+          
+        </div>
+        <div class="day-accordion-summary">애드센스 해지·새 수창채널·계정 정리</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--accent-light);">💬</div><div class="section-title">핵심 Q&amp;A</div></div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">애드센스 계정 해지는 어디서 하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">악싱</span></div><p>애드센스 사이트에서 설정 > 계정정보 > 계정해지 흐름으로 보는 안내가 공유됐습니다. 다만 해지 전 새 수창채널 구매/연결 계획이 있으면 순서를 먼저 잡아야 합니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">새 채널을 더 사면 폰도 계속 늘려야 하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>모바일은 1기기=1채널=1애드센스 쪽이 보수적인 기준으로 반복됐습니다. 대장폰/깡통폰/OTP 저장용 기기 역할을 섞지 않는 것이 핵심입니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">깡통계정은 어디까지 정리해야 하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>기존 로그인 이력, 복구 이메일/전화번호, OTP, 크롬 프로필 분리까지 함께 봐야 합니다. 문제가 난 계정은 새 계정으로 받는 쪽이 더 안전한 케이스가 반복됐습니다.</p></div></div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="day-accordion fade-in" data-day-id="0626">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">6/26 (금)</span>
+          <span class="day-accordion-badge">핵심</span>
+        </div>
+        <div class="day-accordion-summary">중복도·조회수·채널/계정 이력</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--accent-light);">💬</div><div class="section-title">핵심 Q&amp;A</div></div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">조회수가 안 나오면 채널 문제인가요, 영상 문제인가요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">악싱</span></div><p>조회수만으로 채널 문제를 단정하지 않고, 중복도·영상 퀄리티·시청지속/참여율을 같이 봐야 합니다. 같은 채널에서도 변화구를 준 영상과 원본에 가까운 영상의 반응이 달라질 수 있습니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">구글 계정 기기 이력을 삭제해야 하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>보안/로그인 기기 관리에서 현재 로그인된 기기를 확인하는 질문이 반복됐습니다. 계정 이력은 완전히 지운다고 끝나는 문제가 아니라, 새 채널 운영 구조를 분리하는 것이 더 중요합니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">중복도 벗어나려면 무엇을 바꿔야 하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>원본을 그대로 올리지 말고 화면 구성, 확대/크롭, 컷 순서, 자막, 템플릿, 음원 길이 같은 요소를 바꿔야 합니다. 단순 색보정 하나만으로 해결된다고 보기는 어렵습니다.</p></div></div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="day-accordion fade-in" data-day-id="0624">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">6/24 (수)</span>
+          
+        </div>
+        <div class="day-accordion-summary">레한 응답·32일·애드센스 변경</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--accent-light);">💬</div><div class="section-title">핵심 Q&amp;A</div></div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">레한이 24시간 넘게 수락하지 않으면 어떻게 하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>온라인 상태와 수락 여부가 항상 즉시 맞물리지는 않습니다. 결제/문의 내역을 남기고, 초대 메일과 판매자 응답을 차례로 확인하는 흐름이 공유됐습니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">애드센스 변경 제한 32일은 언제부터 보나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>비승인/진행중/변경 가능일을 두고 질문이 많았습니다. 핵심은 화면에 표시된 현재 상태와 마지막 변경일을 기준으로 보고, 확정이 애매하면 고객센터/유튜브 상담 진행 상태까지 같이 확인하는 것입니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">애드센스 정보 제공자를 구할 때 주의점은 무엇인가요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>명의, 전화번호 인증 이력, 주소 변형, 세금정보 입력 가능 여부가 모두 연결됩니다. 이미 문제가 난 명의/주소/계정을 재사용하는 것은 보수적으로 피하는 흐름입니다.</p></div></div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="day-accordion fade-in" data-day-id="0623">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">6/23 (화)</span>
+          
+        </div>
+        <div class="day-accordion-summary">캡컷 내보내기·저조회수·모바일 계정</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--accent-light);">💬</div><div class="section-title">핵심 Q&amp;A</div></div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">캡컷에서 내보낼 때 먼저 확인할 것은 무엇인가요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">악싱</span></div><p>내보내기 전 화면비, 영상 길이, 음원 길이, 자막 위치를 확인하세요. 쇼츠가 일반 동영상으로 올라가거나 저작권 감지가 뜨는 경우 상당수가 이 기본값에서 시작됩니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">오전에 올린 영상이 한 자릿수 조회수면 비공개 후 다시 올려도 되나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>바로 채널 문제로 단정하지 말고, 정책위반/중복도/영상 퀄리티를 나눠 봅니다. 새 영상을 올릴 때는 같은 원본 반복보다 편집 차별화를 먼저 넣는 쪽이 안전합니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">수창채널이 있는 폰으로 깡통계정을 만들어도 되나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>가능 여부보다 리스크 분리가 더 중요합니다. 수창채널 운영 폰, 깡통계정 생성 폰, OTP/대장폰 역할을 분리하는 기준이 반복됐습니다.</p></div></div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="day-accordion fade-in" data-day-id="0620">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">6/20 (토)</span>
+          
+        </div>
+        <div class="day-accordion-summary">조/댓글방·음원·템플릿</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--accent-light);">💬</div><div class="section-title">핵심 Q&amp;A</div></div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">조별 댓글방은 어떻게 들어가나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">멤버</span><span class="qa-answer-name">방 참여자</span></div><p>해당 조 댓글 수가 보이는 곳을 눌러 그 안에서 대화하는 흐름이 공유됐습니다. 방 전체에 함께 보내기보다 조 댓글방 안에서 이어가는 것이 핵심입니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">템플릿 높낮이를 매번 다르게 해도 괜찮나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>템플릿 자체보다 소재/구성/차별화가 더 중요합니다. 다만 높낮이만 무작위로 바꾸는 것보다 화면 구성과 자막/컷의 이유가 있는 편집이 더 낫습니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">음원 때문에 수익창출 제한이 걸릴 수 있나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>가능합니다. 음원 출시 국가/저작권 보호 콘텐츠 감지/수익 제한 문구를 확인하고, 의심되면 음원을 줄이거나 바꾼 뒤 다시 판단하는 흐름이 반복됐습니다.</p></div></div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="day-accordion fade-in" data-day-id="0619">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">6/19 (금)</span>
+          <span class="day-accordion-badge">5강</span>
+        </div>
+        <div class="day-accordion-summary">정규강의 5강·조 편성·32일 이슈</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--accent-light);">💬</div><div class="section-title">핵심 Q&amp;A</div></div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">정규강의 시간이 당겨지면 어디를 확인하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge teacher">강사</span><span class="qa-answer-name">시도남</span></div><p>방 공지와 Zoom 안내를 우선 확인합니다. 이날은 정규강의 5강 관련 안내와 조 편성 이야기가 같이 오가서, 강의 직전 공지를 놓치지 않는 것이 중요했습니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">비승인 후 32일이면 자동으로 완료되나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>32일은 자주 언급된 기준이지만, 화면 상태가 비승인/진행중/상담 후 변경인지에 따라 다릅니다. 승인될 때까지 업로드를 계속할지, 상담을 넣을지 화면 상태를 먼저 캡처해 판단해야 합니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">1황 따라하기는 같은 카테고리만 해야 하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>카테고리가 같으면 적용이 쉽지만, 핵심은 후킹/전개/편집 템포를 배우는 것입니다. 무작정 복제보다 자신의 채널 카테고리에 맞게 구조를 가져오는 식으로 정리됐습니다.</p></div></div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="day-accordion fade-in" data-day-id="0618">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">6/18 (목)</span>
+          <span class="day-accordion-badge">활발</span>
+        </div>
+        <div class="day-accordion-summary">수창·알고리즘·채널 구매 피크</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--accent-light);">💬</div><div class="section-title">핵심 Q&amp;A</div></div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">수창채널을 사야 하는 이유는 무엇인가요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge teacher">강사</span><span class="qa-answer-name">시도남</span></div><p>방에서는 수창채널 구매가 반복적으로 강조됐습니다. 처음부터 수익창출 구조를 갖춘 채널로 시작해 검증 시간을 줄이려는 취지이며, 동시에 계정/애드센스 분리 리스크 관리가 따라와야 합니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">일본채널 알고리즘은 얼마나 걸리나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>정답 기간을 단정하기보다 업로드 빈도, 카테고리 일관성, 첫 반응, 조회수/시청지속을 함께 봐야 합니다. 초반에는 같은 방향으로 꾸준히 올려 유튜브가 채널 성격을 파악하게 하는 흐름입니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">채널 구매 후 AS 대상인지 어떻게 보나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>소유권 이전 전/후, 기존 애드센스 상태, 삭제·정지 사유, 판매자 안내 조건을 나눠 봅니다. 단순히 문제가 났다는 사실만으로 AS 여부를 단정하지 않습니다.</p></div></div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="day-accordion fade-in" data-day-id="0615">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">6/15 (월)</span>
+          
+        </div>
+        <div class="day-accordion-summary">세금정보·채널정지·캡컷 작업</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--accent-light);">💬</div><div class="section-title">핵심 Q&amp;A</div></div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">세금정보는 언제, 누구 명의로 입력하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge teacher">강사</span><span class="qa-answer-name">시도남</span></div><p>나중에 세금정보 입력 단계에서 사업자번호와 서류를 넣는 흐름이 공유됐습니다. 애드센스 명의, 실제 수령 계좌, 국내 세금신고 주체를 함께 맞춰야 합니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">채널 정지/삭제가 나면 어떻게 받아들여야 하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge teacher">강사</span><span class="qa-answer-name">시도남</span></div><p>채널정지와 삭제는 운영 과정에서 이겨내야 하는 영역으로 언급됐습니다. 다만 같은 실수를 반복하지 않도록 계정/소재/중복도/애드센스 연결 이력을 분리해 확인해야 합니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">캡컷 프로젝트를 일부 삭제했으면 시연/과제는 어떻게 하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>남은 작업물로 핵심 과정을 보여줄 수 있는지 먼저 판단합니다. 중요한 것은 결과물 개수보다 템플릿, 소재, 자막, 편집 의도가 설명되는지입니다.</p></div></div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="day-accordion fade-in" data-day-id="0607">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">6/7 (일)</span>
+          
+        </div>
+        <div class="day-accordion-summary">OTP·대장폰·다계정 분리</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--accent-light);">💬</div><div class="section-title">핵심 Q&amp;A</div></div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">수창채널이 여러 개면 OTP는 어디에 넣나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge teacher">강사</span><span class="qa-answer-name">시도남</span></div><p>한국 대장폰에 한국 계정 OTP를 모아 넣는 식의 운영 예시가 공유됐습니다. 중요한 것은 업로드용/생성용/OTP용 역할을 섞지 않고, 실제 운영 계정은 크롬 프로필과 기기 역할로 분리하는 것입니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">대장폰에 여러 계정을 로그인해도 되나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>대장폰은 업로드/관리용으로 쓰되, 채널별 모바일 운영 기준과 섞이지 않게 이해해야 합니다. 계정 생성과 채널 운영, 애드센스 인증을 같은 폰에 몰아넣지 않는 쪽이 보수적입니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">틱톡은 1분 이상이어야 수익이 나나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">악싱</span></div><p>틱톡 수익은 1분 이상 영상 기준으로 언급됐습니다. 처음 계정/첫 영상은 도달 테스트 관점도 함께 봐야 해서, 플랫폼별 길이 기준을 분리해 관리하세요.</p></div></div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="day-accordion fade-in" data-day-id="0522">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">5/22 (금)</span>
+          <span class="day-accordion-badge">1강</span>
+        </div>
+        <div class="day-accordion-summary">정규강의 1강·VOD·Zoom</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--accent-light);">💬</div><div class="section-title">핵심 Q&amp;A</div></div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">라이브를 못 들으면 어떻게 보나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">시지지</span></div><p>정규강의와 특강은 카페 VOD로 제공되고, 보통 다음날 오후 1시쯤 업로드되는 흐름으로 안내됐습니다. 편집이 필요한 강의는 평소보다 늦어질 수 있습니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">첫 정규강의 전에 무엇을 준비하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">시지지</span></div><p>Zoom 다운로드, 카페 등업, 강의 자료 확인이 먼저입니다. 라이브 참여가 처음이면 강의 직전에 설치하지 말고 미리 접속 환경을 확인하세요.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">1강에서 계정/애드센스 질문을 해도 되나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">시지지</span></div><p>계정과 애드센스는 1강에서 자세히 다뤄지는 핵심 주제라, 강의 전에는 카페 자료와 공지를 보고 강의 중/후에 질문하는 흐름으로 정리됐습니다.</p></div></div>
+            </div>
+          </div>
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--orange-light);">📢</div><div class="section-title">공지 · 안내</div></div>
+
+            <div class="insight-card">
+              <div class="insight-emoji">📌</div>
+              <div class="insight-body"><h3>정규강의 1강</h3><p>노멀쇼츠 1기 첫 강의는 Zoom 라이브로 진행됐고, 뒤늦게 보는 사람은 카페 VOD와 자료 업로드를 기준으로 따라가면 됩니다.</p><span class="insight-tag tag-tip">강의</span></div>
             </div>
           </div>
         </div>
       </div>
     </section>
   </div>
+
   <div id="tab-faq" class="tab-content">
-    <div class="section fade-in"><div class="section-header"><div class="section-icon" style="background:var(--orange-light);">❓</div><div class="section-title">자주 묻는 질문</div></div><p style="color:var(--sub);">초기 대화기록 분석 후 채워집니다.</p></div>
+    <div class="section fade-in">
+      <div class="section-header"><div class="section-icon" style="background:var(--orange-light);">❓</div><div class="section-title">자주 묻는 질문</div></div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">1폰 1채널 1애드센스 기준은 왜 계속 나오나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>모바일 기기는 한 사람이 한 개처럼 보이는 신호가 강해서, 계정/채널/애드센스를 섞으면 관련 채널 리스크가 커진다는 운영 기준 때문입니다. 대장폰, 깡통폰, OTP폰 역할을 분리하는 쪽이 반복 안내됐습니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">수창채널 구매 후 바로 바꿔도 되는 항목은 무엇인가요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>소유권 이전 전에는 채널명, 핸들, 로고 같은 큰 변경을 서두르지 않는 쪽이 자주 권장됐습니다. 먼저 관리자/소유권 상태, 애드센스 연결, 기존 영상/수익창출 상태를 확인하세요.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">애드센스 전화번호 인증이 뜨면 어떻게 해야 하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>강의 기준과 화면 상태가 다르면 즉시 진행하기보다 어떤 단계에서 뜬 인증인지 확인해야 합니다. 기존 애드센스/블로그/가족번호 이력까지 엮일 수 있어, 재사용 여부를 보수적으로 봅니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">비승인 또는 진행중 상태는 32일만 기다리면 되나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>32일은 반복 언급된 기준이지만 자동 해결 보장은 아닙니다. 마지막 변경일, 상담 진행 여부, 화면 문구, 승인/비승인 전환 상태를 함께 기록하세요.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">조회수가 0~한 자릿수면 바로 채널을 버리나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>아닙니다. 첫 영상/초기 영상은 도달 테스트 성격이 있고, 중복도·음원·자막 위치·템플릿·소재가 더 직접적인 원인일 수 있습니다. 최소 몇 개 영상의 반응과 품질을 같이 봐야 합니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">VOD와 자료는 어디서 확인하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>노멀쇼츠 1기 카페가 기준입니다. 라이브를 못 들었더라도 VOD와 자료가 업로드되며, 편집이 필요한 강의는 업로드가 늦어질 수 있습니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">채널 구매는 해외와 국내 중 무엇이 낫나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>국내는 비용이 더 들 수 있고, 해외는 결제/소통/초대 확인 리스크가 있습니다. 방에서는 레한, 바이낸스/테더, 국내 판매자 검토 등 여러 흐름이 오갔고, 결론은 싸게 사는 것보다 리스크를 이해하고 사는 것입니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">캡컷에서 쇼츠가 일반 동영상으로 올라가면 무엇을 봐야 하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>화면비 9:16, 1분 미만 길이, 배경음악 길이, 내보내기 설정을 확인하세요. 특히 음악이 길어 전체 영상 길이가 늘어나는 경우가 반복 언급됐습니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">세금정보와 계좌 명의는 어떻게 연결하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>최종적으로 국내에서 세금신고를 할 사람의 정보와 지급 계좌를 맞추는 흐름으로 정리됐습니다. 사업자번호/서류 입력 단계도 이후에 따로 확인해야 합니다.</p></div></div>
+            </div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">조별 댓글방/과제 릴레이는 왜 중요한가요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge ">운영</span><span class="qa-answer-name">다이제스트</span></div><p>과제 제출과 피드백, 조별 소통이 강의 운영의 핵심입니다. 방 전체에 흩어지는 질문보다 조/댓글방 안에서 이어가면 맥락이 덜 끊깁니다.</p></div></div>
+            </div>
+    </div>
   </div>
+
   <div id="tab-links" class="tab-content">
-    <div class="section fade-in"><div class="section-header"><div class="section-icon" style="background:var(--green-light);">🔗</div><div class="section-title">링크 모음</div></div><p style="color:var(--sub);">확인된 링크만 정리합니다.</p></div>
+    <div class="section fade-in">
+      <div class="section-header"><div class="section-icon" style="background:var(--green-light);">🔗</div><div class="section-title">링크 모음</div></div>
+      <div class="link-grid">
+        <a class="link-card" href="https://cafe.naver.com/normalshorts1" target="_blank" rel="noopener">
+          <div class="link-card-title">노멀쇼츠 1기 카페</div>
+          <p>VOD, 강의자료, 과제 릴레이의 기준 공간입니다.</p>
+          <span class="insight-tag tag-tool">카페</span>
+        </a>
+        <a class="link-card" href="https://zoom.us/download" target="_blank" rel="noopener">
+          <div class="link-card-title">Zoom 다운로드</div>
+          <p>정규강의 라이브 참여 전 미리 설치해야 하는 링크입니다.</p>
+          <span class="insight-tag tag-tool">라이브</span>
+        </a>
+        <a class="link-card" href="https://adsense.google.com/" target="_blank" rel="noopener">
+          <div class="link-card-title">AdSense</div>
+          <p>애드센스 계정/설정/계정정보 확인 기준 사이트입니다.</p>
+          <span class="insight-tag tag-tool">애드센스</span>
+        </a>
+        <a class="link-card" href="https://chromewebstore.google.com/detail/nffaoalbilbmmfgbnbgppjihopabppdk" target="_blank" rel="noopener">
+          <div class="link-card-title">속도 조절 확장프로그램</div>
+          <p>강의/VOD를 빠르게 복습할 때 공유된 Chrome Web Store 링크입니다.</p>
+          <span class="insight-tag tag-tool">도구</span>
+        </a>
+        <a class="link-card" href="https://m.mobing.co.kr/main" target="_blank" rel="noopener">
+          <div class="link-card-title">모빙</div>
+          <p>유심/알뜰폰 개통 흐름에서 공유된 링크입니다.</p>
+          <span class="insight-tag tag-tool">유심</span>
+        </a>
+        <a class="link-card" href="https://www.ktmmobile.com/main.do" target="_blank" rel="noopener">
+          <div class="link-card-title">KT M mobile</div>
+          <p>유심/개통 예시로 공유된 통신사 링크입니다.</p>
+          <span class="insight-tag tag-tool">유심</span>
+        </a>
+      </div>
+    </div>
   </div>
+
   <div class="page-footer fade-in">
     <div><span class="live-dot"></span>노멀쇼츠 1기 사담방</div>
-    <div class="updated-at">마지막 업데이트: 2026-06-30 14:36 KST</div>
+    <div class="updated-at">마지막 업데이트: 2026-06-30 15:40 KST</div>
   </div>
 </div>
 <button class="fab-top" id="fabTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
@@ -647,6 +1139,9 @@ function toggleAccordion(panel) {
   panel.classList.toggle('open', next);
   var header = panel.querySelector('.day-accordion-header');
   if (header) header.setAttribute('aria-expanded', String(next));
+}
+function toggleQa(card) {
+  card.classList.toggle('open');
 }
 function copyToClipboard(text) {
   var show = function() { var t = document.getElementById('toast'); t.classList.add('show'); setTimeout(function() { t.classList.remove('show'); }, 1800); };
