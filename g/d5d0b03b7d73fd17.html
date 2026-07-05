@@ -585,7 +585,7 @@
   <div class="stats-bar fade-in">
     <div class="stat-pill"><span class="num">6/23~7/5</span><span class="label">정리 기간</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--green);">2강</span><span class="label">정규강의 라이브</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--orange);">43</span><span class="label">핵심 Q&amp;A</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--orange);">46</span><span class="label">핵심 Q&amp;A</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--purple);">4</span><span class="label">운영 링크</span></div>
   </div>
   <div class="tab-bar-wrap fade-in" id="tabBarWrap">
@@ -605,10 +605,25 @@
           <span class="day-accordion-date">7/5 (일)</span>
           <span class="day-accordion-badge">최신</span>
         </div>
-        <div class="day-accordion-summary">근황 2건</div>
+        <div class="day-accordion-summary">Q&amp;A 3개 · 근황 2건 · 공지 1건</div>
       </button>
       <div class="day-accordion-body">
         <div class="day-accordion-content">
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--accent-light);">💬</div><div class="section-title">핵심 Q&amp;A</div></div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">웨이브(OTT) 영화를 다운로드하려는데 DRM 보호로 막혀요. 다른 방법이 있나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">부기</span></div><p>downie4로는 DRM이 걸린 웨이브 영상이 받아지지 않아요. 부기 조교가 우회 방법을 정리한 블로그 글을 공유했으니 순서대로 따라 해 보세요. <a href="https://m.blog.naver.com/thummmb_95/223424882673" target="_blank" rel="noopener">다운로드 방법 안내(블로그)</a></p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">2주차 과제가 따로 정해져 있나요? (해외영화 미드폼 유통 같은 것)</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge">강사</span><span class="qa-answer-name">레오쌤</span></div><p>매주차 과제가 딱 정해져 있는 게 아니에요. 본인 채널에 영상을 최대한 많이 올리는 게 핵심이고, 많이 못 하는 분들을 위해 “최소 2개”만 기준으로 말씀드린 거예요. 어떤 카테고리든 운영할 채널의 영상을 올리고 레오쌤에게 피드백을 받아 발전시켜 나가는 게 1순위 목적이에요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">완전 초보인데 트렌드보드로 레퍼런스(벤치마킹) 채널을 어떻게 고르나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge">강사</span><span class="qa-answer-name">레오쌤</span></div><p>먼저 운영할 카테고리를 정하세요. 그다음 같은 카테고리로 운영하는 채널 중 ①조회수가 잘 나오고 ②영상 간 조회수 등락이 크지 않은 채널을 트렌드보드 데이터 기준으로 골라요. 그 채널이 곧 레퍼런스(쉐도잉) 채널이에요. 쉐도잉은 이 레퍼런스를 기반으로 진행하면 됩니다.</p></div></div>
+            </div>
+          </div>
           <div class="section fade-in">
             <div class="section-header"><div class="section-icon" style="background:var(--green-light);">🎉</div><div class="section-title">근황</div></div>
             <div class="insight-card">
@@ -618,6 +633,13 @@
             <div class="insight-card">
               <div class="insight-emoji">🌙</div>
               <div class="insight-body"><h3>새벽까지 이어진 응원 수다 &amp; 조교 근황</h3><p>남경이·구구구구·닥고잉님과 시지지 조교가 새벽까지 화기애애하게 이야기를 나눴어요. 시지지 조교는 담당 강사 영상에 응원 댓글을 다는 작업을 하러 새벽 출근을 하면서도 서로를 다독였고, 남경이님은 영상 하나를 만들고 강의 복습을 마친 뒤 잠들었어요.</p><span class="insight-tag tag-tip">근황</span></div>
+            </div>
+          </div>
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--orange-light);">📢</div><div class="section-title">공지 · 안내</div></div>
+            <div class="insight-card">
+              <div class="insight-emoji">📣</div>
+              <div class="insight-body"><h3>1·2주차 VOD 시청 &amp; 과제 제출 독려</h3><p>시지지 조교가 1주차 라이브 미참석자에게 VOD(다시보기) 시청을, 1·2주차 과제 미제출자에게 제출을 무한 태그로 독려했어요. 라이브를 놓쳤다면 VOD로 꼭 챙겨 보고, 과제는 늦더라도 이어서 제출해 주세요. 2주차 과제도 사담방 “제출 명단”에 본인 번호를 이어 붙이는 릴레이 방식으로 인증하고 있어요.</p><span class="insight-tag tag-tip">과제</span></div>
             </div>
           </div>
         </div>
@@ -1252,7 +1274,7 @@
 
   <div class="page-footer fade-in">
     <div><span class="live-dot"></span>쇼츠포뮬러 2기 사담방</div>
-    <div class="updated-at">마지막 업데이트: 2026-07-05 08:40 KST</div>
+    <div class="updated-at">마지막 업데이트: 2026-07-05 21:40 KST</div>
   </div>
 </div>
 <button class="fab-top" id="fabTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
