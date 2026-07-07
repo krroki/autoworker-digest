@@ -585,7 +585,7 @@
   <div class="stats-bar fade-in">
     <div class="stat-pill"><span class="num">6/23~7/7</span><span class="label">정리 기간</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--green);">2강</span><span class="label">정규강의 라이브</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--orange);">51</span><span class="label">핵심 Q&amp;A</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--orange);">55</span><span class="label">핵심 Q&amp;A</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--purple);">4</span><span class="label">운영 링크</span></div>
   </div>
   <div class="tab-bar-wrap fade-in" id="tabBarWrap">
@@ -605,22 +605,45 @@
           <span class="day-accordion-date">7/7 (화)</span>
           <span class="day-accordion-badge">최신</span>
         </div>
-        <div class="day-accordion-summary">근황 1건 · 공지 1건</div>
+        <div class="day-accordion-summary">Q&amp;A 4개 · 근황 2건 · 공지 1건</div>
       </button>
       <div class="day-accordion-body">
         <div class="day-accordion-content">
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--accent-light);">💬</div><div class="section-title">핵심 Q&amp;A</div></div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">해외영화 소스는 어디서 화질 좋게 받나요? OTT에 가입해야 하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">시지지</span></div><p>저는 클레버겟을 써요. 금액이 좀 부담이라(20만 원대 결제) 웹하드가 현실적이긴 한데, 웹하드는 음질이 아쉬워서 결국 클레버겟으로 갈아탔어요.</p></div><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">멤버</span><span class="qa-answer-name">열심하시죠</span></div><p>클레버겟은 OTT 소스 위주예요. 넷플·디플·티빙·아마존·웨이브에 웹하드 포인트까지 다 받아 놔도 30% 정도는 못 찾는 경우가 있는 것 같아요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">다운받은 음원을 캡컷에서 영상에 직접 넣어 올렸는데, 조회수에 영향은 없을까요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge">강사</span><span class="qa-answer-name">레오쌤</span></div><p>음원은 꼭 유튜브 쇼츠 업로드 화면 상단의 “사운드 추가” 기능으로 넣어 주세요. 조회수·노출에는 크게 문제없지만, 찝찝하다면 기존 영상을 삭제하고 사운드 추가 기능으로 음원을 넣어 다시 업로드하는 걸 추천해요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">잘되는 채널이 설명·고정댓글에 “교육적 목적의 콘텐츠”를 넣어 두던데, 왜 그럴까요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">부기</span></div><p>“총” 같은 단어나 기승전결 구조 자체에 가이드 위반 요소가 있어 이를 피하려는 목적과, 유튜브가 교육적 콘텐츠를 선호하기 때문이에요. 설명문만 바꾸는 건 공수가 안 들면서 가이드라인 위반을 막아 줘서, 실제로 이렇게 하면 안 걸리는 경우가 많아요. <a href="https://youtube.com/shorts/ObxSUWUqzDI?si=wq6K6ZMzq_sLegZS" target="_blank" rel="noopener">모락모락님이 발견한 사례 쇼츠</a></p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">AI한테 영상 설명문·제목을 만들게 해 봤는데 결과물이 별로예요. 어떻게 해야 잘 나오나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">부기</span></div><p>최대한 정확한 예시를 넣어 주는 게 중요해요. AI 스튜디오나 제미나이에 잘된 채널의 설명문 예시(캡처보다 글 복붙)와 영상을 같이 넣고, “어떤 영상을 첨부해도 이 형식대로 설명문이 나오게 세팅해 줘”라고 하면 영상만 올려도 설명문·해시태그가 자동으로 나오는 템플릿을 만들 수 있어요.</p></div></div>
+            </div>
+          </div>
           <div class="section fade-in">
             <div class="section-header"><div class="section-icon" style="background:var(--green-light);">🎉</div><div class="section-title">근황</div></div>
             <div class="insight-card">
               <div class="insight-emoji">☕</div>
               <div class="insight-body"><h3>비 오는 화요일, 출근길 아침 인사</h3><p>이른 아침 열심하시죠·로누·도브리댄·별이되자11님이 출근 인사를 나눴고, 월3억 조교도 굿모닝으로 화답했어요. 비 오는 날씨에 커피 한잔과 함께 하루를 시작하며 서로 파이팅을 주고받았어요.</p><span class="insight-tag tag-tip">근황</span></div>
             </div>
+            <div class="insight-card">
+              <div class="insight-emoji">💪</div>
+              <div class="insight-body"><h3>레오쌤 저녁 방문 &amp; 능력자 조교 3인방</h3><p>레오쌤이 저녁에 들어와 남경이님이 막힌 부분을 “응급실에서 해결해 드릴게요”라며 직접 챙기고, 별이되자11님의 음원 질문에도 답을 남겼어요. 부기 조교는 AI 설명문 템플릿을 즉석에서 세팅해 공유했고, “능력자 조교님이 셋이나 있어 든든하다”는 칭찬 속에 “필요한 거 있으면 말씀만 하세요”라며 훈훈하게 마무리됐어요.</p><span class="insight-tag tag-tip">근황</span></div>
+            </div>
           </div>
           <div class="section fade-in">
             <div class="section-header"><div class="section-icon" style="background:var(--orange-light);">📢</div><div class="section-title">공지 · 안내</div></div>
             <div class="insight-card">
               <div class="insight-emoji">⏰</div>
-              <div class="insight-body"><h3>2주차 과제 마감 D-Day — 오늘(7/7) 자정까지</h3><p>2주차 과제 마감이 오늘 밤 12시(자정)까지예요. 밤사이에도 “제출 명단” 릴레이가 이어져 로누님(14번), 남경이님(15번)까지 15명이 인증을 마쳤어요. 아직이라면 사담방 “제출 명단”을 복사해 본인 번호를 이어 붙여 제출을 인증해 주세요.</p><span class="insight-tag tag-caution">마감</span></div>
+              <div class="insight-body"><h3>2주차 과제 마감 D-Day — 오늘(7/7) 자정까지</h3><p>2주차 과제 마감이 오늘 밤 12시(자정)까지예요. “제출 명단” 릴레이가 저녁까지 이어져(비발디·돈솔·스톤님 등) 16명 이상이 제출을 인증했어요. 비발디님처럼 2주차 강의 시청 완료를 알리면 조교가 바로 체크해 줘요. 아직이라면 사담방 “제출 명단”을 복사해 본인 번호를 이어 붙여 제출을 인증해 주세요.</p><span class="insight-tag tag-caution">마감</span></div>
             </div>
           </div>
         </div>
@@ -1361,7 +1384,7 @@
 
   <div class="page-footer fade-in">
     <div><span class="live-dot"></span>쇼츠포뮬러 2기 사담방</div>
-    <div class="updated-at">마지막 업데이트: 2026-07-07 08:40 KST</div>
+    <div class="updated-at">마지막 업데이트: 2026-07-07 22:02 KST</div>
   </div>
 </div>
 <button class="fab-top" id="fabTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
