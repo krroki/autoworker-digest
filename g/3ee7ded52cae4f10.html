@@ -587,7 +587,7 @@
   <div class="stats-bar fade-in">
     <div class="stat-pill"><span class="num">8/5</span><span class="label">정리 시작</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--green);">2기</span><span class="label">현재 기수</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--purple);">4</span><span class="label">누적 Q&amp;A</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--purple);">6</span><span class="label">누적 Q&amp;A</span></div>
   </div>
 
   <div class="tab-bar fade-in" id="tabBar">
@@ -596,12 +596,107 @@
   </div>
 
   <div id="tab-daily" class="tab-content active">
-    <section class="day-accordion fade-in open" data-day-id="0805">
+    <section class="day-accordion fade-in open" data-day-id="0806">
       <button class="day-accordion-header" type="button" aria-expanded="true" onclick="toggleAccordion(this.parentElement)">
         <div class="day-accordion-left">
           <span class="day-accordion-arrow">▼</span>
-          <span class="day-accordion-date">8/5 (수)</span>
+          <span class="day-accordion-date">8/6 (목)</span>
           <span class="day-accordion-badge">최신</span>
+        </div>
+        <div class="day-accordion-summary">대본 팩트체크 · 썸네일 팁 · 새벽반 소식</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--green-light);">🔍</div>
+              <div class="section-title">대본 검증 · 팩트체크</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">대본 내용 검증(팩트체크)은 꼭 해야 하나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>제재로 날아간 채널들을 보니, 죄다 대본 만들 때 팩트체크에 몇 번씩 걸렸던 채널들이었어요.<br>검증에 시간을 오래 쓰는 건 아니고, 토큰을 더 쓰는 방식으로 하고 있어요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>검증에 너무 오래 시간을 쓰면 매몰될 수 있어서, 믿고 진행한다는 의견도 있었어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--purple-light);">🎨</div>
+              <div class="section-title">썸네일 만들기</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">썸네일이 계속 마음에 안 들게 나오면 어떻게 하나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>썸네일 제목(문구)을 먼저 잘 지어놓고 뽑으면 그나마 잘 나와요.<br>레퍼런스로 삼은 영상의 썸네일을 함께 제공해서 뽑아달라고 해보세요.<br>한 번에 끝내려 하지 말고 20~30개 뽑은 뒤 제일 좋은 걸 고르는 방법도 있어요.<br>기본 템플릿을 정해두고 빨간 화살표 정도만 추가하는 식으로 일관되게 쓰는 분도 있어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🖼️</div>
+              <div class="insight-body">
+                <h3>썸네일이 제일 오래 걸리고, 제일 어려워요</h3>
+                <p>대본은 10분인데 썸네일은 50분 걸린다는 이야기까지 나왔어요. 썸네일이 조회수를 좌우한다는 데 다들 공감했고, 새벽까지 썸네일을 다듬는 분들이 많았어요.</p>
+                <span class="insight-tag tag-tip">썸네일</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--orange-light);">🌙</div>
+              <div class="section-title">방 소식</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🌎</div>
+              <div class="insight-body">
+                <h3>미국에서 듣는 새벽반이 다섯 분이나 있어요</h3>
+                <p>서부·중부·동부에 걸쳐 미국 거주 수강생이 다섯 분 계신 게 확인됐어요. 시차 때문에 새벽에 듣는 분들끼리 "새벽반이 안 외롭다"며 서로 격려했어요.</p>
+                <span class="insight-tag tag-tool">새벽반</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🎁</div>
+              <div class="insight-body">
+                <h3>프로그램·쿠폰 나눔으로 훈훈했어요</h3>
+                <p>수강생끼리 직접 만든 프로그램을 나누고 감사의 쿠폰을 주고받았어요. "훈훈해서 덕분에 행복하다"는 반응이 이어졌어요.</p>
+                <span class="insight-tag tag-revenue">나눔</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="day-accordion fade-in" data-day-id="0805">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">8/5 (수)</span>
         </div>
         <div class="day-accordion-summary">수익 창출 신청 · 채널 전략 · 강의 자료 위치</div>
       </button>
@@ -806,10 +901,41 @@
           </div>
         </div>
       </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">대본 팩트체크는 꼭 해야 하나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge">서포터즈</span>
+              <span class="qa-answer-name">아는아이</span>
+            </div>
+            <p>제재로 날아간 채널들은 대본 팩트체크에 몇 번씩 걸렸던 채널들이었어요.<br>시간을 오래 쓰기보다 토큰을 써서 검증하는 편이에요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">썸네일이 마음에 안 들게 나오면 어떻게 하나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>제목 문구를 먼저 잘 지어놓고 뽑아보세요.<br>레퍼런스 영상의 썸네일을 함께 제공해서 뽑는 것도 방법이에요.<br>20~30개 뽑아 제일 좋은 걸 고르거나, 기본 템플릿에 화살표만 추가하는 식으로 쓰는 분도 있어요.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="updated-at">마지막 업데이트: 2026-08-05</div>
+  <div class="updated-at">마지막 업데이트: 2026-08-06</div>
 </div>
 
 <button class="fab-top" id="fabTop" type="button" aria-label="맨 위로" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
