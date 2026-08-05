@@ -587,7 +587,7 @@
   <div class="stats-bar fade-in">
     <div class="stat-pill"><span class="num">8/5</span><span class="label">정리 시작</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--green);">2기</span><span class="label">현재 기수</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--purple);">0</span><span class="label">누적 Q&amp;A</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--purple);">4</span><span class="label">누적 Q&amp;A</span></div>
   </div>
 
   <div class="tab-bar fade-in" id="tabBar">
@@ -603,10 +603,123 @@
           <span class="day-accordion-date">8/5 (수)</span>
           <span class="day-accordion-badge">최신</span>
         </div>
-        <div class="day-accordion-summary">다이제스트 시작</div>
+        <div class="day-accordion-summary">수익 창출 신청 · 채널 전략 · 강의 자료 위치</div>
       </button>
       <div class="day-accordion-body">
         <div class="day-accordion-content">
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--green-light);">💰</div>
+              <div class="section-title">수익 창출 신청</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">수익 창출 신청, 1차 조건이 되면 바로 하나요? 아니면 한 번에 2차까지 기다렸다 하나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>1차 조건이 되면 바로 신청하는 게 좋아요.<br>1차에서 애드센스를 연결하고 검토받는 데 시간이 오래 걸리거든요.<br>애드센스 신청 자체는 보통 5~6시간이면 되지만, 수익 창출 검토는 24시간에서 최대 30일까지 걸리고 실제로 10일 넘게 걸린 분도 있어요.<br>2차는 1차가 승인된 뒤 조건만 맞추면 바로 끝나요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">📈</div>
+              <div class="section-title">채널 전략 · 소재</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">처음부터 여러 채널을 벌리는 것보다 한 채널을 꾸준히 파는 게 나을까요? 첫 채널이 나와 결이 안 맞으면 바로 새 채널로 갈아타는 게 좋을까요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>하나부터 차근차근 늘려가는 게 좋아요. 여러 조교님이 같은 답을 주셨어요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>갈아타는 것도 방법이에요.<br>다만 잘 안 됐을 때 실패한 이유를 분석해서, 같은 이유로 다시 실패하지 않게 준비한 뒤 새 채널로 옮기는 게 좋아요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">✍️</div>
+              <div class="insight-body">
+                <h3>결국 소재 찾기와 대본력에서 판가름 나요</h3>
+                <p>툴은 다들 같은 걸 쓰니 소재 찾기와 대본력이 승부처라는 이야기가 나왔어요. 소재는 거창하게 찾기보다 "내가 관심 있고 만들고 싶은 것"에서 시작해, 그중 사람들이 공통으로 관심 있는 걸 추리면 좋아요. 처음엔 어렵지만 한두 번 해보면 금방 적응한다는 격려도 이어졌어요.</p>
+                <span class="insight-tag tag-tip">소재 찾기</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--purple-light);">📚</div>
+              <div class="section-title">강의 자료 위치</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">무료 특강에서 만들던 파인더뷰, 수업에서 다시 알려주나요? VOD로 볼 수 있나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생 · 서포터즈</span>
+                  </div>
+                  <p>무료강의 1·2부는 유료 수강생을 위해 카페에 올라와 있고, 2기 카페에도 이미 등록돼 있어요.<br>노쌤이 만들어 주신 파인더는 보너스 프로그램에 있어요.<br>바이브코딩 수업은 3강에 있는데 거기서는 다른 내용을 다룰 것 같고, 이 내용은 정규강의 5강 커리큘럼에 있다고 해요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--orange-light);">📢</div>
+              <div class="section-title">방 소식 · 공지</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">✔️</div>
+              <div class="insight-body">
+                <h3>닉네임 변경 안내가 반복 공지되고 있어요</h3>
+                <p>이 방은 1기·2기 수강생이 함께하는 공간이에요. 입장하면 안내된 양식에 맞게 닉네임을 바꿔 달라는 공지가 주기적으로 올라와요.</p>
+                <span class="insight-tag tag-caution">공지</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🎉</div>
+              <div class="insight-body">
+                <h3>아는아이님·후파님이 운영진으로 합류했어요</h3>
+                <p>아는아이님이 서포터즈로, 후파님이 조교로 합류해 방에서 축하가 이어졌어요. "힘닿는 데까지 열심히 도와드릴게요"라는 인사도 있었어요.</p>
+                <span class="insight-tag tag-revenue">축하</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🎬</div>
+              <div class="insight-body">
+                <h3>"영드짜"는 영화·드라마 짜집기예요</h3>
+                <p>강의는 사주, 쇼핑, 쇼츠, 롱폼, 자동화, 영드짜 등 다양하게 있으니 관심 분야를 수강하면 된다는 안내가 있었어요.</p>
+                <span class="insight-tag tag-tool">용어</span>
+              </div>
+            </div>
+          </div>
+
           <div class="section">
             <div class="section-header">
               <div class="section-icon" style="background:var(--accent-light);">🚀</div>
@@ -632,11 +745,65 @@
         <div class="section-icon" style="background:var(--green-light);">💬</div>
         <div class="section-title">자주 묻는 질문</div>
       </div>
-      <div class="insight-card">
-        <div class="insight-emoji">🌱</div>
-        <div class="insight-body">
-          <h3>질문과 답변을 모으고 있어요</h3>
-          <p>반복되는 질문에 구체적인 답변이 확인되면 이곳에서 바로 찾을 수 있게 정리해요.</p>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">수익 창출 신청은 언제 하는 게 좋나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge">서포터즈</span>
+              <span class="qa-answer-name">아는아이</span>
+            </div>
+            <p>1차 조건이 되면 바로 신청하세요.<br>애드센스 신청은 5~6시간 정도지만 수익 창출 검토는 24시간~최대 30일까지 걸려요.<br>2차는 1차 승인 후 조건만 맞추면 바로 끝나요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">채널은 하나만 파는 게 좋나요, 여러 개 늘리는 게 좋나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>하나부터 차근차근 늘려가는 게 좋아요.<br>갈아탈 때는 실패한 이유를 먼저 분석해서 같은 이유로 다시 실패하지 않게 준비한 뒤 옮기세요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">무료 특강 다시보기와 파인더뷰 자료는 어디 있나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생 · 서포터즈</span>
+            </div>
+            <p>무료강의 1·2부는 2기 카페에 올라와 있어요.<br>노쌤이 만들어 주신 파인더는 보너스 프로그램에 있어요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">"영드짜"가 무슨 뜻인가요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>영화·드라마 짜집기라는 뜻이에요.<br>강의는 사주, 쇼핑, 쇼츠, 롱폼, 자동화, 영드짜 등 다양하게 있어요.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -660,6 +827,9 @@ function toggleAccordion(panel) {
   panel.classList.toggle('open', next);
   var header = panel.querySelector('.day-accordion-header');
   if (header) header.setAttribute('aria-expanded', String(next));
+}
+function toggleQa(card) {
+  card.classList.toggle('open');
 }
 var observer = new IntersectionObserver(function(entries) {
   entries.forEach(function(entry) {
