@@ -587,7 +587,7 @@
   <div class="stats-bar fade-in">
     <div class="stat-pill"><span class="num">8/5</span><span class="label">정리 시작</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--green);">2기</span><span class="label">현재 기수</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--purple);">7</span><span class="label">누적 Q&amp;A</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--purple);">8</span><span class="label">누적 Q&amp;A</span></div>
   </div>
 
   <div class="tab-bar fade-in" id="tabBar">
@@ -596,14 +596,57 @@
   </div>
 
   <div id="tab-daily" class="tab-content active">
-    <section class="day-accordion fade-in open" data-day-id="0806">
+    <section class="day-accordion fade-in open" data-day-id="0807">
       <button class="day-accordion-header" type="button" aria-expanded="true" onclick="toggleAccordion(this.parentElement)">
         <div class="day-accordion-left">
           <span class="day-accordion-arrow">▼</span>
-          <span class="day-accordion-date">8/6 (목)</span>
+          <span class="day-accordion-date">8/7 (금)</span>
           <span class="day-accordion-badge">최신</span>
         </div>
-        <div class="day-accordion-summary">대본 팩트체크 · 썸네일 팁 · 무료 강의 듣기 · 방 소식</div>
+        <div class="day-accordion-summary">점검 시간 안내 · 해외·새벽 작업 시간대</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--orange-light);">🛠️</div>
+              <div class="section-title">점검 시간</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">점검 시간은 보통 언제인가요? 매일 있나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>점검 시간은 매번 달라요.<br>미리 공지되니 공지를 확인해 주세요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🌏</div>
+              <div class="insight-body">
+                <h3>해외에서 듣는 분들은 작업 시간대를 미리 계산해요</h3>
+                <p>일하는 시간대가 달라서 점검 시간을 미리 알아두고 싶다는 이야기가 새벽에 나왔어요. 해외에 거주하며 듣는 분이 본인 말고도 서너 분 더 있는 것으로 알고 있다는 언급도 있었어요.</p>
+                <span class="insight-tag tag-tool">새벽·해외</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="day-accordion fade-in" data-day-id="0806">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">8/6 (목)</span>
+        </div>
+        <div class="day-accordion-summary">대본 팩트체크 · 썸네일 팁 · 소재와 이미지 · 강의 시간</div>
       </button>
       <div class="day-accordion-body">
         <div class="day-accordion-content">
@@ -699,6 +742,21 @@
 
           <div class="section">
             <div class="section-header">
+              <div class="section-icon" style="background:var(--green-light);">🧩</div>
+              <div class="section-title">소재 · 이미지 매칭</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🎯</div>
+              <div class="insight-body">
+                <h3>AI 영상은 소재에서 판가름 난다는 이야기가 나왔어요</h3>
+                <p>실사 영상을 찾을 일이 없다 보니 결국 소재가 승부처라는 말이 오갔어요. 소재를 표현할 이미지를 무엇으로 쓸지, 만화풍이 좋을지 수채화풍이 좋을지, 타깃과 맞아떨어지는지까지 함께 고민해야 한다는 조언이 이어졌어요. 카테고리와 대본, 벤치마킹 채널을 찾으며 소재를 조금씩 좁혀 가는 중이라는 분도 있었어요.</p>
+                <span class="insight-tag tag-tip">소재 · 이미지</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
               <div class="section-icon" style="background:var(--accent-light);">🎓</div>
               <div class="section-title">강의 듣기 · 일정</div>
             </div>
@@ -723,6 +781,21 @@
                 <h3>강의는 8/6이 아니라 8/7이에요</h3>
                 <p>강의가 오늘인 줄 알았다가 다음 날이라는 걸 확인한 분이 있었어요. 날짜를 헷갈리기 쉬우니 한 번 더 확인해 주세요.</p>
                 <span class="insight-tag tag-caution">일정</span>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">8/7 강의는 몇 시에 시작하나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>저녁 7시예요.<br>줌에서 만나자는 인사가 방에서 이어졌어요.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -985,10 +1058,25 @@
           </div>
         </div>
       </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">점검 시간은 언제인가요? 매일 있나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>점검 시간은 매번 달라요.<br>미리 공지되니 공지를 확인해 주세요.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="updated-at">마지막 업데이트: 2026-08-06</div>
+  <div class="updated-at">마지막 업데이트: 2026-08-07</div>
 </div>
 
 <button class="fab-top" id="fabTop" type="button" aria-label="맨 위로" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
