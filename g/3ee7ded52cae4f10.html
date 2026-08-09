@@ -587,7 +587,7 @@
   <div class="stats-bar fade-in">
     <div class="stat-pill"><span class="num">8/5</span><span class="label">정리 시작</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--green);">2기</span><span class="label">현재 기수</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--purple);">13</span><span class="label">누적 Q&amp;A</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--purple);">18</span><span class="label">누적 Q&amp;A</span></div>
   </div>
 
   <div class="tab-bar fade-in" id="tabBar">
@@ -596,12 +596,180 @@
   </div>
 
   <div id="tab-daily" class="tab-content active">
-    <section class="day-accordion fade-in open" data-day-id="0809">
+    <section class="day-accordion fade-in open" data-day-id="0810">
       <button class="day-accordion-header" type="button" aria-expanded="true" onclick="toggleAccordion(this.parentElement)">
         <div class="day-accordion-left">
           <span class="day-accordion-arrow">▼</span>
-          <span class="day-accordion-date">8/9 (일)</span>
+          <span class="day-accordion-date">8/10 (월)</span>
           <span class="day-accordion-badge">최신</span>
+        </div>
+        <div class="day-accordion-summary">자막 글자수 · 대본 생성 오류 · 클로드 요금제 · 조교 문의 시간</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--purple-light);">📝</div>
+              <div class="section-title">대본 · 자막 만들기</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">최대 자막 글자수를 20자로 설정했는데 28자로 나와요.</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>같은 문의가 개발 조교방에도 올라가 답변을 받아 공유됐어요.<br>업데이트 전에도 지정한 글자수가 딱 맞게 나오지는 않고 문맥에 따라 조금씩 달라졌다는 설명이에요.<br>그래도 지금은 20으로 설정해도 계속 28자로 나온다는 제보가 이어져서, 조교님이 한 번 더 확인해 보기로 했어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">대본에서 생성 단계가 잘 안 넘어가요.</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>대본에 기호가 많이 들어 있으면 생성이 잘 안 될 수 있어요.<br>먼저 대본을 열어 기호를 정리해 보세요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>이 방법으로 대본을 수정해 해결됐다는 확인이 있었어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--green-light);">💳</div>
+              <div class="section-title">클로드 구독 · 용어</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">클로드 구독은 어떤 요금제가 있나요? 강의에서 말한 게 100불짜리 맞나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>20불, 100불, 200불 세 가지 요금제가 있어요.<br>20불 사용량을 1로 보면 100불은 5, 200불은 20 정도로 생각하면 된다는 설명이 나왔어요.<br>100불부터 클로드 고성능 모델을 쓸 수 있는 걸로 안다는 이야기도 있었어요.<br>방에는 200불 요금제를 쓰는 분도 있었어요.<br>수강생끼리 주고받은 설명이라, 결제 전에 공식 요금 안내를 한 번 더 확인해 보세요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">방에서 말하는 "끌로", "끌코"가 무슨 뜻인가요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>끌로는 클로드, 끌코는 클로드 코딩을 부르는 애칭이에요.<br>1기 때부터 쓰던 별명이라 2기 방에서도 그대로 쓰고 있어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">🎓</div>
+              <div class="section-title">강의 듣는 순서</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">아직 영상을 못 만들고 있는데 언제부터 본격적으로 하게 되나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>1기에서도 2강부터 본격적으로 만들 수 있었어요.<br>1강은 끌로와 오토워커 전체 흐름에 친해지는 단계라, 나중에 복습할 때도 2강부터 보라고 안내했다고 해요.<br>2강이 끝나야 유튜브에 제대로 올릴 수 있을 것 같아 지금은 이것저것 보기만 한다는 분도 있었어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🧭</div>
+              <div class="insight-body">
+                <h3>대본 소재가 안 잡혀도 이번 주는 강의부터 들어요</h3>
+                <p>대본 스킬이 없어 뭘 만들지 모르겠다는 이야기가 나왔어요. 이번 주 강의를 듣고 시작하겠다는 분, 2강까지 듣고 올리겠다는 분이 이어져 아직 영상이 없어도 늦은 게 아니라는 분위기였어요.</p>
+                <span class="insight-tag tag-tip">진도 고민</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--orange-light);">⏰</div>
+              <div class="section-title">조교 문의 시간</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">조교님께 문의는 언제 하면 되나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>조교 정식 근무 시간은 오전 9시부터 새벽 1시까지이고, 교대 근무예요.<br>새벽에 남긴 문의는 오전 9시에 담당 조교님이 출근한 뒤 확인해 주세요.<br>숙제 재제출이나 제출한 이름 오타 수정처럼 손이 필요한 요청도 이 시간에 맞춰 남기면 돼요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--orange-light);">🔥</div>
+              <div class="section-title">방 소식</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">☕</div>
+              <div class="insight-body">
+                <h3>커피 쿠폰 릴레이가 219번까지 이어졌어요</h3>
+                <p>튜브워커로 3분 이상 영상 만들기 릴레이가 새벽에도 계속 이어져 219번까지 올라갔어요. 선착순 20명 커피 쿠폰 이벤트예요.</p>
+                <span class="insight-tag tag-revenue">과제 릴레이</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">✂️</div>
+              <div class="insight-body">
+                <h3>실습 파일을 처음 캡컷에 넣어봤다는 후기가 나왔어요</h3>
+                <p>무료 강의 파일을 받아두고도 실습 자료를 한 번도 안 넣어봤다는 분이 이날 처음 캡컷에 파일을 넣어보고 "이제 잘된다"는 후기를 남겼어요.</p>
+                <span class="insight-tag tag-tip">첫 실습</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="day-accordion fade-in" data-day-id="0809">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">8/9 (일)</span>
         </div>
         <div class="day-accordion-summary">이지워커 오류 · 캡컷 설치와 연결 · 2기 카페 가입 · 과제 릴레이</div>
       </button>
@@ -1506,10 +1674,85 @@
           </div>
         </div>
       </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">대본에서 생성 단계가 안 넘어가요.</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>대본에 기호가 많이 들어 있으면 생성이 잘 안 될 수 있어요.<br>대본을 열어 기호를 정리하니 해결됐다는 확인이 있었어요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">최대 자막 글자수를 20자로 해도 28자로 나와요.</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>업데이트 전에도 지정한 글자수가 딱 맞게 나오지는 않고 문맥에 따라 조금씩 달라졌다는 설명이에요.<br>지금은 계속 28자로 나온다는 제보가 있어 조교님이 다시 확인 중이에요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">조교님께 문의는 언제 하면 되나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>조교 정식 근무 시간은 오전 9시부터 새벽 1시까지이고 교대 근무예요.<br>새벽에 남긴 문의는 오전 9시에 담당 조교님이 출근한 뒤 확인해 주세요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">클로드 구독 요금제는 어떤 게 있나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>20불, 100불, 200불 세 가지가 있어요.<br>20불 사용량을 1로 보면 100불은 5, 200불은 20 정도라는 설명이 나왔어요.<br>수강생끼리 주고받은 이야기라 결제 전에 공식 안내를 한 번 더 확인해 보세요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">"끌로", "끌코"가 무슨 뜻인가요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>끌로는 클로드, 끌코는 클로드 코딩을 부르는 애칭이에요.<br>1기 때부터 쓰던 별명이라 2기 방에서도 그대로 쓰고 있어요.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="updated-at">마지막 업데이트: 2026-08-09</div>
+  <div class="updated-at">마지막 업데이트: 2026-08-10</div>
 </div>
 
 <button class="fab-top" id="fabTop" type="button" aria-label="맨 위로" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
