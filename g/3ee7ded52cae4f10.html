@@ -587,7 +587,7 @@
   <div class="stats-bar fade-in">
     <div class="stat-pill"><span class="num">8/5</span><span class="label">정리 시작</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--green);">2기</span><span class="label">현재 기수</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--purple);">18</span><span class="label">누적 Q&amp;A</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--purple);">22</span><span class="label">누적 Q&amp;A</span></div>
   </div>
 
   <div class="tab-bar fade-in" id="tabBar">
@@ -603,7 +603,7 @@
           <span class="day-accordion-date">8/10 (월)</span>
           <span class="day-accordion-badge">최신</span>
         </div>
-        <div class="day-accordion-summary">자막 글자수 · 대본 생성 오류 · 클로드 요금제 · 조교 문의 시간</div>
+        <div class="day-accordion-summary">자막 글자수 · 캡컷 연결 · Pexels API 키 · 인증코드 재발급 · 질문 규칙</div>
       </button>
       <div class="day-accordion-body">
         <div class="day-accordion-content">
@@ -737,6 +737,134 @@
                 </div>
               </div>
             </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🙋</div>
+              <div class="insight-body">
+                <h3>질문하기 전 체크리스트 공지가 다시 올라왔어요</h3>
+                <p>이날 저녁 공지에서는 조교 답변 시간을 오전 10시부터 익일 새벽 1시까지로 안내했어요. 평소에도 조교님들이 방을 보고 있으니 태그는 되도록 자제해 달라고 했어요. 질문 전에는 강의 내용을 먼저 보고, 직접 해본 뒤, 안 되는 부분을 캡처해서 올려 주세요. 아직 진도가 나가지 않은 내용과 확장 프로그램 질문은 지금은 받지 않아요.</p>
+                <span class="insight-tag tag-caution">질문 규칙</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">🔗</div>
+              <div class="section-title">캡컷 연결 · 인증코드</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">이미지와 음성이 캡컷에 채워지지 않아요.</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>캡컷에서 프로젝트 만들기로 이미지와 음성을 채우는 게 아니에요.<br>튜브워커에서 만든 폴더를 캡컷 경로에 넣어 주세요.<br>잘 안 되셨던 분들을 위해 캡컷 연결 가이드 튜토리얼 영상 버전이 2기 카페에 올라왔어요.<br>그래도 계속 막히면 1:1 톡을 남기면 원격으로 봐주기도 해요.<br><a href="https://cafe.naver.com/autoworker2/17" target="_blank" rel="noopener">2기 카페 캡컷 안내 글 열기</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">인증코드를 넣으니 올바르지 않거나 이미 사용되었다고 나와요.</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>인증코드는 24시간만 유지돼요.<br>주말에 받아두고 시간이 지난 코드는 재발급을 받아야 해요.<br>재발급해 드리면 바로 입력해 주세요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--green-light);">🖼️</div>
+              <div class="section-title">이미지 · 소재</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">Pexels API 키는 어디서 발급받나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>먼저 키 넣기를 눌러 보세요.<br>거기에 Pexels 사이트로 가는 링크가 있고, 없으면 검색해서 들어가면 돼요.<br>강의 안에서 한 로그인과는 별개로 Pexels는 따로 있는 사이트예요.<br>Pexels에서 구글로 로그인한 뒤 API 키를 발급받아 넣으면 돼요.<br><a href="https://www.pexels.com/ko-kr/" target="_blank" rel="noopener">Pexels 사이트 열기</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">3분 영상이면 이미지를 몇 장쯤 만들면 되나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>스토리보드에서 장면 전환을 얼마나 하느냐에 따라 달라져요.<br>정해진 장수를 먼저 정하기보다 내 대본의 장면 수를 보고 정하면 돼요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">마스코트는 어디에 적용되나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>마스코트는 모든 이미지에 적용되는 기능이에요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--purple-light);">📈</div>
+              <div class="section-title">채널 · 수익</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">vidIQ에 뜨는 한 달 예상 수익이 실제와 비슷한가요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>영상마다 광고 금액이 달라서 정확하지 않아요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>실제 수익과는 많이 다르다는 답변이 이어졌어요.<br>참고만 하고 그대로 믿지는 마세요.</p>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="section">
@@ -747,8 +875,8 @@
             <div class="insight-card">
               <div class="insight-emoji">☕</div>
               <div class="insight-body">
-                <h3>커피 쿠폰 릴레이가 219번까지 이어졌어요</h3>
-                <p>튜브워커로 3분 이상 영상 만들기 릴레이가 새벽에도 계속 이어져 219번까지 올라갔어요. 선착순 20명 커피 쿠폰 이벤트예요.</p>
+                <h3>커피 쿠폰 릴레이가 220번대까지 이어졌어요</h3>
+                <p>튜브워커로 3분 이상 영상 만들기 릴레이가 새벽부터 저녁까지 계속 이어져 220번대까지 올라갔어요. 선착순 20명 커피 쿠폰 이벤트예요.</p>
                 <span class="insight-tag tag-revenue">과제 릴레이</span>
               </div>
             </div>
@@ -758,6 +886,22 @@
                 <h3>실습 파일을 처음 캡컷에 넣어봤다는 후기가 나왔어요</h3>
                 <p>무료 강의 파일을 받아두고도 실습 자료를 한 번도 안 넣어봤다는 분이 이날 처음 캡컷에 파일을 넣어보고 "이제 잘된다"는 후기를 남겼어요.</p>
                 <span class="insight-tag tag-tip">첫 실습</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🧪</div>
+              <div class="insight-body">
+                <h3>이번 실습 영상은 꼭 올리지 않아도 괜찮아요</h3>
+                <p>이번 영상은 잘 만들어 올리기보다 사용법을 익히는 데 의의가 있다는 안내가 나왔어요. 크레딧을 여러 번 써가며 다시 만들기보다 헷갈렸던 부분을 잘 기억해 두는 게 더 중요하다고 했어요. 어떤 부분이 이해가 안 됐는지 남겨 주면 튜토리얼을 만드는 데 도움이 된다고 해요.</p>
+                <span class="insight-tag tag-tip">실습 방향</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🧩</div>
+              <div class="insight-body">
+                <h3>확장 프로그램 이야기는 강의가 진행된 뒤로 미뤘어요</h3>
+                <p>지금은 확장 프로그램 질문을 받지 않는다는 안내가 있었어요. 강의가 진행되면 조교님이 만든 확장 프로그램 말고 하나를 더 풀 수도 있다는 이야기가 나왔어요.</p>
+                <span class="insight-tag tag-tool">확장 프로그램</span>
               </div>
             </div>
           </div>
@@ -1746,6 +1890,75 @@
               <span class="qa-answer-badge member">수강생</span>
             </div>
             <p>끌로는 클로드, 끌코는 클로드 코딩을 부르는 애칭이에요.<br>1기 때부터 쓰던 별명이라 2기 방에서도 그대로 쓰고 있어요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">이미지와 음성이 캡컷에 채워지지 않아요.</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge">서포터즈</span>
+              <span class="qa-answer-name">아는아이</span>
+            </div>
+            <p>캡컷에서 프로젝트 만들기로 채우는 게 아니라, 튜브워커에서 만든 폴더를 캡컷 경로에 넣어야 해요.<br>캡컷 연결 가이드는 2기 카페에 글과 튜토리얼 영상 버전이 함께 올라와 있어요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">인증코드가 올바르지 않거나 이미 사용되었다고 나와요.</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge">서포터즈</span>
+              <span class="qa-answer-name">아는아이</span>
+            </div>
+            <p>인증코드는 24시간만 유지돼요.<br>시간이 지난 코드는 재발급을 받아야 하고, 재발급받으면 바로 입력해 주세요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">Pexels API 키는 어디서 발급받나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>키 넣기를 누르면 Pexels 사이트로 가는 링크가 있어요.<br>강의 안에서 한 로그인과는 별개로 Pexels에서 구글로 로그인한 뒤 API 키를 발급받아 넣으면 돼요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">vidIQ에 뜨는 예상 수익이 실제와 비슷한가요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge">서포터즈</span>
+              <span class="qa-answer-name">아는아이</span>
+            </div>
+            <p>영상마다 광고 금액이 달라서 정확하지 않아요.</p>
+          </div>
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>실제 수익과는 많이 다르다는 답변이 이어졌어요.<br>참고만 하고 그대로 믿지는 마세요.</p>
           </div>
         </div>
       </div>
