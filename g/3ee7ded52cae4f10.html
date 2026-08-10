@@ -587,7 +587,7 @@
   <div class="stats-bar fade-in">
     <div class="stat-pill"><span class="num">8/5</span><span class="label">정리 시작</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--green);">2기</span><span class="label">현재 기수</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--purple);">22</span><span class="label">누적 Q&amp;A</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--purple);">24</span><span class="label">누적 Q&amp;A</span></div>
   </div>
 
   <div class="tab-bar fade-in" id="tabBar">
@@ -596,14 +596,144 @@
   </div>
 
   <div id="tab-daily" class="tab-content active">
-    <section class="day-accordion fade-in open" data-day-id="0810">
+    <section class="day-accordion fade-in open" data-day-id="0811">
       <button class="day-accordion-header" type="button" aria-expanded="true" onclick="toggleAccordion(this.parentElement)">
         <div class="day-accordion-left">
           <span class="day-accordion-arrow">▼</span>
-          <span class="day-accordion-date">8/10 (월)</span>
+          <span class="day-accordion-date">8/11 (화)</span>
           <span class="day-accordion-badge">최신</span>
         </div>
-        <div class="day-accordion-summary">자막 글자수 · 캡컷 연결 · Pexels API 키 · 인증코드 재발급 · 질문 규칙</div>
+        <div class="day-accordion-summary">캡컷 프로젝트 열기 · 업로드 거부 · 애드센스 승인 · 인증코드 재발급 문의</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--purple-light);">✂️</div>
+              <div class="section-title">캡컷 프로젝트 연결</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">캡컷에 프로젝트가 생성되지 않아요.</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>새벽에 같은 증상으로 두 번 도움을 요청하셨고, 네 가지 방법이 차례로 나왔어요.<br>1. 프로젝트 폴더 이름에서 한글을 빼고 다시 해보세요.<br>2. 압축을 풀었을 때 같은 폴더가 한 겹 더 생겼는지 확인하세요. 폴더를 열면 바로 resources 폴더와 파일들이 보여야 해요. 윈도우에서는 한 겹 더 생기는 경우가 있어요.<br>3. 한 겹 더 있으면 안쪽 폴더를 캡컷 경로로 옮기세요. 압축은 웬만하면 반디집으로 푸는 걸 권했어요.<br>4. 캡컷에서 만든 영상 폴더에 들어가면 Resources 폴더가 있어요. 그 폴더를 캡컷에서 열어 주세요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">📤</div>
+              <div class="section-title">영상 업로드</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">영상을 올리려는데 "서버에서 거부되었습니다"라고 나와요.</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>캡컷에서 내보낸 150MB짜리 mp4를 올리려다 생긴 일이었어요. 길이는 2분이 조금 넘었어요.<br>1씬에 2분이면 너무 긴 것 같다는 답변이 나왔어요.<br>튜브워커에서 영상을 만들 때는 1씬이 6초예요.<br>씬마다 업로드 용량 제한이 있는지는 조교님이 따로 문의해 보기로 했어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--green-light);">💰</div>
+              <div class="section-title">채널 · 수익</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">애드센스를 새로 만들어 채널에 연결했는데 일주일째 승인이 안 나요.</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>애드센스 승인은 며칠 걸린다고 딱 정해진 게 없어요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>2~3주까지는 생각하고 기다리는 게 좋다는 이야기가 나왔어요.<br>그보다 일찍 승인된 분도 있다고 해요.<br>수시로 들어가서 확인해 보세요. 소리소문없이 승인나 있는 경우가 있어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">🔑</div>
+              <div class="section-title">인증코드 재발급</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">인증코드가 이미 사용되었다고 떠요. 다시 받으려면 어디로 문의하나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>받은 지 시간이 지난 코드는 다시 받아야 해요.<br>새벽이라 바로 답을 받기 어려울 때는 방에 조교님을 태그해 남겨 두면 돼요.<br>일어나서 확인하고 연락 주신다는 안내가 있었어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--orange-light);">🔥</div>
+              <div class="section-title">방 소식</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">☕</div>
+              <div class="insight-body">
+                <h3>커피 쿠폰 릴레이가 255번까지 이어졌어요</h3>
+                <p>튜브워커로 3분 이상 영상 만들기 릴레이가 밤새 이어져 아침에는 255번까지 올라갔어요. 선착순 20명 커피 쿠폰 이벤트예요.</p>
+                <span class="insight-tag tag-revenue">과제 릴레이</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🎬</div>
+              <div class="insight-body">
+                <h3>다른 방에서 공유된 한국어 버전 영상이 전달됐어요</h3>
+                <p>새벽에 다른 방에서 공유된 영상을 그대로 가져와 알려 주셨어요. 한국어 버전도 나왔다는 이야기였고, 방에서는 내년 2월부터 적용된다는 말이 이어졌어요. 어떤 내용인지는 영상에서 직접 확인해 주세요.<br><a href="https://youtu.be/OngJyKkSq8c?si=EWNxx3mRJa5yUcuF" target="_blank" rel="noopener">공유된 영상 열기</a></p>
+                <span class="insight-tag tag-tool">공유 자료</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="day-accordion fade-in" data-day-id="0810">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">8/10 (월)</span>
+        </div>
+        <div class="day-accordion-summary">자막 글자수 · 캡컷 연결 · Pexels API 키 · 인증코드 재발급 · 자료 정리 팁</div>
       </button>
       <div class="day-accordion-body">
         <div class="day-accordion-content">
@@ -902,6 +1032,22 @@
                 <h3>확장 프로그램 이야기는 강의가 진행된 뒤로 미뤘어요</h3>
                 <p>지금은 확장 프로그램 질문을 받지 않는다는 안내가 있었어요. 강의가 진행되면 조교님이 만든 확장 프로그램 말고 하나를 더 풀 수도 있다는 이야기가 나왔어요.</p>
                 <span class="insight-tag tag-tool">확장 프로그램</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🗂️</div>
+              <div class="insight-body">
+                <h3>자료 정리는 자주 쓰는 것만 손으로 정리해요</h3>
+                <p>조교님이 늦은 밤 자료 정리 방법을 공유했어요. 진짜 중요하고 자주 쓰는 자료만 직접 정리하고, 나머지는 큰 카테고리로만 묶어 둔대요. 그마저 애매한 파일은 한 폴더에 몰아넣어 바탕화면이 널브러지지 않게 한다고 해요. 생각날 때마다 바로 해두지 않으면 미루게 된다는 후기도 이어졌어요.</p>
+                <span class="insight-tag tag-tip">자료 정리</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📺</div>
+              <div class="insight-body">
+                <h3>조교님이 참고 영상 두 개를 공유했어요</h3>
+                <p>같은 시간대에 조교님이 짧은 영상 두 개를 올려 주셨어요. 설명 없이 링크만 공유돼서, 내용은 영상에서 직접 확인해 주세요.<br><a href="https://youtube.com/shorts/H3ESJ89WBtI?si=IvRoXwR-odWJ8GET" target="_blank" rel="noopener">공유 영상 1 열기</a><br><a href="https://youtube.com/shorts/FU0JtlP1CeM?si=-VdBcesh7DWdnQvn" target="_blank" rel="noopener">공유 영상 2 열기</a></p>
+                <span class="insight-tag tag-tool">공유 자료</span>
               </div>
             </div>
           </div>
@@ -1962,10 +2108,46 @@
           </div>
         </div>
       </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">캡컷에 프로젝트가 안 보이거나 생성되지 않아요.</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>가장 많이 나온 원인은 폴더가 한 겹 더 들어간 경우예요.<br>압축을 풀고 폴더를 열었을 때 바로 resources 폴더와 파일들이 보여야 해요. 같은 이름 폴더가 한 번 더 있으면 안쪽 폴더를 캡컷 경로로 옮기세요.<br>com.lve 폴더 바로 아래에 프로젝트 폴더가 오는 구조가 맞아요.<br>폴더 이름에 한글이 들어 있으면 빼고 다시 해보세요.<br>압축은 웬만하면 반디집으로 푸는 걸 권했어요.<br>캡컷에서 만든 영상 폴더 안의 Resources 폴더를 캡컷에서 여는 방법도 공유됐어요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">애드센스 승인은 얼마나 걸리나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>며칠 걸린다고 딱 정해진 게 없어요.</p>
+          </div>
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>2~3주까지는 생각하고 기다리는 게 좋다는 이야기가 나왔어요.<br>그보다 일찍 승인된 분도 있다고 해요.<br>수시로 들어가서 확인해 보세요. 소리소문없이 승인나 있는 경우가 있어요.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="updated-at">마지막 업데이트: 2026-08-10</div>
+  <div class="updated-at">마지막 업데이트: 2026-08-11</div>
 </div>
 
 <button class="fab-top" id="fabTop" type="button" aria-label="맨 위로" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
