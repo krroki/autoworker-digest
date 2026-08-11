@@ -587,7 +587,7 @@
   <div class="stats-bar fade-in">
     <div class="stat-pill"><span class="num">8/5</span><span class="label">정리 시작</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--green);">2기</span><span class="label">현재 기수</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--purple);">31</span><span class="label">누적 Q&amp;A</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--purple);">32</span><span class="label">누적 Q&amp;A</span></div>
   </div>
 
   <div class="tab-bar fade-in" id="tabBar">
@@ -596,12 +596,137 @@
   </div>
 
   <div id="tab-daily" class="tab-content active">
-    <section class="day-accordion fade-in open" data-day-id="0811">
+    <section class="day-accordion fade-in open" data-day-id="0812">
       <button class="day-accordion-header" type="button" aria-expanded="true" onclick="toggleAccordion(this.parentElement)">
         <div class="day-accordion-left">
           <span class="day-accordion-arrow">▼</span>
-          <span class="day-accordion-date">8/11 (화)</span>
+          <span class="day-accordion-date">8/12 (수)</span>
           <span class="day-accordion-badge">최신</span>
+        </div>
+        <div class="day-accordion-summary">확장 프로그램 설치 여부 · 클로드 한도 · 캐릭터 실험 · VPN 주의 · 강의 QnA 정리본</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">🧩</div>
+              <div class="section-title">확장 프로그램</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">VSCode 오토워커 확장 프로그램, 지금 설치해야 하나요? 연결 승인을 했는데 인증코드도 안 보여요.</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>설치하라고 안내한 적은 없을 거라는 답이 나왔어요.<br>아직 설치하지 않아도 과제는 진행할 수 있어요.<br>질문하신 분도 설치 없이 강의를 들으며 하나씩 해보기로 했어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--green-light);">💳</div>
+              <div class="section-title">클로드 사용량</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">오토워커에 사용 한도가 있나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>오토워커가 아니라 클로드 한도 이야기였어요.<br>200불 요금제를 쓰는 분도 한도가 다 차서, 일주일 한도가 풀릴 때까지 기다려야 했어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--green-light);">🖼️</div>
+              <div class="section-title">이미지 · 캐릭터</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🎭</div>
+              <div class="insight-body">
+                <h3>강의에서 하지 말라던 캐릭터, 넣어보니 이유가 있었어요</h3>
+                <p>궁금해서 캐릭터를 한번 넣어봤더니 모든 장면에 캐릭터가 등장했다는 후기가 새벽에 나왔어요. 사람 머리 위에 올라가 있기도 하고, 캐릭터가 그림체와도 안 맞았다고 해요. 따로 빼는 설정은 어려워 보인다는 이야기였어요.</p>
+                <span class="insight-tag tag-caution">캐릭터 실험</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">🎓</div>
+              <div class="section-title">강의 듣기</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📚</div>
+              <div class="insight-body">
+                <h3>강의 QnA는 정리본으로 빠르게 볼 수 있어요</h3>
+                <p>강의가 QnA 때문에 길어서 이틀에 걸쳐 봤다는 후기가 나왔어요. 질문 부분은 정리해 주신 것을 보면 빠르게 이해된다는 답이 이어졌어요.</p>
+                <span class="insight-tag tag-tip">수강 팁</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📝</div>
+              <div class="insight-body">
+                <h3>강의 게시판에 줌 채팅 내용까지 올라와요</h3>
+                <p>강의 게시판에 줌 채팅 내용까지 올려 주는 건 처음 봤다는 이야기가 나왔어요. 강의 내용을 시간대로 나눠 준 것과 노션 교재의 디테일까지, 밤사이 칭찬이 이어졌어요.</p>
+                <span class="insight-tag tag-tool">강의 자료</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--orange-light);">⚠️</div>
+              <div class="section-title">계정 안전</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🚫</div>
+              <div class="insight-body">
+                <h3>VPN은 계정 차단의 지름길이에요</h3>
+                <p>아침에 조교님이 VPN은 계정 차단의 지름길이라고 짚어 주셨어요. 짧지만 중요한 경고이니 VPN 사용은 피해 주세요.</p>
+                <span class="insight-tag tag-caution">계정 주의</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--orange-light);">🔥</div>
+              <div class="section-title">방 소식</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">💪</div>
+              <div class="insight-body">
+                <h3>"10번은 도전하고 10번은 실패해 보자"는 이야기가 나왔어요</h3>
+                <p>뭐든 해보고 끝을 보자, 안 되면 그때 포기하자는 도전 이야기가 새벽에 이어졌어요. 전자책 반려를 20번 넘게 받고 미국 회사 취업도 10번 실패 끝에 들어갔다는 경험담에 다들 자극을 받았어요. 50 되기 전에 하고 싶은 걸 다 해보자며 서로 응원했어요.</p>
+                <span class="insight-tag tag-revenue">응원</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="day-accordion fade-in" data-day-id="0811">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">8/11 (화)</span>
         </div>
         <div class="day-accordion-summary">캡컷 프로젝트 열기 · 튜브워커 완성과 자막 · 과제 제출 오류 · 이미지 스타일 · 수익 창출 조건 강화</div>
       </button>
@@ -2432,10 +2557,25 @@
           </div>
         </div>
       </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">VSCode 오토워커 확장 프로그램을 지금 설치해야 하나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>설치하라고 안내한 적은 없다는 답이 나왔어요.<br>아직 설치하지 않아도 과제는 진행할 수 있어요.<br>확장 프로그램 이야기는 강의가 진행된 뒤에 다룰 예정이에요.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="updated-at">마지막 업데이트: 2026-08-11</div>
+  <div class="updated-at">마지막 업데이트: 2026-08-12</div>
 </div>
 
 <button class="fab-top" id="fabTop" type="button" aria-label="맨 위로" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
