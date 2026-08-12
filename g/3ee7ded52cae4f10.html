@@ -587,7 +587,7 @@
   <div class="stats-bar fade-in">
     <div class="stat-pill"><span class="num">8/5</span><span class="label">정리 시작</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--green);">2기</span><span class="label">현재 기수</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--purple);">32</span><span class="label">누적 Q&amp;A</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--purple);">37</span><span class="label">누적 Q&amp;A</span></div>
   </div>
 
   <div class="tab-bar fade-in" id="tabBar">
@@ -603,7 +603,7 @@
           <span class="day-accordion-date">8/12 (수)</span>
           <span class="day-accordion-badge">최신</span>
         </div>
-        <div class="day-accordion-summary">확장 프로그램 설치 여부 · 클로드 한도 · 캐릭터 실험 · VPN 주의 · 강의 QnA 정리본</div>
+        <div class="day-accordion-summary">확장 프로그램 설치 여부 · 클로드 한도와 초기화 · 튜브워커 인물 일관성 · 청크 길이 · 야담 진행 · VPN 주의</div>
       </button>
       <div class="day-accordion-body">
         <div class="day-accordion-content">
@@ -632,7 +632,7 @@
           <div class="section">
             <div class="section-header">
               <div class="section-icon" style="background:var(--green-light);">💳</div>
-              <div class="section-title">클로드 사용량</div>
+              <div class="section-title">클로드 사용</div>
             </div>
             <div class="qa-card" onclick="toggleQa(this)">
               <div class="qa-header">
@@ -649,6 +649,21 @@
                 </div>
               </div>
             </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">요즘 클로드가 예전보다 멍청해진 것 같아요.</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>같이 느꼈다는 분들이 여러 명 있었어요.<br>계속 학습시키고 대화한 찌꺼기가 쌓이다 보니 갈피를 못 잡는 것 같다는 이야기가 나왔어요.<br>한 번 싹 밀었더니 다시 똑똑해지고 있다는 후기가 이어졌어요.</p>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="section">
@@ -662,6 +677,60 @@
                 <h3>강의에서 하지 말라던 캐릭터, 넣어보니 이유가 있었어요</h3>
                 <p>궁금해서 캐릭터를 한번 넣어봤더니 모든 장면에 캐릭터가 등장했다는 후기가 새벽에 나왔어요. 사람 머리 위에 올라가 있기도 하고, 캐릭터가 그림체와도 안 맞았다고 해요. 따로 빼는 설정은 어려워 보인다는 이야기였어요.</p>
                 <span class="insight-tag tag-caution">캐릭터 실험</span>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">튜브워커도 인물을 동일하게 설정할 수 있나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>완전히 같은 인물로 만들려면 마스코트를 이용하시면 돼요.<br>대신 마스코트를 쓰면 한 명이 모든 컷에 계속 나오는 구조가 맞아요.<br>그 방법 말고는 인물 일관성을 유지하기 어렵다는 답이었어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">야담은 이미지 일관성을 어떻게 맞추나요? 튜브워커를 안 쓰나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>야담은 4주차에 알려 주신다고 해서, 조교진도 수업 전까지는 어떤 방식으로 풀어 가실지 공유받지 못했다고 해요.<br>진도대로 따라와 주시면 감사하겠다는 안내가 있었어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--purple-light);">📝</div>
+              <div class="section-title">대본 · 생성</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">청크가 2~3분 길이로 잡히는데 더 짧게 설정할 수는 없나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>청크는 2000자 기준이에요.<br>대본이 짧으면 전체를 다시 생성하는 것과 거의 같은 결과가 나올 거라는 답이었어요.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -685,6 +754,21 @@
                 <h3>강의 게시판에 줌 채팅 내용까지 올라와요</h3>
                 <p>강의 게시판에 줌 채팅 내용까지 올려 주는 건 처음 봤다는 이야기가 나왔어요. 강의 내용을 시간대로 나눠 준 것과 노션 교재의 디테일까지, 밤사이 칭찬이 이어졌어요.</p>
                 <span class="insight-tag tag-tool">강의 자료</span>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">오토워커 사용 관련 자료는 어디서 볼 수 있나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>1기 정규강의를 먼저 봐 주세요.<br>자료는 오토워커 2기 카페에 나와 있어요.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -715,6 +799,30 @@
                 <h3>"10번은 도전하고 10번은 실패해 보자"는 이야기가 나왔어요</h3>
                 <p>뭐든 해보고 끝을 보자, 안 되면 그때 포기하자는 도전 이야기가 새벽에 이어졌어요. 전자책 반려를 20번 넘게 받고 미국 회사 취업도 10번 실패 끝에 들어갔다는 경험담에 다들 자극을 받았어요. 50 되기 전에 하고 싶은 걸 다 해보자며 서로 응원했어요.</p>
                 <span class="insight-tag tag-revenue">응원</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🖼️</div>
+              <div class="insight-body">
+                <h3>썸네일에 시간이 제일 많이 걸린다는 이야기가 나왔어요</h3>
+                <p>열심히 만든 영상은 조회수가 안 나오고 대충 만든 영상이 잘 나갔다는 후기가 저녁에 나왔어요. 그만큼 썸네일이 중요한데 시간이 너무 걸린다는 고민이 이어졌어요. 하루 종일 붙잡고 영상 두 개를 만들었다는 이야기도 있었고요. 썸네일 틀을 잡아 주는 프로그램을 만들고 계신 분이 완성되면 방에 공유해 주시기로 했어요.</p>
+                <span class="insight-tag tag-tip">썸네일</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📖</div>
+              <div class="insight-body">
+                <h3>전자책으로 수익을 내고 있다는 후기가 나왔어요</h3>
+                <p>2기 시작에 맞춰 사흘 만에 만든 전자책으로 수익이 나고 있다는 이야기가 나왔어요. 짤짤이로 벌기에는 전자책만 한 게 없다는 후기였어요. 전자책을 쓰고 있는데 쉽지 않다는 분도 있어 서로 이야기를 주고받았어요.</p>
+                <span class="insight-tag tag-revenue">수익 후기</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🎤</div>
+              <div class="insight-body">
+                <h3>수강생 특강이 준비되고 있어요</h3>
+                <p>특강을 꿀팁 위주로 준비하고 있다는 이야기가 나왔어요. 특강 전에 프리미엄반으로 업그레이드하겠다는 분들도 있었고, 특강을 기다리는 분이 많다는 이야기도 함께 나왔어요. 구체적인 일정은 아직 나오지 않았어요.</p>
+                <span class="insight-tag tag-tool">특강 예고</span>
               </div>
             </div>
           </div>
@@ -2569,6 +2677,83 @@
               <span class="qa-answer-badge member">수강생</span>
             </div>
             <p>설치하라고 안내한 적은 없다는 답이 나왔어요.<br>아직 설치하지 않아도 과제는 진행할 수 있어요.<br>확장 프로그램 이야기는 강의가 진행된 뒤에 다룰 예정이에요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">튜브워커에서 인물을 동일하게 유지할 수 있나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge">서포터즈</span>
+              <span class="qa-answer-name">아는아이</span>
+            </div>
+            <p>완전히 같은 인물로 만들려면 마스코트를 이용하시면 돼요.<br>대신 마스코트를 쓰면 한 명이 모든 컷에 계속 나오는 구조가 맞아요.<br>그 방법 말고는 인물 일관성을 유지하기 어려워요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">청크 길이를 더 짧게 설정할 수 있나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge">서포터즈</span>
+              <span class="qa-answer-name">아는아이</span>
+            </div>
+            <p>청크는 2000자 기준이에요.<br>대본이 짧으면 전체를 다시 생성하는 것과 거의 같은 결과가 나와요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">오토워커 사용 자료는 어디서 볼 수 있나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>1기 정규강의를 먼저 봐 주세요.<br>자료는 오토워커 2기 카페에 나와 있어요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">야담은 이미지 일관성을 어떻게 맞추나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>야담은 4주차에 알려 주신다고 해서, 조교진도 수업 전까지는 어떤 방식으로 풀어 가실지 공유받지 못했어요.<br>진도대로 따라와 주시면 감사하겠다는 안내가 있었어요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">클로드가 예전보다 멍청해진 것 같아요.</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>계속 학습시키고 대화한 찌꺼기가 쌓이면 갈피를 못 잡는 것 같다는 이야기가 나왔어요.<br>한 번 싹 밀었더니 다시 똑똑해지고 있다는 후기가 있었어요.</p>
           </div>
         </div>
       </div>
