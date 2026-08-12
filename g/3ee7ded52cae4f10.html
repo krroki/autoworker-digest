@@ -587,7 +587,7 @@
   <div class="stats-bar fade-in">
     <div class="stat-pill"><span class="num">8/5</span><span class="label">정리 시작</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--green);">2기</span><span class="label">현재 기수</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--purple);">37</span><span class="label">누적 Q&amp;A</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--purple);">39</span><span class="label">누적 Q&amp;A</span></div>
   </div>
 
   <div class="tab-bar fade-in" id="tabBar">
@@ -596,14 +596,89 @@
   </div>
 
   <div id="tab-daily" class="tab-content active">
-    <section class="day-accordion fade-in open" data-day-id="0812">
+    <section class="day-accordion fade-in open" data-day-id="0813">
       <button class="day-accordion-header" type="button" aria-expanded="true" onclick="toggleAccordion(this.parentElement)">
         <div class="day-accordion-left">
           <span class="day-accordion-arrow">▼</span>
-          <span class="day-accordion-date">8/12 (수)</span>
+          <span class="day-accordion-date">8/13 (목)</span>
           <span class="day-accordion-badge">최신</span>
         </div>
-        <div class="day-accordion-summary">확장 프로그램 설치 여부 · 클로드 한도와 초기화 · 튜브워커 인물 일관성 · 청크 길이 · 야담 진행 · VPN 주의</div>
+        <div class="day-accordion-summary">채널별 계정 분리 주의 · 새벽 점검 추정 · 과제 릴레이 279번 · 강의 전날 아침 인사</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--orange-light);">⚠️</div>
+              <div class="section-title">계정 안전</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">이미지 프로그램을 창 두 개로 띄워서 채널마다 아이디를 다르게 써도 되나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>계정 정지를 당할 수 있어요.<br>플로우가 봇 감지를 잘해서 권하지 않아요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--orange-light);">🔥</div>
+              <div class="section-title">방 소식</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🛠️</div>
+              <div class="insight-body">
+                <h3>새벽에 서버 점검으로 보이는 멈춤이 있었어요</h3>
+                <p>새벽 4시쯤 작업이 진행되지 않아 서버 점검 중이냐는 물음이 나왔고, 점검 중인 것 같다는 답이 이어졌어요. 점검 시간은 매번 달라지니 안 될 때는 공지를 확인하고 잠시 기다렸다가 다시 해보세요.</p>
+                <span class="insight-tag tag-caution">점검 추정</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🎬</div>
+              <div class="insight-body">
+                <h3>레퍼런스 따라 만들기 영상이 공유됐어요</h3>
+                <p>새벽에 "레퍼런스 따라만들기"라는 설명과 함께 영상 링크가 올라왔어요. 자세한 내용은 영상에서 직접 확인해 주세요.<br><a href="https://www.youtube.com/watch?v=c7kGmW3YtYw" target="_blank" rel="noopener">공유된 영상 열기</a></p>
+                <span class="insight-tag tag-tool">공유 자료</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">☕</div>
+              <div class="insight-body">
+                <h3>과제 릴레이가 279번까지 이어졌어요</h3>
+                <p>사담방 릴레이 명단이 이날 새벽에도 이어져 279번까지 확인됐어요.</p>
+                <span class="insight-tag tag-revenue">과제 릴레이</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🌅</div>
+              <div class="insight-body">
+                <h3>드디어 내일이 강의날이에요</h3>
+                <p>아침 인사와 함께 내일 강의를 기다린다는 이야기가 이어졌어요. 새벽에 피드백 영상을 챙겨 봤다는 후기도 있었어요.</p>
+                <span class="insight-tag tag-tip">강의 전날</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="day-accordion fade-in" data-day-id="0812">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">8/12 (수)</span>
+        </div>
+        <div class="day-accordion-summary">확장 프로그램 설치 여부 · 클로드 한도와 초기화 · 튜브워커 인물 일관성 · 캡컷 준비 · 청크 길이 · 야담 진행 · VPN 주의</div>
       </button>
       <div class="day-accordion-body">
         <div class="day-accordion-content">
@@ -624,6 +699,21 @@
                     <span class="qa-answer-badge member">수강생</span>
                   </div>
                   <p>설치하라고 안내한 적은 없을 거라는 답이 나왔어요.<br>아직 설치하지 않아도 과제는 진행할 수 있어요.<br>질문하신 분도 설치 없이 강의를 들으며 하나씩 해보기로 했어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">금요일 강의 전에 확장 프로그램을 모두 설치해야 하나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>아무것도 준비하지 않으셔도 돼요.<br>강의에서 다 알려주시니 강의를 보고 천천히 하면 돼요. 조금 빨리 해놓는다고 달라질 건 없다는 답이었어요.<br>이번에 들어온 2기는 금요일 수업 예정이니 미리 설치하지 않는 게 좋겠다는 이야기도 이어졌어요.</p>
                 </div>
               </div>
             </div>
@@ -662,6 +752,14 @@
                   </div>
                   <p>같이 느꼈다는 분들이 여러 명 있었어요.<br>계속 학습시키고 대화한 찌꺼기가 쌓이다 보니 갈피를 못 잡는 것 같다는 이야기가 나왔어요.<br>한 번 싹 밀었더니 다시 똑똑해지고 있다는 후기가 이어졌어요.</p>
                 </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">💬</div>
+              <div class="insight-body">
+                <h3>모르는 단어는 클로드에게 물어보며 따라가요</h3>
+                <p>사담방에 모르는 단어가 많아 클로드한테 물어보면서 벽타기 중이라는 이야기가 밤에 나왔어요. 화면을 캡처해서 물어보면 잘 알려준다는 팁이 이어졌어요.</p>
+                <span class="insight-tag tag-tip">사용 팁</span>
               </div>
             </div>
           </div>
@@ -790,6 +888,43 @@
 
           <div class="section">
             <div class="section-header">
+              <div class="section-icon" style="background:var(--purple-light);">✂️</div>
+              <div class="section-title">캡컷 준비</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">캡컷은 결제해야 하나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>결제는 선택하시면 돼요.<br>결제해서 쓰고 있다는 분도 있었어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">캡컷은 어디서 다운받나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>공식 사이트에서 받으면 돼요. 구글에 capcut을 검색해도 바로 나와요.<br>받았는데 잘 안 될 때는 윈도우+Shift+S로 화면을 캡처해서 채팅창에 Ctrl+V로 붙여 넣어 주세요.<br>캡처와 함께 지금 뭐가 안 되고 있는지 말씀해 주셔야 조교님들이나 다른 수강생분들이 도움을 드릴 수 있어요.<br><a href="https://www.capcut.com/ko-kr/" target="_blank" rel="noopener">캡컷 공식 사이트 열기</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
               <div class="section-icon" style="background:var(--orange-light);">🔥</div>
               <div class="section-title">방 소식</div>
             </div>
@@ -823,6 +958,22 @@
                 <h3>수강생 특강이 준비되고 있어요</h3>
                 <p>특강을 꿀팁 위주로 준비하고 있다는 이야기가 나왔어요. 특강 전에 프리미엄반으로 업그레이드하겠다는 분들도 있었고, 특강을 기다리는 분이 많다는 이야기도 함께 나왔어요. 구체적인 일정은 아직 나오지 않았어요.</p>
                 <span class="insight-tag tag-tool">특강 예고</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🏆</div>
+              <div class="insight-body">
+                <h3>1만 인증 후기 글이 공유됐어요</h3>
+                <p>밤에 1만 인증 후기 글 링크가 방에 올라왔어요. 1기냐는 물음에 지금은 2기로 함께하고 있다는 답이 이어졌어요. 자세한 내용은 글에서 직접 확인해 주세요.<br><a href="https://cafe.naver.com/dinohighclass/361318" target="_blank" rel="noopener">공유된 후기 글 열기</a></p>
+                <span class="insight-tag tag-revenue">인증 후기</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🧪</div>
+              <div class="insight-body">
+                <h3>썸네일 AB 테스트가 다시 된다는 제보가 있었어요</h3>
+                <p>밤에 지금 썸네일 AB 테스트가 다시 된다며 참고하라는 공유가 있었어요. 궁금했다며 고마워하는 반응이 이어졌어요.</p>
+                <span class="insight-tag tag-tool">유튜브 소식</span>
               </div>
             </div>
           </div>
@@ -2676,7 +2827,7 @@
             <div class="qa-answer-header">
               <span class="qa-answer-badge member">수강생</span>
             </div>
-            <p>설치하라고 안내한 적은 없다는 답이 나왔어요.<br>아직 설치하지 않아도 과제는 진행할 수 있어요.<br>확장 프로그램 이야기는 강의가 진행된 뒤에 다룰 예정이에요.</p>
+            <p>설치하라고 안내한 적은 없다는 답이 나왔어요.<br>아직 설치하지 않아도 과제는 진행할 수 있어요.<br>확장 프로그램 이야기는 강의가 진행된 뒤에 다룰 예정이에요.<br>강의 전에 미리 설치할 필요도 없어요. 강의에서 다 알려주니 준비 없이 들으면 돼요.</p>
           </div>
         </div>
       </div>
@@ -2757,10 +2908,40 @@
           </div>
         </div>
       </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">캡컷은 결제해야 하나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>결제는 선택하시면 돼요.<br>결제해서 쓰고 있다는 분도 있었어요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">캡컷은 어디서 다운받나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>공식 사이트에서 받으면 돼요. 구글에 capcut을 검색해도 바로 나와요.<br>받았는데 잘 안 될 때는 윈도우+Shift+S로 캡처해서 뭐가 안 되는지 함께 올려 주세요.<br><a href="https://www.capcut.com/ko-kr/" target="_blank" rel="noopener">캡컷 공식 사이트 열기</a></p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="updated-at">마지막 업데이트: 2026-08-12</div>
+  <div class="updated-at">마지막 업데이트: 2026-08-13</div>
 </div>
 
 <button class="fab-top" id="fabTop" type="button" aria-label="맨 위로" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
