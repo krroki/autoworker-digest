@@ -587,7 +587,7 @@
   <div class="stats-bar fade-in">
     <div class="stat-pill"><span class="num">8/5</span><span class="label">정리 시작</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--green);">2기</span><span class="label">현재 기수</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--purple);">39</span><span class="label">누적 Q&amp;A</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--purple);">43</span><span class="label">누적 Q&amp;A</span></div>
   </div>
 
   <div class="tab-bar fade-in" id="tabBar">
@@ -596,14 +596,50 @@
   </div>
 
   <div id="tab-daily" class="tab-content active">
-    <section class="day-accordion fade-in open" data-day-id="0813">
+    <section class="day-accordion fade-in open" data-day-id="0814">
       <button class="day-accordion-header" type="button" aria-expanded="true" onclick="toggleAccordion(this.parentElement)">
         <div class="day-accordion-left">
           <span class="day-accordion-arrow">▼</span>
-          <span class="day-accordion-date">8/13 (목)</span>
+          <span class="day-accordion-date">8/14 (금)</span>
           <span class="day-accordion-badge">최신</span>
         </div>
-        <div class="day-accordion-summary">채널별 계정 분리 주의 · 새벽 점검 추정 · 과제 릴레이 279번 · 강의 전날 아침 인사</div>
+        <div class="day-accordion-summary">드디어 2주차 강의날 아침 · 과제 릴레이 290번</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--orange-light);">🔥</div>
+              <div class="section-title">방 소식</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🌞</div>
+              <div class="insight-body">
+                <h3>드디어 오늘, 2주차 강의날이에요</h3>
+                <p>"드디어 오늘이네요"라는 아침 인사와 함께 강의를 기다리는 이야기가 이어졌어요. 출근하기 전인데 벌써 일찍 퇴근할 생각부터 든다는 분도 있었어요.</p>
+                <span class="insight-tag tag-tip">강의날</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">☕</div>
+              <div class="insight-body">
+                <h3>과제 릴레이가 290번까지 이어졌어요</h3>
+                <p>새벽 사이 사담방 릴레이 명단이 290번까지 늘었어요.</p>
+                <span class="insight-tag tag-revenue">과제 릴레이</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="day-accordion fade-in" data-day-id="0813">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">8/13 (목)</span>
+        </div>
+        <div class="day-accordion-summary">채널별 계정 분리 · 다중 목소리는 5주차 · 조회수 관리와 주제 찾기 · 롱폼 단가 · 워터마크는 이미지만 · 과제 릴레이 289번 · 내일은 2주차 강의</div>
       </button>
       <div class="day-accordion-body">
         <div class="day-accordion-content">
@@ -632,6 +668,391 @@
 
           <div class="section">
             <div class="section-header">
+              <div class="section-icon" style="background:var(--purple-light);">🔊</div>
+              <div class="section-title">음성 · 목소리</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">대사에 등장인물이 많으면 목소리를 어떻게 바꾸나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>튜브워커에는 다중 목소리가 구현돼 있지 않아요.<br>정보성 채널에 특화돼 있어서 단일 음성으로 생성해요.<br>야담은 5주차에 브루를 이용할 예정이라 그때 배울 수 있어요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>야담은 방식이 좀 다를 거예요.<br>일단 5주차를 기다려 주세요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">후킹 부분에 설정과 다른 목소리를 넣은 야담 채널이 많던데, 저희도 배우나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>5주차 강의에서 다뤄요.<br>브루로 하는 것 같다는 수강생 답도 있었어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">보이스를 남자로 선택했는데 여자 목소리가 나와요.</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>어떤 보이스를 선택했는지부터 확인해 주세요. 선택이 잘못됐을 수 있어요.<br>질문하신 분은 태형을 골랐는데 다른 목소리가 나온 것 같다고 해서 확인이 이어졌어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--green-light);">🎨</div>
+              <div class="section-title">이미지 · 화풍</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">스토리보드에서 채널에 그림체가 정해져 있지 않다고 나와요. 되돌아갈 수 있나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>튜브워커 홈으로 가서 채널 설정에서 화풍을 설정할 수 있어요.<br>설정한 다음 생성 중인 영상의 현재 단계로 돌아와서 하시면 돼요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🧵</div>
+              <div class="insight-body">
+                <h3>커스텀 스타일 프롬프트가 너무 촘촘하면 결과가 치우칠 수 있어요</h3>
+                <p>조교님이 한 수강생의 커스텀 스타일 프롬프트를 번역해 확인해 보니, 의복과 환경까지 아주 촘촘하게 설계돼 있어 문의한 증상이 나올 수 있어 보였다고 해요. 스타일 프롬프트를 조금 완화해서 전체를 다룰 수 있는 쪽으로 수정하는 걸 권했어요. 밤에는 그림체 관련 프롬프트만 넣는 게 좋다는 조교님 답도 이어졌어요.</p>
+                <span class="insight-tag tag-tip">스타일 프롬프트</span>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">글씨(워터마크) 지우기는 이미지에서만 되나요? 영상에서도 되나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>워터마크 말씀하시는 거면 이미지에만 해당돼요.<br>영상은 못 지워요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">🧰</div>
+              <div class="section-title">튜브워커 · 이지워커</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">저희는 튜브워커, 이지워커 두 가지 툴을 쓰는 건가요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>메인은 튜브워커예요.<br>이지워커는 어디까지나 보조 프로그램이에요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">내일 강의에 확장 프로그램 사용법도 나오나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>설명해 주신다고 들었어요.<br>버터떡님이 관련 사용법 영상도 준비하고 계세요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📘</div>
+              <div class="insight-body">
+                <h3>이지워커 사용설명서 v4가 방에 공유됐어요</h3>
+                <p>급하면 설명서를 보고 따라 하면 금방 한다는 안내와 함께 사용설명서 파일이 방에 올라왔어요. 파일은 방에서 직접 받아 주세요.</p>
+                <span class="insight-tag tag-tool">공유 자료</span>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">글을 넣은 후 이미지를 글 내용과 순서 다르게 넣어도 되나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>순서 맞게 넣어 주세요.<br>이미지 전까지 단계별 확인 과정이 있어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🧩</div>
+              <div class="insight-body">
+                <h3>확장 프로그램 안내 문서가 공유됐어요</h3>
+                <p>밤에 조교님이 안내 문서 링크를 공유했어요. 그록을 구독으로 사용하게 해주는 확장으로 보인다는 이야기와 함께 비용 차이가 상당하다는 반응이 이어졌고, 필수값은 길게 입력해 달라는 안내도 있었어요. 자세한 내용은 문서에서 직접 확인해 주세요.<br><a href="https://wiki.autoworkers.ai/6-3bac8b666740803bbe59fe4a891b7efa" target="_blank" rel="noopener">공유된 안내 문서 열기</a></p>
+                <span class="insight-tag tag-tool">공유 자료</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--green-light);">💳</div>
+              <div class="section-title">크레딧 · 비용</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">30분 영상에 이미지 140장을 쓰니 크레딧이 만삼천 원 정도 나가요. 이 정도가 맞나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>배치 없이 140장이면 그 정도 나와요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">20분 기준 롱폼 하나 제작하면 단가를 어느 정도로 생각하면 되나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>비용 부분은 1강 강의에서 약 4시간 3분쯤부터 나와요. 참고해 보세요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>노쌤이 정리해 주신 내용이 있어요.<br>내일 확장을 적용했을 때의 비용으로도 한번 보세요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--purple-light);">📈</div>
+              <div class="section-title">채널 운영</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">조회수가 잘 안 나온 영상은 비공개로 돌리는 게 좋나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>좋다 안 좋다 정답은 없어요.<br>롱폼은 조회수가 0이어도 다음 영상이 잘 나오기도 해서 그냥 둔다는 의견이었어요.<br>쇼츠는 조회수가 안 나오면(영상에 문제가 있을 확률이 커서) 다음 영상에도 영향이 가는 것 같아, 1200 미만이면 무조건 삭제한다는 분도 있었어요.<br>밤에 이어진 대화에서는 30개 중 6개가 100 미만인 정도면 크게 신경 안 써도 된다는 답도 나왔어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">채널은 살아 있는데 잘 안 터져요. 주제를 어떻게 잡아야 하나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>영상이 문제가 아니라 주제가 겹쳐서 사람들이 안 본 걸 수 있어요.<br>같은 주제를 하는 사람이 얼마나 많은지 검색해 보면 주제를 고르는 데 도움이 돼요. 많이 하는 주제는 조회수가 그렇게 나와요.<br>남들이 덜 하면서 조회수가 잘 나오는 주제를 찾아보세요. 채널을 몇 개 더 만들어 아예 다른 주제를 해보는 것도 방법이에요.<br>하루 종일 검색해 보고 직접 보는 게 제일 좋아요. 조회수가 0만 안 나오면 되고, 100 이상 나온다면 그 채널은 살아 있다는 뜻이에요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>클로드로 소재를 찾아 둘 수도 있지만, AI가 찾는 건 한계가 있다는 답이 이어졌어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📡</div>
+              <div class="insight-body">
+                <h3>메인피드를 채널 주제로 세팅해서 트렌드를 봐요</h3>
+                <p>따라 하고 싶은 채널을 구독하고 한두 개 들어보면 메인피드에 인기 영상들이 떠요. 내 주제와 다른 영상은 관심 없음 처리하고, 인기 영상의 채널 구독과 추천 동영상을 타고 들어가다 보면 트렌드를 알 수 있다는 팁이 공유됐어요. 메인피드를 초기화하고 싶을 때는 히스토리(기록)에서 시청한 동영상을 모두 삭제하면 돼요. 작업하다 무관한 영상이 잠시 재생돼도 본 것으로 잡히니, 그런 영상을 지우면 다시 채널 주제에 맞게 세팅돼요.</p>
+                <span class="insight-tag tag-tip">주제 리서치</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🙊</div>
+              <div class="insight-body">
+                <h3>채널명은 방에 공개하지 않는 게 좋아요</h3>
+                <p>쉬고 있던 채널에 롱폼을 올려도 되는지 물으며 채널명을 함께 적자, 되도록 채널명은 공개하지 않는 게 좋다는 답이 나왔어요. 잘못하면 알고리즘에 안 좋은 영향을 줄 수 있다는 이유였어요.</p>
+                <span class="insight-tag tag-caution">채널 주의</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">🔑</div>
+              <div class="section-title">인증번호</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">오늘 합류했는데 튜브워커 인증번호가 원래 좀 오래 걸리나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>신청하고 조금 기다리면 "노씨데브" 이름으로 카톡이 와요.<br>이날도 잠시 뒤 코드 전송 완료 안내가 이어졌어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">🎓</div>
+              <div class="section-title">진도 · 강의</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">2기는 숙제만 제출하면 되는 거죠? 방에 어려운 이야기가 많아 걱정돼요.</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>내일 강의에서 전반적으로 배울 수 있으니 걱정 안 하셔도 돼요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>내가 배운 게 아니면 그냥 넘어가세요. 진도대로 따라가면 돼요.<br>내일 강의 후에도 필요한 것들을 차근차근 다 가르쳐 주신다는 답이 이어졌어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">클로드 스킬은 매월 15만 원인가요? 가격이 꽤 세 보여요.</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>클로드는 처음에는 작은 걸 쓰라고 안내하셨어요.<br>클로드와 VS코드를 함께 쓰는 구성이에요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>내일 수업에서 배울 내용이니 설명을 들어보세요.<br>코드와 스킬은 수업에서 다루고 나면 익숙해질 때까지 알려드린대요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🙋</div>
+              <div class="insight-body">
+                <h3>지금은 1주차 강의 내용 질문만 받아요</h3>
+                <p>질문을 받기 전에 조교님이 지금은 1주차 강의 내용 질문만 받고 있다고 안내했어요. 아직 안 배운 내용은 다음 강의를 듣고 질문해 주세요. 밤에도 수업 진도에 맞춰 답변드리고 있다는 안내가 다시 나왔어요. 다 같이 진도에 맞춰 질문하면 더 효율적으로 꼼꼼히 알려드릴 수 있다고 해요.</p>
+                <span class="insight-tag tag-caution">질문 규칙</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🗺️</div>
+              <div class="insight-body">
+                <h3>다채널 확장은 안정된 다음이 베스트예요</h3>
+                <p>안정적으로 다른 카테고리를 운영하면서 5주차 야담 강의를 듣고 다채널로 확장하는 게 이상적일 것 같다는 이야기에, 조교님도 그게 베스트일 것 같다고 답했어요.</p>
+                <span class="insight-tag tag-tip">운영 전략</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--purple-light);">🎟️</div>
+              <div class="section-title">수강 신청</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">친구가 이 강의를 듣고 싶다는데 지금이라도 수강 신청이 가능한가요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>가능합니다.<br>채널톡에 문의하시면 돼요.<br><a href="http://pf.kakao.com/_EJixlG" target="_blank" rel="noopener">카카오 채널 열기</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
               <div class="section-icon" style="background:var(--orange-light);">🔥</div>
               <div class="section-title">방 소식</div>
             </div>
@@ -652,10 +1073,18 @@
               </div>
             </div>
             <div class="insight-card">
+              <div class="insight-emoji">✨</div>
+              <div class="insight-body">
+                <h3>튜브워커가 업데이트됐고 "신세계"라는 후기가 나왔어요</h3>
+                <p>오후에 튜브워커가 업데이트됐다는 감사 인사가 올라왔어요. 과제 제출용 영상을 만들어 본 분은 신세계라는 후기를 남겼고, 후파님과 아는아이님이 만든 확장 프로그램도 대박이라는 반응이 이어졌어요.</p>
+                <span class="insight-tag tag-tool">튜브워커</span>
+              </div>
+            </div>
+            <div class="insight-card">
               <div class="insight-emoji">☕</div>
               <div class="insight-body">
-                <h3>과제 릴레이가 279번까지 이어졌어요</h3>
-                <p>사담방 릴레이 명단이 이날 새벽에도 이어져 279번까지 확인됐어요.</p>
+                <h3>과제 릴레이가 289번까지 이어졌어요</h3>
+                <p>사담방 릴레이 명단이 새벽 279번에 이어 저녁 285번, 밤에는 289번까지 확인됐어요.</p>
                 <span class="insight-tag tag-revenue">과제 릴레이</span>
               </div>
             </div>
@@ -663,7 +1092,7 @@
               <div class="insight-emoji">🌅</div>
               <div class="insight-body">
                 <h3>드디어 내일이 강의날이에요</h3>
-                <p>아침 인사와 함께 내일 강의를 기다린다는 이야기가 이어졌어요. 새벽에 피드백 영상을 챙겨 봤다는 후기도 있었어요.</p>
+                <p>아침 인사와 함께 내일 강의를 기다린다는 이야기가 이어졌어요. 새벽에 피드백 영상을 챙겨 봤다는 후기도 있었어요. 밤에는 일주일이 이렇게 길게 느껴진 건 처음이라며 다들 내일 2주차 강의를 기다렸어요.</p>
                 <span class="insight-tag tag-tip">강의 전날</span>
               </div>
             </div>
@@ -2938,10 +3367,71 @@
           </div>
         </div>
       </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">등장인물마다 목소리를 다르게 넣을 수 있나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge">서포터즈</span>
+              <span class="qa-answer-name">아는아이</span>
+            </div>
+            <p>튜브워커에는 다중 목소리가 구현돼 있지 않아요.<br>정보성 채널에 특화돼 있어서 단일 음성으로 생성해요.<br>야담은 5주차에 브루를 이용할 예정이라 그때 배울 수 있어요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">튜브워커와 이지워커, 둘 다 쓰는 건가요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>메인은 튜브워커예요.<br>이지워커는 어디까지나 보조 프로그램이에요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">지금이라도 수강 신청이 가능한가요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>가능합니다.<br>채널톡에 문의하시면 돼요.<br><a href="http://pf.kakao.com/_EJixlG" target="_blank" rel="noopener">카카오 채널 열기</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">글씨(워터마크) 지우기는 영상에서도 되나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>워터마크 제거는 이미지에만 해당돼요.<br>영상은 못 지워요.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="updated-at">마지막 업데이트: 2026-08-13</div>
+  <div class="updated-at">마지막 업데이트: 2026-08-14</div>
 </div>
 
 <button class="fab-top" id="fabTop" type="button" aria-label="맨 위로" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
