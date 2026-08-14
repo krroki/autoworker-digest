@@ -587,7 +587,7 @@
   <div class="stats-bar fade-in">
     <div class="stat-pill"><span class="num">8/5</span><span class="label">정리 시작</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--green);">2기</span><span class="label">현재 기수</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--purple);">43</span><span class="label">누적 Q&amp;A</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--purple);">46</span><span class="label">누적 Q&amp;A</span></div>
   </div>
 
   <div class="tab-bar fade-in" id="tabBar">
@@ -603,10 +603,180 @@
           <span class="day-accordion-date">8/14 (금)</span>
           <span class="day-accordion-badge">최신</span>
         </div>
-        <div class="day-accordion-summary">드디어 2주차 강의날 아침 · 과제 릴레이 290번</div>
+        <div class="day-accordion-summary">2주차 강의날 · 저녁 7시 2강 · 강의 자료 공유 · 클로드 코드 설치와 결제 · 깃 설치 · 과제 릴레이 302번</div>
       </button>
       <div class="day-accordion-body">
         <div class="day-accordion-content">
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">🎓</div>
+              <div class="section-title">2주차 강의</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">오늘 강의는 8시인가요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>저녁 7시에 시작해요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">운영진</span>
+                  </div>
+                  <p>시작 10분 전인 6시 50분에 참가 안내를 방으로 보내드려요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🎥</div>
+              <div class="insight-body">
+                <h3>2강 참가 안내가 방에 두 번 올라왔어요</h3>
+                <p>6시 50분에 참가 링크와 회의 ID, 암호가 안내됐고, 7시 정각에 "강의 시작했어요"라며 같은 안내가 한 번 더 올라왔어요. 참가 정보는 방 안내 메시지에서 확인해 주세요.</p>
+                <span class="insight-tag tag-tool">2강 안내</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--purple-light);">📘</div>
+              <div class="section-title">강의 자료</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">강의자료를 열어볼 수 있는 링크가 있나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>강의 중에 2강 자료 링크를 방에 공유해 주셨어요.<br><a href="https://wiki.autoworkers.ai/2-7edc8b666740838cae9481358f4b1f6d" target="_blank" rel="noopener">2강 강의 자료 열기</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🗂️</div>
+              <div class="insight-body">
+                <h3>강의 중에 자료 폴더도 함께 공유됐어요</h3>
+                <p>강의 후반에 노쌤이 자료 폴더 링크를 방에 올려 주셨어요. 자세한 내용은 폴더에서 직접 확인해 주세요.<br><a href="https://drive.google.com/drive/folders/13PG48_9nFHxV10lDGWtl3bok4FwUynM0" target="_blank" rel="noopener">공유된 자료 폴더 열기</a></p>
+                <span class="insight-tag tag-tool">공유 자료</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--green-light);">🤖</div>
+              <div class="section-title">클로드 · 클로드 코드</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">클로드와 클로드 코드는 결제가 따로인가요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>클로드를 결제하시면 클로드 코드도 쓸 수 있어요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>노쌤은 맨 끝에 있는 MAX 요금제를 추천하셨고, 110달러 정도라는 이야기가 나왔어요.<br>수강생끼리 주고받은 이야기라 결제 전에 공식 안내를 한 번 더 확인해 보세요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">클로드 코드는 어디서 받나요? 코드 화면이 안 보여요.</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>PC에 클로드를 내려받으면 왼쪽에 코드 탭이 보여요.<br>맨 위 홈 바로 옆의 Code를 눌러 주세요.<br><a href="https://claude.com/ko/download" target="_blank" rel="noopener">클로드 다운로드 페이지 열기</a></p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>지금 화면이 코드가 아니라 채팅 화면인 것 같아요.<br>코드를 쓰려면 결제를 하셔야 해요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">오토워커 스크립트는 어디에 두고 여나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>원하는 곳에 두고 즐겨찾기 해두면 돼요.<br>클로드 코드에서는 명령어 입력창 아래 폴더 열기로 그 폴더를 찾아 선택하면 설정돼요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">짝퉁 클로드를 결제한 것 같아요. 앱 이미지가 달라요.</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">운영진</span>
+                  </div>
+                  <p>강의 중에 안내해 드린 다운로드 링크로 받으셨으면 정품이 맞아요.<br>앱 아이콘 이미지가 달라 헷갈릴 수 있어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">💻</div>
+              <div class="section-title">설치 준비</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">깃 설치할 때 항목을 다 체크하는 건가요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>그냥 넥스트로 넘어가셔도 돼요.<br>설치 페이지는 강의 중 방에 공유됐어요.<br><a href="https://git-scm.com/install/windows" target="_blank" rel="noopener">깃 설치 페이지 열기</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="section">
             <div class="section-header">
               <div class="section-icon" style="background:var(--orange-light);">🔥</div>
@@ -621,10 +791,26 @@
               </div>
             </div>
             <div class="insight-card">
+              <div class="insight-emoji">🖥️</div>
+              <div class="insight-body">
+                <h3>막힐 때는 강의를 먼저 보고 개별로 도움받아요</h3>
+                <p>저녁에 설정이 막힌 분들이 이어지자, 쉬는 시간에 원격으로 봐드릴 테니 우선 강의를 보시는 게 좋겠다는 안내가 나왔어요. 급한 분들은 1:1 톡으로 문의해 달라는 답도 이어졌어요. 원격 지원용으로 올라왔던 오픈채팅 링크는 이미 만료된 링크로 확인됐으니, 필요하면 방에서 다시 안내받아 주세요.</p>
+                <span class="insight-tag tag-caution">문의 방법</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🎉</div>
+              <div class="insight-body">
+                <h3>한 시간 넘게 씨름한 끝에 됐다는 후기도 나왔어요</h3>
+                <p>강의 직전까지 설정이 안 돼 한 시간 넘게 붙잡고 있다가 결국 해결했다는 이야기가 올라왔어요. 강의 중에는 클로드가 정말 좋다는 반응도 이어졌어요.</p>
+                <span class="insight-tag tag-tip">해결 후기</span>
+              </div>
+            </div>
+            <div class="insight-card">
               <div class="insight-emoji">☕</div>
               <div class="insight-body">
-                <h3>과제 릴레이가 290번까지 이어졌어요</h3>
-                <p>새벽 사이 사담방 릴레이 명단이 290번까지 늘었어요.</p>
+                <h3>과제 릴레이가 302번까지 이어졌어요</h3>
+                <p>새벽에 290번까지 늘었던 사담방 릴레이 명단이 강의가 시작될 무렵 302번까지 이어졌어요.</p>
                 <span class="insight-tag tag-revenue">과제 릴레이</span>
               </div>
             </div>
@@ -3425,6 +3611,53 @@
               <span class="qa-answer-badge sub">조교</span>
             </div>
             <p>워터마크 제거는 이미지에만 해당돼요.<br>영상은 못 지워요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">클로드와 클로드 코드는 결제가 따로인가요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge">서포터즈</span>
+              <span class="qa-answer-name">아는아이</span>
+            </div>
+            <p>클로드를 결제하시면 클로드 코드도 쓸 수 있어요.<br>결제를 하지 않으면 코드 화면을 쓸 수 없어요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">클로드에서 코드 화면이 안 보여요.</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>PC에 클로드를 내려받으면 왼쪽에 코드 탭이 보여요.<br>맨 위 홈 바로 옆의 Code를 눌러 주세요. 채팅 화면이면 아직 코드 화면이 아니에요.<br><a href="https://claude.com/ko/download" target="_blank" rel="noopener">클로드 다운로드 페이지 열기</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">깃 설치할 때 항목을 다 체크해야 하나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge">서포터즈</span>
+              <span class="qa-answer-name">아는아이</span>
+            </div>
+            <p>그냥 넥스트로 넘어가셔도 돼요.<br><a href="https://git-scm.com/install/windows" target="_blank" rel="noopener">깃 설치 페이지 열기</a></p>
           </div>
         </div>
       </div>
