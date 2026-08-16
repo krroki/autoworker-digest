@@ -587,7 +587,7 @@
   <div class="stats-bar fade-in">
     <div class="stat-pill"><span class="num">8/5</span><span class="label">정리 시작</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--green);">2기</span><span class="label">현재 기수</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--purple);">62</span><span class="label">누적 Q&amp;A</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--purple);">67</span><span class="label">누적 Q&amp;A</span></div>
   </div>
 
   <div class="tab-bar fade-in" id="tabBar">
@@ -596,12 +596,233 @@
   </div>
 
   <div id="tab-daily" class="tab-content active">
-    <section class="day-accordion fade-in open" data-day-id="0816">
+    <section class="day-accordion fade-in open" data-day-id="0817">
       <button class="day-accordion-header" type="button" aria-expanded="true" onclick="toggleAccordion(this.parentElement)">
         <div class="day-accordion-left">
           <span class="day-accordion-arrow">▼</span>
-          <span class="day-accordion-date">8/16 (일)</span>
+          <span class="day-accordion-date">8/17 (월)</span>
           <span class="day-accordion-badge">최신</span>
+        </div>
+        <div class="day-accordion-summary">실패한 이미지만 재시도 · 확장 V7 재설치 · 60초에 30개 제한 · 튜브워커 해외 카드 결제 · 업로드 시간대 · 크레딧과 시간 · 클로드 코드 휴대폰 · 그록 대할인 · 클로드 서버 장애 · 쇼츠는 어렵다 · 과제 릴레이 70번</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">🧰</div>
+              <div class="section-title">확장 프로그램 · 이미지 업로드</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">실패한 사진만 다시 업로드하려는데 업로드 시작 버튼이 활성화되지 않아요. 실패한 것만 재시도는 어떻게 하나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>V7 버전에는 실패한 것만 재시도 버튼이 있어요.<br>업로드 실패가 뜨면 그 버튼이 활성화돼요.<br>다만 60초에 30개 제한 때문에 바로 재시도하면 또 실패할 수 있으니, 다시 될 때까지 재시도하시면 돼요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>확장을 새로 받아 설치하고, 기존에 생성한 이미지를 다시 업로드해 보세요.<br>첫 버전엔 이것저것 버그가 많았다고 해요.<br><a href="https://smile387.synology.me:5001/sharing/LwhK2Zkbd" target="_blank" rel="noopener">공유된 확장 다운로드 링크 열기</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">✅</div>
+              <div class="insight-body">
+                <h3>둘 다 지우고 다시 설치해서 업로드에 성공했다는 후기예요</h3>
+                <p>예전 버전은 삭제하는지, 둘 중 어떤 게 예전 버전인지 헷갈린다는 이야기가 있었는데, 결국 둘 다 제거하고 다시 설치한 뒤 새벽 0시 54분쯤 이미지 업로드에 성공했다고 알렸어요. 조교님도 다행이라며 고생하셨다고 답했어요. 다른 분도 이미지가 생성되고 있고 업로드도 잘 되고 있다며 반가워했어요.</p>
+                <span class="insight-tag tag-tool">재설치 후기</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--purple-light);">💳</div>
+              <div class="section-title">튜브워커 해외 카드 결제</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🌏</div>
+              <div class="insight-body">
+                <h3>튜브워커에 해외 카드 결제 옵션이 생겼어요</h3>
+                <p>해외 카드 결제 옵션을 만들어 달라고 요청해서 이제 튜브워커에서 해외 결제가 된다는 소식이 새벽에 올라왔어요. 직접 테스트해 봤는데 성공적이었고, 오른쪽 위에 해외 카드 옵션이 새로 생겼다고 해요.</p>
+                <span class="insight-tag tag-tool">해외 결제</span>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">해외 비자카드로 결제했는데 an error occurred가 뜨면서 카드사에 문의하라고 나와요. 카드사에서는 결제 시도 기록 자체가 없다며 사이트에 문의하라는데 어떻게 하나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>성공한 분은 체이스 비자를 썼고 잘 됐다고 해요.<br>시간차를 좀 두고 다시 시도해 보라는 답이었어요.<br>그분 카드는 해외 거래(foreign transaction)가 잘 되는 카드라는 설명도 덧붙였어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--green-light);">📺</div>
+              <div class="section-title">업로드 시간대 · 크레딧</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">경제 영상은 올리면 좋은 시간대가 있을까요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>레퍼런스 채널들 시간대를 보면 다양해요.<br>성향에 따라 6시, 9시, 12시, 19시, 21시 등 제각각이고, 생각해 보니 뉴스 방영 시간대와 겹치기도 한다고 해요.<br>질문한 분은 매일 올려야 한다는 생각에 하다 보니 결국 밤 11시쯤 올리게 된다고 했어요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>시간대도 있지만 크레딧도 함께 봐야 한다는 이야기가 있었어요.<br>하루 1개를 만들어도 기본 크레딧은 부족할 거라, 돈을 쓰고 시간을 벌려면 크레딧을 사서 튜브워커에서 한 번에 만들고, 시간을 쓰고 돈을 아끼려면 이지워커에서 이미지와 영상을 만들어 올리는 식으로 선택하는 거라고 해요.<br>버터떡님 영상을 보고 따라 해 보라며, 업로드는 구글 플로우가 아니라 이지워커가 하는 거라는 설명도 이어졌어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">🤖</div>
+              <div class="section-title">클로드 코드 · 서버 상태</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">클로드 코드는 휴대폰 앱에서도 가능한가요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>되긴 하지만, 클로드 코드가 작동될 기반 PC도 켜져 있어야 해요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">클로드가 갑자기 안 돼요. 저만 그런가요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>지금 클로드 서버 상태가 안 좋아요.<br>상태가 많이 안 좋으니 오전 작업은 쉬시는 게 좋을 것 같아요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>클로드가 잘 되는지는 상태 페이지에서 확인할 수 있어요.<br><a href="https://status.claude.com/" target="_blank" rel="noopener">클로드 상태 페이지 열기</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🟢</div>
+              <div class="insight-body">
+                <h3>아침 8시 15분쯤 클로드 서버가 정상으로 돌아왔어요</h3>
+                <p>아침 7시 4분쯤 서포터즈가 서버 상태가 안 좋다고 알린 뒤, 여러 분이 클로드가 갑자기 안 된다, 나만 안 되는 줄 알았다고 했어요. 다른 작업이나 해야겠다, 클로드도 안 되니 밥이나 해야겠다는 이야기가 오갔고, 8시 15분쯤 서포터즈가 클로드 서버가 정상으로 돌아왔다고 알렸어요.</p>
+                <span class="insight-tag tag-caution">서버 장애</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--orange-light);">⚡</div>
+              <div class="section-title">그록 · 다람님 특강</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🏷️</div>
+              <div class="insight-body">
+                <h3>새벽에 그록 대할인 이벤트가 있었다는 이야기가 나왔어요</h3>
+                <p>새벽에 그록 대란이 있었다며, 헤비그록이 엄청 싸게 풀렸다는 이야기예요. 될 줄 알고 결제했다가 대란 탑승에는 실패해 환불 신청만 두 번 했다는 분도 있었고, 아깝다, 안 그래도 헤비그록이 필요했는데 하는 아쉬움이 이어졌어요.</p>
+                <span class="insight-tag tag-caution">그록 이벤트</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🔁</div>
+              <div class="insight-body">
+                <h3>어제 다람님 특강을 두 번씩 다시 돌려봤다는 후기가 있었어요</h3>
+                <p>어제 특강을 두 번 더 돌려봤다며 다람님을 칭찬하는 이야기와, 자기도 특강을 두 번 돌려봤다는 반응이 아침에 이어졌어요.</p>
+                <span class="insight-tag tag-tip">특강 복습</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--orange-light);">🔥</div>
+              <div class="section-title">방 소식</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">☕</div>
+              <div class="insight-body">
+                <h3>2주차 과제 릴레이가 70번까지 이어졌어요</h3>
+                <p>새벽 4시쯤 69번까지 이어진 명단이 아침 7시 48분에는 70번까지 늘었어요. 선착순 20명 커피 쿠폰과 튜브워커로 5분 이상 영상 만들기라는 조건은 그대로예요.</p>
+                <span class="insight-tag tag-revenue">과제 릴레이</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">😅</div>
+              <div class="insight-body">
+                <h3>쇼츠가 롱폼보다 어렵다는 공감이 오갔어요</h3>
+                <p>쇼츠 10개를 만들어야 하는데 괜히 혼자 지친다, 오토워커는 즐거운데 쇼츠는 왜 이렇게 힘든지 모르겠다는 이야기에 쇼츠는 롱폼보다 어렵다고 생각한다는 답이 있었어요. 너무 롱폼에 익숙해져서인지 어렵다, 책 쓰는 게 제일 쉽다는 농담과 함께 쇼츠 어렵다는 공감이 이어졌어요. 오토워커 하러 왔는데 자진워커가 되어 버렸다는 농담과, 그래도 하루에 영상을 많이 칠 수 있어 감사하다는 이야기도 있었어요.</p>
+                <span class="insight-tag tag-tip">방 분위기</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">💬</div>
+              <div class="insight-body">
+                <h3>클로드를 몇 번 팼는지 모르겠다는 농담도 나왔어요</h3>
+                <p>클로드를 몇 번 팼는지 모르겠고 코덱스는 패도 말을 안 듣는다는 농담이 새벽에 오갔어요. 한글이 안 깨지고 이미지를 참 잘 만든다며 동네 골목 간판이 나오는 장면에서도 놀랐다는 감탄, 그림체가 예쁘다는 반응도 있었어요.</p>
+                <span class="insight-tag tag-tip">방 분위기</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🙋</div>
+              <div class="insight-body">
+                <h3>아직 답을 기다리는 질문도 있어요</h3>
+                <p>새벽 1시 8분에 오토워커 시간이 월요일 0시에 리셋되는 줄 알았는데 지금 보니 지난주 시간 그대로라는 질문, 새벽 4시 22분에 금요일 강의 때 버터떡님이 줌 채팅으로 주신 프롬프트를 못 받았는데 받을 수 있는지 묻는 질문(어떤 프롬프트인지 되묻는 답만 있었고, 질문한 분도 무슨 프롬프트인지는 모르겠다고 했어요), 아침 7시 27분에 이지워커에서 이미지 형식을 나사 다큐 말고 다른 건 못 쓰는지 묻는 질문, 8시 4분에 헤비그록 이벤트가 또 언제 있는지·그런 정보는 어떻게 알 수 있는지 묻는 질문이 올라왔는데 8시 15분 기준으로 아직 답이 없어요.</p>
+                <span class="insight-tag tag-caution">답변 대기</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="day-accordion fade-in" data-day-id="0816">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">8/16 (일)</span>
         </div>
         <div class="day-accordion-summary">튜브워커 작업 화면 주소 · 이지워커 장면 만들기 · 설치 오류 실수담 · 이지 플로우는 무료 · 마스코트 미리 준비 · Qwen과 그록 · FGV · 이미지 속 한글 깨짐 · CTA 넣는 자리 · 대본 가이드는 생략 가능 · 오토그록 글은 프반 전용 · 구독 정지 문의 결과 · 과제 릴레이 60번</div>
       </button>
@@ -4889,10 +5110,85 @@
           </div>
         </div>
       </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">이미지 업로드에 실패한 것만 다시 시도할 수 있나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>V7 버전 확장에는 실패한 것만 재시도 버튼이 있어요. 업로드 실패가 뜨면 활성화돼요.<br>60초에 30개 제한 때문에 바로 재시도하면 또 실패할 수 있으니, 다시 될 때까지 재시도하세요.<br>확장은 새로 받아 설치하고, 기존에 생성한 이미지를 다시 업로드해 보세요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">튜브워커는 해외 카드로도 결제되나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>네, 오른쪽 위에 해외 카드 옵션이 새로 생겨서 해외 결제가 돼요.<br>체이스 비자로 성공했다는 후기가 있었고, 오류가 나면 시간차를 두고 다시 시도해 보라는 답이 있었어요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">클로드 코드를 휴대폰 앱에서도 쓸 수 있나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>되긴 하지만, 클로드 코드가 작동될 기반 PC도 켜져 있어야 해요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">클로드가 갑자기 안 되면 어떻게 하나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생 · 서포터즈</span>
+            </div>
+            <p>서버 상태가 안 좋을 때가 있어요. 그럴 땐 오전 작업은 잠시 쉬는 게 낫다는 안내가 있었어요.<br>클로드가 잘 되는지는 상태 페이지에서 확인할 수 있어요.<br><a href="https://status.claude.com/" target="_blank" rel="noopener">클로드 상태 페이지 열기</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">영상은 몇 시에 올리는 게 좋나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>레퍼런스 채널 시간대는 성향에 따라 6시, 9시, 12시, 19시, 21시 등 다양해요.<br>뉴스 방영 시간대와 겹치기도 한다는 이야기예요.<br>시간대와 함께 크레딧도 생각해서, 돈을 쓰고 시간을 벌지(튜브워커) 시간을 쓰고 돈을 아낄지(이지워커) 선택하라는 답도 있었어요.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="updated-at">마지막 업데이트: 2026-08-16</div>
+  <div class="updated-at">마지막 업데이트: 2026-08-17</div>
 </div>
 
 <button class="fab-top" id="fabTop" type="button" aria-label="맨 위로" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
