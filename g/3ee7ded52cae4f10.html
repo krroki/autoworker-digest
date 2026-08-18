@@ -587,7 +587,7 @@
   <div class="stats-bar fade-in">
     <div class="stat-pill"><span class="num">8/5</span><span class="label">정리 시작</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--green);">2기</span><span class="label">현재 기수</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--purple);">80</span><span class="label">누적 Q&amp;A</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--purple);">85</span><span class="label">누적 Q&amp;A</span></div>
   </div>
 
   <div class="tab-bar fade-in" id="tabBar">
@@ -596,12 +596,197 @@
   </div>
 
   <div id="tab-daily" class="tab-content active">
-    <section class="day-accordion fade-in open" data-day-id="0818">
+    <section class="day-accordion fade-in open" data-day-id="0819">
       <button class="day-accordion-header" type="button" aria-expanded="true" onclick="toggleAccordion(this.parentElement)">
         <div class="day-accordion-left">
           <span class="day-accordion-arrow">▼</span>
-          <span class="day-accordion-date">8/18 (화)</span>
+          <span class="day-accordion-date">8/19 (수)</span>
           <span class="day-accordion-badge">최신</span>
+        </div>
+        <div class="day-accordion-summary">권한 우회 모드는 웹 말고 앱 · 깃은 다운 말고 설치까지 · 막히면 스샷으로 질문 · 이지워커 이미지는 왼쪽에서 선택 · 썸네일 문구는 레퍼런스 분석 · 야담은 2기부터 · 오퍼스 5 한도 체감 · 새벽엔 뚝뚝 끊김 · 오늘자 경제 핫이슈 · 새벽 작업 분위기</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">🖥️</div>
+              <div class="section-title">클로드 앱 설치</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">클로드에서 권한 우회 모드(권한 무시)가 안 보여요. 자동으로 놓고 진행해도 되나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>크롬 같은 인터넷 창에서 쓰는 웹 클로드에는 그 설정이 안 보여요. 웹 말고 데스크톱 앱 클로드를 설치해서 쓰면 돼요.<br>다운로드만 하고 설치를 안 한 경우가 많으니 설치까지 마쳤는지 확인해 보세요. 질문한 분도 받아 놓고 설치 화면으로 안 들어갔던 게 원인이었어요.<br>자세한 과정은 2주차 강의 초반에 나와요. 카톡으로 설명하기는 쉽지 않으니 강의를 한 번 더 보시는 걸 권했어요.<br><a href="https://code.claude.com/docs/ko/desktop-quickstart" target="_blank" rel="noopener">데스크톱 앱 안내 문서 열기</a><br><a href="https://claude.com/ko/download" target="_blank" rel="noopener">클로드 다운로드 페이지 열기</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--purple-light);">🐙</div>
+              <div class="section-title">깃 설치</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">깃을 다운받았는데 계속 안내 화면이 떠요. 설치가 된 건지 모르겠어요.</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>다운로드만 하고 설치를 안 한 경우가 많으니, 받은 파일로 설치까지 마쳤는지 먼저 확인해 보세요.<br>클로드에게 "깃을 설치해줘"라고 그대로 시켜 보는 방법도 있어요. 안 되면 클로드에게 "왜 이러냐"고 물어보면 돼요.<br>말로 설명하기 어려우면 화면을 그냥 다 스크린샷 찍어서 보여 주는 게 제일 빨라요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🤖</div>
+              <div class="insight-body">
+                <h3>설치와 파일 정리는 클로드에게 통째로 시켜 보세요</h3>
+                <p>엑셀 시트를 주고 클로드한테 부탁했더니 파일명을 잘 바꿔 주더라는 후기와, "끌로야 니가 필요한 거 다 깔아줘"라고 해서 설치 과정이 기억도 안 난다는 이야기가 나왔어요. 클로드가 "직접 할 수 없어요"라고 하면 그때 스크린샷을 찍어 "어디야? 뭐 해 줄까?"라고 물으면 되고, 강의 화면과 내 화면이 다를 때도 강의 스샷을 찍어 "이게 뭐야?"라고 물어보면 된다는 팁이에요. 클로드 코드(끌코)가 준비 안 됐으면 끌코 말고 클로드 앱(끌로)에게 물어보라는 조언도 있었어요.</p>
+                <span class="insight-tag tag-tip">클로드 팁</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--green-light);">🖼️</div>
+              <div class="section-title">이지워커 · 튜브워커</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">이지워커로 이미지 생성을 마치고 튜브워커에 올리려는데, 견본 영상처럼 화면이 안 나와요. 어떻게 하나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>왼쪽에서 이미지 파일을 선택하면 돼요. 만들어진 이미지 파일 전체를 선택하면 견본처럼 채워져요.<br>그래도 이미지 파일 선택 버튼이 안 나타난다는 분이 있었는데, 말로만 설명하면 알기 어려우니 스크린샷을 찍어 같이 올려 달라는 안내가 이어졌어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--orange-light);">🎨</div>
+              <div class="section-title">썸네일 문구</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">썸네일 문구 예시는 어디서 받을 수 있을까요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>기존 레퍼런스 영상들을 보시고, 그걸 클로드에 분석시켜서 만들면 돼요.<br>썸네일 문구는 레퍼런스 영상들을 계속 공부하셔야 해요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--purple-light);">📜</div>
+              <div class="section-title">야담 커리큘럼</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">야담은 1기분들도 전부 하시는 건가요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>야담은 2기부터 생긴 커리큘럼이라, 1기분들이 전부 하시는 건 아니에요.<br>다람님 특강 다음 순서를 묻는 질문도 있었는데, 답한 분은 아직 야담은 안 하셨고 본인 특강은 일정을 봐서 9월 둘째 주쯤이 될 것 같다고 했어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">📉</div>
+              <div class="section-title">클로드 한도 · 상태</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">⏳</div>
+              <div class="insight-body">
+                <h3>오퍼스 5로 올라가면서 한도가 더 빨리 닳는 것 같다는 체감담</h3>
+                <p>클로드 7일 사용량이 끝나서 할 일이 없다는 분, 어제부터 한도가 차서 쉬고 있다는 분이 이어졌어요. 오퍼스가 5로 업데이트되면서 토큰 사용량이 더 많아진 것 같다는 이야기와, 인간미 넘치던 오퍼스 4.6이 좋았다는 아쉬움도 나왔어요. 클로드 한도가 아니라 튜브워커 주간 한도를 다 써서 쉬는 분도 있었어요.</p>
+                <span class="insight-tag tag-caution">사용량</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🌙</div>
+              <div class="insight-body">
+                <h3>새벽에는 클로드가 뚝뚝 끊긴다는 체감담</h3>
+                <p>새벽 4시쯤 클로드가 요즘 계속 멍청해지는 것 같고 오늘은 뚝뚝 끊긴다는 하소연이 나왔어요. 앞서 새벽 2시 45분에는 지금 서버 과부하로 에이전트가 안 돌아가는 게 맞느냐, 새벽에 하면 안 되겠다는 이야기도 있었어요.</p>
+                <span class="insight-tag tag-caution">서버 상태</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--orange-light);">🔥</div>
+              <div class="section-title">방 소식</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📌</div>
+              <div class="insight-body">
+                <h3>오늘자(8/19) 경제 핫이슈 정리가 공유됐어요</h3>
+                <p>아침 7시 23분에 오늘의 경제 핫이슈 정리가 올라왔어요. 미 30년물 국채 금리가 5.33%를 돌파해 19년 만에 최고이고 일본·독일·프랑스·한국 국채도 최고치를 경신했다는 글로벌 장기금리 이야기, 어제 장중 7,200을 회복했다가 6,800선으로 하락 마감한 코스피 이야기 같은 소재예요.</p>
+                <span class="insight-tag tag-tip">소재 공유</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🌙</div>
+              <div class="insight-body">
+                <h3>이날도 새벽 2~4시 반까지 작업이 이어졌어요</h3>
+                <p>새벽 2시 48분 "오늘 하루도 고생하셨습니다" 인사 뒤에도 대화가 이어졌고, 4시 29분에는 "세상에 아직도 안 주무시네요"라는 걱정이 나왔어요. 기한이 지난 1주차 숙제를 이제야 한 편(3분) 완성했다는 분은, 완성 없이 넘어가려다 2주차 2부 강의에서 노쌤이 1주차 숙제를 안 하면 안 된다고 해서 뜨끔해서 만들었다고 했어요. 아침에는 설치와 씨름하던 분의 "신문물이 스트레스, 아날로그 세대가 그립네요"라는 하소연도 있었어요.</p>
+                <span class="insight-tag tag-tip">방 분위기</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🙋</div>
+              <div class="insight-body">
+                <h3>아직 답을 기다리는 질문도 있어요</h3>
+                <p>①기한이 지나 완성한 1주차 숙제(3분 한 편)를 제출이나 업로드 없이 소장용으로 둬야 하는지 ②그록에서 480p로 해도 영상 화질이 괜찮은지 ③다들 영상은 어느 정도 넣는지 묻는 질문이 올라왔어요.<br>이 시간대 대화에서는 아직 답이 없어요.</p>
+                <span class="insight-tag tag-caution">답변 대기</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="day-accordion fade-in" data-day-id="0818">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">8/18 (화)</span>
         </div>
         <div class="day-accordion-summary">플로우 워터마크는 선택 · 스타일 고르기는 새 채널 만들기 · 이지워커 엑셀은 후파님 폴더 플로우로 · 화면 나누기 단축키 · 대본 길이는 20분 제한 · 야담 목소리는 브루 · 끌로 호칭 · 대니님 정리 페이지 · 오늘자 경제 소재 · 채널 인증은 한 번, 번호는 기록 · 출처 링크는 고급기능부터 · 고정댓글은 달면 좋아요 · 결제해도 시간 한도는 그대로 · 중간 합류 가능 · 과제 릴레이 111번</div>
       </button>
@@ -5873,10 +6058,85 @@
           </div>
         </div>
       </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">클로드에서 권한 우회 모드(권한 무시)가 안 보여요.</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>크롬 같은 인터넷 창에서 쓰는 웹 클로드에는 안 보여요. 데스크톱 앱 클로드를 설치해서 쓰면 돼요.<br>다운로드만 하고 설치를 안 했는지도 확인해 보세요. 자세한 과정은 2주차 강의 초반에 나와요.<br><a href="https://code.claude.com/docs/ko/desktop-quickstart" target="_blank" rel="noopener">데스크톱 앱 안내 문서 열기</a><br><a href="https://claude.com/ko/download" target="_blank" rel="noopener">클로드 다운로드 페이지 열기</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">깃을 다운받았는데 설치가 된 건지 모르겠어요.</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>다운로드만 하고 설치를 안 한 경우가 많아요. 받은 파일로 설치까지 마쳤는지 먼저 확인해 보세요.<br>클로드에게 "깃을 설치해줘"라고 그대로 시켜 보는 방법도 있어요.<br>막히면 화면을 스크린샷 찍어 그대로 물어보는 게 제일 빨라요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">이지워커로 만든 이미지를 튜브워커에 어떻게 올리나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>왼쪽에서 이미지 파일을 선택하면 돼요.<br>만들어진 이미지 파일 전체를 선택하면 견본 영상처럼 채워져요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">썸네일 문구 예시는 어디서 받을 수 있나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>따로 받는 곳이 있다기보다, 기존 레퍼런스 영상들을 보고 클로드에 분석시켜서 만들면 돼요.<br>썸네일 문구는 레퍼런스 영상들을 계속 공부하는 게 답이라는 조언이 있었어요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">야담은 모든 기수가 하는 커리큘럼인가요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>야담은 2기부터 생긴 커리큘럼이에요.<br>1기분들이 전부 하시는 건 아니에요.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="updated-at">마지막 업데이트: 2026-08-18</div>
+  <div class="updated-at">마지막 업데이트: 2026-08-19</div>
 </div>
 
 <button class="fab-top" id="fabTop" type="button" aria-label="맨 위로" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
