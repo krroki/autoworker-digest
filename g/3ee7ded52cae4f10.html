@@ -587,7 +587,7 @@
   <div class="stats-bar fade-in">
     <div class="stat-pill"><span class="num">8/5</span><span class="label">정리 시작</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--green);">2기</span><span class="label">현재 기수</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--purple);">75</span><span class="label">누적 Q&amp;A</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--purple);">80</span><span class="label">누적 Q&amp;A</span></div>
   </div>
 
   <div class="tab-bar fade-in" id="tabBar">
@@ -603,7 +603,7 @@
           <span class="day-accordion-date">8/18 (화)</span>
           <span class="day-accordion-badge">최신</span>
         </div>
-        <div class="day-accordion-summary">플로우 워터마크는 선택 · 스타일 고르기는 새 채널 만들기 · 이지워커 엑셀은 후파님 폴더 플로우로 · 화면 나누기 단축키 · 대본 길이는 20분 제한 · 야담 목소리는 브루 · 끌로 호칭 · 대니님 정리 페이지 · 과제 릴레이 99번 · 오늘자 경제 소재</div>
+        <div class="day-accordion-summary">플로우 워터마크는 선택 · 스타일 고르기는 새 채널 만들기 · 이지워커 엑셀은 후파님 폴더 플로우로 · 화면 나누기 단축키 · 대본 길이는 20분 제한 · 야담 목소리는 브루 · 끌로 호칭 · 대니님 정리 페이지 · 오늘자 경제 소재 · 채널 인증은 한 번, 번호는 기록 · 출처 링크는 고급기능부터 · 고정댓글은 달면 좋아요 · 결제해도 시간 한도는 그대로 · 중간 합류 가능 · 과제 릴레이 111번</div>
       </button>
       <div class="day-accordion-body">
         <div class="day-accordion-content">
@@ -742,6 +742,164 @@
 
           <div class="section">
             <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">🔐</div>
+              <div class="section-title">채널 인증 기록</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">인증은 한 번만 하면 되나요? 이후에 따로 또 해야 하는 게 있나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>인증만 하시면 그 단계 이후로는 따로 필요 없어요.<br>다만 어떤 채널에 어떤 번호로 인증했는지는 기록해 두면 좋아요.<br>나중에 채널에 문제가 생겼을 때 관련 채널로 같이 엮이지 않기 위해서예요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--purple-light);">🔗</div>
+              <div class="section-title">유튜브 출처 · 고급기능 · 고정댓글</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">유튜브에 올릴 때 출처를 넣으려고 하니 인증 메시지가 떴어요. 경제 채널이라 출처까지 넣는 게 나을까요, 빼도 될까요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>출처는 넣으시는 게 좋아요.<br>외부 링크는 고급기능이 열려야 가능해요.<br>롱폼은 채널 중·고급기능을 기본으로 열어 준다고 생각하셔야 해요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">고급기능은 어떻게 열어야 하나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>사진 2장이면 된다는 답이 있었어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">유튜브에 영상을 올리고 고정댓글이라는 것까지 다 하는 건가요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>고정댓글은 달면 좋아요.<br>귀찮아서 그냥 안 한다는 서포터즈님 이야기도 있었으니, 필수라기보다는 하면 좋은 쪽이에요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--orange-light);">⏳</div>
+              <div class="section-title">튜브워커 크레딧 · 시간 한도</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">결제하면 한도가 늘어나지 않나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>크레딧만 늘어나요. 시간은 안 늘어요.<br>주간 한도에 걸리는 건 너무 치명적이라는 반응도 있었어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">💡</div>
+              <div class="insight-body">
+                <h3>시간과 크레딧은 아껴 쓰세요</h3>
+                <p>이래저래 연습하다가 실수로 시간을 날리지 말고 아껴서 해 보라는 경험담이 나왔어요. 크레딧도 잘 몰라서 이것저것 해 보다가 두 번 충전했다는 이야기가 있었어요.</p>
+                <span class="insight-tag tag-tip">아껴 쓰기</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--green-light);">🎓</div>
+              <div class="section-title">중간 합류</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">지금도 추가 수강이 가능한가요? 2기로 들어올 수 있는지, 3기를 기다려야 하는지 궁금해요.</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>지금도 들어오실 수 있어요. 채널톡에 상담하시면 돼요.<br>디하클 스태프분도 중간 합류와 업그레이드 모두 가능하다고 확인해 주셨어요.<br>실제로 오늘 수강료를 내고 들어왔다는 분도 있었어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">🧩</div>
+              <div class="section-title">확장 프로그램 · 클로드 팁</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">1기 때 조교님이 공유해 주신 확장 프로그램을 개선해서 쓰고 있는데, 9월에 있을 제 특강에서 공유해도 될까요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>저는 크게 상관없어요. 개선하신 거면 그분 거예요.<br>다만 확장 프로그램이 너무 많으면 혼선이 올 수 있으니, 노쌤과 한번 이야기해 보시는 게 어떻겠냐고 권했어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🧒</div>
+              <div class="insight-body">
+                <h3>어려운 설명은 "10살 아이도 이해할 수 있게 설명해줘"</h3>
+                <p>터미널이 아니라 앱에서 실행하면 전용 에이전트를 불러오기 힘든 것 같다는 이야기가 나오자, 무슨 말인지 모를 때는 클로드에게 "10살 아이도 이해할 수 있게 설명해줘"라고 하면 쉽게 풀어서 이야기해 준다는 팁이 공유됐어요.</p>
+                <span class="insight-tag tag-tip">클로드 팁</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
               <div class="section-icon" style="background:var(--orange-light);">🔥</div>
               <div class="section-title">방 소식</div>
             </div>
@@ -756,8 +914,8 @@
             <div class="insight-card">
               <div class="insight-emoji">☕</div>
               <div class="insight-body">
-                <h3>2주차 과제 릴레이가 99번까지 이어졌어요</h3>
-                <p>아침 8시 27분에 86번부터 99번까지 이어진 명단이 올라왔어요. 선착순 20명 커피 쿠폰과 튜브워커로 5분 이상 영상 만들기라는 조건은 그대로예요. 100등 안에 들고 싶었는데 들었다는 기쁨과, 따지고 보면 3분에서 5분으로 늘어난 것뿐인데 다들 길게 만드시는 것 같다는 이야기도 있었어요.</p>
+                <h3>2주차 과제 릴레이가 111번까지 이어졌어요</h3>
+                <p>아침 8시 27분에 86번부터 99번까지 이어진 명단이 올라왔어요. 선착순 20명 커피 쿠폰과 튜브워커로 5분 이상 영상 만들기라는 조건은 그대로예요. 100등 안에 들고 싶었는데 들었다는 기쁨과, 따지고 보면 3분에서 5분으로 늘어난 것뿐인데 다들 길게 만드시는 것 같다는 이야기도 있었어요. 저녁 9시 19분에는 100번부터 111번까지 이어진 명단이 다시 올라왔고, 조교님의 감사 인사가 이어졌어요.</p>
                 <span class="insight-tag tag-revenue">과제 릴레이</span>
               </div>
             </div>
@@ -778,10 +936,26 @@
               </div>
             </div>
             <div class="insight-card">
+              <div class="insight-emoji">💬</div>
+              <div class="insight-body">
+                <h3>질문은 1:1보다 방과 댓글로 남겨 주세요</h3>
+                <p>개별로 여쭤보려는 분께 여기서 이야기하자며, 1:1은 되도록 지양하고 있으니 댓글로 남겨 달라는 조교님 안내가 있었어요.</p>
+                <span class="insight-tag tag-tip">운영 안내</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🤖</div>
+              <div class="insight-body">
+                <h3>조교님 클론 이야기로 한바탕 웃었어요</h3>
+                <p>매달 백만 원을 결제해서라도 조교님 클론이 생기면 기꺼이 쓰겠다, 건강까지 클로닝돼서 24시간 일할 수 있으면 오백까지도 가능하다는 농담이 이어졌어요. 클론을 빌려서 일을 시키며 구박하겠다는 서포터즈님 말에는 클론을 잘못 구박하면 폭동을 일으킬 것 같다는 답이 돌아왔고, 1기 때는 만인의 연인이었는데 2기에서는 만인의 쌈닭이 됐다는 놀림도 나왔어요.</p>
+                <span class="insight-tag tag-tip">방 분위기</span>
+              </div>
+            </div>
+            <div class="insight-card">
               <div class="insight-emoji">🙋</div>
               <div class="insight-body">
                 <h3>아직 답을 기다리는 질문도 있어요</h3>
-                <p>아침 8시 40분에 이 자료가 어디 있는지 묻는 질문이 올라왔는데(바로 앞에 오늘자 경제 소재 정리 글이 공유된 뒤였어요), 이 시간대 대화에서는 아직 답이 없어요.</p>
+                <p>아침 8시 40분에는 이 자료가 어디 있는지 묻는 질문이 올라왔어요(바로 앞에 오늘자 경제 소재 정리 글이 공유된 뒤였어요).<br>저녁에는 ①매일 하나씩 올려야 하는데 주간 한도가 13분밖에 안 남았다며 튜브워커 주간 한도를 한시적으로 열어 줄 수 없는지 ②인증 기록을 안 해 둬서 뒤죽박죽인데 다 정리하고 다시 인증해도 되는지 ③튜브워커를 프리랜서 같은 일반인에게 알려줘도 되는 공개 솔루션인지 ④3분 스킬을 경제스킬 카페에서 받는 게 맞는지 묻는 질문이 올라왔어요.<br>이 시간대 대화에서는 아직 답이 없어요.</p>
                 <span class="insight-tag tag-caution">답변 대기</span>
               </div>
             </div>
@@ -5620,6 +5794,82 @@
               <span class="qa-answer-badge member">수강생</span>
             </div>
             <p>레퍼런스가 길면 대본도 길어져요.<br>대본을 뽑을 때 클로드에게 "20분 제한이야"처럼 길이를 말해 주세요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">유튜브에 출처(외부 링크)를 넣으려니 인증 안내가 떠요. 출처는 넣는 게 좋나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge">서포터즈</span>
+              <span class="qa-answer-name">아는아이</span>
+            </div>
+            <p>출처는 넣으시는 게 좋아요.<br>외부 링크는 고급기능이 열려야 가능해요. 고급기능은 사진 2장이면 된다는 답이 있었어요.<br>롱폼은 채널 중·고급기능을 기본으로 열어 준다고 생각하셔야 해요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">영상을 올리고 고정댓글까지 다 하는 건가요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>고정댓글은 달면 좋아요.<br>필수라기보다는 하면 좋은 쪽이에요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">결제하면 시간 한도도 늘어나나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>크레딧만 늘어나요. 시간(주간 한도)은 안 늘어요.<br>연습하다 실수로 시간을 날리지 말고 아껴서 써 보세요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">지금도 2기에 중간 합류할 수 있나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>지금도 들어오실 수 있어요. 채널톡에 상담하시면 돼요.<br>중간 합류와 업그레이드 모두 가능해요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">채널 인증은 한 번만 하면 되나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>네, 인증만 하면 그 뒤로는 따로 필요 없어요.<br>어떤 채널에 어떤 번호로 인증했는지는 기록해 두면 좋아요.</p>
           </div>
         </div>
       </div>
