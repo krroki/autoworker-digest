@@ -587,7 +587,7 @@
   <div class="stats-bar fade-in">
     <div class="stat-pill"><span class="num">8/5</span><span class="label">정리 시작</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--green);">2기</span><span class="label">현재 기수</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--purple);">85</span><span class="label">누적 Q&amp;A</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--purple);">95</span><span class="label">누적 Q&amp;A</span></div>
   </div>
 
   <div class="tab-bar fade-in" id="tabBar">
@@ -603,7 +603,7 @@
           <span class="day-accordion-date">8/19 (수)</span>
           <span class="day-accordion-badge">최신</span>
         </div>
-        <div class="day-accordion-summary">권한 우회 모드는 웹 말고 앱 · 깃은 다운 말고 설치까지 · 막히면 스샷으로 질문 · 이지워커 이미지는 왼쪽에서 선택 · 썸네일 문구는 레퍼런스 분석 · 야담은 2기부터 · 오퍼스 5 한도 체감 · 새벽엔 뚝뚝 끊김 · 오늘자 경제 핫이슈 · 새벽 작업 분위기</div>
+        <div class="day-accordion-summary">권한 우회 모드는 웹 말고 앱 · 깃은 다운 말고 설치까지 · 막히면 스샷으로 질문 · 이지워커 이미지는 왼쪽에서 선택 · 대본 받고 튜브워커로 · 실패한 씬은 씬 목록에서 확인 · 그록에 넣을 이미지는 안 지워도 됨 · 썸네일 문구는 레퍼런스 분석 · 채널 판단은 노출수부터 · 튜브워커 가입은 수작업 승인 · 채널 세팅은 루키특강 · 프반 이력은 3,000분 · 야담은 2기부터 · 오퍼스 5 한도 체감 · 새벽엔 뚝뚝 끊김 · 오늘자 경제 핫이슈 · 과제 릴레이 130번 · 새벽·저녁 작업 분위기</div>
       </button>
       <div class="day-accordion-body">
         <div class="day-accordion-content">
@@ -679,6 +679,81 @@
                 </div>
               </div>
             </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">대본을 받은 다음에는 어디로 가면 되나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>우선 여기서 대본을 받아서 튜브워커로 가시면 돼요.<br>중간에 훅 영상을 어디서 만드는지는 이 대화에서 정리되지 않았어요. 순서가 헷갈리면 화면을 보여 주면서 한 번 더 여쭤보세요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">클로드에서 대본을 만들 때 뭘 먼저 확인해야 하나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>클로드에 오토스크립트가 연결돼 있는지 먼저 확인하고, 그다음에 "대본 만들어줘"라고 하면 돼요.<br>어디를 봐야 하는지 모르겠다는 질문에는 화면 위쪽을 마우스로 직접 짚어 주셨어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">이지워커에서 이미지 생성 중 에러가 떠요. 90개가 다 만들어졌는지는 어떻게 확인하나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>위쪽 씬 목록을 보면 실패한 건 실패했다고 표시돼요.<br>실패한 게 몇 개인지 어디서 세는지 다시 묻는 질문이 이어졌는데, 이 시간대 대화에는 추가 답이 없어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">작업 화면이 계속 멈춰 있으면 어떻게 하나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>새로고침을 해 보시라는 안내가 있었어요.<br>다만 새로고침을 하니 작업이 다 날아가고 검은 화면만 나온다는 답이 이어졌고, 이 시간대에는 그 뒤 답이 없어요. 같은 상황이면 새로고침 전에 화면을 먼저 찍어 두는 걸 권해요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">그록에는 리무버로 지운 이미지를 넣어야 하나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>꼭 지운 이미지를 넣으실 필요는 없어요.<br>지우고 싶으시면 지우고 넣으셔도 돼요.</p>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="section">
@@ -720,6 +795,118 @@
                     <span class="qa-answer-badge member">수강생</span>
                   </div>
                   <p>야담은 2기부터 생긴 커리큘럼이라, 1기분들이 전부 하시는 건 아니에요.<br>다람님 특강 다음 순서를 묻는 질문도 있었는데, 답한 분은 아직 야담은 안 하셨고 본인 특강은 일정을 봐서 9월 둘째 주쯤이 될 것 같다고 했어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--green-light);">📈</div>
+              <div class="section-title">채널 진단</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">매일 영상을 올리는데, 이 채널을 접어야 할지 며칠까지 지켜봐야 할까요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>단순 조회수만으로는 판단하기 어려워요. 노출수와 노출 클릭률까지 같이 보셔야 해요.<br>채널 뽑기 운도 물론 있지만, 대체로 내가 못하고 있었을 가능성이 높다는 이야기도 함께 있었어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📊</div>
+              <div class="insight-body">
+                <h3>조회수보다 노출수를 먼저 보라는 정리가 다시 공유됐어요</h3>
+                <p>아는아이님이 며칠 전 적어 주신 내용을 다른 분이 다시 올려 주셨어요. 영상을 5~10개 올렸을 때 ①노출수는 나오는데 클릭률이 낮으면 썸네일이나 시청 연령층 문제 ②노출수도 나오고 클릭률도 괜찮은데 시청지속률이 낮으면 대본 구조 문제 ③노출수는 나오는데 클릭률과 시청지속률이 모두 낮으면 싹 뜯어고쳐야 하는 상태로 본다는 정리예요. ④노출 자체를 안 주는 경우도 항목에 있었는데, 이어지는 설명은 이 대화에서 잘려 있어요.</p>
+                <span class="insight-tag tag-tip">지표 보는 법</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">🧰</div>
+              <div class="section-title">시작 준비</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">튜브워커 가입 신청을 했는데 바로 쓸 수 있나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>카톡으로 인증 코드가 오면 입력하시면 돼요.<br>수작업으로 처리해 주시는 거라 늦은 시간에는 다음 날 갈 수도 있어요. 이날 신청한 분은 곧바로 코드를 받았어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">계정이나 채널을 처음 만들 때 주의할 점은 어디서 배울 수 있나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>카페의 루키 특강을 들어 보시면 돼요.<br>여러 채널을 운영하게 될 경우의 구성, 한 채널에 문제가 생겼을 때 다른 채널까지 영향받지 않게 하는 방법이 궁금하다는 질문에 나온 안내예요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">아직 수업 전인데 바이브코딩이 많이 어려울까요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>안 어려우니 너무 걱정하지 않으셔도 돼요.<br>천천히 해 보시면 된다는 답이었어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🖱️</div>
+              <div class="insight-body">
+                <h3>VS Code가 손에 안 익으면 클로드 데스크톱 앱으로 하셔도 돼요</h3>
+                <p>VS Code는 커리큘럼에서 곧 배우게 되지만, 툴만 달라지는 거라 손에 안 익으면 클로드 데스크톱 앱으로 하셔도 무방하다는 안내가 있었어요.</p>
+                <span class="insight-tag tag-tool">도구 선택</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--orange-light);">💳</div>
+              <div class="section-title">수강 혜택</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">1기 때 프리미엄반이었으면 2기 시간은 어떻게 되나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>한 번이라도 프리미엄반이었던 분은 2기를 수강하지 않고 99,000원을 결제해도 3,000분, 2기를 일반반으로 연장해도 3,000분이라고 안내됐어요.<br>2기 일반반 자체가 3개월 뒤 3,000분이 되는 건 아니니, 본인 상황이 애매하면 조교님께 한 번 더 확인해 보세요.</p>
                 </div>
               </div>
             </div>
@@ -774,6 +961,30 @@
               <div class="insight-body">
                 <h3>아직 답을 기다리는 질문도 있어요</h3>
                 <p>①기한이 지나 완성한 1주차 숙제(3분 한 편)를 제출이나 업로드 없이 소장용으로 둬야 하는지 ②그록에서 480p로 해도 영상 화질이 괜찮은지 ③다들 영상은 어느 정도 넣는지 묻는 질문이 올라왔어요.<br>이 시간대 대화에서는 아직 답이 없어요.</p>
+                <span class="insight-tag tag-caution">답변 대기</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">☕</div>
+              <div class="insight-body">
+                <h3>2주차 과제 릴레이가 130번까지 이어졌어요</h3>
+                <p>밤 9시 26분에 129번, 9시 40분에 130번까지 명단이 늘었어요. 선착순 20명 커피 쿠폰과 튜브워커로 5분 이상 영상이라는 조건은 그대로예요. 129번을 올린 분은 "내가 과제를 하다니, 이게 다 오토워커 덕분"이라는 소감도 함께 남겼어요.</p>
+                <span class="insight-tag tag-revenue">과제 릴레이</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">💅</div>
+              <div class="insight-body">
+                <h3>저녁에는 네일 사진과 출장 근황으로 잠시 쉬어 갔어요</h3>
+                <p>손톱을 정리하고 나니 클릭은 잘 되는데 타이핑이 불편하다는 이야기에, 2년 만의 기분 전환이라 예쁘다는 반응이 이어졌어요. 부산으로 장기 출장을 왔는데 숙소 인터넷이 느려 카페에서 작업 중이라며 남은 8월도 화이팅이라는 인사, 조교님들 답변에 감사하다는 인사도 있었어요.</p>
+                <span class="insight-tag tag-tip">방 분위기</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🙋</div>
+              <div class="insight-body">
+                <h3>저녁에도 답을 기다리는 질문이 올라왔어요</h3>
+                <p>밤 9시 4분에 이지워커에서 실패한 이미지가 몇 개인지 어디서 확인하는지 다시 묻는 질문, 9시 9~10분에 장면 만들기까지가 튜브워커인지·만든 프롬프트를 들고 이지워커로 가는 게 맞는지 묻는 질문, 9시 33분에 새로고침 뒤 작업이 다 날아가고 검은 화면만 나온다는 상황이 올라왔는데 9시 40분 기준으로 아직 답이 없어요.</p>
                 <span class="insight-tag tag-caution">답변 대기</span>
               </div>
             </div>
@@ -6130,6 +6341,157 @@
               <span class="qa-answer-badge member">수강생</span>
             </div>
             <p>야담은 2기부터 생긴 커리큘럼이에요.<br>1기분들이 전부 하시는 건 아니에요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">대본을 받은 다음에는 어디로 가면 되나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>대본을 받은 뒤에는 튜브워커로 가시면 돼요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">클로드에서 대본을 만들 때 뭘 먼저 확인하나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>클로드에 오토스크립트가 연결돼 있는지 먼저 확인하세요.<br>연결을 확인한 다음 "대본 만들어줘"라고 하면 돼요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">이지워커에서 이미지가 제대로 만들어졌는지 어떻게 확인하나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>위쪽 씬 목록을 보면 실패한 건 실패했다고 표시돼요.<br>화면이 멈춰 있으면 새로고침을 권하는데, 새로고침 뒤 작업이 날아갔다는 사례도 있으니 그전에 화면을 찍어 두는 게 안전해요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">그록에 넣는 이미지는 리무버로 지운 걸 써야 하나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>꼭 지운 이미지를 넣을 필요는 없어요.<br>지우고 싶으면 지워서 넣어도 돼요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">이 채널을 접어야 할지 어떻게 판단하나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>조회수만으로는 판단하기 어려워요. 노출수와 노출 클릭률까지 같이 보세요.<br>채널 운도 있지만 대체로 내가 못하고 있었을 가능성이 높다고 봐요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">조회수보다 노출수를 먼저 보라는 게 무슨 뜻인가요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge">서포터즈</span>
+              <span class="qa-answer-name">아는아이</span>
+            </div>
+            <p>영상을 5~10개 올렸을 때 지표 조합으로 원인을 나눠 볼 수 있어요.<br>노출수는 나오는데 클릭률이 낮으면 썸네일이나 시청 연령층 문제예요.<br>클릭률은 괜찮은데 시청지속률이 낮으면 대본 구조 문제예요.<br>클릭률과 시청지속률이 모두 낮으면 싹 뜯어고쳐야 하는 상태로 봐요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">튜브워커 가입 신청을 하면 바로 쓸 수 있나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>카톡으로 인증 코드가 오면 입력하시면 돼요.<br>수작업으로 처리해 주시는 거라 늦은 시간에 신청하면 다음 날 갈 수도 있어요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">계정·채널을 처음 만들 때 주의할 점은 어디서 배우나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>카페의 루키 특강을 들어 보세요.<br>여러 채널 운영을 대비한 계정 구성이 궁금할 때도 같은 안내를 받았어요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">VS Code를 꼭 써야 하나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>VS Code는 커리큘럼에서 곧 배우게 돼요.<br>툴만 달라지는 거라 손에 안 익으면 클로드 데스크톱 앱으로 하셔도 무방해요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">1기 때 프리미엄반이었으면 2기 시간은 어떻게 되나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>한 번이라도 프리미엄반이었던 분은 2기를 수강하지 않고 99,000원을 결제해도 3,000분이에요.<br>2기를 일반반으로 연장하는 경우에도 3,000분이라고 안내됐어요.<br>본인 상황이 애매하면 조교님께 한 번 더 확인해 보세요.</p>
           </div>
         </div>
       </div>
