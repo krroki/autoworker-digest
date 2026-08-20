@@ -587,7 +587,7 @@
   <div class="stats-bar fade-in">
     <div class="stat-pill"><span class="num">8/5</span><span class="label">정리 시작</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--green);">2기</span><span class="label">현재 기수</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--purple);">100</span><span class="label">누적 Q&amp;A</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--purple);">106</span><span class="label">누적 Q&amp;A</span></div>
   </div>
 
   <div class="tab-bar fade-in" id="tabBar">
@@ -596,14 +596,132 @@
   </div>
 
   <div id="tab-daily" class="tab-content active">
-    <section class="day-accordion fade-in open" data-day-id="0820">
+    <section class="day-accordion fade-in open" data-day-id="0821">
       <button class="day-accordion-header" type="button" aria-expanded="true" onclick="toggleAccordion(this.parentElement)">
         <div class="day-accordion-left">
           <span class="day-accordion-arrow">▼</span>
-          <span class="day-accordion-date">8/20 (목)</span>
+          <span class="day-accordion-date">8/21 (금)</span>
           <span class="day-accordion-badge">최신</span>
         </div>
-        <div class="day-accordion-summary">첫 주는 하루 한 편 · 30분 영상에 500크레딧 · 크레딧 자동 사용은 설정에서 끄기 · 썸네일만 받는 프롬프트 재공유 · 모바일은 리모트로 이어서 · 1기 이북은 메일 확인 · 구독비 아끼는 방법들 · 썸네일 바꾸고 조회수 반등 · 크롬 프로필 분리 재운영 전언 · 과제 릴레이 307번·133번 · 새벽 무협지 담소</div>
+        <div class="day-accordion-summary">초기화 전에는 폴더 복사부터 · 썸네일은 기준을 잡고 타협 · 업로드 시각은 채널마다 제각각 · 미국 명의와 세금은 직접 확인 · 새벽까지 이어진 담소</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">🤖</div>
+              <div class="section-title">클로드 코드 쓰기</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">클로드 코드를 초기화하기 전에 뭘 챙겨 두면 되나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>작업 폴더를 통째로 복사해 두시면 돼요.<br>새벽 2시 43분에는 한 번 초기화했다가 백업을 안 해 둬서 쓰고 있던 전자책 원고가 다 날아갔다는 이야기가 나왔어요. 남아 있던 조각 글로 다시 쓰긴 했지만, 초기화 전에 폴더부터 복사해 두는 게 안전해요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--purple-light);">🎨</div>
+              <div class="section-title">썸네일 · 업로드</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">썸네일이 너무 오래 걸리고 마음에 드는 게 잘 안 나와요.</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>고르는 기준을 점점 명확하게 잡아 가시면 돼요.<br>잘 만들어도 조회수가 낮을 수 있고 대충 만들어도 높을 수 있어서, 완벽을 노리기보다 적당히 타협하고 올린다는 이야기가 새벽 2시 55분에 이어졌어요.<br>레퍼런스를 받아도 마음에 안 들 때가 많다는 공감, 하다 보면 만드는 속도는 빨라진다는 이야기도 함께 나왔어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">다들 강의에서 이야기한 오후 2시쯤에 올리시나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>채널마다 다르게 올려서 시간이 다 다르다는 답이 새벽 3시에 돌아왔어요.<br>하루치씩 예약 업로드를 걸어 두면 마음이 편하다는 이야기도 같이 나왔어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📈</div>
+              <div class="insight-body">
+                <h3>롱폼은 조회수가 느긋하게 오르는 것 같다는 후기예요</h3>
+                <p>쇼츠보다 마음이 편하고, 롱폼이라 그런지 조회수가 천천히 오르는 것 같다는 이야기가 새벽 2시 56분에 나왔어요.</p>
+                <span class="insight-tag tag-tip">후기</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--green-light);">🌎</div>
+              <div class="section-title">해외 계정 · 세금</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">⚠️</div>
+              <div class="insight-body">
+                <h3>미국은 명의를 마음대로 쓰면 위험하다는 조언이 있었어요</h3>
+                <p>아침 6시 13분에 미국에서는 명의를 마음대로 이용하면 위험하고, 세금도 주마다 다르니 계시는 곳 기준으로 알아보셔야 한다는 이야기가 나왔어요. 주에 따라 주세(state tax)가 아예 없는 곳도 있다고 해요.<br>이야기를 들은 분은 안전하게 한국 가족 계정을 만드는 쪽이 낫겠다고 정리하셨어요.<br>어떤 서비스의 명의를 두고 나온 이야기인지는 이 대화만으로는 분명하지 않으니, 결제나 계정 만들기 전에 직접 확인해 보시는 게 좋아요.</p>
+                <span class="insight-tag tag-caution">직접 확인</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--orange-light);">🔥</div>
+              <div class="section-title">방 소식</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">💬</div>
+              <div class="insight-body">
+                <h3>새벽에는 "AI가 사람 같다"는 이야기로 웃었어요</h3>
+                <p>존댓말로 이야기하다가 반말을 하면 같이 반말로 대들더라는 이야기, 모델 이름을 자기 이름으로 착각하더라는 이야기가 새벽 2시 40분 전후로 이어졌어요.<br>제미나이가 약 올리는 사람 같다는 말, 기계 같지 않은 매력이 있다는 말이 오가며 한참 웃음이 이어졌어요.</p>
+                <span class="insight-tag tag-tip">방 분위기</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">☕</div>
+              <div class="insight-body">
+                <h3>새벽까지 작업하며 서로 챙기는 인사가 오갔어요</h3>
+                <p>새벽 2시 53분에 "오늘도 하다 보니 3시"라는 이야기가 올라오자 "열정 최고", "성공하실 겁니다"라는 답이 돌아왔어요. 3시 29분에는 "언능들 주무셔요, 새벽반"이라는 인사도 있었어요.<br>클로드 코드가 게임보다 재밌어서 밤을 새우게 된다는 이야기, 이번 강의에서 받은 스킬로 경제 채널 대본을 하나 만들어 봤다는 이야기도 함께 나왔어요.</p>
+                <span class="insight-tag tag-tip">방 분위기</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="day-accordion fade-in" data-day-id="0820">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">8/20 (목)</span>
+        </div>
+        <div class="day-accordion-summary">첫 주는 하루 한 편 · 30분 영상에 500크레딧 · 크레딧 자동 사용은 설정에서 끄기 · 썸네일만 받는 프롬프트 재공유 · 모바일은 리모트로 이어서 · 슈퍼그록 해지 화면의 3개월 오퍼 · 이미지 업로드는 1장씩 · "스킬써서 대본써줘" · 영상 하나에 두 시간~사흘 · 과제 릴레이 307번·143번 · 새벽 무협지 담소</div>
       </button>
       <div class="day-accordion-body">
         <div class="day-accordion-content">
@@ -694,6 +812,36 @@
                 </div>
               </div>
             </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">스킬로 대본을 다 만든 다음 /clear를 꼭 해야 하나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>새 채팅방을 열어서 하셔도 돼요.<br>밤 9시 5분에 "/clear를 꼭 해야 하는지, 그냥 새 채팅방을 열어 다음 대본을 써도 되는지" 묻는 질문에 대한 답이에요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">대본이 이상하게 나오고, 폴더에 있던 텍스트 파일도 안 보여요.</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>스킬이 자동으로 적용되지 않은 경우예요.<br>명령 앞에 "스킬써서"만 붙여 주시면 알아서 써요. "링크 주고, 스킬써서 대본써줘"처럼 쓰시면 돼요.<br>매번 붙이기 번거로우면 "앞으로 '대본써'라고 할 때 매번 스킬 써서 대본 써 주고 그 내용을 대본 스킬에 업데이트해 줘"라고 미리 일러두는 문장이 방에 공유됐어요. 막히면 클로드에게 그대로 물어보면 바로 풀린다는 조언도 있었어요.</p>
+                </div>
+              </div>
+            </div>
             <div class="insight-card">
               <div class="insight-emoji">📁</div>
               <div class="insight-body">
@@ -731,6 +879,21 @@
               <div class="section-icon" style="background:var(--accent-light);">💳</div>
               <div class="section-title">구독 · 비용</div>
             </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">그록그록 확장을 쓰려면 그록을 어떻게 구독하는 게 좋나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>슈퍼그록으로 구독하시면 돼요.<br>구독한 다음 구독 해지를 눌러 다음 화면으로 계속 넘어가다 보면, 최종 해지 직전에 "3개월 동안 30불에 쓰게 해 준다"는 팝업이 떠요. 그 오퍼를 받으면 한 달 10불 정도로 쓸 수 있어요.<br>진짜로 해지하라는 뜻이 아니라, 해지 흐름 중간에 뜨는 오퍼를 잡는 방법이에요.<br>다만 이날은 팝업이 안 뜬 경우도 있었고 화면 순서가 정확히 기억나지 않는다는 단서도 붙었으니, 결제 화면을 한 단계씩 확인하면서 진행하세요.</p>
+                </div>
+              </div>
+            </div>
             <div class="insight-card">
               <div class="insight-emoji">💸</div>
               <div class="insight-body">
@@ -753,6 +916,37 @@
             <div class="section-header">
               <div class="section-icon" style="background:var(--purple-light);">📺</div>
               <div class="section-title">채널 운영</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">롱폼 rpm은 어느 정도 나오나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>rpm은 정확하게 나오지 않고, cpm이 평균 7천 원에서 1만 2천 원 정도 나와요.<br>30분짜리에서 rpm이 7천 원 나오는 정도면 상당히 잘 나오는 편이에요.<br>30분 영상에서 시청 지속률 60%면 18분대라 거의 불가능하다는 이야기도 함께 있었어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">두 개 찍어낼 시간에 하나에 정성을 쏟는 게 나을까요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>확률을 높이는 쪽이 좋다고 생각한다는 답이었어요.<br>두 개 만들 정성을 하나에 붓는다고 무조건 잘되는 것도 아니라는 이야기였어요.</p>
+                </div>
+              </div>
             </div>
             <div class="insight-card">
               <div class="insight-emoji">📈</div>
@@ -782,15 +976,75 @@
 
           <div class="section">
             <div class="section-header">
+              <div class="section-icon" style="background:var(--green-light);">🧰</div>
+              <div class="section-title">확장 업로드 · 제작 시간</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">이미지 업로드가 자꾸 실패해요. 140장 중에 랜덤으로 실패가 떠요.</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>60초에 30장 업로드 제한이 있어서, 30장이 넘어가면 실패가 떠요.<br>실패한 것만 재시도 버튼을 누르시면 되고, 또 몇 개가 실패하면 다시 실패한 것만 재시도하시면 돼요.<br>동시 업로드를 1장으로 바꾸면 좀 느려도 실패는 거의 안 떠요. 실제로 1장씩 바꿔서 깔끔하게 올라갔다는 후기가 밤 9시에 바로 이어졌어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">조교님들은 몇 분짜리 영상을 만드는 데 얼마나 걸리세요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>카테고리에 따라 다른데, 빠른 건 두 시간 정도예요.<br>오래 걸리는 건 이틀, 사흘 걸리는 것도 있어요. 대신 그 대본을 직접 쓰려고 하면 일주일이 넘게 걸릴 거예요.<br>맡겨 놓고 다른 일을 하면 되니, 한 시간 반 정도면 아주 빠른 편이라는 이야기였어요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>썸네일까지 다 해서 평균 두세 시간 걸려요.<br>20~30분 분량으로 만들고, 영상을 아주 많이 치는 편이라 속도가 빠른 편이에요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">⏱️</div>
+              <div class="insight-body">
+                <h3>30분짜리 하나에 들이는 시간 이야기도 나왔어요</h3>
+                <p>30분짜리를 만드는데 대본 뽑고 수정하는 데만 두 시간쯤 걸린다는 후기가 밤 8시 55분에 올라왔어요. 25~30분으로 잡으면 클로드 토큰이 도는 시간만 한 시간 20분은 기본이라는 이야기도 있었어요.<br>썸네일이 정말 오래 걸린다는 공감도 이어졌고, 결국 루틴을 잡는 게 중요하겠다는 이야기로 정리됐어요.</p>
+                <span class="insight-tag tag-tip">후기</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
               <div class="section-icon" style="background:var(--orange-light);">🔥</div>
               <div class="section-title">방 소식</div>
             </div>
             <div class="insight-card">
               <div class="insight-emoji">☕</div>
               <div class="insight-body">
-                <h3>과제 릴레이가 1주차 307번, 2주차 133번까지 이어졌어요</h3>
-                <p>새벽 2시 20분에 1주차 제출자 릴레이는 307번, 2주차 릴레이는 133번까지 명단이 늘었어요. 1주차는 튜브워커로 3분 이상 영상, 2주차는 5분 이상 영상이고, 선착순 20명 커피 쿠폰이라는 조건은 그대로예요.</p>
+                <h3>과제 릴레이가 1주차 307번, 2주차 143번까지 이어졌어요</h3>
+                <p>새벽 2시 20분에 1주차 제출자 릴레이는 307번, 2주차 릴레이는 133번까지 명단이 늘었어요. 1주차는 튜브워커로 3분 이상 영상, 2주차는 5분 이상 영상이고, 선착순 20명 커피 쿠폰이라는 조건은 그대로예요.<br>밤 8시 54분에는 2주차 릴레이가 143번까지 이어졌어요.</p>
                 <span class="insight-tag tag-revenue">과제 릴레이</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🙏</div>
+              <div class="insight-body">
+                <h3>튜브워커를 만든 조교님께 고맙다는 인사가 이어졌어요</h3>
+                <p>밤 9시에 "이런 프로그램을 만든다는 생각조차 못 했다"며 감사 인사가 오갔고, 조교님은 1기를 수강하면서 본인이 필요해서 만든 것이라고 답하셨어요.</p>
+                <span class="insight-tag tag-tip">방 분위기</span>
               </div>
             </div>
             <div class="insight-card">
@@ -805,7 +1059,7 @@
               <div class="insight-emoji">🙋</div>
               <div class="insight-body">
                 <h3>아직 답을 기다리는 질문도 있어요</h3>
-                <p>①조교님은 크레딧을 보통 어느 정도 쓰시는지 ②썸네일 만드는 사이트 이름이 뭐였는지 ③다음 강의에 유튜브로 바로 적용할 수 있는 내용이 있는지 ④일레븐랩스에서 태형 말고 추천하는 목소리가 있는지(솔라는 좀 어색했다고 해요) ⑤이미지가 2D와 3D로 랜덤하게 나올 때 다시 생성하는지 묻는 질문이 올라왔어요.<br>②는 새벽 2시 7분에 그록 주소가 함께 올라왔지만 어떤 질문에 대한 답인지는 이 대화만으로는 분명하지 않아요. 아침 8시 36분 기준으로 나머지도 아직 답이 없어요.</p>
+                <p>①조교님은 크레딧을 보통 어느 정도 쓰시는지 ②썸네일 만드는 사이트 이름이 뭐였는지 ③다음 강의에 유튜브로 바로 적용할 수 있는 내용이 있는지 ④일레븐랩스에서 태형 말고 추천하는 목소리가 있는지(솔라는 좀 어색했다고 해요) ⑤이미지가 2D와 3D로 랜덤하게 나올 때 다시 생성하는지 묻는 질문이 올라왔어요.<br>②는 새벽 2시 7분에 그록 주소가 함께 올라왔지만 어떤 질문에 대한 답인지는 이 대화만으로는 분명하지 않아요. 아침 8시 36분 기준으로 나머지도 아직 답이 없어요.<br>밤에는 ⑥임시 메일로 계정 30개를 만들 때 인증 화면에 어떻게 들어가는지, ⑦썸네일에 기사 속 이미지를 바꿔서 써도 되는지 묻는 질문이 이어졌는데 8/21 아침까지도 답이 확인되지 않았어요.</p>
                 <span class="insight-tag tag-caution">답변 대기</span>
               </div>
             </div>
@@ -5340,7 +5594,7 @@
             <div class="qa-answer-header">
               <span class="qa-answer-badge member">수강생</span>
             </div>
-            <p>제목 문구를 먼저 잘 지어놓고 뽑아보세요.<br>레퍼런스 영상의 썸네일을 함께 제공해서 뽑는 것도 방법이에요.<br>20~30개 뽑아 제일 좋은 걸 고르거나, 기본 템플릿에 화살표만 추가하는 식으로 쓰는 분도 있어요.</p>
+            <p>제목 문구를 먼저 잘 지어놓고 뽑아보세요.<br>레퍼런스 영상의 썸네일을 함께 제공해서 뽑는 것도 방법이에요.<br>20~30개 뽑아 제일 좋은 걸 고르거나, 기본 템플릿에 화살표만 추가하는 식으로 쓰는 분도 있어요.<br>고르는 기준을 점점 명확하게 잡아 가는 게 좋다는 조언도 있어요. 잘 만들어도 조회수가 낮을 수 있고 대충 만들어도 높을 수 있어서, 적당히 타협하고 올린다는 분들도 많아요.</p>
           </div>
         </div>
       </div>
@@ -6226,7 +6480,7 @@
             <div class="qa-answer-header">
               <span class="qa-answer-badge sub">조교</span>
             </div>
-            <p>V7 버전 확장에는 실패한 것만 재시도 버튼이 있어요. 업로드 실패가 뜨면 활성화돼요.<br>60초에 30개 제한 때문에 바로 재시도하면 또 실패할 수 있으니, 다시 될 때까지 재시도하세요.<br>확장은 새로 받아 설치하고, 기존에 생성한 이미지를 다시 업로드해 보세요.</p>
+            <p>V7 버전 확장에는 실패한 것만 재시도 버튼이 있어요. 업로드 실패가 뜨면 활성화돼요.<br>60초에 30개 제한 때문에 바로 재시도하면 또 실패할 수 있으니, 다시 될 때까지 재시도하세요.<br>확장은 새로 받아 설치하고, 기존에 생성한 이미지를 다시 업로드해 보세요.<br>동시 업로드를 1장으로 바꾸면 좀 느려도 실패가 거의 안 뜬다는 조교님 팁도 있어요.</p>
           </div>
         </div>
       </div>
@@ -6286,7 +6540,7 @@
             <div class="qa-answer-header">
               <span class="qa-answer-badge member">수강생</span>
             </div>
-            <p>레퍼런스 채널 시간대는 성향에 따라 6시, 9시, 12시, 19시, 21시 등 다양해요.<br>뉴스 방영 시간대와 겹치기도 한다는 이야기예요.<br>시간대와 함께 크레딧도 생각해서, 돈을 쓰고 시간을 벌지(튜브워커) 시간을 쓰고 돈을 아낄지(이지워커) 선택하라는 답도 있었어요.</p>
+            <p>레퍼런스 채널 시간대는 성향에 따라 6시, 9시, 12시, 19시, 21시 등 다양해요.<br>뉴스 방영 시간대와 겹치기도 한다는 이야기예요.<br>시간대와 함께 크레딧도 생각해서, 돈을 쓰고 시간을 벌지(튜브워커) 시간을 쓰고 돈을 아낄지(이지워커) 선택하라는 답도 있었어요.<br>채널마다 다른 시간대로 올려서 시간이 다 다르다는 답도 있었어요.</p>
           </div>
         </div>
       </div>
@@ -6587,7 +6841,7 @@
             <div class="qa-answer-header">
               <span class="qa-answer-badge sub">조교</span>
             </div>
-            <p>클로드에 오토스크립트가 연결돼 있는지 먼저 확인하세요.<br>연결을 확인한 다음 "대본 만들어줘"라고 하면 돼요.</p>
+            <p>클로드에 오토스크립트가 연결돼 있는지 먼저 확인하세요.<br>연결을 확인한 다음 "대본 만들어줘"라고 하면 돼요.<br>대본이 이상하게 나오면 스킬이 자동으로 적용되지 않은 경우예요. 명령에 "스킬써서"만 붙여 "스킬써서 대본써줘"라고 하면 알아서 적용돼요.</p>
           </div>
         </div>
       </div>
@@ -6788,10 +7042,108 @@
           </div>
         </div>
       </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">그록을 좀 더 싸게 구독하는 방법이 있나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>슈퍼그록으로 구독한 다음 구독 해지를 눌러 다음 화면으로 계속 넘어가면, 최종 해지 직전에 "3개월 동안 30불에 쓰게 해 준다"는 팝업이 떠요.<br>그 오퍼를 받으면 한 달 10불 정도로 쓸 수 있어요. 진짜로 해지하라는 뜻이 아니라 해지 흐름 중간에 뜨는 오퍼를 잡는 방법이에요.<br>팝업이 안 뜨는 경우도 있으니 결제 화면을 한 단계씩 확인하면서 진행하세요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">스킬로 대본을 다 만든 다음 /clear를 꼭 해야 하나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>새 채팅방을 열어서 다음 대본을 쓰셔도 돼요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">영상 하나 만드는 데 시간이 얼마나 걸리나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>카테고리에 따라 달라서 빠른 건 두 시간, 오래 걸리는 건 이틀에서 사흘까지도 걸려요.<br>같은 대본을 직접 쓰려고 하면 일주일이 넘게 걸려요. 맡겨 놓고 다른 일을 하면 되니 한 시간 반이면 아주 빠른 편이에요.</p>
+          </div>
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge">서포터즈</span>
+              <span class="qa-answer-name">아는아이</span>
+            </div>
+            <p>썸네일까지 다 해서 평균 두세 시간 걸려요.<br>20~30분 분량으로 만들고, 영상을 많이 치는 편이라 속도가 빠른 편이에요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">롱폼 rpm·cpm은 어느 정도 나오나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge">서포터즈</span>
+              <span class="qa-answer-name">아는아이</span>
+            </div>
+            <p>rpm은 정확하게 나오지 않고, cpm이 평균 7천 원에서 1만 2천 원 정도예요.<br>30분짜리에서 rpm 7천 원이면 상당히 잘 나오는 편이에요.<br>30분 영상에서 시청 지속률 60%면 18분대라 거의 불가능하다고 봐요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">클로드 코드를 초기화하기 전에 뭘 챙겨 두면 되나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>작업 폴더를 통째로 복사해 두시면 돼요.<br>백업 없이 초기화했다가 쓰던 원고가 다 날아간 사례가 있었어요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">해외 계정이나 남의 명의를 빌려 써도 괜찮을까요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>미국에서는 명의를 마음대로 이용하면 위험하다는 이야기가 있었어요.<br>세금도 주마다 달라서 계시는 곳 기준으로 알아보셔야 하고, 주에 따라 주세(state tax)가 아예 없는 곳도 있어요.<br>안전하게 한국 가족 계정을 만드는 쪽으로 정리한 분도 있었으니, 결제 전에 직접 확인해 보세요.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="updated-at">마지막 업데이트: 2026-08-20</div>
+  <div class="updated-at">마지막 업데이트: 2026-08-21</div>
 </div>
 
 <button class="fab-top" id="fabTop" type="button" aria-label="맨 위로" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
