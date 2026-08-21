@@ -576,16 +576,16 @@
   <div class="hero fade-in">
     <div class="hero-badge">📋 사담방 다이제스트</div>
     <h1>노멀쇼츠 1기<br>핵심 정리</h1>
-    <p>(사담방) 노멀쇼츠 1기 [시도남] · 5/19~8/19 누적 정리</p>
+    <p>(사담방) 노멀쇼츠 1기 [시도남] · 5/19~8/21 누적 정리</p>
   </div>
   <div class="notice-banner fade-in">
     <div class="nb-emoji">🤖</div>
     <div>지난 대화를 봇이 핵심만 추려 정리했어요.<br>잘못된 부분은 조교(운영진)께 알려주시면 바로 고칠게요!</div>
   </div>
   <div class="stats-bar fade-in">
-    <div class="stat-pill"><span class="num">5/19~8/19</span><span class="label">정리 기간</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--green);">60</span><span class="label">대표 일자</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--orange);">228</span><span class="label">핵심 Q&amp;A</span></div>
+    <div class="stat-pill"><span class="num">5/19~8/21</span><span class="label">정리 기간</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--green);">61</span><span class="label">대표 일자</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--orange);">229</span><span class="label">핵심 Q&amp;A</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--purple);">22</span><span class="label">운영 링크</span></div>
   </div>
   <div class="tab-bar-wrap fade-in" id="tabBarWrap">
@@ -598,12 +598,34 @@
 
   <div id="tab-daily" class="tab-content active">
 
-    <section class="day-accordion fade-in open" data-day-id="0819">
+    <section class="day-accordion fade-in open" data-day-id="0821">
       <button class="day-accordion-header" type="button" aria-expanded="true" onclick="toggleAccordion(this.parentElement)">
         <div class="day-accordion-left">
           <span class="day-accordion-arrow">▼</span>
-          <span class="day-accordion-date">8/19 (수)</span>
+          <span class="day-accordion-date">8/21 (금)</span>
           <span class="day-accordion-badge">최신</span>
+        </div>
+        <div class="day-accordion-summary">애드센스 예상수익이 줄어든 이유 Q&amp;A 1개</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--accent-light);">💬</div><div class="section-title">핵심 Q&amp;A</div></div>
+
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">어제는 예상수익이 68만원이었는데 오늘 아침에 62만원으로 줄었어요. 환율에 따라 입금 금액이 달라지나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub">조교</span><span class="qa-answer-name">악싱</span></div><p>화면에 보이는 금액이 최근 28일 기준 예상수익이라는 답이었습니다. 하루가 지나면 집계하는 28일 구간도 같이 밀리기 때문에, 앞쪽 기간의 수입이 빠지면서 금액이 줄어 보일 수 있어요. 먼저 다른 참여자가 한 달 간격이 아닐까 싶다고 조심스럽게 답했고, 질문자도 7월 수입이 오늘을 기점으로 빠져서 그런가 보다고 짚었는데, 조교가 28일 예상수익이라고 확인해 주면서 정리됐습니다. 질문자도 바로 수긍했어요. 다만 환율 자체가 실제 입금 금액에 영향을 주는지는 이날 따로 답이 나오지 않았습니다. 수익금이 실제로 지급되는 기준은 7/5 정리(애드센스 "수익금 지급받기"의 시작하기)를 참고하세요.</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="day-accordion fade-in" data-day-id="0819">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">8/19 (수)</span>
         </div>
         <div class="day-accordion-summary">키고무비 OTT 구독 조건·관련 채널 정지 대응·픽셀링 강의 입장 Q&amp;A 3개 · 키고무비 40% 할인 · 시도남 강사 격려</div>
       </button>
@@ -3326,7 +3348,7 @@
 
   <div class="page-footer fade-in">
     <div><span class="live-dot"></span>노멀쇼츠 1기 사담방</div>
-    <div class="updated-at">마지막 업데이트: 2026-08-19 21:40 KST</div>
+    <div class="updated-at">마지막 업데이트: 2026-08-21 08:40 KST</div>
   </div>
 </div>
 <button class="fab-top" id="fabTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
