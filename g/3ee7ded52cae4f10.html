@@ -587,7 +587,7 @@
   <div class="stats-bar fade-in">
     <div class="stat-pill"><span class="num">8/5</span><span class="label">정리 시작</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--green);">2기</span><span class="label">현재 기수</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--purple);">120</span><span class="label">누적 Q&amp;A</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--purple);">135</span><span class="label">누적 Q&amp;A</span></div>
   </div>
 
   <div class="tab-bar fade-in" id="tabBar">
@@ -596,14 +596,483 @@
   </div>
 
   <div id="tab-daily" class="tab-content active">
-    <section class="day-accordion fade-in open" data-day-id="0823">
+    <section class="day-accordion fade-in open" data-day-id="0825">
       <button class="day-accordion-header" type="button" aria-expanded="true" onclick="toggleAccordion(this.parentElement)">
         <div class="day-accordion-left">
           <span class="day-accordion-arrow">▼</span>
-          <span class="day-accordion-date">8/23 (일)</span>
+          <span class="day-accordion-date">8/25 (화)</span>
           <span class="day-accordion-badge">최신</span>
         </div>
-        <div class="day-accordion-summary">썸네일이 제일 어렵다는 공감 · 새벽에 영상 2개와 대본 6개 · 3주차 과제 릴레이 62번까지 · 새벽 담소 · 임시 아이디 30개 용도는 답변 대기</div>
+        <div class="day-accordion-summary">트래픽 검색은 구글 트렌드로 · 후킹은 제미나이 거쳐 클로드로 톤 정리 · 클로드는 일단 못한다부터 하고 봄 · 경제채널 55세 이상 타겟 전환 사례 · vrew 합치기 자동화 예고 · 3주차 과제 릴레이 97번까지</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">🔎</div>
+              <div class="section-title">트래픽 · 소재 찾기</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">다들 트래픽은 어떻게 검색하세요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>제미나이와 클로드를 크로스로 괴롭힌다고 해요. 일억남님이 올리신 걸로 하신대요.<br>구글 트렌드 실시간 인기 페이지를 한번 훑는 방법도 공유됐어요(새벽 3시 50분).<br>질문하신 분도 같은 페이지를 보고 있다며, 경제 쪽 트래픽을 바로 검토할 수 있는 프로그램을 만들어 볼까 하는 아이디어까지 나왔어요.<br><a href="https://trends.google.co.kr/trending?geo=KR" target="_blank" rel="noopener">구글 트렌드 실시간 인기 열기</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--purple-light);">✍️</div>
+              <div class="section-title">후킹 · 클로드 다루기</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">도입부 후킹을 고쳐 달라고 하면 클로드가 사실이 아닌 내용을 지어내요. 결국 대본을 다시 고치고 재녹음했어요…</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>후킹을 제미나이로 들고 가서 한 번 더 수정한다는 팁이 나왔어요(새벽 4시 18분).<br>읽었을 때 너무 재미없으면 제미나이에게 사람같이 써 달라고 하면 훨씬 재미있게 써 주고, 그걸 다시 클로드로 가져가 전체 톤을 바꾸라고 한대요. 선생님이 후킹에 신경 쓰라고 하셔서 이렇게 하고 나니 확실히 재미있어졌다고 해요.<br>거짓말을 하기 시작하면 창을 새로 열어서 다시 시작한다는 팁도 함께였어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🙃</div>
+              <div class="insight-body">
+                <h3>클로드는 일단 못한다고 하고 본다는 웃픈 공감이 있었어요</h3>
+                <p>새벽 6시 12분 "이놈은 뭐든 못한다고만 하네요"라는 하소연에, 뭐든 일단 못한다고 한 뒤에 "이거 할 수 있을걸~" 하면 할 줄 안다는 답이 이어졌어요.<br>그렇게 해서 쇼츠 자동화를 만들었다는 후일담도 나왔어요.</p>
+                <span class="insight-tag tag-tip">팁</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🪙</div>
+              <div class="insight-body">
+                <h3>채널을 여러 개 돌리면 클로드 토큰이 항상 모자라대요</h3>
+                <p>쇼츠 자동화, 카드뉴스 텔레그램 봇, 주식 자동매매까지 이것저것 돌리다 보니 200불 요금제로도 항상 모자라다는 이야기가 새벽에 나왔어요. 전자책을 한두 번 쓰면 일주일 한도가 끝나기도 한대요(팩트 확인 때문에 페이블 모델을 주로 써서라고 해요).<br>한도 리셋(수요일 저녁)을 기다리며 100불짜리 추가 크레딧을 살까 고민하는 이야기도 함께였어요.</p>
+                <span class="insight-tag tag-tip">후기</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--green-light);">📈</div>
+              <div class="section-title">채널 전략</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">경제채널은 타겟층을 어떻게 두면 될까요? 시니어? 3040대?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>초반에는 30~40대 에버그린 타겟으로 했는데 조회수가 안 나와서, 55세 이상 타겟으로 소재를 조금 바꾸니 알고리즘을 조금씩 타기 시작했다는 경험담이 있었어요(아침 7시 36분).</p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🎲</div>
+              <div class="insight-body">
+                <h3>유튜브는 진짜 알 수가 없다는 공감이 이어졌어요</h3>
+                <p>아침 7시 22분, "1도 기대 안 한 게 터지고, 이건 무조건 터진다 한 건 망하고"라는 이야기에 뭐라도 하나 터졌으면 좋겠다는 반응이 이어졌어요.<br>조회수가 한 자리 수라 많이 힘들지만 일단 믿고 해 보겠다는 다짐도 있었어요.</p>
+                <span class="insight-tag tag-tip">방 분위기</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--orange-light);">🔥</div>
+              <div class="section-title">방 소식</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🎬</div>
+              <div class="insight-body">
+                <h3>vrew 합치기 자동화가 소개됐어요</h3>
+                <p>아침 7시 4분, vrew에서 만든 음성 파일과 이미지·동영상을 넣고 합치면 완성된 vrew 파일로 만들어지는 자동화가 소개됐어요. 스킬로 스토리보드와 대본을 만들어 준 것에 맞춰 합쳐지는 구조라, 쓰려면 스킬까지 같이 공유가 필요하다고 해요.<br>써 보고 싶다는 분이 바로 세 분이나 손을 들었어요.</p>
+                <span class="insight-tag tag-tool">도구</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🎉</div>
+              <div class="insight-body">
+                <h3>알고리즘 탄 성과 공유에 축하가 이어졌어요</h3>
+                <p>아침 8시에 성과 사진과 함께 기뻐하는 인증이 올라왔고, 알고리즘 타셨다니 대단하다는 축하와 그저 부럽다는 반응이 이어졌어요.</p>
+                <span class="insight-tag tag-tip">방 분위기</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">☕</div>
+              <div class="insight-body">
+                <h3>3주차 과제 릴레이가 97번까지 이어졌어요</h3>
+                <p>튜브워커로 15분 이상 영상을 만든 분들이 이름을 이어 적는 3주차 과제 제출자 릴레이(선착순 20명 커피 쿠폰)가 계속 돌고 있어요. 아침 7시 21분에 96번, 7시 24분에 97번까지 이어졌어요.<br>이어 적으실 때는 가장 최근 메시지를 확인하고 그다음 번호로 붙여 주세요.</p>
+                <span class="insight-tag tag-tip">과제 릴레이</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="day-accordion fade-in" data-day-id="0824">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">8/24 (월)</span>
+        </div>
+        <div class="day-accordion-summary">어두운 썸네일은 눈에 잘 안 띈다는 피드백 · 크롬 프로필 분리 zip은 이지워커 안에 · 구독 전환은 후킹 뒤 좋댓구알 CTA · 유효 시청 시간은 쇼츠·삭제분 제외 · 썸네일 시간 가림은 괜찮음 · 어색한 대본은 스킬에 업데이트 · 쿠팡링크 자동변환 공유 · 3주차 과제 릴레이 94번까지</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">🎨</div>
+              <div class="section-title">썸네일</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🌑</div>
+              <div class="insight-body">
+                <h3>어두운 썸네일이 눈에 안 띈다는 피드백이 오갔어요</h3>
+                <p>새벽에 몰락 컨셉이라 일부러 어둡게 만든 썸네일을 두고, 유튜브 화면에서 다른 썸네일과 비교하면 너무 어두우면 눈에 안 띄는 것 같다는 피드백이 나왔어요. 배경을 살짝 밝게 하고 몰락 분위기는 인물 표정이나 문구로 표현할 수 있다는 제안이었고, 만든 분은 이미 배경과 폰트를 살짝 밝게 싹 바꾼 상태라고 답했어요.<br>썸네일은 해도 해도 어렵다, 언젠간 터지겠지 하며 계속 바꿔 봐야 할 듯하다는 공감도 함께였어요.</p>
+                <span class="insight-tag tag-tip">팁</span>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">클로드가 썸네일 문구를 유튜브 우측 하단 시간 표시가 가린다며 비우라는데, 클로드 말을 들어야 하나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>그닥 상관없습니다.<br>"클로드는 수익 창출을 해 본 적이 없어서 몰라요"라는 농담에 다들 웃었어요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>A/B 테스트!<br>질문하신 분은 가려져도 상관없군요, 클로드는 무슨 큰일 날 것처럼 말하던데, 라며 안심했어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">한국 주식은 상승이 빨강인데, 플로우로 만든 썸네일 이미지는 빨강이 하락으로 나와요. 잘못된 건가요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>썸네일에서는 빨강이 시각적으로 부정적인 요소라 그런 것 같아요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생 · 서포터즈</span>
+                  </div>
+                  <p>미국은 빨강이 내리고 초록이 오르는 거예요.<br>미국 기준이라서, 한국 기준으로 쓰려면 따로 요청해야 해요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">노쌤 썸네일 템플릿은 카페 어디에 있나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>카페 대문에서 썸네일템플릿을 클릭해 보세요(저녁 7시 38분).</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--green-light);">📈</div>
+              <div class="section-title">채널 지표 · 구독 전환</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">영상 하나가 터져서 시청 시간은 금방 차는데, 구독 전환이 어렵네요…</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>영상 1분 후킹 뒤에 좋댓구알 CTA를 대본에 녹여내면 구독 전환율이 올라가요(저녁 7시 23분).</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">1분 후킹 뒤에 좋댓구알을 대본에 넣는 방법을 모르겠어요. 어떻게 하나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>대본을 쓸 때 클로드에 이야기하면 돼요. "대본 써 줘, 인트로 다음에 좋댓구알 써 줘"처럼요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>"훅과 본문이 이어지는 부분에, 좋아요·댓글·구독·알림을 부탁하거나 사정하는 말투가 아니라 구독을 하면 어떤 이득이 되는지 유도하는 글을 자연스럽게 넣어줘"라고 프롬프트를 써 보세요.<br>질문하신 분은 팁 안 주셨으면 구걸·사정할 뻔했다며 웃었어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">새 채널인데 시청 시간은 1.3천 시간으로 나오고, 유효 시청 시간은 오늘 2시간으로 집계됐어요. 유효 시청 시간은 어떻게 계산되나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>쇼츠와 비공개·삭제 영상 시청 시간을 제외해서 집계하는데, 일주일 정도 걸려요.<br>수익 창출 탭을 보시면 집계 기준 날짜가 나와요. 질문하신 분도 날짜를 확인하고 바로 이해했어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🔁</div>
+              <div class="insight-body">
+                <h3>안 터지는 카테고리는 갈아탄다는 이야기가 나왔어요</h3>
+                <p>역사·과학 쪽 채널이 도저히 안 터져서 다시 경제 채널을 하나 더 해 볼까 한다는 이야기가 새벽에 나왔어요. 채널마다 밀어주는 주제가 다르다는 "채널 뽑기" 이야기, 에버그린용 채널은 따로 만든다는 이야기도 함께였어요.</p>
+                <span class="insight-tag tag-tip">후기</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--purple-light);">🧩</div>
+              <div class="section-title">크롬 프로필 분리</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">후파님이 주셨다는 크롬 프로필 분리 자료는 뭔가요? 어디서 받나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>3강에 크롬 프로필 분리를 주셨어요.<br>"4. 프로필매니저(크롬계정분리용).zip" 파일인데, 후파님이 올려 주신 이지워커 zip 안에 따로 들어 있는 zip이에요. 좀 이상한 데에 들어가 있어서 잘 못 보고 지나칠 수 있다고 해요.<br>찾아 쓰기 시작한 분은 한군데에 딱 모여 있으니 너무 좋다고 했어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">💡</div>
+              <div class="insight-body">
+                <h3>채널이 안 터질 때 크롬 캐시 공유를 의심해 본 분이 있었어요</h3>
+                <p>본인은 경제 영상을 안 보는데 경제 채널을 운영하다 보니, 크롬 캐시가 공유돼서 노출이 안 되는 건가 싶다는 가설이 나왔어요(새벽 4시).<br>일단 크롬 프로필 분리를 적용해 보고 캐시 분리 후에 다시 실험해 본다고 해요.</p>
+                <span class="insight-tag tag-tip">후기</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">✍️</div>
+              <div class="section-title">대본 · 클로드 다루기</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">권한 무시 모드인데 왜 자꾸 "몇 분 길이로 할래? 이 중에 뭘로 할래?" 하고 물어봐요</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>"영상 길이는 이 정도로 해 줘. 지침 변경해 놓고 물어보지 마"라고 한번 이야기해 두면 그다음부터는 안 물어보더라고요(저녁 8시 37분).</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">대본이 자연스럽지 않고 수정해도 이상한 경우가 많은데, 그냥 올리시나요? 클로드랑 그만 싸우고 싶어요…</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>레퍼런스를 넣고, 생성된 대본을 읽어 보면서 보완이 필요한 부분은 스킬에 업데이트해요.<br>초반에는 대본을 읽어 보면서 흐름을 잡기도 하고, 터지면 그 포맷을 유지하기도 해요. 이 부분은 개인 취향과 카테고리에 따라 다른 것 같아요.<br>질문하신 분은 "숫자가 작은 순서대로 줄을 세우면 위험한 순서가 나온다고 생각하기 쉽습니다" 같은 어색한 문장이 생각보다 많이 나온다는 예시를 들었어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">이제 각 잡고 VOD 보면서 영상 만들기를 해 보려는데, 무료 특강 실습부터 할까요, 1강부터 들을까요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>1강이요.<br>질문하신 분은 1강부터 복습하면서 보기로 했어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">VS Code에서 클로드로 캡컷 프로젝트 폴더를 찾아 열게 하고 싶은데, 쌤 화면처럼 안 돼요</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>좌상단 파일 → 폴더 열기에서 강사님이 주신 대본만들기 폴더를 먼저 여세요.<br>뭐라도 폴더를 불러와야 상단에 클로드가 뜨더라고요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">플로우 이미지에 종이 여백이 보이는데, 안 보이게 하는 방법이 있나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>해당 스타일이 만화 사진 스타일이라, 모든 이미지가 모눈종이 위에 사진을 올려 둔 것처럼 나와요(밤 9시 10분).</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--purple-light);">🧰</div>
+              <div class="section-title">도구 · 자료 공유</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🔗</div>
+              <div class="insight-body">
+                <h3>스레드 쿠팡링크 자동변환을 만들었다는 공유가 있었어요</h3>
+                <p>아침 8시 21분, 스레드 쿠팡링크 자동변환을 만들었다며 카페 글이 공유됐어요.<br><a href="https://cafe.naver.com/dinohighclass/371317" target="_blank" rel="noopener">공유된 카페 글 열기</a></p>
+                <span class="insight-tag tag-tool">공유 자료</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🍱</div>
+              <div class="insight-body">
+                <h3>직접 만든 사이트 링크도 공유됐어요</h3>
+                <p>아침 8시 39분, 한 분이 직접 만든 사이트 링크를 공유했어요. "전 이거 만들었다고 혼났잖아요"라는 농담도 함께였어요.<br><a href="https://jeomme-chu.netlify.app/" target="_blank" rel="noopener">공유된 사이트 열기</a></p>
+                <span class="insight-tag tag-tool">공유 자료</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--orange-light);">🔥</div>
+              <div class="section-title">방 소식</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🎉</div>
+              <div class="insight-body">
+                <h3>카페 인증 글에 축하가 이어졌어요</h3>
+                <p>아침 8시 40분, "살포시 인증하겠습니다. 월요일 화이팅입니다!"라는 인사와 함께 카페 인증 글이 공유되자 축하가 이어졌어요.<br>인증 이미지에는 디하클/본인 닉네임 워터마크를 넣어 달라는 안내도 있었어요.<br><a href="https://cafe.naver.com/dinohighclass/371332" target="_blank" rel="noopener">인증 글 열기</a></p>
+                <span class="insight-tag tag-tip">방 소식</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">💪</div>
+              <div class="insight-body">
+                <h3>55일 챌린지, 매일 괴롭혀 드리겠다는 예고가 있었어요</h3>
+                <p>저녁 6시 29분, 55일 챌린지를 완주할 수 있도록 매일 괴롭혀 드리겠다는 서포터즈의 응원 예고가 있었어요.</p>
+                <span class="insight-tag tag-tip">방 소식</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">😄</div>
+              <div class="insight-body">
+                <h3>사담방 요약 정리가 화제가 됐어요</h3>
+                <p>공지 아래에 있는 사담방 요약을 들어오면 딱 눌러 본다는 이야기와 함께, 벽타기를 포기하고 요약만 기다린다, 일을 너무 잘한다는 반응이 오갔어요. 우리 대화가 정리되다니 너무 신기하다는 반응도요.<br>대전 성심당 본관과 케익부띠크에 줄 선 사진 같은 일상 공유도 이어졌어요.</p>
+                <span class="insight-tag tag-tip">방 분위기</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">☕</div>
+              <div class="insight-body">
+                <h3>3주차 과제 릴레이가 94번까지 이어졌어요</h3>
+                <p>튜브워커로 15분 이상 영상을 만든 분들이 이름을 이어 적는 3주차 과제 제출자 릴레이(선착순 20명 커피 쿠폰)가 계속 돌고 있어요. 저녁 7시 47분에 90번, 8시 28분에 91번, 8시 31분에 92번, 밤 9시 39분에 93번, 9시 45분에 94번까지 이어졌어요.<br>이어 적으실 때는 가장 최근 메시지를 확인하고 그다음 번호로 붙여 주세요.</p>
+                <span class="insight-tag tag-tip">과제 릴레이</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🙋</div>
+              <div class="insight-body">
+                <h3>아직 답을 기다리는 질문이 있어요</h3>
+                <p>①새벽 5시 46분, 조교님이 올려 주신 자료를 두고 "이건 무슨 기준으로 30% 이상인지 재시는 건가요?" 하는 질문이 올라왔는데, 이 대화 안에서는 이어지는 답이 보이지 않아요(사진에 대한 질문이라 무엇의 30%인지도 이 대화만으로는 분명하지 않아요).<br>②밤 9시 53분, 캡컷 자막이 앞뒤가 잘려 어색하게 줄바꿈된다며 튜브워커가 의미 단위로 줄바꿈해 줬으면 한다는 의견도 아직 이어지는 답이 보이지 않아요.</p>
+                <span class="insight-tag tag-caution">답변 대기</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="day-accordion fade-in" data-day-id="0823">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">8/23 (일)</span>
+        </div>
+        <div class="day-accordion-summary">썸네일이 제일 어렵다는 공감 · 새벽에 영상 2개와 대본 6개 · 첫 영상은 조회수 기대 금지 · 테스트 기준은 2~3주·14개·노출 100 · 클릭률 8프로면 양호 · 처음엔 태형 목소리 · 스킬 파일은 드라이브에서 · 3주차 과제 릴레이 76번까지</div>
       </button>
       <div class="day-accordion-body">
         <div class="day-accordion-content">
@@ -647,22 +1116,214 @@
 
           <div class="section">
             <div class="section-header">
+              <div class="section-icon" style="background:var(--green-light);">📈</div>
+              <div class="section-title">초기 조회수 · 클릭률</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">첫 영상으로 30분짜리를 올려봤는데, 조회수가 몇 정도 나와야 선방했다고 보나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>첫 영상은 조회수를 기대하지 마세요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>운빨이라 답이 없어요. 보통 20개는 올려 보라는 이야기가 있는데, 하루 한 개 기준이 아니라 몇 개를 올리든이에요.<br>답하신 분은 20개를 채우기 전에 혼자 테스트를 많이 해 봤는데, 20개부터 조회수가 좀 터진다고 이야기하시는 분들이 있는 것 같다고 했어요.<br>숙제로 만든 3분짜리를 올린 걸 후회했다는 분도 있었어요. 2~3일 동안 0이었대요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>기간 2~3주 / 영상 14개 / 첫 노출 100 넘기기, 이 정도로 테스트하시는 것 같아요(저녁 8시 49분). 여기서 100은 퍼센트가 아니라 노출 숫자예요.<br>계속 두 자리 수에 머무는 경우에는 새 계정으로 다시 시작했을 때 반응이 생기기도 해요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">조회수 1200이 넘는 영상이 앞에 나왔는데, 방향을 바꾸라고 신호를 주는 걸까요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>업로드한 지 얼마나 됐는지부터 봐야 해요. 아직 판단하기에는 이른 것 같아요(저녁 8시 8~9분).<br>질문하신 분은 제목 후킹이 중요한 것 같다고 덧붙였어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">이제 3개째인데 그저께 밤에 올린 첫 영상이 조회수 588이에요. 갈 길이 머네요…</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>갈 길이 먼 게 아니라 빠른 건데요? 3개째에 반응이 오기는 쉽지 않아요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>3개째에 588이면 잘되고 있는 거예요.<br>질문하신 분은 조교님들 조언대로 썸네일 문구와 제목을 수정했더니 조회수가 다시 올라갔다며 감사 인사를 남겼어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">클릭률이 몇이면 양호한가요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>8프로요(밤 9시 4분). 30분짜리 롱폼을 올리는 분의 질문에 대한 답이었어요.<br>클릭률 11.3이 나온다는 분께는 아주 좋다고 답했어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📊</div>
+              <div class="insight-body">
+                <h3>조회수가 계단식으로 오르면 아직 채널을 파악하는 중이래요</h3>
+                <p>저녁 8시 6분, 조회수가 계단식으로 상승하는 모양이면 유튜브가 아직 채널을 파악하는 중이라는 조교 답변이 있었어요.</p>
+                <span class="insight-tag tag-tip">팁</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">🎙️</div>
+              <div class="section-title">목소리 · 채널 정비</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">댓글에서 이 목소리 지겹다고 해요. 추천 목소리를 썼는데, 다른 추천 있나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>노선생님께서도 말씀하셨지만, 태형 목소리가 잘되는 데는 이유가 있어요.<br>목소리에 대한 댓글마저도 시청자의 반응이라고 생각하시고, 처음에는 그냥 태형으로 하는 게 좋아요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">가입한 지는 좀 됐는데 아무것도 안 올린 아이디로 올리는 것보다, 새로 만드는 게 낫나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>이 부분은 케바케인 것 같아요.<br>예전에는 오래된 계정이 좋다고 하셨는데, 최근에는 새 계정으로 아예 처음부터 싹 세팅해서 하시기도 해요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">채널명을 검색하면 채널은 뜨는데 프로필 사진이 안 보여요. 채널에 들어가면 프로필과 배너는 보이는데, 설정에서 뭘 적용해야 하나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>신경 쓰지 마세요. 시청자는 영상을 보고 들어오지, 채널을 검색해서 들어오지 않아요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>크게 중요하지 않아요.<br>질문하신 분은 쓸데없는 걱정이었다며 웃었어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--purple-light);">🧰</div>
+              <div class="section-title">도구 · 자료 공유</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">오토워커 스크립트 파일 안에 스킬 파일이 없는데, 어디서 어떻게 다운받아야 하나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>구글 드라이브에서 스킬을 다운받을 수 있어요(저녁 8시 50분).<br>함께 다시 공유된 대본스킬 업데이트 공지에 따르면, 좋아요 수를 비공개로 해 둔 영상을 레퍼런스로 수집할 때 오류가 나며 멈추는 문제가 수정됐어요. 드라이브에서 새 zip을 받아 다운로드(Downloads) 폴더에 그대로 두고, 압축을 풀거나 다른 곳으로 옮기지 마세요.<br><a href="https://drive.google.com/drive/folders/13PG48_9nFHxV10lDGWtl3bok4FwUynM0" target="_blank" rel="noopener">스킬 zip 드라이브 폴더 열기</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🔗</div>
+              <div class="insight-body">
+                <h3>조회수 관련해 참고할 카페 글이 공유됐어요</h3>
+                <p>영상을 올리고 조회수 떡상을 위해 채널에 해 주는 작업이 있는지 묻는 질문에, 한 수강생분이 카페 글 링크를 공유해 주셨어요(저녁 8시 35분). 질문하신 분은 "와우 헐이다"라는 반응을 남겼어요.<br><a href="https://cafe.naver.com/dinohighclass/370640" target="_blank" rel="noopener">공유된 카페 글 열기</a></p>
+                <span class="insight-tag tag-tool">공유 자료</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
               <div class="section-icon" style="background:var(--orange-light);">🔥</div>
               <div class="section-title">방 소식</div>
             </div>
             <div class="insight-card">
               <div class="insight-emoji">☕</div>
               <div class="insight-body">
-                <h3>3주차 과제 릴레이가 62번까지 이어졌어요</h3>
-                <p>튜브워커로 15분 이상 영상을 만든 분들이 이름을 이어 적는 3주차 과제 제출자 릴레이(선착순 20명 커피 쿠폰)가 계속 돌고 있어요. 새벽 6시 40분에 61번, 아침 7시 9분에 62번까지 이어졌어요.<br>이어 적으실 때는 가장 최근 메시지를 확인하고 그다음 번호로 붙여 주세요.</p>
+                <h3>3주차 과제 릴레이가 76번까지 이어졌어요</h3>
+                <p>튜브워커로 15분 이상 영상을 만든 분들이 이름을 이어 적는 3주차 과제 제출자 릴레이(선착순 20명 커피 쿠폰)가 계속 돌고 있어요. 새벽 6시 40분에 61번, 아침 7시 9분에 62번, 밤 9시 7분에 75번, 9시 33분에 76번까지 이어졌어요.<br>이어 적으실 때는 가장 최근 메시지를 확인하고 그다음 번호로 붙여 주세요.</p>
                 <span class="insight-tag tag-tip">과제 릴레이</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">😄</div>
+              <div class="insight-body">
+                <h3>밤에는 별명 놀이로 방이 한바탕 웃었어요</h3>
+                <p>밤 9시 15분쯤부터 "에이아이님", "수창스님", "연쇄수창스님" 같은 별명 놀이가 이어지며 웃음이 터졌고, 작명 센스가 넘친다는 반응도 나왔어요.<br>클로드 토큰이 도는 시간에 녹아 버린다는 하소연, 방금 올린 영상이 어그로를 끈 것 같아 싫어요가 달릴까 걱정된다는 이야기도 있었어요.</p>
+                <span class="insight-tag tag-tip">방 분위기</span>
               </div>
             </div>
             <div class="insight-card">
               <div class="insight-emoji">🙋</div>
               <div class="insight-body">
                 <h3>아직 답을 기다리는 질문이 있어요</h3>
-                <p>①아침 8시 38분에 "전에 임시 아이디 30개를 만들어 놓으라고 했는데 어디에 쓰려고 그런 건지, qwen과 상관이 있는지" 묻는 질문이 올라왔어요. 이 대화에는 아직 이어지는 답이 보이지 않아요.<br>②어젯밤 9시 54분에 올라온 "채널 세 개가 다 조회수 0인데 쇼츠는 즉각 반응이 온다, 희망이 있을까" 하는 고민도 아직 답이 없어요.</p>
+                <p>①아침 8시 38분에 "전에 임시 아이디 30개를 만들어 놓으라고 했는데 어디에 쓰려고 그런 건지, qwen과 상관이 있는지" 묻는 질문이 올라왔어요. 밤까지도 이어지는 답이 보이지 않아요.<br>②어젯밤 9시 54분에 올라온 "채널 세 개가 다 조회수 0인데 쇼츠는 즉각 반응이 온다, 희망이 있을까" 하는 고민도 아직 답이 없어요.<br>③저녁 8시 57분에 "후파의 그록그록에서 프롬프트 일괄입력(엑셀)은 아직 안 되는지, 언제쯤 되는지" 묻는 질문, ④밤 9시 8분에 "2주차 과제를 지금 했는데 지금 올리면 되는지" 묻는 질문도 이 대화 안에서는 답이 보이지 않아요.</p>
                 <span class="insight-tag tag-caution">답변 대기</span>
               </div>
             </div>
@@ -7995,10 +8656,269 @@
           </div>
         </div>
       </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">첫 영상은 조회수가 얼마나 나와야 선방인가요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge">서포터즈</span>
+              <span class="qa-answer-name">아는아이</span>
+            </div>
+            <p>첫 영상은 조회수를 기대하지 마세요.</p>
+          </div>
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>기간 2~3주 / 영상 14개 / 첫 노출 100 넘기기(퍼센트가 아니라 노출 숫자) 정도로 테스트하시는 것 같아요.<br>계속 두 자리 수에 머무는 경우에는 새 계정으로 다시 시작했을 때 반응이 생기기도 해요.</p>
+          </div>
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>운빨이라 답이 없어요. 보통 20개는 올려 보라는 이야기도 있어요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">클릭률이 몇이면 양호한가요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>8프로면 양호해요.<br>클릭률 11.3이 나온다면 아주 좋은 편이에요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">댓글에서 목소리가 지겹다고 하면 바꿔야 하나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>태형 목소리가 잘되는 데는 이유가 있어요.<br>목소리에 대한 댓글마저도 시청자의 반응이라고 생각하시고, 처음에는 그냥 태형으로 하는 게 좋아요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">묵혀 둔 아이디와 새 계정 중 어느 쪽으로 시작하는 게 낫나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>케바케인 것 같아요.<br>예전에는 오래된 계정이 좋다고 하셨는데, 최근에는 새 계정으로 아예 처음부터 싹 세팅해서 하시기도 해요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">오토워커 스크립트 파일 안에 스킬 파일이 없어요. 어디서 받나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>구글 드라이브에서 스킬을 다운받을 수 있어요.<br>새 zip을 받아 다운로드(Downloads) 폴더에 그대로 두고, 압축을 풀거나 다른 곳으로 옮기지 마세요.<br><a href="https://drive.google.com/drive/folders/13PG48_9nFHxV10lDGWtl3bok4FwUynM0" target="_blank" rel="noopener">스킬 zip 드라이브 폴더 열기</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">채널명을 검색하면 프로필 사진이 안 보여요. 문제인가요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge">서포터즈</span>
+              <span class="qa-answer-name">아는아이</span>
+            </div>
+            <p>신경 쓰지 마세요. 시청자는 영상을 보고 들어오지, 채널을 검색해서 들어오지 않아요.</p>
+          </div>
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>크게 중요하지 않아요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">유효 시청 시간은 어떻게 계산되나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge">서포터즈</span>
+              <span class="qa-answer-name">아는아이</span>
+            </div>
+            <p>쇼츠와 비공개·삭제 영상 시청 시간을 제외해서 집계하는데, 일주일 정도 걸려요.<br>수익 창출 탭을 보시면 집계 기준 날짜가 나와요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">구독 전환이 어려워요. 방법이 있나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>영상 1분 후킹 뒤에 좋댓구알 CTA를 대본에 녹여내면 구독 전환율이 올라가요.</p>
+          </div>
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge">서포터즈</span>
+              <span class="qa-answer-name">아는아이</span>
+            </div>
+            <p>"훅과 본문이 이어지는 부분에, 좋아요·댓글·구독·알림을 부탁하거나 사정하는 말투가 아니라 구독을 하면 어떤 이득이 되는지 유도하는 글을 자연스럽게 넣어줘"라고 프롬프트를 써 보세요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">권한 무시 모드인데 클로드가 자꾸 영상 길이 같은 걸 물어봐요</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>"영상 길이는 이 정도로 해 줘. 지침 변경해 놓고 물어보지 마"라고 한번 이야기해 두면 그다음부터는 안 물어보더라고요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">썸네일 문구가 유튜브 시간 표시에 가려져도 되나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>그닥 상관없어요.</p>
+          </div>
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>A/B 테스트로 확인해 보세요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">후킹이 재미없거나, 후킹을 고치라니 클로드가 사실을 지어낼 때는 어떻게 하나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>후킹을 제미나이로 들고 가서 사람같이 써 달라고 한 뒤, 그걸 다시 클로드로 가져가 전체 톤을 맞추는 방법이 있어요.<br>거짓말을 하기 시작하면 창을 새로 열어서 다시 시작하세요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">경제채널 타겟층은 어떻게 잡나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>30~40대 에버그린 타겟으로 시작했다가 조회수가 안 나와서, 55세 이상 타겟으로 소재를 바꾸니 알고리즘을 타기 시작했다는 경험담이 있어요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">트래픽(트렌드)은 어디서 확인하나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>구글 트렌드 실시간 인기 페이지를 한번 훑는 방법이 공유됐어요.<br><a href="https://trends.google.co.kr/trending?geo=KR" target="_blank" rel="noopener">구글 트렌드 실시간 인기 열기</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">플로우 썸네일에서 주식 상승·하락 색이 반대로 나와요</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생 · 서포터즈</span>
+            </div>
+            <p>미국 기준(빨강이 하락, 초록이 상승)이라서 그래요.<br>한국 기준으로 쓰려면 따로 요청해야 해요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">크롬 프로필 분리 자료는 어디 있나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>3강에 크롬 프로필 분리 자료가 있어요.<br>"4. 프로필매니저(크롬계정분리용).zip"은 후파님이 올려 주신 이지워커 zip 안에 따로 들어 있어요.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="updated-at">마지막 업데이트: 2026-08-23</div>
+  <div class="updated-at">마지막 업데이트: 2026-08-25</div>
 </div>
 
 <button class="fab-top" id="fabTop" type="button" aria-label="맨 위로" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
