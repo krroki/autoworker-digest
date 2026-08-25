@@ -587,7 +587,7 @@
   <div class="stats-bar fade-in">
     <div class="stat-pill"><span class="num">8/5</span><span class="label">정리 시작</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--green);">2기</span><span class="label">현재 기수</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--purple);">135</span><span class="label">누적 Q&amp;A</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--purple);">140</span><span class="label">누적 Q&amp;A</span></div>
   </div>
 
   <div class="tab-bar fade-in" id="tabBar">
@@ -603,7 +603,7 @@
           <span class="day-accordion-date">8/25 (화)</span>
           <span class="day-accordion-badge">최신</span>
         </div>
-        <div class="day-accordion-summary">트래픽 검색은 구글 트렌드로 · 후킹은 제미나이 거쳐 클로드로 톤 정리 · 클로드는 일단 못한다부터 하고 봄 · 경제채널 55세 이상 타겟 전환 사례 · vrew 합치기 자동화 예고 · 3주차 과제 릴레이 97번까지</div>
+        <div class="day-accordion-summary">트래픽 검색은 구글 트렌드로 · 후킹은 제미나이 거쳐 클로드로 톤 정리 · 클로드는 일단 못한다부터 하고 봄 · 경제채널 55세 이상 타겟 전환 사례 · vrew 합치기 자동화 예고 · 앞 강의 밀려도 일단 듣기 · 4강 줌 암호 문제는 링크 재공유로 해결 · 클로드 코드 아이콘은 제한 모드 관리에서 · 강의노트 모바일 버전 공유 · 롱폼과 쇼츠 조회수는 별개 · 카페 등급 낮으면 채널톡 문의 · 3주차 과제 릴레이 106번까지</div>
       </button>
       <div class="day-accordion-body">
         <div class="day-accordion-content">
@@ -699,6 +699,158 @@
 
           <div class="section">
             <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">🎥</div>
+              <div class="section-title">4강 · 강의 듣기</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">3강을 아직 다 못 들었는데 오늘 4강 들어도 괜찮을까요? 3강을 이해 못 하면 4강이 어려울까요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>일단 들으시라는 답이 이어졌어요(저녁 5시 48분).<br>밀리면 더 하기 싫어질 것 같으니 일단 듣는다는 이야기, 본강의를 먼저 듣고 복습을 이어서 하라는 이야기가 함께였어요.<br>이해력이 떨어져서 걱정이라던 질문자분도 고맙다며 4강으로 가셨어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">4강 줌 링크를 눌렀는데 회의 암호를 입력하라고 떠요</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>저녁 6시 53분에 올라온 4강 줌 링크가 중간에서 한 번 끊겨, 암호가 붙은 뒷부분 없이 눌린 분들에게 암호 입력창이 떴어요.<br>암호가 뜬다는 문의가 이어지자 저녁 6시 55분에 끊기지 않은 링크가 다시 올라왔어요. 아래 링크처럼 <code>pwd=</code>까지 이어진 주소로 들어가면 암호를 따로 넣지 않아도 돼요.<br>줌은 저녁 7시 강의 시작에 맞춰 올라왔어요.<br><a href="https://us06web.zoom.us/j/84207695296?pwd=IAZPmMbHNmbmHOg1wGsbJ37SRdehAE.1" target="_blank" rel="noopener">오토워커 2기 정규강의 4강 줌 열기</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--purple-light);">🛠️</div>
+              <div class="section-title">클로드 코드 · 강의노트</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">Claude Code for VS Code를 설치했는데 우측 상단에 클로드 코드 마크가 안 보여요</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>맨 위에 뜨는 제한 모드 안내줄에서 <strong>관리</strong>를 눌러 보시라는 안내가 있었어요(저녁 6시 51분). 제한 모드는 안전한 코드 검색을 위한 기능이에요.<br>눌렀을 때 화면이 어떻게 나오는지 캡처해서 올려 달라는 요청도 함께였어요.<br>질문하신 분은 저녁 6시 54분에 해결됐다고 하셨어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📒</div>
+              <div class="insight-body">
+                <h3>강의 텍스트를 보기 좋게 만든 강의노트가 공유됐어요</h3>
+                <p>저녁 5시 9분, 노쌤이 올려 주신 강의 text를 가독성 좋게 정리한 강의노트 파일이 공유됐어요. 너무 편하다는 반응이 이어졌어요.<br>처음 올라온 버전은 PC 전용이라 모바일에서는 1강 화면에서 넘어가지 않는 문제가 있었는데, 저녁 6시 35분에 모바일까지 되게 고친 버전이 다시 올라왔어요. 모바일에서는 크롬 같은 브라우저에서 열어 보시면 돼요.<br>2강·3강 노트도 같은 파일 안에 함께 들어 있다고 해요.</p>
+                <span class="insight-tag tag-tool">도구</span>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">강의노트는 전에 받은 걸 삭제하고 다시 받아야 하나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>따로 내려받지 않고 올려 주신 링크를 눌러서 썼다는 답이 있었어요(저녁 5시 45분).</p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🩹</div>
+              <div class="insight-body">
+                <h3>화면 캡처를 놓고 복구 방법이 오갔어요</h3>
+                <p>오후 4시 54분에 올라온 화면 캡처를 두고 "이거 떠 보신 분 계신가요"라는 질문이 나왔어요. 어떤 화면이었는지는 이 대화만으로는 분명하지 않아요.</p>
+                <p>나온 방법은 세 가지였어요.<br>①고급 옵션에서 복구를 눌러 한 번에 됐다는 경험<br>②복구도 초기화도 안 되고 재부팅을 여러 번 해도 안 될 때는 아예 지우고 다시 설치해 보라는 조교 안내(저녁 5시 3분)<br>③클로드에게 물어보고 재부팅을 반복해 세 번째에 성공했다는 경험</p>
+                <span class="insight-tag tag-caution">주의</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--green-light);">🏆</div>
+              <div class="section-title">성과 인증 · 조회수</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">롱폼이랑 쇼츠 조회수는 별개로 가는 걸까요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>네, 별개예요(오후 4시 45분).</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">1만 인증을 하려는데 디하클 카페 등급이 Economy라 글을 아직 못 써요. 카페 매니저한테 챗 드리면 될까요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>네, 채널톡에 문의하시면 돼요(저녁 7시 18분).<br>질문하신 분은 저녁 9시 7분에 쉬는 시간을 이용해 1만 인증글을 올리셨고, 조교님들과 방 동기분들의 축하가 이어졌어요.<br><a href="https://cafe.naver.com/dinohighclass/373227" target="_blank" rel="noopener">해당 인증글 보기</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📌</div>
+              <div class="insight-body">
+                <h3>성과 인증 관련 설명은 노션에 있어요</h3>
+                <p>오후 4시 26분, 성과 인증과 관련한 내용은 노션에 설명이 있다는 안내가 있었어요.</p>
+                <span class="insight-tag tag-tip">안내</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🎉</div>
+              <div class="insight-body">
+                <h3>조회수와 첫 수익 인증이 이어졌어요</h3>
+                <p>오후 4시 32분, 인증글을 올린 뒤로 조회수가 8천 정도 더 올라갔다는 소식이 공유됐어요. 선생님과 조교님들 덕분이라는 인사와 함께 축하가 이어졌어요.<br>저녁 6시 52분에는 채널을 살리고 받는 첫 수익 56달러 인증이 올라와, 부럽다는 반응과 나는 언제 수익 창출하나 하는 이야기가 이어졌어요.<br><a href="https://cafe.naver.com/dinohighclass/369610?tc=shared_link" target="_blank" rel="noopener">조회수 인증글 보기</a></p>
+                <span class="insight-tag tag-revenue">성과</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">💬</div>
+              <div class="insight-body">
+                <h3>프로그램반이면 소재가 유리한가 하는 이야기도 있었어요</h3>
+                <p>저녁 7시 7분, 인증글이 대부분 프로그램반인 것 같고 소재가 치트키라던데 프로그램반에서만 뭔가 공유되는 것 아니냐는 이야기가 나왔어요.<br>이에 프로그램반인데도 성과가 없어 스트레스라는 답이 바로 이어졌어요. 이 대화 안에서 조교님 확인 답변은 보이지 않아요.</p>
+                <span class="insight-tag tag-tip">방 분위기</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
               <div class="section-icon" style="background:var(--orange-light);">🔥</div>
               <div class="section-title">방 소식</div>
             </div>
@@ -721,9 +873,34 @@
             <div class="insight-card">
               <div class="insight-emoji">☕</div>
               <div class="insight-body">
-                <h3>3주차 과제 릴레이가 97번까지 이어졌어요</h3>
-                <p>튜브워커로 15분 이상 영상을 만든 분들이 이름을 이어 적는 3주차 과제 제출자 릴레이(선착순 20명 커피 쿠폰)가 계속 돌고 있어요. 아침 7시 21분에 96번, 7시 24분에 97번까지 이어졌어요.<br>이어 적으실 때는 가장 최근 메시지를 확인하고 그다음 번호로 붙여 주세요.</p>
+                <h3>3주차 과제 릴레이가 106번까지 이어졌어요</h3>
+                <p>튜브워커로 15분 이상 영상을 만든 분들이 이름을 이어 적는 3주차 과제 제출자 릴레이(선착순 20명 커피 쿠폰)가 계속 돌고 있어요. 아침 7시 24분 97번에서 이어져 저녁 8시 59분에 106번까지 왔어요.<br>튜브워커로 5분 이상 영상을 만든 분들의 2주차 릴레이도 함께 돌고 있고, 오후 4시 53분 기준 165번까지 이어졌어요.<br>이어 적으실 때는 가장 최근 메시지를 확인하고 그다음 번호로 붙여 주세요.</p>
                 <span class="insight-tag tag-tip">과제 릴레이</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🎞️</div>
+              <div class="insight-body">
+                <h3>클로드로 나만의 쇼츠 제작 흐름을 완성한 후기가 올라왔어요</h3>
+                <p>저녁 5시 57분, 처음엔 100불 요금제를 괜히 했나 싶었는데 성능이 정말 좋았다며 저만의 쇼츠 제작을 완성했다는 후기가 올라왔어요.</p>
+                <p>방법은 이랬대요(저녁 6시 28분).<br>1. 1~3강 안에 해답이 다 있다고 보고 시작했어요.<br>2. 파는 쇼츠 제작 프로그램을 하나 사서 클로드에게 분석을 시켰더니 아주 디테일하게 분석해 줬대요.<br>3. 만들고 싶은 쇼츠를 이야기하면서 하나씩 만들어 갔어요.<br>디테일을 잡는 게 힘들었지만 하고 나니 정말 편해졌다고 해요. 대단하다는 반응과 그 프로그램 탐난다는 이야기가 이어졌어요.</p>
+                <span class="insight-tag tag-tip">후기</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📚</div>
+              <div class="insight-body">
+                <h3>조교님이 오토워커 위키 문서를 공유했어요</h3>
+                <p>저녁 9시 30분에 오토워커 위키 문서 링크가 올라왔어요. 어떤 질문에 대한 답으로 올라온 것인지는 이 대화만으로는 분명하지 않아요.<br><a href="https://wiki.autoworkers.ai/2-3b5c8b66674080cf863fd91bcc90bdbf?p=3c7c8b66674080b6b130c639ede8b629&amp;pm=c" target="_blank" rel="noopener">공유된 위키 문서 열기</a></p>
+                <span class="insight-tag tag-tool">자료</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🙋</div>
+              <div class="insight-body">
+                <h3>답변 대기</h3>
+                <p>저녁 6시 44분에 "플로우 뉴버전이 어디 있나요"라는 질문이 있었어요. 뒤이어 링크 공유해 주신 걸로 썼다는 이야기가 나왔지만, 같은 시간대에 강의노트 링크 이야기가 함께 오가고 있어서 플로우 뉴버전을 가리킨 답인지는 이 대화만으로는 분명하지 않아요.</p>
+                <span class="insight-tag tag-caution">확인 필요</span>
               </div>
             </div>
           </div>
@@ -8915,6 +9092,81 @@
           </div>
         </div>
       </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">롱폼과 쇼츠 조회수는 따로 계산되나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>네, 별개예요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">Claude Code for VS Code를 설치했는데 클로드 코드 아이콘이 안 보여요</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>맨 위에 뜨는 제한 모드 안내줄에서 <strong>관리</strong>를 눌러 보세요. 제한 모드는 안전한 코드 검색을 위한 기능이에요.<br>화면이 어떻게 나오는지 캡처해서 올리면 더 빨리 봐 드릴 수 있어요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">앞 강의를 다 못 들었는데 오늘 강의를 들어도 될까요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>일단 들으시라는 이야기가 많아요.<br>밀리면 더 하기 싫어지니 본강의를 먼저 듣고 복습을 이어서 하는 방식이에요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">줌 링크를 눌렀는데 회의 암호를 입력하라고 떠요</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>링크가 중간에서 끊긴 채로 눌렸을 때 그래요.<br><code>pwd=</code>로 시작하는 뒷부분까지 이어진 전체 주소로 다시 들어가면 암호를 따로 넣지 않아도 돼요.<br>암호창이 뜬다고 방에 올려 주시면 끊기지 않은 링크를 다시 공유해 드려요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">카페 등급이 낮아서 인증글을 못 써요</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>채널톡으로 문의하시면 돼요.<br>성과 인증 방법 자체는 노션에 설명이 있어요.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -8944,7 +9196,7 @@ var observer = new IntersectionObserver(function(entries) {
   entries.forEach(function(entry) {
     if (entry.isIntersecting) entry.target.classList.add('visible');
   });
-}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+}, { threshold: [0, 0.08], rootMargin: '0px 0px -30px 0px' });
 document.querySelectorAll('.fade-in').forEach(function(element, index) {
   element.style.transitionDelay = Math.min(index * 0.05, 0.3) + 's';
   observer.observe(element);
