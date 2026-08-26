@@ -850,6 +850,7 @@
         var len = points.length;
         if (len < 2) {
           hint.textContent = '';
+          svg.style.height = '54px';
           svg.setAttribute('viewBox', '0 0 100 40');
           var t = document.createElementNS(SVG, 'text');
           t.setAttribute('x', '50'); t.setAttribute('y', '22');
@@ -862,6 +863,7 @@
         }
 
         var W = 340, H = 190, padL = 34, padR = 8, padT = 12, padB = 22;
+        svg.style.height = '190px';
         svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
         svg.setAttribute('preserveAspectRatio', 'none');
 
