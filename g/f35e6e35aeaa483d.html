@@ -278,6 +278,13 @@
       box-shadow: 1px 0 0 var(--line);
     }
     th:first-child { background: #f9fafb; z-index: 3; }
+    th .th-name {
+      display: inline-block;
+      max-width: 14em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      vertical-align: middle;
+    }
     th .dot {
       display: inline-block;
       width: 8px;
@@ -365,6 +372,7 @@
       .range { width: 100%; }
       .range button { flex: 1; }
       th, td { padding: 9px 10px; }
+      th .th-name { max-width: 7em; }
     }
   </style>
 </head>
@@ -569,7 +577,7 @@
         total.appendChild(document.createTextNode(n(data.summary.totalCount)));
         total.appendChild(el('small', null, '명'));
         setDelta(document.getElementById('total-delta'), data.summary.totalDelta);
-        document.getElementById('foot').textContent = '마지막 수집 ' + fmtStamp(data.generatedAt) + ' · 표시 중인 기록 ' + data.totalHistory.length + '일';
+        document.getElementById('foot').textContent = '마지막 수집 ' + fmtStamp(data.generatedAt) + ' · 누적 기록 ' + data.totalHistory.length + '일';
       }
 
       function renderRooms() {
@@ -595,11 +603,14 @@
           card.appendChild(row);
 
           var series = visible(room.history);
-          var svg = document.createElementNS(SVG, 'svg');
-          svg.setAttribute('class', 'spark');
-          svg.setAttribute('role', 'img');
-          svg.setAttribute('aria-label', room.name + ' 인원 변화');
-          card.appendChild(svg);
+          var svg = null;
+          if (series.length > 1) {
+            svg = document.createElementNS(SVG, 'svg');
+            svg.setAttribute('class', 'spark');
+            svg.setAttribute('role', 'img');
+            svg.setAttribute('aria-label', room.name + ' 인원 변화');
+            card.appendChild(svg);
+          }
 
           var note = el('div', 'spark-note');
           if (series.length > 1) {
@@ -617,7 +628,7 @@
           card.appendChild(note);
 
           grid.appendChild(card);
-          drawSpark(svg, series, color);
+          if (svg) drawSpark(svg, series, color);
         });
       }
 
@@ -635,7 +646,9 @@
           var dot = el('span', 'dot');
           dot.style.setProperty('--accent', ACCENTS[i % ACCENTS.length]);
           th.appendChild(dot);
-          th.appendChild(document.createTextNode(room.name));
+          var nameSpan = el('span', 'th-name', room.name);
+          nameSpan.title = room.name;
+          th.appendChild(nameSpan);
           tr.appendChild(th);
         });
         head.appendChild(tr);
