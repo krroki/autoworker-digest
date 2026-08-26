@@ -5,29 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="color-scheme" content="light">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#fee500">
   <title>관찰대상방 인원 현황</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111827'/%3E%3Cpath d='M14 40l10-12 9 8 17-18' fill='none' stroke='%2334d399' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23fee500'/%3E%3Cellipse cx='32' cy='29' rx='21' ry='17' fill='%233c1e1e'/%3E%3Cpath d='M24 42l-6 9 13-8z' fill='%233c1e1e'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <style>
     :root {
-      --bg: #f4f5f7;
+      --kakao: #fee500;
+      --kakao-deep: #f7d900;
+      --brown: #3c1e1e;
+      --bg: #edeef0;
       --card: #ffffff;
-      --ink: #111827;
-      --ink-2: #374151;
-      --muted: #6b7280;
-      --line: #e5e7eb;
-      --line-strong: #d1d5db;
-      --up: #15803d;
-      --up-bg: #ecfdf3;
-      --down: #b91c1c;
-      --down-bg: #fef2f2;
-      --flat: #6b7280;
-      --flat-bg: #f3f4f6;
-      --accent-1: #2563eb;
-      --accent-2: #d97706;
-      --accent-3: #7c3aed;
-      --radius: 14px;
+      --ink: #16181d;
+      --ink-2: #3d434d;
+      --muted: #8b919c;
+      --line: #eaecef;
+      --line-strong: #dfe2e7;
+      --up: #12805c;
+      --up-bg: #e8f6f0;
+      --down: #d13b3b;
+      --down-bg: #fdeeee;
+      --flat: #8b919c;
+      --flat-bg: #f1f2f4;
+      --radius: 18px;
       --font: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", system-ui, sans-serif;
     }
 
@@ -39,234 +39,218 @@
       background: var(--bg);
       font-family: var(--font);
       font-size: 15px;
-      line-height: 1.5;
+      line-height: 1.45;
       -webkit-font-smoothing: antialiased;
       word-break: keep-all;
     }
     button { font: inherit; }
-    .num { font-variant-numeric: tabular-nums; }
+    .num { font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
 
-    .wrap {
-      width: min(1080px, 100% - 32px);
+    .app {
+      width: min(760px, 100%);
+      min-height: 100vh;
       margin: 0 auto;
-      padding: 20px 0 48px;
+      background: var(--bg);
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04);
     }
 
-    /* ── 머리 ───────────────────────── */
-    .head {
+    /* ── 상단 바 ─────────────────────── */
+    .bar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 16px;
+      gap: 10px;
+      padding: 14px 18px;
+      background: var(--kakao);
+      color: var(--brown);
     }
-    .head h1 {
+    .bar h1 {
       margin: 0;
-      font-size: 22px;
+      font-size: 17px;
       font-weight: 800;
       letter-spacing: -0.02em;
-      line-height: 1.25;
     }
-    .head .sub {
-      margin: 4px 0 0;
-      color: var(--muted);
-      font-size: 13px;
+    .bar .when {
+      margin: 2px 0 0;
+      font-size: 12px;
+      font-weight: 600;
+      opacity: 0.72;
     }
-    .head .sub b { color: var(--ink-2); font-weight: 600; }
-    .chip {
+    .badge-off {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
       flex: 0 0 auto;
-      padding: 6px 10px;
-      border: 1px solid var(--line-strong);
+      padding: 6px 11px;
       border-radius: 999px;
-      background: var(--card);
-      color: var(--ink-2);
+      background: rgba(60, 30, 30, 0.1);
+      color: var(--brown);
       font-size: 12px;
-      font-weight: 700;
+      font-weight: 800;
       white-space: nowrap;
     }
-    .chip::before {
-      content: "";
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #9ca3af;
-    }
+    .badge-off svg { width: 13px; height: 13px; }
+
+    .body { padding: 14px 14px 40px; }
 
     /* ── 전체 합계 ───────────────────── */
     .total {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
-      padding: 18px 20px;
-      border: 1px solid var(--line);
+      gap: 14px;
+      padding: 16px 18px;
       border-radius: var(--radius);
-      background: var(--ink);
-      color: #fff;
+      background: var(--card);
+      box-shadow: 0 1px 2px rgba(16, 18, 22, 0.06);
     }
-    .total .label {
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 13px;
-      font-weight: 600;
-    }
+    .total .cap { color: var(--muted); font-size: 12.5px; font-weight: 600; }
     .total .value {
       display: block;
-      margin-top: 2px;
-      font-size: 40px;
+      margin-top: 1px;
+      font-size: 34px;
       font-weight: 800;
-      letter-spacing: -0.03em;
-      line-height: 1.05;
+      line-height: 1.08;
     }
-    .total .value small {
-      margin-left: 3px;
-      font-size: 16px;
-      font-weight: 600;
-      color: rgba(255, 255, 255, 0.75);
-    }
-    .total .delta-box { text-align: right; }
-    .total .delta-box .cap {
-      color: rgba(255, 255, 255, 0.6);
-      font-size: 12px;
-    }
+    .total .value small { margin-left: 2px; font-size: 15px; font-weight: 700; color: var(--muted); }
+    .total .right { text-align: right; }
+
     .delta {
       display: inline-flex;
       align-items: center;
-      gap: 4px;
-      padding: 4px 10px;
+      gap: 3px;
+      margin-top: 4px;
+      padding: 4px 9px;
       border-radius: 8px;
-      font-size: 15px;
+      font-size: 13px;
       font-weight: 800;
       white-space: nowrap;
     }
     .delta.up { color: var(--up); background: var(--up-bg); }
     .delta.down { color: var(--down); background: var(--down-bg); }
-    .delta.flat { color: var(--flat); background: var(--flat-bg); }
-    .delta.none { color: var(--flat); background: var(--flat-bg); font-weight: 600; }
-    .total .delta.up { color: #4ade80; background: rgba(74, 222, 128, 0.16); }
-    .total .delta.down { color: #fca5a5; background: rgba(252, 165, 165, 0.16); }
-    .total .delta.flat, .total .delta.none { color: rgba(255, 255, 255, 0.8); background: rgba(255, 255, 255, 0.12); }
+    .delta.flat, .delta.none { color: var(--flat); background: var(--flat-bg); }
+    .delta.none { font-weight: 700; }
 
-    /* ── 구획 ────────────────────────── */
-    .section { margin-top: 24px; }
-    .section-head {
+    /* ── 구획 제목 ───────────────────── */
+    .sec {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 10px;
+      gap: 10px;
+      margin: 22px 4px 8px;
     }
-    .section-head h2 {
-      margin: 0;
-      font-size: 16px;
-      font-weight: 800;
-      letter-spacing: -0.01em;
-    }
-    .section-head .hint { color: var(--muted); font-size: 12px; }
+    .sec h2 { margin: 0; font-size: 14px; font-weight: 800; color: var(--ink-2); }
+    .sec .hint { color: var(--muted); font-size: 12px; }
 
-    .range {
-      display: inline-flex;
-      padding: 3px;
-      border: 1px solid var(--line-strong);
-      border-radius: 10px;
-      background: var(--card);
-    }
+    .range { display: inline-flex; padding: 3px; border-radius: 10px; background: #e3e5e9; }
     .range button {
-      min-width: 44px;
-      padding: 6px 10px;
+      min-width: 42px;
+      padding: 5px 9px;
       border: 0;
-      border-radius: 7px;
+      border-radius: 8px;
       background: transparent;
-      color: var(--muted);
-      font-size: 13px;
+      color: #6d737d;
+      font-size: 12.5px;
       font-weight: 700;
       cursor: pointer;
     }
-    .range button[aria-pressed="true"] { background: var(--ink); color: #fff; }
-
-    /* ── 방 카드 ─────────────────────── */
-    .rooms {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
+    .range button[aria-pressed="true"] {
+      background: var(--card);
+      color: var(--ink);
+      box-shadow: 0 1px 2px rgba(16, 18, 22, 0.12);
     }
-    .room {
-      position: relative;
-      min-width: 0;
-      padding: 16px 16px 14px;
-      border: 1px solid var(--line);
-      border-top: 4px solid var(--accent, var(--accent-1));
+
+    /* ── 방 목록(채팅목록 결) ─────────── */
+    .rooms {
+      overflow: hidden;
       border-radius: var(--radius);
       background: var(--card);
+      box-shadow: 0 1px 2px rgba(16, 18, 22, 0.06);
     }
+    .room {
+      display: grid;
+      grid-template-columns: 52px minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 12px;
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--line);
+    }
+    .rooms .room:last-child { border-bottom: 0; }
+
+    .avatar {
+      position: relative;
+      width: 52px;
+      height: 52px;
+      border-radius: 19px;
+      overflow: hidden;
+      background: #dfe2e7;
+    }
+    .avatar img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .avatar .letter {
+      display: grid;
+      width: 100%;
+      height: 100%;
+      place-items: center;
+      color: #fff;
+      background: var(--accent, #9aa1ac);
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .room .info { min-width: 0; }
     .room .name {
       margin: 0;
-      min-height: 2.6em;
+      overflow: hidden;
       font-size: 15px;
       font-weight: 700;
       line-height: 1.3;
-      color: var(--ink-2);
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
-    .room .count {
-      margin-top: 10px;
-      font-size: 36px;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      line-height: 1.05;
-    }
-    .room .count small { margin-left: 2px; font-size: 15px; font-weight: 600; color: var(--muted); }
-    .room .row {
+    .room .meta {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-      margin-top: 10px;
-    }
-    .room .row .cap { color: var(--muted); font-size: 12px; }
-    .room .spark { display: block; width: 100%; height: 56px; margin-top: 12px; }
-    .room .spark-note {
-      margin-top: 8px;
-      display: flex;
-      justify-content: space-between;
-      gap: 8px;
+      gap: 6px;
+      margin-top: 3px;
       color: var(--muted);
-      font-size: 12px;
+      font-size: 12.5px;
     }
-    .room .spark-note b { font-weight: 700; }
-    .room .spark-note .up { color: var(--up); }
-    .room .spark-note .down { color: var(--down); }
+    .room .meta .spark { display: block; width: 68px; height: 20px; flex: 0 0 auto; }
+    .room .meta .trend { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .room .meta .trend b { font-weight: 700; }
+    .room .meta .trend b.up { color: var(--up); }
+    .room .meta .trend b.down { color: var(--down); }
+
+    .room .stat { text-align: right; }
+    .room .count { font-size: 22px; font-weight: 800; line-height: 1.15; }
+    .room .count small { margin-left: 1px; font-size: 12px; font-weight: 700; color: var(--muted); }
+    .room .delta { margin-top: 2px; padding: 2px 7px; font-size: 12px; }
 
     /* ── 일별 표 ─────────────────────── */
     .ledger {
       overflow: hidden;
-      border: 1px solid var(--line);
       border-radius: var(--radius);
       background: var(--card);
+      box-shadow: 0 1px 2px rgba(16, 18, 22, 0.06);
     }
     .table-wrap { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-    table {
-      width: 100%;
-      min-width: 640px;
-      border-collapse: separate;
-      border-spacing: 0;
-      font-size: 14px;
-    }
+    table { width: 100%; min-width: 560px; border-collapse: separate; border-spacing: 0; font-size: 13.5px; }
     th, td {
       padding: 10px 14px;
       border-bottom: 1px solid var(--line);
       text-align: right;
-      vertical-align: middle;
       white-space: nowrap;
     }
     th {
       position: sticky;
       top: 0;
       z-index: 1;
-      background: #f9fafb;
+      background: #f7f8fa;
       color: var(--muted);
-      font-size: 12px;
+      font-size: 11.5px;
       font-weight: 700;
     }
     th:first-child, td:first-child {
@@ -277,129 +261,114 @@
       background: var(--card);
       box-shadow: 1px 0 0 var(--line);
     }
-    th:first-child { background: #f9fafb; z-index: 3; }
+    th:first-child { background: #f7f8fa; z-index: 3; }
+    th .dot {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      margin-right: 5px;
+      border-radius: 50%;
+      vertical-align: middle;
+      background: var(--accent, #9aa1ac);
+    }
     th .th-name {
       display: inline-block;
-      max-width: 14em;
+      max-width: 11em;
       overflow: hidden;
       text-overflow: ellipsis;
       vertical-align: middle;
     }
-    th .dot {
-      display: inline-block;
-      width: 8px;
-      height: 8px;
-      margin-right: 6px;
-      border-radius: 50%;
-      vertical-align: middle;
-      background: var(--accent, var(--accent-1));
-    }
-    tbody tr:first-child td { background: #fffbeb; font-weight: 700; }
-    tbody tr:first-child td:first-child { background: #fffbeb; }
+    tbody tr:first-child td { background: #fffbe6; font-weight: 700; }
+    tbody tr:first-child td:first-child { background: #fffbe6; }
     tbody tr:last-child td { border-bottom: 0; }
-    td .d {
-      display: inline-block;
-      min-width: 3.2em;
-      margin-left: 6px;
-      font-size: 12px;
-      font-weight: 700;
-      text-align: left;
-    }
+    td .d { display: inline-block; min-width: 2.9em; margin-left: 6px; font-size: 11.5px; font-weight: 700; text-align: left; }
     td .d.up { color: var(--up); }
     td .d.down { color: var(--down); }
     td .d.flat, td .d.none { color: var(--muted); font-weight: 500; }
-    td.total-col { font-weight: 700; }
     .today-tag {
       display: inline-block;
-      margin-left: 6px;
+      margin-left: 5px;
       padding: 1px 6px;
       border-radius: 6px;
-      background: #fde68a;
-      color: #78350f;
-      font-size: 11px;
+      background: var(--kakao);
+      color: var(--brown);
+      font-size: 10.5px;
       font-weight: 800;
       vertical-align: middle;
     }
 
-    .note {
-      margin-top: 10px;
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.6;
-    }
+    .note { margin: 10px 4px 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
     .note b { color: var(--ink-2); font-weight: 600; }
 
     .state {
       display: grid;
       place-items: center;
-      min-height: 160px;
+      min-height: 150px;
       padding: 24px;
-      border: 1px dashed var(--line-strong);
       border-radius: var(--radius);
       background: var(--card);
       color: var(--muted);
       text-align: center;
     }
-    .state b { display: block; color: var(--ink); margin-bottom: 4px; }
+    .state b { display: block; margin-bottom: 4px; color: var(--ink); }
     .state button {
       margin-top: 12px;
-      padding: 8px 14px;
+      padding: 9px 16px;
       border: 0;
-      border-radius: 8px;
-      background: var(--ink);
-      color: #fff;
-      font-weight: 700;
+      border-radius: 10px;
+      background: var(--kakao);
+      color: var(--brown);
+      font-weight: 800;
       cursor: pointer;
     }
 
-    .foot {
-      margin-top: 28px;
-      padding-top: 14px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 12px;
-    }
+    .foot { margin: 18px 4px 0; color: var(--muted); font-size: 11.5px; }
 
-    @media (max-width: 760px) {
-      .wrap { width: min(100% - 24px, 1080px); padding-top: 14px; }
-      .head h1 { font-size: 20px; }
-      .rooms { grid-template-columns: 1fr; }
-      .room .name { min-height: 0; }
-      .room .count { font-size: 34px; }
-      .total { padding: 16px; }
-      .total .value { font-size: 36px; }
-      .section-head { flex-wrap: wrap; }
-      .range { width: 100%; }
-      .range button { flex: 1; }
+    @media (max-width: 400px) {
+      .body { padding: 12px 10px 32px; }
+      .room { grid-template-columns: 46px minmax(0, 1fr) auto; gap: 10px; padding: 12px; }
+      .avatar { width: 46px; height: 46px; border-radius: 17px; }
+      .room .meta .spark { width: 52px; }
+      .total .value { font-size: 31px; }
       th, td { padding: 9px 10px; }
       th .th-name { max-width: 7em; }
+    }
+
+    @media (min-width: 760px) {
+      .app { margin: 18px auto; min-height: 0; border-radius: 22px; overflow: hidden; }
+      .bar { border-radius: 0; }
     }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <header class="head">
+  <div class="app">
+    <header class="bar">
       <div>
         <h1>관찰대상방 인원 현황</h1>
-        <p class="sub" id="head-sub">불러오는 중…</p>
+        <p class="when" id="when">불러오는 중…</p>
       </div>
-      <span class="chip" id="mode-chip">발신 차단</span>
+      <span class="badge-off" id="mode">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"></circle><path d="M6 6l12 12"></path>
+        </svg>
+        <span id="mode-text">발신 차단</span>
+      </span>
     </header>
 
-    <section class="total" aria-label="전체 인원">
-      <div>
-        <span class="label">전체 인원 <span id="total-rooms"></span></span>
-        <strong class="value num" id="total-count">—</strong>
-      </div>
-      <div class="delta-box">
-        <div class="cap">전일 대비</div>
-        <span class="delta none" id="total-delta">—</span>
-      </div>
-    </section>
+    <main class="body">
+      <section class="total" aria-label="전체 인원">
+        <div>
+          <span class="cap">전체 인원 <span id="total-rooms"></span></span>
+          <strong class="value num" id="total-count">—</strong>
+        </div>
+        <div class="right">
+          <span class="cap">어제보다</span><br>
+          <span class="delta none" id="total-delta">—</span>
+        </div>
+      </section>
 
-    <section class="section" aria-labelledby="rooms-title">
-      <div class="section-head">
-        <h2 id="rooms-title">방별 인원</h2>
+      <div class="sec">
+        <h2>방별 인원</h2>
         <div class="range" role="group" aria-label="표시 기간">
           <button type="button" data-days="7" aria-pressed="false">7일</button>
           <button type="button" data-days="14" aria-pressed="true">14일</button>
@@ -410,11 +379,9 @@
       <div class="rooms" id="rooms" aria-live="polite">
         <div class="state">불러오는 중…</div>
       </div>
-    </section>
 
-    <section class="section" aria-labelledby="ledger-title">
-      <div class="section-head">
-        <h2 id="ledger-title">일별 기록</h2>
+      <div class="sec">
+        <h2>일별 기록</h2>
         <span class="hint" id="ledger-hint"></span>
       </div>
       <div class="ledger">
@@ -426,17 +393,17 @@
         </div>
       </div>
       <p class="note"><b>수집 기준</b> 매일 오전 9시 이후 첫 정상 확인값 · 숫자 옆 작은 값은 전날과의 차이</p>
-    </section>
 
-    <footer class="foot" id="foot"></footer>
-  </main>
+      <p class="foot" id="foot"></p>
+    </main>
+  </div>
 
   <script>
     (function () {
       'use strict';
 
       var DATA_URL = './f35e6e35aeaa483d.json';
-      var ACCENTS = ['#2563eb', '#d97706', '#7c3aed', '#0d9488', '#db2777', '#4b5563'];
+      var ACCENTS = ['#f5a623', '#4a90d9', '#7b68c9', '#3aab7a', '#e2698f', '#8b919c'];
       var WEEK = ['일', '월', '화', '수', '목', '금', '토'];
       var SVG = 'http://www.w3.org/2000/svg';
 
@@ -444,25 +411,15 @@
       var days = 14;
 
       function n(v) { return Number(v).toLocaleString('ko-KR'); }
+      function parseDate(t) { return new Date(t + 'T00:00:00+09:00'); }
+      function fmtShort(t) { var d = parseDate(t); return (d.getMonth() + 1) + '/' + d.getDate() + ' (' + WEEK[d.getDay()] + ')'; }
+      function fmtLong(t) { var d = parseDate(t); return d.getFullYear() + '. ' + (d.getMonth() + 1) + '. ' + d.getDate() + ' (' + WEEK[d.getDay()] + ')'; }
 
-      function parseDate(text) { return new Date(text + 'T00:00:00+09:00'); }
-
-      function fmtDateShort(text) {
-        var d = parseDate(text);
-        return (d.getMonth() + 1) + '/' + d.getDate() + ' (' + WEEK[d.getDay()] + ')';
-      }
-
-      function fmtDateLong(text) {
-        var d = parseDate(text);
-        return d.getFullYear() + '. ' + (d.getMonth() + 1) + '. ' + d.getDate() + ' (' + WEEK[d.getDay()] + ')';
-      }
-
-      function fmtTime(iso) {
+      function fmtClock(iso) {
         var d = new Date(iso);
         if (isNaN(d.getTime())) return '';
         return new Intl.DateTimeFormat('ko-KR', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'Asia/Seoul' }).format(d);
       }
-
       function fmtStamp(iso) {
         var d = new Date(iso);
         if (isNaN(d.getTime())) return '';
@@ -476,33 +433,20 @@
         if (v < 0) return 'down';
         return 'flat';
       }
-
-      function arrow(delta) {
-        var c = cls(delta);
-        if (c === 'up') return '▲';
-        if (c === 'down') return '▼';
-        return '';
-      }
-
-      // 큰 표시용: "▲ 12명" / "▼ 3명" / "변동 없음" / "첫 기록"
       function deltaLabel(delta) {
         var c = cls(delta);
         if (c === 'none') return '첫 기록';
         if (c === 'flat') return '변동 없음';
-        return arrow(delta) + ' ' + n(Math.abs(Number(delta))) + '명';
+        return (c === 'up' ? '▲ ' : '▼ ') + n(Math.abs(Number(delta))) + '명';
       }
-
-      // 표용: "+12" / "-3" / "0" / "—"
       function deltaShort(delta) {
-        var c = cls(delta);
-        if (c === 'none') return '—';
+        if (cls(delta) === 'none') return '—';
         var v = Number(delta);
         return (v > 0 ? '+' : '') + n(v);
       }
-
-      function setDelta(el, delta) {
-        el.className = el.className.replace(/\b(up|down|flat|none)\b/g, '').trim() + ' ' + cls(delta);
-        el.textContent = deltaLabel(delta);
+      function setDelta(node, delta) {
+        node.className = 'delta ' + cls(delta);
+        node.textContent = deltaLabel(delta);
       }
 
       function visible(series) {
@@ -519,116 +463,107 @@
 
       function drawSpark(svg, series, color) {
         while (svg.firstChild) svg.removeChild(svg.firstChild);
-        var w = Math.max(120, Math.round(svg.clientWidth || 280));
-        var h = Math.round(svg.clientHeight || 56);
+        var w = 68, h = 20, pad = 2;
         svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
-        svg.setAttribute('width', w);
-        svg.setAttribute('height', h);
-
+        svg.setAttribute('preserveAspectRatio', 'none');
         var vals = series.map(function (s) { return Number(s.count); });
-        if (!vals.length) return;
+        if (vals.length < 2) return;
         var min = Math.min.apply(Math, vals);
         var max = Math.max.apply(Math, vals);
         var spread = Math.max(1, max - min);
-        var padX = 6, padY = 6;
         var pts = vals.map(function (v, i) {
-          var x = vals.length === 1 ? w - padX : padX + i * ((w - padX * 2) / (vals.length - 1));
-          var y = h - padY - ((v - min) / spread) * (h - padY * 2);
-          return [x, y];
+          return [pad + i * ((w - pad * 2) / (vals.length - 1)), h - pad - ((v - min) / spread) * (h - pad * 2)];
         });
-
-        var base = document.createElementNS(SVG, 'line');
-        base.setAttribute('x1', padX); base.setAttribute('x2', w - padX);
-        base.setAttribute('y1', h - padY); base.setAttribute('y2', h - padY);
-        base.setAttribute('stroke', '#e5e7eb');
-        svg.appendChild(base);
-
-        if (pts.length > 1) {
-          var d = pts.map(function (p, i) { return (i ? 'L' : 'M') + p[0].toFixed(1) + ' ' + p[1].toFixed(1); }).join(' ');
-          var area = document.createElementNS(SVG, 'path');
-          area.setAttribute('d', d + ' L' + pts[pts.length - 1][0].toFixed(1) + ' ' + (h - padY) + ' L' + pts[0][0].toFixed(1) + ' ' + (h - padY) + ' Z');
-          area.setAttribute('fill', color);
-          area.setAttribute('opacity', '0.12');
-          svg.appendChild(area);
-          var path = document.createElementNS(SVG, 'path');
-          path.setAttribute('d', d);
-          path.setAttribute('fill', 'none');
-          path.setAttribute('stroke', color);
-          path.setAttribute('stroke-width', '2.5');
-          path.setAttribute('stroke-linecap', 'round');
-          path.setAttribute('stroke-linejoin', 'round');
-          svg.appendChild(path);
-        }
+        var d = pts.map(function (p, i) { return (i ? 'L' : 'M') + p[0].toFixed(1) + ' ' + p[1].toFixed(1); }).join(' ');
+        var path = document.createElementNS(SVG, 'path');
+        path.setAttribute('d', d);
+        path.setAttribute('fill', 'none');
+        path.setAttribute('stroke', color);
+        path.setAttribute('stroke-width', '1.8');
+        path.setAttribute('stroke-linecap', 'round');
+        path.setAttribute('stroke-linejoin', 'round');
+        svg.appendChild(path);
         var last = pts[pts.length - 1];
         var dot = document.createElementNS(SVG, 'circle');
-        dot.setAttribute('cx', last[0]); dot.setAttribute('cy', last[1]); dot.setAttribute('r', '4');
+        dot.setAttribute('cx', last[0].toFixed(1));
+        dot.setAttribute('cy', last[1].toFixed(1));
+        dot.setAttribute('r', '2.2');
         dot.setAttribute('fill', color);
-        dot.setAttribute('stroke', '#fff'); dot.setAttribute('stroke-width', '2');
         svg.appendChild(dot);
       }
 
       function renderHead() {
-        document.getElementById('head-sub').innerHTML =
-          '기준일 <b>' + fmtDateLong(data.latestDate) + '</b> · ' + fmtTime(data.capturedAt) + ' 수집';
-        document.getElementById('mode-chip').textContent = data.modeLabel || '발신 차단';
-        document.getElementById('total-rooms').textContent = '(' + data.summary.roomCount + '개 방)';
+        document.getElementById('when').textContent =
+          fmtLong(data.latestDate) + ' · ' + fmtClock(data.capturedAt) + ' 확인';
+        document.getElementById('mode-text').textContent = data.modeLabel || '발신 차단';
+        document.getElementById('total-rooms').textContent = '· 방 ' + data.summary.roomCount + '개';
         var total = document.getElementById('total-count');
-        total.textContent = '';
-        total.appendChild(document.createTextNode(n(data.summary.totalCount)));
-        total.appendChild(el('small', null, '명'));
+        total.replaceChildren(document.createTextNode(n(data.summary.totalCount)), el('small', null, '명'));
         setDelta(document.getElementById('total-delta'), data.summary.totalDelta);
-        document.getElementById('foot').textContent = '마지막 수집 ' + fmtStamp(data.generatedAt) + ' · 누적 기록 ' + data.totalHistory.length + '일';
+        document.getElementById('foot').textContent =
+          '마지막 수집 ' + fmtStamp(data.generatedAt) + ' · 누적 기록 ' + data.totalHistory.length + '일';
+      }
+
+      function avatarNode(room, color) {
+        var box = el('div', 'avatar');
+        if (typeof room.avatar === 'string' && room.avatar.indexOf('data:image/') === 0) {
+          var img = document.createElement('img');
+          img.src = room.avatar;
+          img.alt = '';
+          img.loading = 'lazy';
+          box.appendChild(img);
+        } else {
+          var letter = el('div', 'letter', (room.name || '?').trim().charAt(0));
+          letter.style.setProperty('--accent', color);
+          box.appendChild(letter);
+        }
+        return box;
       }
 
       function renderRooms() {
-        var grid = document.getElementById('rooms');
-        grid.replaceChildren();
+        var list = document.getElementById('rooms');
+        list.replaceChildren();
         data.rooms.forEach(function (room, i) {
           var color = ACCENTS[i % ACCENTS.length];
-          var card = el('article', 'room');
-          card.style.setProperty('--accent', color);
+          var row = el('article', 'room');
+          row.appendChild(avatarNode(room, color));
 
-          card.appendChild(el('h3', 'name', room.name));
+          var info = el('div', 'info');
+          var name = el('p', 'name', room.name);
+          name.title = room.name;
+          info.appendChild(name);
 
+          var meta = el('div', 'meta');
+          var series = visible(room.history);
+          if (series.length > 1) {
+            var svg = document.createElementNS(SVG, 'svg');
+            svg.setAttribute('class', 'spark');
+            svg.setAttribute('aria-hidden', 'true');
+            meta.appendChild(svg);
+            var first = series[0];
+            var diff = Number(series[series.length - 1].count) - Number(first.count);
+            var trend = el('span', 'trend');
+            trend.appendChild(document.createTextNode(fmtShort(first.date) + ' 대비 '));
+            trend.appendChild(el('b', cls(diff), (diff > 0 ? '+' : '') + n(diff) + '명'));
+            meta.appendChild(trend);
+            drawSpark(svg, series, color);
+          } else {
+            meta.appendChild(el('span', 'trend', '기록 1일째 · 내일부터 변화 표시'));
+          }
+          info.appendChild(meta);
+          row.appendChild(info);
+
+          var stat = el('div', 'stat');
           var count = el('div', 'count num');
           count.appendChild(document.createTextNode(n(room.currentCount)));
           count.appendChild(el('small', null, '명'));
-          card.appendChild(count);
-
-          var row = el('div', 'row');
-          row.appendChild(el('span', 'cap', '전일 대비'));
+          stat.appendChild(count);
           var delta = el('span', 'delta');
           setDelta(delta, room.delta);
-          row.appendChild(delta);
-          card.appendChild(row);
+          stat.appendChild(delta);
+          row.appendChild(stat);
 
-          var series = visible(room.history);
-          var svg = null;
-          if (series.length > 1) {
-            svg = document.createElementNS(SVG, 'svg');
-            svg.setAttribute('class', 'spark');
-            svg.setAttribute('role', 'img');
-            svg.setAttribute('aria-label', room.name + ' 인원 변화');
-            card.appendChild(svg);
-          }
-
-          var note = el('div', 'spark-note');
-          if (series.length > 1) {
-            var first = series[0], lastItem = series[series.length - 1];
-            var diff = Number(lastItem.count) - Number(first.count);
-            var left = el('span');
-            left.appendChild(document.createTextNode(fmtDateShort(first.date) + ' ' + n(first.count) + '명 → '));
-            var b = el('b', cls(diff), (diff > 0 ? '+' : '') + n(diff) + '명');
-            left.appendChild(b);
-            note.appendChild(left);
-            note.appendChild(el('span', null, series.length + '일'));
-          } else {
-            note.appendChild(el('span', null, '기록 1일째 · 내일부터 변화가 표시됩니다'));
-          }
-          card.appendChild(note);
-
-          grid.appendChild(card);
-          if (svg) drawSpark(svg, series, color);
+          list.appendChild(row);
         });
       }
 
@@ -656,11 +591,11 @@
         var rows = visible(data.totalHistory).slice().reverse();
         rows.forEach(function (item, idx) {
           var row = el('tr');
-          var dateCell = el('td', 'num', fmtDateShort(item.date));
+          var dateCell = el('td', 'num', fmtShort(item.date));
           if (idx === 0) dateCell.appendChild(el('span', 'today-tag', '최신'));
           row.appendChild(dateCell);
 
-          var totalCell = el('td', 'num total-col');
+          var totalCell = el('td', 'num');
           totalCell.appendChild(document.createTextNode(n(item.count)));
           totalCell.appendChild(el('span', 'd ' + cls(item.delta), deltaShort(item.delta)));
           row.appendChild(totalCell);
@@ -682,8 +617,10 @@
           body.appendChild(row);
         });
 
-        document.getElementById('ledger-hint').textContent =
-          '최근 ' + rows.length + '일 · 최신순';
+        var hint = '최근 ' + rows.length + '일 · 최신순';
+        var wrap = document.querySelector('.table-wrap');
+        if (wrap && wrap.scrollWidth > wrap.clientWidth + 4) hint += ' · 표는 옆으로 밀어서 보기';
+        document.getElementById('ledger-hint').textContent = hint;
       }
 
       function renderAll() {
@@ -694,8 +631,8 @@
       }
 
       function showError() {
-        var grid = document.getElementById('rooms');
-        grid.replaceChildren();
+        var list = document.getElementById('rooms');
+        list.replaceChildren();
         var box = el('div', 'state');
         var inner = el('div');
         inner.appendChild(el('b', null, '데이터를 불러오지 못했습니다'));
@@ -705,8 +642,8 @@
         btn.addEventListener('click', load);
         inner.appendChild(btn);
         box.appendChild(inner);
-        grid.appendChild(box);
-        document.getElementById('head-sub').textContent = '데이터 없음';
+        list.appendChild(box);
+        document.getElementById('when').textContent = '데이터 없음';
       }
 
       function load() {
@@ -728,12 +665,6 @@
           });
           renderAll();
         });
-      });
-
-      var resizeTimer = null;
-      window.addEventListener('resize', function () {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(renderRooms, 150);
       });
 
       load();
