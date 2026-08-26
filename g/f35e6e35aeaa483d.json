@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "관찰대상방 인원 현황",
-  "modeLabel": "발신 없이 관찰 중",
+  "modeLabel": "발신 차단",
   "latestDate": "2026-08-26",
   "capturedAt": "2026-08-26T18:54:21+09:00",
   "generatedAt": "2026-08-26T18:54:21+09:00",

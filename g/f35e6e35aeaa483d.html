@@ -117,13 +117,19 @@
     }
 
     .brand-title {
-      margin: 2px 0 0;
+      margin: 0;
       font-family: "Gowun Dodum", sans-serif;
-      font-size: 17px;
+      font-size: 20px;
       font-weight: 400;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+    }
+
+    .brand-status {
+      margin: 3px 0 0;
+      color: var(--muted);
+      font-size: 12px;
     }
 
     .mode-chip {
@@ -153,8 +159,8 @@
     .hero {
       position: relative;
       display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
-      min-height: 430px;
+      grid-template-columns: minmax(0, 0.8fr) minmax(360px, 1.2fr);
+      min-height: 310px;
       overflow: hidden;
       border-radius: var(--radius-xl);
       color: #f8f7ef;
@@ -180,8 +186,8 @@
       display: flex;
       min-width: 0;
       flex-direction: column;
-      justify-content: space-between;
-      padding: clamp(30px, 5vw, 64px);
+      justify-content: center;
+      padding: clamp(30px, 4vw, 48px);
     }
 
     .hero-kicker {
@@ -206,15 +212,15 @@
       max-width: 620px;
       margin: 0;
       font-family: "Gowun Dodum", sans-serif;
-      font-size: clamp(38px, 6vw, 72px);
+      font-size: clamp(34px, 4vw, 48px);
       font-weight: 400;
-      line-height: 1.08;
-      letter-spacing: -0.055em;
+      line-height: 1.2;
+      letter-spacing: -0.045em;
     }
 
-    .hero h1 em {
+    .hero h1 strong {
       color: var(--lime);
-      font-style: normal;
+      font-weight: 600;
     }
 
     .hero-note {
@@ -227,10 +233,9 @@
     }
 
     .hero-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 24px;
-      margin-top: 40px;
+      display: grid;
+      gap: 12px;
+      margin-top: 32px;
       color: rgba(248, 247, 239, 0.62);
       font-size: 13px;
     }
@@ -244,7 +249,7 @@
       min-width: 0;
       flex-direction: column;
       justify-content: space-between;
-      margin: 18px;
+      margin: 12px;
       padding: clamp(24px, 4vw, 42px);
       border: 1px solid var(--white-line);
       border-radius: 24px;
@@ -308,7 +313,7 @@
     }
 
     .section {
-      margin-top: 48px;
+      margin-top: 36px;
     }
 
     .section-head {
@@ -378,15 +383,7 @@
     }
 
     .room-card::before {
-      content: "";
-      position: absolute;
-      width: 116px;
-      height: 116px;
-      right: -52px;
-      top: -58px;
-      border: 24px solid var(--room-accent, var(--mint));
-      border-radius: 50%;
-      opacity: 0.13;
+      content: none;
     }
 
     .room-index {
@@ -404,7 +401,7 @@
 
     .room-name {
       min-height: 54px;
-      margin: 18px 0 22px;
+      margin: 0 0 26px;
       font-family: "Gowun Dodum", sans-serif;
       font-size: 21px;
       font-weight: 400;
@@ -521,7 +518,7 @@
     .site-footer {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-end;
       gap: 16px;
       margin-top: 34px;
       padding-top: 20px;
@@ -541,13 +538,11 @@
       .shell { width: min(100% - 24px, 1240px); padding-top: 18px; }
       .topbar { align-items: flex-start; }
       .brand-title { max-width: 188px; font-size: 15px; }
-      .mode-chip { width: 44px; padding: 0; justify-content: center; }
-      .mode-chip span:last-child { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
+      .mode-chip { padding: 0 12px; justify-content: center; font-size: 12px; }
       .hero { min-height: 0; border-radius: 26px; }
       .hero-copy { padding: 34px 24px 30px; }
-      .hero h1 { font-size: clamp(38px, 13vw, 52px); }
-      .hero-note { font-size: 14px; }
-      .hero-meta { margin-top: 28px; flex-direction: column; gap: 6px; }
+      .hero h1 { font-size: 36px; }
+      .hero-meta { margin-top: 24px; gap: 8px; }
       .hero-metric { min-height: 290px; margin: 0 10px 10px; padding: 26px 22px; }
       .metric-number { font-size: 58px; }
       .section { margin-top: 38px; }
@@ -571,30 +566,25 @@
       <div class="brand">
         <div class="brand-mark" aria-hidden="true"></div>
         <div class="brand-copy">
-          <p class="eyebrow">Room pulse · daily</p>
           <p class="brand-title">관찰대상방 인원 현황</p>
+          <p class="brand-status" id="captured-label">마지막 수집 확인 중</p>
         </div>
       </div>
-      <div class="mode-chip"><span class="mode-dot" aria-hidden="true"></span><span>발신 없이 관찰 중</span></div>
+      <div class="mode-chip"><span class="mode-dot" aria-hidden="true"></span><span>발신 차단</span></div>
     </header>
 
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <div>
-          <div class="hero-kicker">매일 한 번, 같은 기준으로</div>
-          <h1 id="hero-title">세 방의 흐름을<br><em>한눈에 봐요.</em></h1>
-          <p class="hero-note">대화에는 관여하지 않고, 매일 오전 기준 인원 변화만 차분히 기록해요.</p>
-        </div>
+        <h1 id="hero-title">관찰 방 <strong id="room-count-label">3개</strong></h1>
         <div class="hero-meta">
-          <span>관찰 방 <strong id="room-count-label">3곳</strong></span>
-          <span id="captured-label">최근 기록을 불러오는 중이에요</span>
+          <span>기준일 <strong id="summary-date-label">—</strong></span>
         </div>
       </div>
       <div class="hero-metric">
         <div>
           <div class="metric-label"><span>현재 전체 인원</span><span id="latest-date-label">—</span></div>
           <strong class="metric-number" id="total-count">—<small>명</small></strong>
-          <span class="delta-pill neutral" id="total-delta">변화를 계산하고 있어요</span>
+          <span class="delta-pill neutral" id="total-delta">—</span>
         </div>
         <svg class="hero-chart" id="total-chart" role="img" aria-label="전체 인원 변화 그래프"></svg>
       </div>
@@ -602,10 +592,7 @@
 
     <section class="section" aria-labelledby="room-section-title">
       <div class="section-head">
-        <div>
-          <h2 class="section-title" id="room-section-title">방별 오늘의 온도</h2>
-          <p class="section-subtitle">숫자보다 흐름이 먼저 보이도록 전일 변화와 추이를 함께 담았어요.</p>
-        </div>
+        <h2 class="section-title" id="room-section-title">방별 인원</h2>
         <div class="range-control" aria-label="그래프 표시 기간">
           <button class="range-button" type="button" data-days="7" aria-pressed="false">7일</button>
           <button class="range-button" type="button" data-days="14" aria-pressed="true">14일</button>
@@ -613,16 +600,13 @@
         </div>
       </div>
       <div id="room-grid" class="room-grid" aria-live="polite">
-        <div class="loading">인원 흐름을 불러오고 있어요.</div>
+        <div class="loading">데이터 불러오는 중</div>
       </div>
     </section>
 
     <section class="section" aria-labelledby="ledger-title">
       <div class="section-head">
-        <div>
-          <h2 class="section-title" id="ledger-title">날짜별 기록</h2>
-          <p class="section-subtitle">가장 최근 날짜가 위에 보여요.</p>
-        </div>
+        <h2 class="section-title" id="ledger-title">일별 기록</h2>
       </div>
       <div class="ledger">
         <div class="table-wrap">
@@ -633,14 +617,12 @@
         </div>
       </div>
       <div class="footnote">
-        <span aria-hidden="true">●</span>
-        <span><strong>기록 기준</strong><br>매일 오전 9시 이후 처음 정상 확인된 인원수를 저장해요. 일시적으로 확인할 수 없는 날은 임의의 숫자로 채우지 않아요.</span>
+        <span><strong>수집 기준</strong> · 매일 오전 9시 이후 첫 정상 확인값</span>
       </div>
     </section>
 
     <footer class="site-footer">
-      <span>ROOM PULSE / OBSERVATION ONLY</span>
-      <span id="generated-label">현황판 준비 중</span>
+      <span id="generated-label">마지막 수집 —</span>
     </footer>
   </main>
 
@@ -670,7 +652,7 @@
 
       function formatCaptured(isoText) {
         var date = new Date(isoText);
-        if (Number.isNaN(date.getTime())) return '최근 기록 시각을 확인할 수 없어요';
+        if (Number.isNaN(date.getTime())) return '수집 시각 없음';
         return new Intl.DateTimeFormat('ko-KR', {
           month: 'long',
           day: 'numeric',
@@ -681,10 +663,8 @@
       }
 
       function deltaText(value, firstLabel) {
-        if (value === null || typeof value === 'undefined') return firstLabel || '첫 기록';
-        if (Number(value) > 0) return '전일보다 +' + formatNumber(value) + '명';
-        if (Number(value) < 0) return '전일보다 ' + formatNumber(value) + '명';
-        return '전일과 같아요';
+        if (value === null || typeof value === 'undefined') return firstLabel || '비교 데이터 없음';
+        return '전일 대비 ' + (Number(value) > 0 ? '+' : '') + formatNumber(value) + '명';
       }
 
       function deltaClass(value) {
@@ -751,15 +731,16 @@
       }
 
       function renderHero(data) {
-        document.getElementById('room-count-label').textContent = data.summary.roomCount + '곳';
-        document.getElementById('captured-label').textContent = formatCaptured(data.capturedAt);
+        document.getElementById('room-count-label').textContent = data.summary.roomCount + '개';
+        document.getElementById('captured-label').textContent = '마지막 수집 ' + formatCaptured(data.capturedAt);
         document.getElementById('latest-date-label').textContent = formatDate(data.latestDate, false);
+        document.getElementById('summary-date-label').textContent = formatDate(data.latestDate, true);
         document.getElementById('total-count').innerHTML = formatNumber(data.summary.totalCount) + '<small>명</small>';
         var delta = document.getElementById('total-delta');
-        delta.textContent = deltaText(data.summary.totalDelta, '오늘부터 변화를 기록해요');
+        delta.textContent = deltaText(data.summary.totalDelta, '비교 데이터 없음');
         delta.className = 'delta-pill ' + deltaClass(data.summary.totalDelta);
         drawSparkline(document.getElementById('total-chart'), visibleSeries(data.totalHistory), '#d6ed69', false);
-        document.getElementById('generated-label').textContent = formatCaptured(data.generatedAt) + ' 업데이트';
+        document.getElementById('generated-label').textContent = '마지막 수집 ' + formatCaptured(data.generatedAt);
       }
 
       function renderRooms(data) {
@@ -769,10 +750,6 @@
           var card = document.createElement('article');
           card.className = 'room-card';
           card.style.setProperty('--room-accent', palette[index % palette.length]);
-
-          var badge = document.createElement('span');
-          badge.className = 'room-index';
-          badge.textContent = 'ROOM ' + String(index + 1).padStart(2, '0');
 
           var name = document.createElement('h3');
           name.className = 'room-name';
@@ -788,7 +765,7 @@
           count.appendChild(unit);
           var delta = document.createElement('span');
           delta.className = 'room-delta ' + deltaClass(room.delta);
-          delta.textContent = deltaText(room.delta, '첫 기록');
+          delta.textContent = deltaText(room.delta, '비교 데이터 없음');
           stat.appendChild(count);
           stat.appendChild(delta);
 
@@ -798,7 +775,6 @@
           svg.setAttribute('aria-label', room.name + ' 인원 변화 그래프');
           drawSparkline(svg, visibleSeries(room.history), palette[index % palette.length], true);
 
-          card.appendChild(badge);
           card.appendChild(name);
           card.appendChild(stat);
           card.appendChild(svg);
@@ -861,9 +837,9 @@
         card.className = 'error-card';
         var content = document.createElement('div');
         var title = document.createElement('strong');
-        title.textContent = '현황을 불러오지 못했어요.';
+        title.textContent = '데이터를 불러오지 못했습니다.';
         var text = document.createElement('div');
-        text.textContent = '잠시 뒤 다시 확인해 주세요.';
+        text.textContent = '다시 시도해 주세요.';
         var retry = document.createElement('button');
         retry.type = 'button';
         retry.textContent = '다시 불러오기';
