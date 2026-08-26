@@ -626,6 +626,10 @@
             trend.appendChild(el('b', cls(diff), (diff > 0 ? '+' : '') + n(diff) + '명'));
             meta.appendChild(trend);
             drawSpark(svg, series, color);
+          } else if (room.friends && Number(room.friends.members) > 0) {
+            meta.appendChild(el('span', 'trend',
+              '기본닉 ' + n(room.friends.defaultCount) + '명 · ' +
+              Math.round((room.friends.defaultCount / room.friends.members) * 100) + '%'));
           } else {
             meta.appendChild(el('span', 'trend', '기록 1일째 · 내일부터 변화 표시'));
           }
@@ -643,6 +647,60 @@
           row.appendChild(stat);
 
           list.appendChild(row);
+        });
+      }
+
+      function renderFriends() {
+        var block = document.getElementById('friends-block');
+        var summary = data.friendsSummary;
+        var withFriends = data.rooms.filter(function (r) { return r.friends && r.friends.counts; });
+        if (!summary || !withFriends.length) { block.hidden = true; return; }
+        block.hidden = false;
+
+        var total = document.getElementById('friends-total');
+        total.replaceChildren(document.createTextNode(n(summary.defaultCount)), el('small', null, '명'));
+        var share = summary.members > 0 ? Math.round((summary.defaultCount / summary.members) * 100) : 0;
+        document.getElementById('friends-share').textContent = share + '%';
+        document.getElementById('friends-hint').textContent =
+          '현재 인원 ' + n(summary.members) + '명 기준';
+
+        var head = document.getElementById('friends-head');
+        var body = document.getElementById('friends-body');
+        head.replaceChildren();
+        body.replaceChildren();
+
+        var tr = el('tr');
+        tr.appendChild(el('th', 'who', '캐릭터'));
+        withFriends.forEach(function (room) {
+          var th = el('th', 'room-col');
+          th.title = room.name;
+          var box = el('div', 'room-head');
+          var idx = data.rooms.indexOf(room);
+          if (typeof room.avatar === 'string' && room.avatar.indexOf('data:image/') === 0) {
+            var img = document.createElement('img');
+            img.src = room.avatar;
+            img.alt = room.name;
+            box.appendChild(img);
+          } else {
+            var letter = el('span', null, (room.name || '?').trim().charAt(0));
+            letter.style.setProperty('--accent', ACCENTS[idx % ACCENTS.length]);
+            box.appendChild(letter);
+          }
+          th.appendChild(box);
+          tr.appendChild(th);
+        });
+        tr.appendChild(el('th', null, '합계'));
+        head.appendChild(tr);
+
+        Object.keys(summary.counts).forEach(function (name) {
+          var row = el('tr');
+          row.appendChild(el('td', 'who', name));
+          withFriends.forEach(function (room) {
+            var v = Number(room.friends.counts[name] || 0);
+            row.appendChild(el('td', 'room-col num' + (v ? '' : ' zero'), v ? n(v) : '·'));
+          });
+          row.appendChild(el('td', 'sum num', n(summary.counts[name])));
+          body.appendChild(row);
         });
       }
 
@@ -706,6 +764,7 @@
         if (!data) return;
         renderHead();
         renderRooms();
+        renderFriends();
         renderLedger();
       }
 
