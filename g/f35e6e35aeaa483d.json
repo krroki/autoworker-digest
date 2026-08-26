@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "title": "관찰대상방 인원 현황",
+  "modeLabel": "발신 없이 관찰 중",
+  "latestDate": "2026-08-26",
+  "capturedAt": "2026-08-26T18:54:21+09:00",
+  "generatedAt": "2026-08-26T18:54:21+09:00",
+  "summary": {
+    "roomCount": 3,
+    "totalCount": 5189,
+    "totalDelta": null
+  },
+  "rooms": [
+    {
+      "key": "sashalook",
+      "name": "샤샤룩이랑 유튜브로 월급벌기",
+      "currentCount": 667,
+      "delta": null,
+      "history": [
+        {
+          "date": "2026-08-26",
+          "count": 667,
+          "delta": null
+        }
+      ]
+    },
+    {
+      "key": "lululalalily",
+      "name": "룰루랄라릴리와 쇼츠로 벤츠까지",
+      "currentCount": 1533,
+      "delta": null,
+      "history": [
+        {
+          "date": "2026-08-26",
+          "count": 1533,
+          "delta": null
+        }
+      ]
+    },
+    {
+      "key": "yunabi",
+      "name": "유나비와 유튜브 나비효과",
+      "currentCount": 2989,
+      "delta": null,
+      "history": [
+        {
+          "date": "2026-08-26",
+          "count": 2989,
+          "delta": null
+        }
+      ]
+    }
+  ],
+  "totalHistory": [
+    {
+      "date": "2026-08-26",
+      "count": 5189,
+      "delta": null
+    }
+  ]
+}
