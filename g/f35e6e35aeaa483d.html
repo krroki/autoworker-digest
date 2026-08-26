@@ -98,15 +98,64 @@
 
     /* ── 전체 합계 ───────────────────── */
     .total {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      padding: 16px 18px;
+      padding: 16px 18px 14px;
       border-radius: var(--radius);
       background: var(--card);
       box-shadow: 0 1px 2px rgba(16, 18, 22, 0.06);
     }
+    .total-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+    }
+    .refresh {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 11px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--kakao);
+      color: var(--brown);
+      font-size: 12.5px;
+      font-weight: 800;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .refresh svg { width: 13px; height: 13px; }
+    .refresh[disabled] { opacity: 0.55; cursor: default; }
+    .refresh.spin svg { animation: spin 0.9s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .total .right .cap { display: block; margin: 5px 0 4px; }
+
+    .gauge { margin-top: 12px; }
+    .gauge-bar {
+      height: 8px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: #eceef1;
+    }
+    .gauge-bar span {
+      display: block;
+      height: 100%;
+      width: 0;
+      border-radius: 999px;
+      background: var(--accent, var(--brown));
+      transition: width 320ms ease;
+    }
+    .gauge-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .gauge-label b { color: var(--ink-2); font-weight: 800; }
+    .gauge.full .gauge-bar span { background: var(--down); }
+    .gauge.near .gauge-bar span { background: #e08b2a; }
     .total .cap { color: var(--muted); font-size: 12.5px; font-weight: 600; }
     .total .value {
       display: block;
@@ -171,13 +220,17 @@
       box-shadow: 0 1px 2px rgba(16, 18, 22, 0.06);
     }
     .room {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--line);
+    }
+    .room-main {
       display: grid;
       grid-template-columns: 52px minmax(0, 1fr) auto;
       align-items: center;
       gap: 12px;
-      padding: 13px 16px;
-      border-bottom: 1px solid var(--line);
     }
+    .room .gauge { margin-top: 10px; }
+    .room .gauge-bar { height: 6px; }
     .rooms .room:last-child { border-bottom: 0; }
 
     .avatar {
@@ -228,6 +281,45 @@
     .room .count { font-size: 22px; font-weight: 800; line-height: 1.15; }
     .room .count small { margin-left: 1px; font-size: 12px; font-weight: 700; color: var(--muted); }
     .room .delta { margin-top: 2px; padding: 2px 7px; font-size: 12px; }
+
+    /* ── 추이 그래프 ─────────────────── */
+    .chart-card {
+      padding: 14px 12px 12px;
+      border-radius: var(--radius);
+      background: var(--card);
+      box-shadow: 0 1px 2px rgba(16, 18, 22, 0.06);
+    }
+    #chart { display: block; width: 100%; height: 190px; }
+    .chart-empty {
+      display: grid;
+      place-items: center;
+      min-height: 120px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 14px;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+    }
+    .legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--ink-2);
+      font-size: 12.5px;
+      font-weight: 600;
+    }
+    .legend i {
+      width: 10px;
+      height: 3px;
+      border-radius: 2px;
+      background: var(--accent, #9aa1ac);
+    }
 
     /* ── 기본 닉네임 ─────────────────── */
     .friends {
@@ -383,7 +475,8 @@
 
     @media (max-width: 400px) {
       .body { padding: 12px 10px 32px; }
-      .room { grid-template-columns: 46px minmax(0, 1fr) auto; gap: 10px; padding: 12px; }
+      .room { padding: 12px; }
+      .room-main { grid-template-columns: 46px minmax(0, 1fr) auto; gap: 10px; }
       .avatar { width: 46px; height: 46px; border-radius: 17px; }
       .room .meta .spark { width: 52px; }
       .total .value { font-size: 31px; }
@@ -414,13 +507,25 @@
 
     <main class="body">
       <section class="total" aria-label="전체 인원">
-        <div>
-          <span class="cap">전체 인원 <span id="total-rooms"></span></span>
-          <strong class="value num" id="total-count">—</strong>
+        <div class="total-row">
+          <div>
+            <span class="cap">전체 인원 <span id="total-rooms"></span></span>
+            <strong class="value num" id="total-count">—</strong>
+          </div>
+          <div class="right">
+            <button class="refresh" type="button" id="refresh">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 11a8 8 0 1 0-.6 4"></path><path d="M20 4v7h-7"></path>
+              </svg>
+              <span id="refresh-text">새로고침</span>
+            </button>
+            <div class="cap" id="live-when"></div>
+            <span class="delta none" id="total-delta">—</span>
+          </div>
         </div>
-        <div class="right">
-          <span class="cap">어제보다</span><br>
-          <span class="delta none" id="total-delta">—</span>
+        <div class="gauge" id="total-gauge">
+          <div class="gauge-bar"><span id="total-fill"></span></div>
+          <div class="gauge-label"><span id="total-cap"></span><b id="total-pct"></b></div>
         </div>
       </section>
 
@@ -435,6 +540,15 @@
       </div>
       <div class="rooms" id="rooms" aria-live="polite">
         <div class="state">불러오는 중…</div>
+      </div>
+
+      <div class="sec">
+        <h2>인원 추이</h2>
+        <span class="hint" id="chart-hint"></span>
+      </div>
+      <div class="chart-card">
+        <svg id="chart" role="img" aria-label="방별 인원 추이 그래프"></svg>
+        <div class="legend" id="legend"></div>
       </div>
 
       <section id="friends-block" hidden>
@@ -571,14 +685,67 @@
         svg.appendChild(dot);
       }
 
+      function ago(iso) {
+        var t = new Date(iso).getTime();
+        if (isNaN(t)) return '';
+        var m = Math.floor((Date.now() - t) / 60000);
+        if (m < 1) return '방금';
+        if (m < 60) return m + '분 전';
+        var h = Math.floor(m / 60);
+        if (h < 24) return h + '시간 전';
+        return Math.floor(h / 24) + '일 전';
+      }
+
+      function setGauge(box, fill, capNode, pctNode, count, capacity) {
+        var pct = capacity > 0 ? (count / capacity) * 100 : 0;
+        fill.style.width = Math.max(1.5, Math.min(100, pct)) + '%';
+        box.className = 'gauge' + (pct >= 95 ? ' full' : pct >= 80 ? ' near' : '');
+        if (capNode) capNode.textContent = '정원 ' + n(capacity) + '명';
+        if (pctNode) pctNode.textContent = pct.toFixed(pct < 10 ? 1 : 0) + '%';
+      }
+
+      // 지금 인원(live)이 있으면 그 값을, 없으면 오늘 기록값을 쓴다.
+      function liveTotal() {
+        return data.live ? Number(data.live.totalCount) : Number(data.summary.totalCount);
+      }
+      function liveRoomCount(room) {
+        if (data.live && data.live.rooms && typeof data.live.rooms[room.key] === 'number') {
+          return Number(data.live.rooms[room.key]);
+        }
+        return Number(room.currentCount);
+      }
+
+      // 큰 숫자가 지금 인원이면 증감도 지금 인원 기준이어야 한다.
+      // 어제 기록이 없으면 비교 대상이 없으므로 null(첫 기록)이다.
+      function shownDelta(history, shownCount, recordedDelta) {
+        if (!data.live) return recordedDelta;
+        if (!Array.isArray(history) || history.length < 2) return null;
+        return shownCount - Number(history[history.length - 2].count);
+      }
+
       function renderHead() {
         document.getElementById('when').textContent =
           fmtLong(data.latestDate) + ' · ' + fmtClock(data.capturedAt) + ' 확인';
         document.getElementById('mode-text').textContent = data.modeLabel || '발신 차단';
         document.getElementById('total-rooms').textContent = '· 방 ' + data.summary.roomCount + '개';
         var total = document.getElementById('total-count');
-        total.replaceChildren(document.createTextNode(n(data.summary.totalCount)), el('small', null, '명'));
-        setDelta(document.getElementById('total-delta'), data.summary.totalDelta);
+        total.replaceChildren(document.createTextNode(n(liveTotal())), el('small', null, '명'));
+        setDelta(
+          document.getElementById('total-delta'),
+          shownDelta(data.totalHistory, liveTotal(), data.summary.totalDelta)
+        );
+        document.getElementById('live-when').textContent =
+          data.live ? ago(data.live.checkedAt) + ' 확인' : '오늘 기록 기준';
+
+        var capacity = Number(data.summary.capacity || 0);
+        setGauge(
+          document.getElementById('total-gauge'),
+          document.getElementById('total-fill'),
+          document.getElementById('total-cap'),
+          document.getElementById('total-pct'),
+          liveTotal(),
+          capacity
+        );
         document.getElementById('foot').textContent =
           '마지막 수집 ' + fmtStamp(data.generatedAt) + ' · 누적 기록 ' + data.totalHistory.length + '일';
       }
@@ -605,7 +772,8 @@
         data.rooms.forEach(function (room, i) {
           var color = ACCENTS[i % ACCENTS.length];
           var row = el('article', 'room');
-          row.appendChild(avatarNode(room, color));
+          var main = el('div', 'room-main');
+          main.appendChild(avatarNode(room, color));
 
           var info = el('div', 'info');
           var name = el('p', 'name', room.name);
@@ -634,20 +802,141 @@
             meta.appendChild(el('span', 'trend', '기록 1일째 · 내일부터 변화 표시'));
           }
           info.appendChild(meta);
-          row.appendChild(info);
+          main.appendChild(info);
 
           var stat = el('div', 'stat');
           var count = el('div', 'count num');
-          count.appendChild(document.createTextNode(n(room.currentCount)));
+          count.appendChild(document.createTextNode(n(liveRoomCount(room))));
           count.appendChild(el('small', null, '명'));
           stat.appendChild(count);
           var delta = el('span', 'delta');
-          setDelta(delta, room.delta);
+          setDelta(delta, shownDelta(room.history, liveRoomCount(room), room.delta));
           stat.appendChild(delta);
-          row.appendChild(stat);
+          main.appendChild(stat);
+          row.appendChild(main);
+
+          var capacity = Number(room.capacity || 0);
+          if (capacity > 0) {
+            var gauge = el('div', 'gauge');
+            var bar = el('div', 'gauge-bar');
+            var fill = el('span');
+            fill.style.setProperty('--accent', color);
+            bar.appendChild(fill);
+            gauge.appendChild(bar);
+            var label = el('div', 'gauge-label');
+            var capNode = el('span');
+            var pctNode = el('b');
+            label.appendChild(capNode);
+            label.appendChild(pctNode);
+            gauge.appendChild(label);
+            row.appendChild(gauge);
+            setGauge(gauge, fill, capNode, pctNode, liveRoomCount(room), capacity);
+          }
 
           list.appendChild(row);
         });
+      }
+
+      function renderChart() {
+        var svg = document.getElementById('chart');
+        var legend = document.getElementById('legend');
+        var hint = document.getElementById('chart-hint');
+        while (svg.firstChild) svg.removeChild(svg.firstChild);
+        legend.replaceChildren();
+
+        // 방마다 규모가 4배씩 차이 나서 한 축에 겹치면 선이 전부 눌린다.
+        // 여기서는 전체 합계만 그리고, 방별 흐름은 각 줄의 작은 그래프가 맡는다.
+        var points = visible(data.totalHistory);
+        var len = points.length;
+        if (len < 2) {
+          hint.textContent = '';
+          svg.setAttribute('viewBox', '0 0 100 40');
+          var t = document.createElementNS(SVG, 'text');
+          t.setAttribute('x', '50'); t.setAttribute('y', '22');
+          t.setAttribute('text-anchor', 'middle');
+          t.setAttribute('font-size', '5');
+          t.setAttribute('fill', '#8b919c');
+          t.textContent = '기록이 하루뿐이라 내일부터 그려집니다';
+          svg.appendChild(t);
+          return;
+        }
+
+        var W = 340, H = 190, padL = 34, padR = 8, padT = 12, padB = 22;
+        svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+        svg.setAttribute('preserveAspectRatio', 'none');
+
+        var all = points.map(function (p) { return Number(p.count); });
+        var min = Math.min.apply(Math, all);
+        var max = Math.max.apply(Math, all);
+        var pad = Math.max(10, Math.round((max - min) * 0.15));
+        min = Math.max(0, min - pad);
+        max = max + pad;
+        var spread = Math.max(1, max - min);
+        var x = function (i) { return padL + i * ((W - padL - padR) / (len - 1)); };
+        var y = function (v) { return H - padB - ((v - min) / spread) * (H - padT - padB); };
+
+        [0, 0.5, 1].forEach(function (f) {
+          var value = Math.round(min + spread * (1 - f));
+          var gy = padT + f * (H - padT - padB);
+          var line = document.createElementNS(SVG, 'line');
+          line.setAttribute('x1', padL); line.setAttribute('x2', W - padR);
+          line.setAttribute('y1', gy); line.setAttribute('y2', gy);
+          line.setAttribute('stroke', '#eceef1');
+          svg.appendChild(line);
+          var label = document.createElementNS(SVG, 'text');
+          label.setAttribute('x', padL - 5); label.setAttribute('y', gy + 3);
+          label.setAttribute('text-anchor', 'end');
+          label.setAttribute('font-size', '8');
+          label.setAttribute('fill', '#8b919c');
+          label.textContent = n(value);
+          svg.appendChild(label);
+        });
+
+        [0, len - 1].forEach(function (i) {
+          var label = document.createElementNS(SVG, 'text');
+          label.setAttribute('x', i === 0 ? padL : W - padR);
+          label.setAttribute('y', H - 6);
+          label.setAttribute('text-anchor', i === 0 ? 'start' : 'end');
+          label.setAttribute('font-size', '8');
+          label.setAttribute('fill', '#8b919c');
+          label.textContent = fmtShort(points[i].date);
+          svg.appendChild(label);
+        });
+
+        var line = points.map(function (p, i) {
+          return (i ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(Number(p.count)).toFixed(1);
+        }).join(' ');
+        var area = document.createElementNS(SVG, 'path');
+        area.setAttribute('d', line + ' L' + x(len - 1).toFixed(1) + ' ' + (H - padB) + ' L' + x(0).toFixed(1) + ' ' + (H - padB) + ' Z');
+        area.setAttribute('fill', '#3d434d');
+        area.setAttribute('opacity', '0.08');
+        svg.appendChild(area);
+        var path = document.createElementNS(SVG, 'path');
+        path.setAttribute('d', line);
+        path.setAttribute('fill', 'none');
+        path.setAttribute('stroke', '#3d434d');
+        path.setAttribute('stroke-width', '2.4');
+        path.setAttribute('stroke-linecap', 'round');
+        path.setAttribute('stroke-linejoin', 'round');
+        svg.appendChild(path);
+        var dot = document.createElementNS(SVG, 'circle');
+        dot.setAttribute('cx', x(len - 1).toFixed(1));
+        dot.setAttribute('cy', y(Number(points[len - 1].count)).toFixed(1));
+        dot.setAttribute('r', '3.4');
+        dot.setAttribute('fill', '#3d434d');
+        dot.setAttribute('stroke', '#fff');
+        dot.setAttribute('stroke-width', '1.6');
+        svg.appendChild(dot);
+
+        var first = Number(points[0].count);
+        var last = Number(points[len - 1].count);
+        var diff = last - first;
+        var item = el('span');
+        item.appendChild(document.createTextNode('전체 인원 · ' + fmtShort(points[0].date) + ' 대비 '));
+        item.appendChild(el('b', cls(diff), (diff > 0 ? '+' : '') + n(diff) + '명'));
+        legend.appendChild(item);
+
+        hint.textContent = '최근 ' + len + '일';
       }
 
       function renderFriends() {
@@ -764,6 +1053,7 @@
         if (!data) return;
         renderHead();
         renderRooms();
+        renderChart();
         renderFriends();
         renderLedger();
       }
@@ -785,7 +1075,7 @@
       }
 
       function load() {
-        fetch(DATA_URL + '?v=' + Date.now(), { cache: 'no-store' })
+        return fetch(DATA_URL + '?v=' + Date.now(), { cache: 'no-store' })
           .then(function (r) { if (!r.ok) throw new Error('http ' + r.status); return r.json(); })
           .then(function (json) {
             if (!json || !json.summary || !Array.isArray(json.rooms) || !Array.isArray(json.totalHistory)) throw new Error('invalid');
@@ -794,6 +1084,32 @@
           })
           .catch(showError);
       }
+
+      var refreshBtn = document.getElementById('refresh');
+      var refreshText = document.getElementById('refresh-text');
+      refreshBtn.addEventListener('click', function () {
+        if (refreshBtn.disabled) return;
+        refreshBtn.disabled = true;
+        refreshBtn.classList.add('spin');
+        refreshText.textContent = '확인 중';
+        var started = Date.now();
+        load().then(function () {
+          // 너무 빨리 끝나면 눌린 느낌이 안 나서 최소 400ms는 돌린다.
+          var wait = Math.max(0, 400 - (Date.now() - started));
+          setTimeout(function () {
+            refreshBtn.classList.remove('spin');
+            refreshText.textContent = '새로고침';
+            refreshBtn.disabled = false;
+          }, wait);
+        });
+      });
+
+      // 화면을 열어둔 채로 시간이 흐르면 "N분 전"이 낡는다. 1분마다 문구만 고친다.
+      setInterval(function () {
+        if (data && data.live) {
+          document.getElementById('live-when').textContent = ago(data.live.checkedAt) + ' 확인';
+        }
+      }, 60000);
 
       document.querySelectorAll('.range button').forEach(function (btn) {
         btn.addEventListener('click', function () {
