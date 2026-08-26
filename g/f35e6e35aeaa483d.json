@@ -8,12 +8,16 @@
   "summary": {
     "roomCount": 3,
     "totalCount": 5189,
-    "totalDelta": null
+    "totalDelta": null,
+    "capacity": 12000,
+    "roomCapacity": 4000
   },
   "rooms": [
     {
       "key": "sashalook",
       "name": "샤샤룩이랑 유튜브로 월급벌기",
+      "shortName": "샤샤룩",
+      "capacity": 4000,
       "currentCount": 667,
       "delta": null,
       "history": [
@@ -43,6 +47,8 @@
     {
       "key": "lululalalily",
       "name": "룰루랄라릴리와 쇼츠로 벤츠까지",
+      "shortName": "룰루랄라릴리",
+      "capacity": 4000,
       "currentCount": 1533,
       "delta": null,
       "history": [
@@ -75,6 +81,8 @@
     {
       "key": "yunabi",
       "name": "유나비와 유튜브 나비효과",
+      "shortName": "유나비",
+      "capacity": 4000,
       "currentCount": 2989,
       "delta": null,
       "history": [
@@ -113,6 +121,15 @@
       "delta": null
     }
   ],
+  "live": {
+    "checkedAt": "2026-08-26T22:23:02+09:00",
+    "totalCount": 5673,
+    "rooms": {
+      "sashalook": 694,
+      "lululalalily": 1988,
+      "yunabi": 2991
+    }
+  },
   "friendsSummary": {
     "members": 5618,
     "named": 5618,
