@@ -229,6 +229,63 @@
     .room .count small { margin-left: 1px; font-size: 12px; font-weight: 700; color: var(--muted); }
     .room .delta { margin-top: 2px; padding: 2px 7px; font-size: 12px; }
 
+    /* ── 기본 닉네임 ─────────────────── */
+    .friends {
+      overflow: hidden;
+      border-radius: var(--radius);
+      background: var(--card);
+      box-shadow: 0 1px 2px rgba(16, 18, 22, 0.06);
+    }
+    .friends-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px 12px;
+      border-bottom: 1px solid var(--line);
+    }
+    .friends-top .cap { color: var(--muted); font-size: 12.5px; font-weight: 600; }
+    .friends-top .value { display: block; margin-top: 1px; font-size: 26px; font-weight: 800; }
+    .friends-top .value small { margin-left: 2px; font-size: 13px; font-weight: 700; color: var(--muted); }
+    .friends-share {
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: var(--kakao);
+      color: var(--brown);
+      font-size: 14px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    #friends-table { min-width: 0; }
+    #friends-table th.who, #friends-table td.who { text-align: left; white-space: nowrap; }
+    #friends-table th.room-col { padding-left: 6px; padding-right: 6px; }
+    #friends-table .room-head {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+    #friends-table .room-head img,
+    #friends-table .room-head span {
+      width: 26px;
+      height: 26px;
+      border-radius: 9px;
+      object-fit: cover;
+    }
+    #friends-table .room-head span {
+      display: grid;
+      place-items: center;
+      background: var(--accent, #9aa1ac);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+    }
+    #friends-table td.room-col { padding-left: 6px; padding-right: 6px; color: var(--ink-2); }
+    #friends-table td.zero { color: #c3c7ce; }
+    #friends-table td.sum { font-weight: 800; }
+    #friends-table tbody tr:first-child td { background: transparent; font-weight: 400; }
+    #friends-table tbody tr:first-child td.sum { font-weight: 800; }
+    #friends-table tbody tr:first-child td.who { background: var(--card); }
+
     /* ── 일별 표 ─────────────────────── */
     .ledger {
       overflow: hidden;
@@ -379,6 +436,28 @@
       <div class="rooms" id="rooms" aria-live="polite">
         <div class="state">불러오는 중…</div>
       </div>
+
+      <section id="friends-block" hidden>
+        <div class="sec">
+          <h2>기본 닉네임</h2>
+          <span class="hint" id="friends-hint"></span>
+        </div>
+        <div class="friends">
+          <div class="friends-top">
+            <div>
+              <span class="cap">프렌즈 닉네임 그대로 쓰는 사람</span>
+              <strong class="value num" id="friends-total">—</strong>
+            </div>
+            <div class="friends-share num" id="friends-share"></div>
+          </div>
+          <div class="table-wrap">
+            <table id="friends-table">
+              <thead id="friends-head"></thead>
+              <tbody id="friends-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
 
       <div class="sec">
         <h2>일별 기록</h2>
