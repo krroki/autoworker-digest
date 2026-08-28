@@ -161,6 +161,15 @@
       "delta": 563
     }
   ],
+  "live": {
+    "checkedAt": "2026-08-28T19:30:32+09:00",
+    "totalCount": 6785,
+    "rooms": {
+      "sashalook": 1366,
+      "lululalalily": 2529,
+      "yunabi": 2890
+    }
+  },
   "friendsSummary": {
     "members": 6722,
     "named": 6722,
