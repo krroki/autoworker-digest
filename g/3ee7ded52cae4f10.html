@@ -587,7 +587,7 @@
   <div class="stats-bar fade-in">
     <div class="stat-pill"><span class="num">8/5</span><span class="label">정리 시작</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--green);">2기</span><span class="label">현재 기수</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--purple);">185</span><span class="label">누적 Q&amp;A</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--purple);">187</span><span class="label">누적 Q&amp;A</span></div>
   </div>
 
   <div class="tab-bar fade-in" id="tabBar">
@@ -603,7 +603,7 @@
           <span class="day-accordion-date">9/1 (화)</span>
           <span class="day-accordion-badge">최신</span>
         </div>
-        <div class="day-accordion-summary">새 세션으로 다시 여니 작동함 · 새 이지워커 배포 페이지와 zip 파일 공유 · 그록 버전업에 맞춘 업데이트라 이번엔 한 번 설치하면 계속 사용 · 썸네일 파일은 경량화해서 다시 올림 · 튜브워커 pexels 스톡 채우기는 공지 카톡에 있다는 답 · 썸네일 클릭률은 경제 기준 10% · 좋은 영상은 초반 20~30%에서 10%로 수렴 · 타겟이 안 잡힌 시기엔 3~5% · 소재가 관심사와 맞으면 클릭률이 낮아도 조회수가 남 · 대본·영상보다 소재와 썸네일을 의심 · 조회수 29만인데 구독자는 300명도 못 모음, CTA 당부 · 썸네일을 손보니 0이던 조회수가 움직임 · 댓글을 열심히 달았더니 3만 돌파 · 1만 달성·첫 1만·구독자 1,000명 축하 · 챌린지 인증 릴레이 · 시즌 2 프롬프트 입력창 커서와 이지워커 설치 방법은 답변 대기</div>
+        <div class="day-accordion-summary">새 세션으로 다시 여니 작동함 · 새 이지워커 배포 페이지와 zip 파일 공유 · 그록 버전업에 맞춘 업데이트라 이번엔 한 번 설치하면 계속 사용 · 썸네일 파일은 경량화해서 다시 올림 · 튜브워커 pexels 스톡 채우기는 공지 카톡에 있다는 답 · 썸네일 클릭률은 경제 기준 10% · 좋은 영상은 초반 20~30%에서 10%로 수렴 · 타겟이 안 잡힌 시기엔 3~5% · 소재가 관심사와 맞으면 클릭률이 낮아도 조회수가 남 · 대본·영상보다 소재와 썸네일을 의심 · 조회수 29만인데 구독자는 300명도 못 모음, CTA 당부 · 썸네일을 손보니 0이던 조회수가 움직임 · 댓글을 열심히 달았더니 3만 돌파 · 1만 달성·첫 1만·구독자 1,000명 축하 · 챌린지 인증 릴레이가 밤까지 이어짐 · 플로우 저장과 토큰은 무관, auto 다운로드 없이 사이트가 만료되면 하나하나 받아야 함 · 이지워커는 chrome://extensions/에서 5.3.0으로 업데이트 · 배포 zip은 bat 파일 클릭으로 자동 설치 · 플로우 비정상활동 감지 경고는 원격 지원으로 진행 · 썸네일은 GPT가 더 좋다는 후기 · 구독자 만오천에 조회수 200 농담과 고수 인정 릴레이 · 시즌 2 프롬프트 입력창 커서는 답변 대기</div>
       </button>
       <div class="day-accordion-body">
         <div class="day-accordion-content">
@@ -669,6 +669,55 @@
                 <span class="insight-tag tag-tool">공유 자료</span>
               </div>
             </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">플로우에서 auto 다운로드를 안 해놨는데, 토큰이 떨어지면 생성된 게 저장 안 되나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>밤 9시 21분 질문에, 저장하고 토큰은 관련이 없다는 답이 바로 있었어요.</p>
+                  <p>이어서 93컷 중 63장까지 생성되다 멈췄고 그대로 뒀더니 사이트가 만료됐다는 상황 설명이 있었어요. auto를 안 해두고 다 생성된 뒤 전체 zip 저장을 눌러 왔다고 하자, 그 경우에는 하나하나 클릭해서 다운받아야 한다는 답이 이어졌어요.</p>
+                  <p>밤 9시 40분에는 이지워커 버전을 확인해(5.27) chrome://extensions/ 화면에서 업데이트를 누르라는 안내가 있었고, 5.3.0으로 설치한 뒤 플로우로 이동하며 조치가 이어지던 중에 이 대화 발췌가 끝났어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">최종 자동 업데이트 이지워커 링크가 어디 있나요? PC에도 설치하려는데 못 찾겠어요.</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>밤 9시 37분, 어제 노트북에 설치했고 PC에도 설치하려는데 기존 걸 다 삭제하고 찾으려니 못 찾겠다는 질문이 있었어요.</p>
+                  <p>9시 38분에 배포 페이지 링크가 다시 공유됐어요. 압축을 풀면 bat 파일이 있고, 그걸 클릭하면 자동 설치되며 뭘 물어보면 다 예스를 누르면 된다고 했어요.<br><a href="https://limbj1218-cyber.github.io/hoopa-ez-dist/" target="_blank" rel="noopener">공유된 이지워커 배포 페이지 열기</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">플로우로 이미지 생성할 때 '비정상활동 감지' 경고가 계속 떠요. 해결 방법이 있을까요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>밤 9시 33분, 계정 5개 정도를 썼는데 이제 계정당 10장만 넘어가도(2개 이상 한 번에 생성 시) 경고가 떠서 영상 생성 진도가 안 나간다는 질문이 있었어요.</p>
+                  <p>9시 34분에 조교님이 원격으로 봐 주겠다고 해서, 크롬 원격 데스크톱 설치와 코드 생성 안내로 원격 지원이 진행됐어요. 원격에서 어떻게 해결됐는지는 이 대화 안에서 확인되지 않았어요.<br><a href="https://remotedesktop.google.com/support/" target="_blank" rel="noopener">안내된 크롬 원격 데스크톱 페이지 열기</a></p>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="section">
             <div class="section-header">
@@ -728,6 +777,14 @@
                 <span class="insight-tag tag-tip">썸네일</span>
               </div>
             </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🎨</div>
+              <div class="insight-body">
+                <h3>썸네일은 GPT가 더 좋다는 후기가 있었어요</h3>
+                <p>밤 9시 32분, 제미나이를 치워 버리고 GPT로 갈아탔다는 후기가 있었어요. 역시 선배님들 말이 맞다며, 썸네일은 GPT라고 했어요.</p>
+                <span class="insight-tag tag-tip">썸네일</span>
+              </div>
+            </div>
           </div>
           <div class="section">
             <div class="section-header">
@@ -780,11 +837,12 @@
             <div class="insight-card">
               <div class="insight-emoji">✅</div>
               <div class="insight-body">
-                <h3>챌린지 인증 릴레이가 새벽부터 아침까지 이어졌어요</h3>
+                <h3>챌린지 인증 릴레이가 새벽부터 밤까지 이어졌어요</h3>
                 <p>새벽 4시 22분, 벌써 4시라며 챌린지를 하고 자러 간다는 인증 글이 올라왔어요.<br><a href="https://cafe.naver.com/dinohighclass/381227" target="_blank" rel="noopener">새벽 4시 22분 챌린지 인증 글 보기</a></p>
                 <p>새벽 4시 50분에는 3일차 도전 글이 올라왔어요.<br><a href="https://cafe.naver.com/dinohighclass?iframe_url_utf8=%2FArticleRead.nhn%253Fclubid%3D30819883%2526articleid%3D381234%2526menuid%3D303%2526boardtype%3DL" target="_blank" rel="noopener">새벽 4시 50분 3일차 도전 글 보기</a></p>
                 <p>아침 7시 3분에는 4일차 인증 글이 올라왔어요.<br><a href="https://cafe.naver.com/dinohighclass/381262" target="_blank" rel="noopener">아침 7시 3분 4일차 인증 글 보기</a></p>
                 <p>아침 8시대에도 출근길에 인증 글이 여러 건 이어졌어요.</p>
+                <p>밤 9시 36분에는 잠시 챌린지 지나간다며 인증 글이 공유됐고, 9시 37분에는 2/55일차 인증 글 제목도 올라왔어요.<br><a href="https://cafe.naver.com/dinohighclass/382202" target="_blank" rel="noopener">밤 9시 36분 챌린지 인증 글 보기</a></p>
                 <span class="insight-tag tag-revenue">과제 릴레이</span>
               </div>
             </div>
@@ -807,11 +865,19 @@
               </div>
             </div>
             <div class="insight-card">
+              <div class="insight-emoji">🏆</div>
+              <div class="insight-body">
+                <h3>구독자 만오천에 조회수 200이라는 농담과 고수 인정 릴레이가 있었어요</h3>
+                <p>밤 9시 15분경 채널이 꺼진다는 이야기 끝에, 구독자가 만오천 명인데 조회수가 200인 게 꺼진 거라는 농담이 나왔어요. 이런 유언비어는 2기분들에게 큰 오해를 불러일으킨다는 응수와 함께, 누가 못했나 인증으로 증명해야겠다는 너스레가 이어졌어요.</p>
+                <p>업고기님과 떡상러님을 고수로 인정하는 릴레이가 이어졌고, 본인은 돈 못 버는 고수라며 진짜 고수도 못 먹는다고 받아쳤어요. 조교님이 특강 강사님이라고 치켜세우자 유튜브랑은 내외하는 중이라는 답이 돌아왔어요.</p>
+                <span class="insight-tag tag-tip">방 분위기</span>
+              </div>
+            </div>
+            <div class="insight-card">
               <div class="insight-emoji">🙋</div>
               <div class="insight-body">
                 <h3>답변 대기</h3>
                 <p>새벽 1시 2분, 시즌 2로 넘어와 파일을 넣고 시작을 누르니 아래 창에 프롬프트를 입력하라는 메시지가 계속 나오는데, 직접 입력하려 해도 커서가 나타나지 않는다는 질문이 있었어요. 1시 15분에는 그록그록 맨 마지막 창에 글자 입력하는 법을 알려 달라는 요청이 이어졌는데, 이 대화 안에서는 답이 확인되지 않았어요.</p>
-                <p>새벽 2시 9분, 이지워커를 확장 프로그램에 그대로 넣으면 되는지 압축을 풀고 넣어야 하는지 묻는 질문이 있었어요. 이 대화 안에서는 답이 확인되지 않았어요.</p>
                 <span class="insight-tag tag-caution">확인 필요</span>
               </div>
             </div>
@@ -11563,6 +11629,12 @@
             </div>
             <p>9월 1일 새벽에는 별도 배포 페이지 링크가 공유됐고, 받는 파일 이름은 hoopa-ez-install.zip 이었어요.<br>받은 파일이 비어 있으면 이 배포 페이지에서 다시 받아 보세요.<br><a href="https://limbj1218-cyber.github.io/hoopa-ez-dist/index.html?t=11" target="_blank" rel="noopener">공유된 이지워커 배포 페이지 열기</a></p>
           </div>
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>9월 1일 밤에도 조교님이 같은 배포 페이지를 다시 공유했어요.<br>압축을 풀면 bat 파일이 있고, 그걸 클릭하면 자동 설치되며 뭘 물어보면 다 예스를 누르면 돼요.<br><a href="https://limbj1218-cyber.github.io/hoopa-ez-dist/" target="_blank" rel="noopener">공유된 이지워커 배포 페이지 열기</a></p>
+          </div>
         </div>
       </div>
       <div class="qa-card" onclick="toggleQa(this)">
@@ -11576,7 +11648,7 @@
             <div class="qa-answer-header">
               <span class="qa-answer-badge member">수강생</span>
             </div>
-            <p>그록이 버전업될 때마다 거기에 맞춰 이지워커도 업데이트돼 왔어요.<br>예전에는 업데이트할 때마다 확장 프로그램을 삭제했다가 다시 받아야 했는데, 9월 1일에 공유된 것은 한 번 설치하면 쭉 쓸 수 있다고 들었다는 설명이 있었어요.</p>
+            <p>그록이 버전업될 때마다 거기에 맞춰 이지워커도 업데이트돼 왔어요.<br>예전에는 업데이트할 때마다 확장 프로그램을 삭제했다가 다시 받아야 했는데, 9월 1일에 공유된 것은 한 번 설치하면 쭉 쓸 수 있다고 들었다는 설명이 있었어요.<br>9월 1일 밤에는 chrome://extensions/ 화면에서 업데이트 버튼을 누르면 5.3.0으로 올라간다는 조교님 안내도 있었어요.</p>
           </div>
         </div>
       </div>
@@ -12010,6 +12082,36 @@
               <span class="qa-answer-badge member">수강생</span>
             </div>
             <p>조회수가 팍 올라가는 것들은 대체로 클릭률 10%를 넘는 것 같다고 해요.<br>처음에 클릭률이 잘 나와도 꺾이는 경우가 있는데, 썸네일 클릭률이 다시 높아지면 조회수도 다시 상승하는 것 같다는 경험이 있었어요.<br>썸네일 공부와 제목 벤치마킹이 중요하다는 이야기가 여러 번 나왔어요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">플로우에서 auto 다운로드를 안 해두면 토큰이 떨어질 때 저장이 안 되나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>저장하고 토큰은 관련이 없어요.<br>다만 auto 다운로드를 안 해둔 채 사이트가 만료되면 전체 zip 저장을 쓸 수 없어서, 생성된 이미지를 하나하나 클릭해서 다운받아야 해요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">썸네일 이미지는 어떤 AI로 만드는 게 좋나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>제미나이를 치워 버리고 GPT로 갈아탔다는 후기가 있었어요.<br>역시 선배님들 말이 맞다며, 썸네일은 GPT라고 했어요.</p>
           </div>
         </div>
       </div>
