@@ -2,13 +2,13 @@
   "schemaVersion": 1,
   "title": "관찰대상방 인원 현황",
   "modeLabel": "발신 차단",
-  "latestDate": "2026-08-31",
-  "capturedAt": "2026-08-31T09:30:06+09:00",
-  "generatedAt": "2026-08-31T09:30:06+09:00",
+  "latestDate": "2026-09-01",
+  "capturedAt": "2026-09-01T09:30:06+09:00",
+  "generatedAt": "2026-09-01T09:30:06+09:00",
   "summary": {
     "roomCount": 3,
-    "totalCount": 8894,
-    "totalDelta": 1416,
+    "totalCount": 9059,
+    "totalDelta": 165,
     "capacity": 12000,
     "roomCapacity": 4000
   },
@@ -18,8 +18,8 @@
       "name": "샤샤룩이랑 유튜브로 월급벌기",
       "shortName": "샤샤룩",
       "capacity": 4000,
-      "currentCount": 3517,
-      "delta": 1433,
+      "currentCount": 3685,
+      "delta": 168,
       "history": [
         {
           "date": "2026-08-26",
@@ -50,23 +50,29 @@
           "date": "2026-08-31",
           "count": 3517,
           "delta": 1433
+        },
+        {
+          "date": "2026-09-01",
+          "count": 3685,
+          "delta": 168
         }
       ],
       "avatar": "data:image/jpeg;base64,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",
       "friends": {
-        "members": 3516,
-        "named": 3516,
-        "defaultCount": 726,
+        "members": 3684,
+        "named": 3684,
+        "defaultCount": 764,
         "counts": {
-          "춘식이": 196,
-          "라이언": 147,
-          "어피치": 142,
-          "죠르디": 78,
-          "프렌즈": 75,
+          "춘식이": 210,
+          "어피치": 152,
+          "라이언": 146,
+          "프렌즈": 82,
+          "죠르디": 79,
           "스카피": 55,
-          "앙몬드": 25,
-          "네오": 4,
+          "앙몬드": 33,
           "무지": 2,
+          "네오": 2,
+          "프로도": 1,
           "제이지": 1,
           "튜브": 1
         }
@@ -77,8 +83,8 @@
       "name": "룰루랄라릴리와 쇼츠로 벤츠까지",
       "shortName": "룰루랄라릴리",
       "capacity": 4000,
-      "currentCount": 2483,
-      "delta": -22,
+      "currentCount": 2470,
+      "delta": -13,
       "history": [
         {
           "date": "2026-08-26",
@@ -109,21 +115,26 @@
           "date": "2026-08-31",
           "count": 2483,
           "delta": -22
+        },
+        {
+          "date": "2026-09-01",
+          "count": 2470,
+          "delta": -13
         }
       ],
       "avatar": "data:image/jpeg;base64,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",
       "friends": {
-        "members": 2481,
-        "named": 2481,
-        "defaultCount": 481,
+        "members": 2469,
+        "named": 2469,
+        "defaultCount": 478,
         "counts": {
-          "라이언": 125,
+          "라이언": 124,
           "춘식이": 114,
           "어피치": 86,
           "죠르디": 56,
           "프렌즈": 39,
           "스카피": 34,
-          "앙몬드": 20,
+          "앙몬드": 18,
           "무지": 3,
           "프로도": 2,
           "제이지": 1,
@@ -136,8 +147,8 @@
       "name": "유나비와 유튜브 나비효과",
       "shortName": "유나비",
       "capacity": 4000,
-      "currentCount": 2894,
-      "delta": 5,
+      "currentCount": 2904,
+      "delta": 10,
       "history": [
         {
           "date": "2026-08-26",
@@ -168,20 +179,25 @@
           "date": "2026-08-31",
           "count": 2894,
           "delta": 5
+        },
+        {
+          "date": "2026-09-01",
+          "count": 2904,
+          "delta": 10
         }
       ],
       "avatar": "data:image/jpeg;base64,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",
       "friends": {
-        "members": 2893,
-        "named": 2893,
-        "defaultCount": 708,
+        "members": 2903,
+        "named": 2903,
+        "defaultCount": 717,
         "counts": {
-          "춘식이": 216,
-          "라이언": 135,
-          "어피치": 130,
-          "죠르디": 71,
-          "스카피": 65,
-          "프렌즈": 54,
+          "춘식이": 217,
+          "라이언": 138,
+          "어피치": 129,
+          "죠르디": 77,
+          "스카피": 64,
+          "프렌즈": 55,
           "앙몬드": 32,
           "프로도": 2,
           "제이지": 1,
@@ -221,34 +237,39 @@
       "date": "2026-08-31",
       "count": 8894,
       "delta": 1416
+    },
+    {
+      "date": "2026-09-01",
+      "count": 9059,
+      "delta": 165
     }
   ],
   "live": {
-    "checkedAt": "2026-09-01T08:30:24+09:00",
-    "totalCount": 9067,
+    "checkedAt": "2026-09-01T09:30:06+09:00",
+    "totalCount": 9059,
     "rooms": {
-      "sashalook": 3694,
-      "lululalalily": 2471,
-      "yunabi": 2902
+      "sashalook": 3685,
+      "lululalalily": 2470,
+      "yunabi": 2904
     }
   },
   "friendsSummary": {
-    "members": 8890,
-    "named": 8890,
-    "defaultCount": 1915,
+    "members": 9056,
+    "named": 9056,
+    "defaultCount": 1959,
     "counts": {
-      "춘식이": 526,
-      "라이언": 407,
-      "어피치": 358,
-      "죠르디": 205,
-      "프렌즈": 168,
-      "스카피": 154,
-      "앙몬드": 77,
+      "춘식이": 541,
+      "라이언": 408,
+      "어피치": 367,
+      "죠르디": 212,
+      "프렌즈": 176,
+      "스카피": 153,
+      "앙몬드": 83,
       "무지": 6,
-      "프로도": 4,
-      "네오": 4,
+      "프로도": 5,
       "제이지": 3,
-      "튜브": 3
+      "튜브": 3,
+      "네오": 2
     }
   }
 }
