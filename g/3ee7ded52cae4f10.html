@@ -587,7 +587,7 @@
   <div class="stats-bar fade-in">
     <div class="stat-pill"><span class="num">8/5</span><span class="label">정리 시작</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--green);">2기</span><span class="label">현재 기수</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--purple);">191</span><span class="label">누적 Q&amp;A</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--purple);">196</span><span class="label">누적 Q&amp;A</span></div>
   </div>
 
   <div class="tab-bar fade-in" id="tabBar">
@@ -596,14 +596,169 @@
   </div>
 
   <div id="tab-daily" class="tab-content active">
-    <section class="day-accordion fade-in open" data-day-id="0902">
+    <section class="day-accordion fade-in open" data-day-id="0903">
       <button class="day-accordion-header" type="button" aria-expanded="true" onclick="toggleAccordion(this.parentElement)">
         <div class="day-accordion-left">
           <span class="day-accordion-arrow">▼</span>
-          <span class="day-accordion-date">9/2 (수)</span>
+          <span class="day-accordion-date">9/3 (목)</span>
           <span class="day-accordion-badge">최신</span>
         </div>
-        <div class="day-accordion-summary">안 되던 계정 인증이 와이프 얼굴 인증으로 풀림 · 영상 인증이 안 돼도 올리다 보면 풀리고 썸네일 테스트만 제한 · 새 계정은 어뷰징 걱정에 천천히 활동 · 페이블 5.1이 되면서 클로드 사용량이 초기화된 것 같다는 확인 릴레이 · 대본은 오퍼스를 쓰면 되니 넘기면 된다는 클로드 답 · 실행할 때마다 썸네일 노출률을 체크해 6% 이하면 경고를 주는 '중증 채널 센터' 알파버전, 빠르면 내일 저녁 배포 예정 · 조회수 집계 방식이 바뀌어 지표가 엉망이라는 이야기 · 레퍼런스가 이상하면 대본도 이상하게 나옴 · 스크립트 없는 레퍼런스 주의 · 이상한 부분은 방향을 짚어 수정 지시 · 채널 수익 기여 0이라는 클로드 잔소리 캡처로 웃음 · 화이팅 카페 글 공유 · 썸네일 숙제 보러 가는 아침 · 중급 인증은 휴대폰, 고급 인증은 얼굴이고 결국 둘 다 해야 함 · 중급 인증을 해야 15분 이상 영상 업로드 가능 · 정지된 계정에서 쓴 얼굴로는 인증이 막힐 수 있다는 경험담 · 애드센스 질문은 억남님 특강 때 · 쇼츠 피드백: 1분 넘으면 미들쇼츠 느낌, 음성·영상 배속 올리고 무음 구간 제거 · 훅·인트로가 자극적이지 않으면 이탈, 훅만 명확하게 · 자체 플로우로 만든 쇼츠, 레퍼런스 교정에 토큰을 많이 씀 · 쇼츠 최고 기록 8만·20만 이야기 · 밤 카페 글 공유 3건 · 인트로 BGM 효과는 답변 대기</div>
+        <div class="day-accordion-summary">발음 검수에서 93곳이 '구십세 곳'으로 읽히는 문제 · 큰 수는 한자어로 읽는 것도 널리 쓰인다는 노쌤 답, 튜브워커에서 직접 수정 가능 · 경상도는 원래 그렇게 읽는다는 웃음 · 훅 인트로 이미지가 3개만 나오면 장면별 시간을 길게 잡은 탓일 수 있음, 조교님은 대본 총길이 되물음 · 새벽 예약 업로드는 조회수가 안 나와 점심·저녁대로 · 조회수 1만 인증 글은 카페에 올리고 디하클 채널톡에도 공유 · 새벽부터 아침까지 챌린지 인증 릴레이, 5/55일차 · 아침 8시 24분 링크는 카페 홈으로 열린다는 지적 · 클로드가 밤티가 돼 대본 더 잘 쓰라고 쪼았다는 새벽 · 1일 1영상 빡세다 · 미국은 오후 3시 반 · 3강 틀어 놓고 이해 중 · 영상 생성 범위는 답변 대기</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">🔊</div>
+              <div class="section-title">발음 검수 · 훅 인트로</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">오토워커 발음 검수에서 93곳이 '구십세 곳', 67곳이 '육십일곱 곳'으로 자동 변환되는데, 한번 검토해 주실 수 있나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>새벽 0시 23분, 요즘 발음 검수를 하는데 이런 식으로 발음이 자동으로 바뀌더라는 질문이 있었어요. 0시 24분, 그건 수동으로 바꿀 수 있다는 답이 먼저 나왔고, 질문한 분도 수동 수정은 알고 있다고 했어요. 아마 AI가 하는 거라 완벽하진 않은 것 같다는 말이 이어졌어요.</p>
+                  <p>0시 29분, 가끔 한두 번이 아니라 여러 번 이런 걸 봐서 발음 변환 시스템상 뭔가 있나 해서 올려 봤다며, 일레븐랩스 발음 변환 시스템이라면 어쩔 수 없겠다고 했어요. 0시 37분에는 어쩔 수 없는 것 같고 많진 않아서 본인도 그냥 수정한다는 다른 수강생의 답이 있었어요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>0시 42분, 발음이 맞지 않느냐, 본인은 저렇게 읽는다는 의견도 나왔어요. 0시 45분, 구십삼·육십칠이나 아흔셋·예순일곱으로 읽어야 하는데 지금은 한자어로 읽는 것과 우리말로 읽는 법이 혼합돼 있다는 설명이 있었고, 0시 48분 그게 정석이군요, 구십세 곳·육십일곱 곳도 익숙해져서 맞는 줄 알았다는 답이 이어졌어요. 질문한 분은 그럼 딱히 신경 써서 고치지 않아도 되는 부분이겠다고 정리했어요.</p>
+                  <p>새벽 1시 58분에는 경상도는 구십세 곳이 육십일곱 곳인데 이게 어색한 거였느냐는 이야기가 나왔고, 3시 8분에는 저도 경상도라 어색함을 모르겠다는 공감이 이어졌어요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">운영진</span>
+                    <span class="qa-answer-name">노쌤</span>
+                  </div>
+                  <p>새벽 1시 33분, 노쌤이 직접 답을 남겼어요. 좀 어색한 게 맞고, 알아보니 93곳→아흔세 곳, 67곳→예순일곱 곳으로 읽는 것도 맞지만 수가 커지면(보통 20~30 이상) 한자어로 읽는 것도 널리 허용되고 실제로 더 많이 쓴다고 한대요. 93곳→구십삼 곳, 67곳→육십칠 곳처럼요.</p>
+                  <p>193곳은 어떻게 읽는지도 알아보니 백구십세 곳, 백구십삼 곳 이렇게 읽는다고도 한다고 했어요. 다만 각자 어색하게 느껴질 수 있는 부분이라 튜브워커에서 직접 수정할 수 있게 해 두었으니 편한 대로 수정해서 쓰면 된다고 했어요. 1시 37분, 쌤이 직접 대답해 주시다니 빠르게 확인해 줘서 감사하다는 인사가 이어졌어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">훅 인트로 이미지가 9개 정도라고 강의에서 들었는데 자동 생성하니 3개밖에 안 나와요. 괜찮은 건가요, 대본 문제인가요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>새벽 0시 16분, 건드린 건 따로 없고 자동 생성했을 때라는 질문이 있었어요. 0시 21분, 장면별 시간을 길게 잡으셔서 훅이 3장만 나온 것 같다는 답이 있었어요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>0시 22분, 조교님이 대본 총길이가 얼마나 되는지 되물었어요. 그 뒤의 답은 이 대화 안에서 확인되지 않았어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--green-light);">📤</div>
+              <div class="section-title">업로드 시간 · 조회수 인증</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">첫 영상을 새벽 예약 업로드로 올렸는데 조회수가 안 나와요. 보통 몇 시에 업로드해야 좋나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>새벽 0시 8분, 새벽보단 점심·저녁대로 해 보라는 답이 있었어요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>질문한 분은 오늘 첫 영상을 새벽 업로드 예약으로 올렸는데 조회수가 빵이라 험난하다며, 두 번째 영상도 새벽 예약으로 올렸다고 했어요. 퇴근하고 부랴부랴 만드느라 그랬다며, 0시 9분 3번째 영상부터는 점심이나 저녁때로 예약해 두겠다고 했어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">조회수 1만 인증 글은 카페 여기에 올리면 되는 걸까요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>새벽 0시 25분, 굿굿이라며 올리고 디하클 채널톡에도 공유했는지 되물었어요. 채널톡에도 공유하겠다는 답이 이어졌어요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>0시 24분, 조회수 1만 인증 글을 올리며 여기에 올리면 되는지 물었고, 3강까지 쫓아왔는데 남은 강의도 얼른 따라가야겠다고 했어요.<br><a href="https://cafe.naver.com/dinohighclass/383702" target="_blank" rel="noopener">새벽 0시 24분 조회수 1만 인증 글 보기</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--orange-light);">🔥</div>
+              <div class="section-title">방 소식</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">✅</div>
+              <div class="insight-body">
+                <h3>챌린지 인증 릴레이가 새벽부터 아침까지 이어졌어요</h3>
+                <p>새벽 0시 23분 잠시 지나가겠다며, 0시 44분 챌린지 지나간다며, 1시 35분 지나갑니데이라며 인증 글이 차례로 공유됐어요.<br><a href="https://cafe.naver.com/dinohighclass/383700" target="_blank" rel="noopener">새벽 0시 23분 챌린지 인증 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/383731" target="_blank" rel="noopener">새벽 0시 44분 챌린지 인증 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/383766" target="_blank" rel="noopener">새벽 1시 35분 챌린지 인증 글 보기</a></p>
+                <p>새벽 0시 4분, 1시 10분, 2시 15분, 3시 5분, 3시 37분에도 카페 글 링크가 이어졌어요. 2시 15분에는 모두 굿나잇, 3시 7분에는 굿모닝인지 굿나잇인지 모르겠다며 좋은 날 되시라는 인사가 함께였어요. 어떤 글인지는 이 대화 안에서 확인되지 않았어요.<br><a href="https://cafe.naver.com/dinohighclass/383682" target="_blank" rel="noopener">새벽 0시 4분 공유된 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/383751" target="_blank" rel="noopener">새벽 1시 10분 공유된 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/383782" target="_blank" rel="noopener">새벽 2시 15분 공유된 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/383800" target="_blank" rel="noopener">새벽 3시 5분 공유된 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/383812" target="_blank" rel="noopener">새벽 3시 37분 공유된 카페 글 보기</a></p>
+                <p>아침 7시 5분부터 7시 26분 사이에도 카페 글 링크가 다섯 건 이어졌어요. 어떤 글인지는 이 대화 안에서 확인되지 않았어요.<br><a href="https://cafe.naver.com/dinohighclass/383834" target="_blank" rel="noopener">아침 7시 5분 공유된 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/383836" target="_blank" rel="noopener">아침 7시 11분 공유된 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/383837" target="_blank" rel="noopener">아침 7시 17분 공유된 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/383838" target="_blank" rel="noopener">아침 7시 19분 공유된 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/383840" target="_blank" rel="noopener">아침 7시 26분 공유된 카페 글 보기</a></p>
+                <p>아침 8시 6분에는 '[오토워커 2기]챌린지 5/55일차 : 유입을 위한 쇼츠, 썸네일, 시리즈 편성'이라는 글 제목이 공유됐어요. 8시 24분에 잠시 지나갔다며 올라온 링크는 8시 35분 링크가 이상하다, 디하클 홈으로 되어 있는 것 같다는 지적을 받았고, 아무것도 지나가지 않았다는 농담에 네??? 하는 반응이 이어졌어요. 그 링크는 여기에 싣지 않았어요.</p>
+                <span class="insight-tag tag-revenue">과제 릴레이</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">😄</div>
+              <div class="insight-body">
+                <h3>새벽에도 방이 북적였어요</h3>
+                <p>새벽 3시 11분, 클로드가 밤티가 돼서 대본 더 잘 쓰라고 쪼느라 아직도 못 자고 있었는데 채팅창을 보고 웃는다는 이야기가 있었어요. 4시 33분, 간신히 영상을 치고 이제 잔다며 1일 1영상이 빡세다는 말이 이어졌어요.</p>
+                <p>새벽 4시 2분, 하남부자님이 인사를 남기자 4시 15분 벌써 일어나셨느냐, 너무 조금 주무시는 것 아니냐는 걱정이 있었고, 이러다 사무실 구석에서 10분 쪽잠을 잘 것 같다는 답이 돌아왔어요. 미국은 지금 몇 시냐는 물음에는 오후 3시 반이라는 답이 있었고, 3시 반에 퇴근했다는 말에 신의 직장이라는 반응이 이어졌어요. 늦게 자면 더 피곤하고 12시 전에 자면 그나마 낫다는 말과 함께, 5시에는 아직 이해를 못 해서 3강을 틀어 놨다는 이야기도 있었어요.</p>
+                <p>아침 6시 44분, 로그님한테 피드백 받고 싶다는 말이 나왔고, 8시 36분에는 더프리님한테 강의받고 싶다는 답이 돌아왔어요.</p>
+                <span class="insight-tag tag-tip">방 분위기</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🙋</div>
+              <div class="insight-body">
+                <h3>답변 대기</h3>
+                <p>새벽 0시 17분, 영상 생성을 어디까지 하시는지도 궁금하다는 질문이 있었는데, 이 대화 안에서는 답이 확인되지 않았어요. 0시 16분 훅 인트로 이미지가 3개만 나온다는 질문도 조교님이 대본 총길이를 되물은 뒤의 답은 확인되지 않았어요.</p>
+                <span class="insight-tag tag-caution">확인 필요</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="day-accordion fade-in" data-day-id="0902">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">9/2 (수)</span>
+        </div>
+        <div class="day-accordion-summary">안 되던 계정 인증이 와이프 얼굴 인증으로 풀림 · 영상 인증이 안 돼도 올리다 보면 풀리고 썸네일 테스트만 제한 · 새 계정은 어뷰징 걱정에 천천히 활동 · 페이블 5.1이 되면서 클로드 사용량이 초기화된 것 같다는 확인 릴레이 · 대본은 오퍼스를 쓰면 되니 넘기면 된다는 클로드 답 · 실행할 때마다 썸네일 노출률을 체크해 6% 이하면 경고를 주는 '중증 채널 센터' 알파버전, 빠르면 내일 저녁 배포 예정 · 조회수 집계 방식이 바뀌어 지표가 엉망이라는 이야기 · 레퍼런스가 이상하면 대본도 이상하게 나옴 · 스크립트 없는 레퍼런스 주의 · 이상한 부분은 방향을 짚어 수정 지시 · 채널 수익 기여 0이라는 클로드 잔소리 캡처로 웃음 · 화이팅 카페 글 공유 · 썸네일 숙제 보러 가는 아침 · 중급 인증은 휴대폰, 고급 인증은 얼굴이고 결국 둘 다 해야 함 · 중급 인증을 해야 15분 이상 영상 업로드 가능 · 정지된 계정에서 쓴 얼굴로는 인증이 막힐 수 있다는 경험담 · 애드센스 질문은 억남님 특강 때 · 쇼츠 피드백: 1분 넘으면 미들쇼츠 느낌, 음성·영상 배속 올리고 무음 구간 제거 · 훅·인트로가 자극적이지 않으면 이탈, 훅만 명확하게 · 자체 플로우로 만든 쇼츠, 레퍼런스 교정에 토큰을 많이 씀 · 쇼츠 최고 기록 8만·20만 이야기 · 밤 카페 글 공유 3건 · 인트로 BGM 효과는 답변 대기 · 챌린지 인증을 하루 이틀 늦게 올려도 2일 넘기지 않으면 될 것 같다는 조교 답 · 무음 압축은 잘못하면 음절이 씹힐 수 있어 캡컷 배속도 방법, 강하게로 해 보니 20분이 15분 정도로 · 밤 11시 45분 세이프 인증과 또 꺾인다는 한숨 · 오늘도 지각이지만 챌린지는 해야</div>
       </button>
       <div class="day-accordion-body">
         <div class="day-accordion-content">
@@ -783,6 +938,55 @@
           </div>
           <div class="section">
             <div class="section-header">
+              <div class="section-icon" style="background:var(--purple-light);">🎙️</div>
+              <div class="section-title">무음 압축 · 챌린지 인증 기한</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">말투 속도를 빠르게 하려면 무음 압축을 '강하게'로 하면 몇 배 정도 빨라지나요? '강하게'와 '최대'는 얼마나 차이 나나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>밤 11시 55분, 무음 압축은 잘못하면 음절이 씹힐 수도 있어서 캡컷에서 배속을 걸어 보는 것도 방법일 수 있다는 답이 있었어요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>다음 날 새벽 0시 5분, 강하게로 해 봤는데 씹히진 않고 잘 말하는데 빠르긴 빠르다며, 영상 속도도 20분짜리를 만들면 15분 정도로 줄어들더라는 후기가 있었어요. 질문한 분은 1.25배속 정도 되는 거네요라며 고맙다고 했어요.</p>
+                  <p>강하게와 최대의 차이는 이 대화 안에서 확인되지 않았어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">챌린지 인증을 하루 이틀 늦게 올려도 3일 이내면 인정되는 게 맞나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>밤 11시 43분, 8월 31일에 업로드하고 인증을 못 올렸는데 오늘 올려도 3일 이내면 인정되는 게 맞느냐는 질문이 있었어요. 곧이어 30일에 글을 쓰고 31일에 업로드한 거였다고 정정했어요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>밤 11시 49분, 2일 넘기지 않으면 될 것 같다는 답이 있었어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="section-header">
               <div class="section-icon" style="background:var(--orange-light);">🔥</div>
               <div class="section-title">방 소식</div>
             </div>
@@ -821,6 +1025,7 @@
                 <p>아침 7시 56분에도 카페 글 링크가 하나 공유됐는데, 어떤 글인지는 이 대화 안에서 확인되지 않았어요.<br><a href="https://cafe.naver.com/dinohighclass/382680" target="_blank" rel="noopener">아침 7시 56분 공유된 카페 글 보기</a></p>
                 <p>밤 9시 27분에 공유된 카페 글에는 글 제목이 너무 슬프다는 반응이 있었고, 멘붕이 와서 그렇다며 이겨내 보겠다는 답이 이어졌어요.<br><a href="https://cafe.naver.com/dinohighclass/383348" target="_blank" rel="noopener">밤 9시 27분 공유된 카페 글 보기</a></p>
                 <p>9시 35분과 9시 36분에도 카페 글 링크가 하나씩 공유됐는데, 어떤 글인지는 이 대화 안에서 확인되지 않았어요.<br><a href="https://cafe.naver.com/dinohighclass/383368" target="_blank" rel="noopener">밤 9시 35분 공유된 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/383370" target="_blank" rel="noopener">밤 9시 36분 공유된 카페 글 보기</a></p>
+                <p>밤 11시 45분에는 세이프라며 챌린지 인증 글이 공유됐고, 11시 52분 또 꺾인다는 한숨이 이어졌어요. 11시 59분에는 오늘도 지각이지만 챌린지는 해야 한다는 말도 있었어요.<br><a href="https://cafe.naver.com/dinohighclass/383639" target="_blank" rel="noopener">밤 11시 45분 챌린지 인증 글 보기</a></p>
                 <span class="insight-tag tag-tool">공유 자료</span>
               </div>
             </div>
@@ -10354,6 +10559,12 @@
             </div>
             <p>레퍼런스 채널 시간대는 성향에 따라 6시, 9시, 12시, 19시, 21시 등 다양해요.<br>뉴스 방영 시간대와 겹치기도 한다는 이야기예요.<br>시간대와 함께 크레딧도 생각해서, 돈을 쓰고 시간을 벌지(튜브워커) 시간을 쓰고 돈을 아낄지(이지워커) 선택하라는 답도 있었어요.<br>채널마다 다른 시간대로 올려서 시간이 다 다르다는 답도 있었어요.</p>
           </div>
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>새벽 예약 업로드는 조회수가 잘 안 나왔다는 후기가 있었고, 조교님은 새벽보다는 점심·저녁대로 올려 보라고 했어요.</p>
+          </div>
         </div>
       </div>
       <div class="qa-card" onclick="toggleQa(this)">
@@ -12421,10 +12632,104 @@
           </div>
         </div>
       </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">챌린지 인증 글을 하루 이틀 늦게 올려도 인정되나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>2일을 넘기지 않으면 될 것 같다고 했어요.<br>8월 31일 업로드분 인증을 9월 2일에 올려도 되는지 물었을 때 나온 답이에요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">말투 속도를 빠르게 하려면 무음 압축을 '강하게'로 하면 되나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>무음 압축은 잘못하면 음절이 씹힐 수 있어요.<br>캡컷에서 배속을 걸어 보는 것도 방법이에요.</p>
+          </div>
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>'강하게'로 해 본 분은 씹히진 않고 잘 말하는데 빠르긴 빠르다고 했어요.<br>영상 길이도 20분짜리가 15분 정도로 줄었다고 해요.<br>'강하게'와 '최대'의 차이는 확인된 답이 없어요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">발음 검수에서 93곳이 '구십세 곳'처럼 읽히는데 고쳐야 하나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge">운영진</span>
+              <span class="qa-answer-name">노쌤</span>
+            </div>
+            <p>좀 어색한 게 맞아요. 93곳→아흔세 곳, 67곳→예순일곱 곳으로 읽는 것도 맞지만, 수가 커지면(보통 20~30 이상) 한자어로 읽는 것(구십삼 곳, 육십칠 곳)도 널리 허용되고 실제로 더 많이 쓴다고 해요.<br>193곳은 백구십세 곳, 백구십삼 곳 이렇게 읽는다고도 해요.<br>각자 어색하게 느껴질 수 있는 부분이라 튜브워커에서 직접 수정할 수 있게 해 두었으니 편한 대로 수정해서 쓰면 돼요.</p>
+          </div>
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>수동으로 바꿀 수 있고, AI가 하는 거라 완벽하진 않은 것 같다는 답이 있었어요.<br>한자어(구십삼)와 우리말(아흔셋) 읽기가 섞인 형태라 정석은 아니지만, 딱히 신경 써서 고치지 않아도 되는 부분이라는 쪽으로 이야기가 모였어요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">훅 인트로 이미지가 자동 생성에서 3개만 나오는데 괜찮은 건가요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>장면별 시간을 길게 잡아서 훅이 3장만 나온 것 같다는 답이 있었어요.</p>
+          </div>
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>조교님은 대본 총길이가 얼마나 되는지 되물었어요.<br>그 뒤의 정리된 답은 아직 확인되지 않았어요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">조회수 1만 인증 글은 어디에 올리나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>카페에 인증 글로 올리면 돼요.<br>올린 뒤에는 디하클 채널톡에도 공유해요.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="updated-at">마지막 업데이트: 2026-09-02</div>
+  <div class="updated-at">마지막 업데이트: 2026-09-03</div>
 </div>
 
 <button class="fab-top" id="fabTop" type="button" aria-label="맨 위로" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
