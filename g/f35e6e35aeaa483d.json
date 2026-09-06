@@ -344,12 +344,12 @@
     }
   ],
   "live": {
-    "checkedAt": "2026-09-07T07:30:06+09:00",
-    "totalCount": 8461,
+    "checkedAt": "2026-09-07T08:30:06+09:00",
+    "totalCount": 8444,
     "rooms": {
-      "sashalook": 3250,
+      "sashalook": 3232,
       "lululalalily": 2424,
-      "yunabi": 2787
+      "yunabi": 2788
     }
   },
   "friendsSummary": {
