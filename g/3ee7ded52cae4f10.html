@@ -587,7 +587,7 @@
   <div class="stats-bar fade-in">
     <div class="stat-pill"><span class="num">8/5</span><span class="label">정리 시작</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--green);">2기</span><span class="label">현재 기수</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--purple);">229</span><span class="label">누적 Q&amp;A</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--purple);">236</span><span class="label">누적 Q&amp;A</span></div>
   </div>
 
   <div class="tab-bar fade-in" id="tabBar">
@@ -596,12 +596,282 @@
   </div>
 
   <div id="tab-daily" class="tab-content active">
-    <section class="day-accordion fade-in open" data-day-id="0907">
+    <section class="day-accordion fade-in open" data-day-id="0908">
       <button class="day-accordion-header" type="button" aria-expanded="true" onclick="toggleAccordion(this.parentElement)">
         <div class="day-accordion-left">
           <span class="day-accordion-arrow">▼</span>
-          <span class="day-accordion-date">9/7 (월)</span>
+          <span class="day-accordion-date">9/8 (화)</span>
           <span class="day-accordion-badge">최신</span>
+        </div>
+        <div class="day-accordion-summary">아침에는 회사 인사팀과 클꼬 이야기를 하다 붙잡혔다는 웃음으로 방이 열림 · 대본 대비 영상 그림체가 조회수에 큰 차이를 만드느냐는 물음에 어나더레벨 고퀄이 아니면 1순위는 대본, 0순위는 썸네일이라는 답 · 썸네일은 센스의 영역 같다는 고민에 레퍼런스 이미지를 배경·요소별로 정리해 두고 조립한다는 방법 공유 · 레퍼용 영상이 정리된 대시보드가 잠깐만 공유됐다 사라졌다는 이야기 · 노쌤 피드백이 최고라는 후기와 강의자료 준비 중이라는 소식 · 어제 올린 영상 클릭률이 오랜만에 10프로를 넘었다는 이야기 · 아침 챌린지 인증 릴레이 · 저녁에는 챌린지 11일 차에 구독자 1,000명을 달성했다는 인증과 축하 릴레이 · 튜브워커 크레딧은 처음 2,300 이후 직접 결제해야 하고 결제관리 페이지에서 카드 결제가 된다는 답 · 같은 카드로 추가 결제가 막히는 건 카드 1일 한도일 수 있다는 조교 안내 · 외국 이야기인데 한국 사람 이미지가 나오면 이미지 스타일에 외국인 인물로 적어 두고, 이미 만든 건 그 이미지만 프롬프트를 바꿔 다시 만들라는 노쌤 답 · 저녁 7시 조교 두코 특강 공지와 줌 링크 · 늦어도 녹화본이 제공되지만 라이브 참석을 권한다는 답 · 특강 교재 링크 공유와 8시 40분 쉬는 시간 안내 · 조회수 2천에서 멈췄던 영상이 3시간 만에 8천 회가 붙어 1만이 됐다는 후기 · 첫 인증과 저녁 카페 글 릴레이 · 오토워커 새 대본 여부와 레퍼용 대시보드 툴의 정체는 답변 대기</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">💳</div>
+              <div class="section-title">튜브워커 결제 · 크레딧</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">튜브워커 크레딧은 처음 2,300만 주고 그 뒤로는 계속 충전해야 하나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>저녁 6시 0분에 나온 물음에, 6시 1분 네 맞다며 결제하셔야 한다는 답이 바로 돌아왔어요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>저녁 6시 5분, 봄동 조교님이 결제관리 페이지에서 확인해 보시라며 카드 결제가 가능하다고 안내했어요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>질문하신 분은 저녁 6시 1분 달마다 충전해 주는 줄 알았다고 했어요. 6시 6분에는 충전해 주는 줄 알고 계속 기다리다 아껴 쓰느라 영상을 며칠 못 만들었다며, 6시 7분 그냥 계속 만들었어야 했다는 말을 남겼어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">튜브워커에서 카드 결제를 했는데 똑같은 카드로 추가 결제가 안 돼요.</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>저녁 6시 17분에 올라온 문의에, 6시 19분 후파 조교님이 해당 한도에 걸리는 게 없을지 되물었어요. 6시 20분에는 혹시 신한카드면 1일 한도 5만 원이 있다는 안내가 이어졌어요.</p>
+                  <p>6시 21분, 질문하신 분이 맞다며 신한카드라고 확인해 주면서 원인이 정리됐어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--purple-light);">🎬</div>
+              <div class="section-title">영상 제작 · 이미지 · 썸네일</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">영상이 외국 이야기인데 이미지가 한국 사람으로 나와요. 어떻게 고치나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">운영진</span>
+                    <span class="qa-answer-name">노쌤</span>
+                  </div>
+                  <p>저녁 6시 18분 문의에, 6시 19분 노쌤이 처음에 이미지 스타일을 만드실 때 외국인 인물로 나오게끔 적어 둬야 한다고 답했어요.</p>
+                  <p>6시 20분에는 국뽕 이야기라 한국 사람과 외국 사람이 같이 나오는데 외국 사람 이야기에 한국 사람들로 나온다는 부연이 붙었어요. 저녁 7시 56분에는 그 이미지만 이미지 프롬프트를 변경해서 다시 만들어 주면 된다는 답이 이어졌어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">대본 대비 영상 그림체가 조회수나 인기도에 큰 차이를 만드나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>아침 8시 7분, 힘이 들어가서 너무 공을 들이다 보니 진행이 더딘데 힘을 다 빼고 만들기도 그렇다며 다른 분들 생각이 궁금하다는 물음이 올라왔어요.</p>
+                  <p>8시 10분에는 차이가 없다고 본다는 답이 있었어요. 이치에 맞는지, 대본에 맞는지 정도의 차이는 있지만 영화급이 아니라면 퀄리티만으로 승부를 보지는 않는 것 같다는 이야기였어요.</p>
+                  <p>8시 20분에는 진짜 어나더레벨 고퀄이 아닌 이상 1순위는 대본, 0순위는 썸네일이라는 답이 이어졌어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">썸네일은 센스의 영역 같아서 잘 안 나와요. 다들 어떻게 하시나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>아침 8시 48분, 썸네일은 센스의 영역이 큰 것 같은데 자기는 진짜 안 나온다는 이야기가 올라왔어요. 그날 아침 6시 56분에도 오늘 썸네일이 잘 안된다는 말이 있었어요.</p>
+                  <p>8시 50분에는 센스는 포기하고 레퍼런스를 엄청 따라 한다는 답이 있었어요. 대신 비슷하지만 다르게 만든다고 했어요.</p>
+                  <p>8시 52분에는 비슷하게 하면 중복 문제가 걱정돼 나름대로 바꾸는데, 너무 어그로를 끄는 것도 싫어서 모르겠다는 고민이 이어졌어요. 8시 53분에는 일부러 어그로를 끄는 것도 있지만 이건 진짜 잘했다 싶은 것들로 바꾸고 있다는 답이 돌아왔어요.</p>
+                  <p>같은 8시 53분, 구체적인 방법도 나왔어요. 레퍼런스 이미지를 전부 따와서 배경이나 요소들을 종류별로 다 구분해 정리해 두고, 그걸 나름대로 조립하고 조립해서 하나를 만든다고 했어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--green-light);">🎤</div>
+              <div class="section-title">조교 두코 특강</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📢</div>
+              <div class="insight-body">
+                <h3>저녁 7시에 조교 두코 특강이 열렸어요</h3>
+                <p>저녁 6시 18분, 일반반을 포함한 조교 두코 특강이 50분 뒤인 저녁 7시에 열린다는 공지가 올라왔어요. 실제 채널을 다 보여 드린다는 소개와 함께, 인생 첫 유튜브를 시작해 2주 만에 애드센스를 통과하고 수익 집계 첫 주 일주일에만 639만 원을 냈다는 이력이 적혀 있었어요. 다루는 내용으로는 소재에서 클릭, 유지로 이어지는 조회수가 터지는 순서가 안내됐어요. 공지 뒷부분은 이 대화 안에서 잘려 있어 전체 항목까지는 확인되지 않았어요.</p>
+                <p>저녁 6시 50분에 줌 링크가 올라왔어요. 링크에 암호가 포함돼 있어서 아래 주소로 들어가면 암호를 따로 넣지 않아도 돼요.<br><a href="https://us06web.zoom.us/j/89942664261?pwd=iixYa1Qv9VbJMGDeFwpGxCwjKl5P9A.1" target="_blank" rel="noopener">조교 두코 특강 줌 열기</a></p>
+                <p>6시 51분에는 오늘은 실제 채널 운영 전반에 대한 강의이고, 진짜 운영한 채널을 바탕으로 분석 결과를 다 공개하는 자리라 무조건 오시는 게 좋다는 말이 붙었어요. 6시 54분에는 분석을 야무지게 해 주실 거라며 수업 자료를 보고 놀랐다는 이야기도 있었어요.</p>
+                <p>강의 중인 저녁 8시 24분에는 8시 40분이 쉬는 시간이라는 안내가 있었어요.</p>
+                <span class="insight-tag tag-tip">공지</span>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">차가 막혀서 늦을 것 같은데 특강 다시보기가 제공될까요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">운영진</span>
+                    <span class="qa-answer-name">노쌤</span>
+                  </div>
+                  <p>저녁 6시 53분 물음에, 6시 54분 녹화할 예정이라는 답이 있었어요.</p>
+                  <p>다만 같은 6시 54분에 그래도 라이브로 오시는 게 가장 좋다며, 오실 수 있는 분들은 꼭 오시라는 말이 함께 붙었어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">특강 교재 링크는 어디서 볼 수 있나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>저녁 8시 24분 교재 링크를 부탁한다는 요청에, 8시 26분 링크가 공유됐고 8시 26분 감사하다는 인사가 이어졌어요.<br><a href="https://wiki.autoworkers.ai/647c8b66674083578d85013bf2b670ee?v=7e1c8b666740821490da083e4de4cb00&amp;p=0dec8b666740829a8f3b81a58c48e94a&amp;pm=s" target="_blank" rel="noopener">저녁 8시 26분 공유된 교재 링크 열기</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--orange-light);">🔥</div>
+              <div class="section-title">방 소식</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🎉</div>
+              <div class="insight-body">
+                <h3>챌린지 11일 차에 구독자 1,000명 달성 인증이 올라왔어요</h3>
+                <p>저녁 5시 44분, 챌린지 11/55일 차에 드디어 1,000명이 됐다는 카페 글이 공유됐어요. 이어서 드디어 천 명이라며 감사하다는 인사가 올라왔어요.</p>
+                <p>5시 45분부터 6시 3분까지 축하 인사가 쏟아졌어요. 엄청 빨리 되셨다는 반응, 꿈의 숫자 1천 명이라는 축하, 조교님과 서포터즈의 축하도 함께 이어졌어요. 저녁 6시 59분에도 축하 인사가 하나 더 붙었어요.</p>
+                <p>5시 52분에는 자력 수창은 처음이라 너무 기쁘다는 말이 있었어요.</p>
+                <span class="insight-tag tag-revenue">성과 인증</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📈</div>
+              <div class="insight-body">
+                <h3>조회수 2천에서 멈췄던 영상이 3시간 만에 1만이 됐다는 후기가 나왔어요</h3>
+                <p>저녁 8시 39분, 조회수 2천에서 멈춰 있던 영상 하나에 갑자기 3시간 안에 8천 회가 찍혀 1만이 됐다는 이야기가 올라왔어요. 썸네일 클릭률이 20%가 넘어간다고 했어요.</p>
+                <p>이런 경우도 있다며, 유튜브는 알다가도 모르겠고 기분 좋으면서도 어이없다는 소감이 함께 붙었어요.</p>
+                <span class="insight-tag tag-revenue">성과 인증</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🎯</div>
+              <div class="insight-body">
+                <h3>구독자 목표 이야기도 오갔어요</h3>
+                <p>저녁 7시 19분, 이제 구독자 400명만 모으면 첫 수익 창출이라며 구독자가 늘어나는 건 시간문제라 오늘도 꾸준히 영상을 치러 간다는 말이 있었어요.</p>
+                <p>7시 35분에는 저도 구독자 천 명만 채우면 되는데 힘들다는 이야기가 이어졌어요.</p>
+                <span class="insight-tag tag-tip">방 분위기</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🌱</div>
+              <div class="insight-body">
+                <h3>저녁에 첫 인증도 올라왔어요</h3>
+                <p>저녁 8시 27분, 첫 인증이라며 카페 글이 공유됐어요. 8시 28분 축하 인사가 이어졌고, 8시 29분에는 십만 가자는 응원도 붙었어요.<br><a href="https://cafe.naver.com/dinohighclass/390364" target="_blank" rel="noopener">저녁 8시 27분 첫 인증 글 보기</a></p>
+                <span class="insight-tag tag-revenue">성과 인증</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📊</div>
+              <div class="insight-body">
+                <h3>아침에는 클릭률과 강의자료 이야기가 오갔어요</h3>
+                <p>아침 8시 35분부터 클릭률 이야기가 나왔어요. 8시 36분 이건 한 영상의 클릭률이냐는 물음이 있었고, 8시 37분에는 어제 올린 영상이 오랜만에 10프로를 넘었다는 이야기가 있었어요. 8시 38분에는 조회수만 2천이 넘는다는 말도 붙었어요.</p>
+                <p>8시 36분에는 지금 강의자료를 만들다가 죽을 것 같다는 이야기가 올라왔어요. 8시 37분 강의자료를 넘겨주셔야 한다는 농담에 넘겨주기 전에 죽을 것 같다는 답이, 8시 38분에는 긴장보다 자료 검증하느라 그렇다는 말이 이어졌어요.</p>
+                <p>8시 42분에는 노쌤에게 피드백을 받았다는 이야기와 함께, 8시 43분 노쌤 피드백은 최고라는 후기가 나왔어요.</p>
+                <span class="insight-tag tag-tip">방 분위기</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🦉</div>
+              <div class="insight-body">
+                <h3>레퍼용 영상이 정리된 대시보드가 잠깐만 공유됐다 사라졌어요</h3>
+                <p>아침 8시 43분, 무슨 자료가 공유된 것이냐며 알려 달라는 물음이 있었어요. 8시 44분에는 레퍼용 영상들이 정리된 대시보드가 잠시 동안만 공유됐었는데 올빼미들이 나타나서 다 채 갔다는 답이 돌아왔어요.</p>
+                <p>그 툴이 정확히 무엇인지는 이 대화 안에서 더 확인되지 않았어요.</p>
+                <span class="insight-tag tag-tool">공유 자료</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">☕</div>
+              <div class="insight-body">
+                <h3>아침 방은 회사 이야기와 작업 환경 이야기로 열렸어요</h3>
+                <p>아침 7시 3분, 회사 인사팀과 이런저런 이야기를 하다 클꼬 이야기가 나왔는데 말이 좀 통한다며 붙잡혔다는 사연이 올라왔어요. 이직한 지 얼마 안 됐는데 코 꿰이기 싫다는 말과, 7시 6분 이미 대표에게 보고했다는 이야기가 이어졌어요. 7시 13분에는 사실 경력자인데 신입으로 들어와서 다들 알고 나서 괴롭힌다는 말이, 7시 57분에는 튀어야 하는데 지금도 자기 능력 이상이라는 농담이 붙었어요.</p>
+                <p>8시 41분에는 오늘 내일 예약 게시를 해 두고 새벽에 잤는데 노트북이 고장 났다는 이야기가 올라왔어요. 8시 42분에는 요즘 PC방에 가서 한다며, 급할 때는 찬물 더운물 가릴 게 없다는 답이 있었어요.</p>
+                <p>8시 47분에는 요즘처럼 구글 아이디가 필요한 적이 없다며 깡통 계정 30개 정도 갖고 싶다는 이야기도 나왔어요.</p>
+                <span class="insight-tag tag-tip">방 분위기</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🌅</div>
+              <div class="insight-body">
+                <h3>아침에 챌린지 인증과 카페 글이 이어졌어요</h3>
+                <p>아침 7시 11분 9/55일 차 인증이 올라왔고, 7시 31분에도 지나간다는 인사와 함께 글이 공유됐어요.<br><a href="https://cafe.naver.com/dinohighclass?iframe_url_utf8=%2FArticleRead.nhn%253Fclubid%3D30819883%2526articleid%3D389593%2526menuid%3D303" target="_blank" rel="noopener">아침 7시 11분 9/55일 차 인증 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass?iframe_url_utf8=%2FArticleRead.nhn%253Fclubid%3D30819883%2526articleid%3D389604%2526menuid%3D303" target="_blank" rel="noopener">아침 7시 31분 공유된 카페 글 보기</a></p>
+                <p>7시 32분에는 아침 날씨가 제법 선선하다는 인사와 함께 오늘도 화이팅이라는 글이, 8시 3분과 8시 20분에도 카페 글이 이어졌어요.<br><a href="https://cafe.naver.com/dinohighclass/389603" target="_blank" rel="noopener">아침 7시 32분 공유된 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/389617" target="_blank" rel="noopener">아침 8시 3분 공유된 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/389630" target="_blank" rel="noopener">아침 8시 20분 공유된 카페 글 보기</a></p>
+                <span class="insight-tag tag-tool">공유 자료</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🔗</div>
+              <div class="insight-body">
+                <h3>저녁에도 카페 글 링크가 계속 이어졌어요</h3>
+                <p>저녁 5시 36분부터 6시 8분까지 카페 글이 공유됐어요. 어떤 글인지 설명은 이 대화 안에서 확인되지 않았어요.<br><a href="https://cafe.naver.com/dinohighclass/390150" target="_blank" rel="noopener">저녁 5시 36분 공유된 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/390152" target="_blank" rel="noopener">저녁 5시 38분 공유된 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/390202" target="_blank" rel="noopener">저녁 6시 8분 공유된 카페 글 보기</a></p>
+                <p>저녁 6시 25분에는 꾸준히 올려 본다는 인사와 함께 글이, 6시 34분에는 링크가 하나 더 공유됐어요.<br><a href="https://cafe.naver.com/dinohighclass/390223" target="_blank" rel="noopener">저녁 6시 25분 공유된 카페 글 보기</a><br><a href="https://naver.me/xQJL7WqX" target="_blank" rel="noopener">저녁 6시 34분 공유된 링크 열기</a></p>
+                <p>저녁 6시 59분, 7시 2분, 7시 17분, 7시 40분, 8시 3분, 8시 16분에도 지나간다는 인사와 함께 글이 이어졌어요.<br><a href="https://cafe.naver.com/dinohighclass/390252" target="_blank" rel="noopener">저녁 6시 59분 공유된 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/390260" target="_blank" rel="noopener">저녁 7시 2분 공유된 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/390281" target="_blank" rel="noopener">저녁 7시 17분 공유된 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/390307" target="_blank" rel="noopener">저녁 7시 40분 공유된 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/390335" target="_blank" rel="noopener">저녁 8시 3분 공유된 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/389779" target="_blank" rel="noopener">저녁 8시 16분 공유된 카페 글 보기</a></p>
+                <p>저녁 8시 57분, 8시 58분, 9시 19분에도 카페 글이 이어졌어요.<br><a href="https://cafe.naver.com/dinohighclass/390412" target="_blank" rel="noopener">저녁 8시 57분 공유된 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/390415" target="_blank" rel="noopener">저녁 8시 58분 공유된 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/390444" target="_blank" rel="noopener">저녁 9시 19분 공유된 카페 글 보기</a></p>
+                <span class="insight-tag tag-tool">공유 자료</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🙋</div>
+              <div class="insight-body">
+                <h3>답변 대기</h3>
+                <p>아침 8시 39분, 오토워커 새 대본이 나왔는지 묻는 물음이 있었어요. 단톡에서 얼핏 본 것 같다는 이유였는데, 이 대화 안에서는 답이 확인되지 않았어요.</p>
+                <p>아침 8시 47분, 레퍼용 영상이 정리된 대시보드가 노쌤이 만드신 뜨는 유튜브 채널 찾기의 업그레이드 버전 같은 것인지 묻는 물음이 있었는데 답이 확인되지 않았어요.</p>
+                <span class="insight-tag tag-caution">확인 필요</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="day-accordion fade-in" data-day-id="0907">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">9/7 (월)</span>
         </div>
         <div class="day-accordion-summary">월요일 아침 인사와 함께 조회수 욕심 이야기로 하루가 열림 · 레퍼런스에도 한두 개만 터지는 복권형과 꾸준히 터지는 일률형이 있다는 팁 · 일률형만 모아 두면 소재가 마를 일이 없다는 이야기 · 수강생이 만든 소재 프로그램을 받아 쓰기 시작했다는 후기와 포화도를 보완해 다시 올리겠다는 예고 · 강의를 다 안 듣고 어떻게 만드느냐는 물음에 마법의 단어는 만들어 줘라는 답 · 알고리즘은 직접 검토한 뒤 클로드에게 근거를 요구한다는 작업 방식 · 3강·4강 큐앤에이로 이어진 강의 진도 이야기 · 아침 8시 3분 10만 조회수 인증과 축하 릴레이 · 정지됐던 계정이 풀렸다는 소식과 수창하다 한 번씩 겪는 홍역이라는 위로 · 이번 주는 10만 하나씩 물고 가자는 목표 · 크롬 프로필 분리 동시 로그인 확인과 수강생 프로그램 카페 위치 문의는 답변 대기 · 저녁에는 제미나이에 대본과 업로드 정보 파일을 넣고 자극적인 문구를 받는 방법이 공유됨 · 클로드가 뽑아 주는 제목은 너무 얌전하다는 이야기가 여러 명에게서 나옴 · 제목 3개를 올려 유튜브 AB 테스트를 걸어 봤다는 후기 · 이지워커 업데이트 버전은 오류가 나고 예전 버전은 잘된다는 이야기 · 플로우에서 알집 전체 다운로드는 없어지고 압축 없이 순서대로 받는 방식으로 바뀌었다는 조교 안내 · 이지워커 영상 생성 중 에러는 플로우 트래픽 폭주 때문이라는 서포터즈 답 · 수익 창출 3단계에서 막혀 항소 영상을 만들어야 한다는 고민에 카페 팁 글 공유와 특강 문의 권유 · 저녁에도 카페 글 링크 릴레이 · grabbit 드래그 복사, 내 채널 대시보드 채널 추가 실패, 이지워커 캐릭터 일관성 항목 여부는 답변 대기</div>
       </button>
@@ -14662,10 +14932,117 @@
           </div>
         </div>
       </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">튜브워커 크레딧은 처음 받은 2,300 이후에도 계속 충전해야 하나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>매달 자동으로 충전되지 않아요. 처음 준 크레딧을 다 쓰면 직접 결제해야 해요.<br>결제관리 페이지에서 확인하실 수 있고 카드 결제가 가능해요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">튜브워커에서 카드 결제를 했는데 똑같은 카드로 추가 결제가 안 돼요.</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>카드사 1일 한도에 걸렸을 수 있어요.<br>후파 조교님이 신한카드는 1일 한도 5만 원이 있다고 안내했고, 실제로 그 경우였어요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">영상이 외국 이야기인데 이미지가 한국 사람으로 나와요.</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge">운영진</span>
+              <span class="qa-answer-name">노쌤</span>
+            </div>
+            <p>처음 이미지 스타일을 만들 때 외국인 인물로 나오게끔 적어 둬야 해요.<br>이미 만들어진 영상이면 그 이미지만 이미지 프롬프트를 변경해서 다시 만들면 돼요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">특강에 늦을 것 같은데 다시보기가 제공되나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge">운영진</span>
+              <span class="qa-answer-name">노쌤</span>
+            </div>
+            <p>녹화할 예정이라 다시보기는 제공돼요.<br>다만 오실 수 있는 분들은 라이브로 오시는 게 가장 좋다고 안내했어요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">대본 대비 영상 그림체가 조회수에 큰 차이를 만드나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>어나더레벨 고퀄이 아닌 이상 그림체만으로 승부가 갈리지는 않는다는 의견이 모였어요.<br>1순위는 대본, 0순위는 썸네일이라는 이야기가 나왔어요.<br>그림체는 이치에 맞는지, 대본에 맞는지 정도의 차이로 보면 된다고 했어요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">썸네일이 잘 안 나올 때는 어떻게 하시나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>센스로 승부하기보다 레퍼런스를 따라 하되 비슷하지만 다르게 만든다는 방법이 공유됐어요.<br>레퍼런스 이미지를 전부 모아 배경이나 요소별로 구분해 정리해 두고, 그것들을 조립해서 하나를 만든다고 했어요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">특강 교재 링크는 어디서 볼 수 있나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>조교 두코 특강 때 방에 교재 링크가 공유됐어요.<br><a href="https://wiki.autoworkers.ai/647c8b66674083578d85013bf2b670ee?v=7e1c8b666740821490da083e4de4cb00&amp;p=0dec8b666740829a8f3b81a58c48e94a&amp;pm=s" target="_blank" rel="noopener">공유된 교재 링크 열기</a></p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="updated-at">마지막 업데이트: 2026-09-07</div>
+  <div class="updated-at">마지막 업데이트: 2026-09-08</div>
 </div>
 
 <button class="fab-top" id="fabTop" type="button" aria-label="맨 위로" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
