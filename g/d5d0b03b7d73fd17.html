@@ -576,16 +576,16 @@
   <div class="hero fade-in">
     <div class="hero-badge">📋 사담방 다이제스트</div>
     <h1>쇼츠포뮬러 2기<br>핵심 정리</h1>
-    <p>(사담방) 쇼츠포뮬러 2기 (레오96) · 6/23~9/10 개강 11주차</p>
+    <p>(사담방) 쇼츠포뮬러 2기 (레오96) · 6/23~9/11 개강 11주차</p>
   </div>
   <div class="notice-banner fade-in">
     <div class="nb-emoji">🤖</div>
     <div>지난 대화를 봇이 핵심만 추려 정리했어요.<br>잘못된 부분은 조교(운영진)께 알려주시면 바로 고칠게요!</div>
   </div>
   <div class="stats-bar fade-in">
-    <div class="stat-pill"><span class="num">6/23~9/10</span><span class="label">정리 기간</span></div>
+    <div class="stat-pill"><span class="num">6/23~9/11</span><span class="label">정리 기간</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--green);">4강</span><span class="label">정규강의 라이브</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--orange);">193</span><span class="label">핵심 Q&amp;A</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--orange);">195</span><span class="label">핵심 Q&amp;A</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--purple);">4</span><span class="label">운영 링크</span></div>
   </div>
   <div class="tab-bar-wrap fade-in" id="tabBarWrap">
@@ -598,12 +598,48 @@
 
   <div id="tab-daily" class="tab-content active">
 
-    <section class="day-accordion fade-in open" data-day-id="0910">
+    <section class="day-accordion fade-in open" data-day-id="0911">
       <button class="day-accordion-header" type="button" aria-expanded="true" onclick="toggleAccordion(this.parentElement)">
         <div class="day-accordion-left">
           <span class="day-accordion-arrow">▼</span>
-          <span class="day-accordion-date">9/10 (목)</span>
+          <span class="day-accordion-date">9/11 (금)</span>
           <span class="day-accordion-badge">최신</span>
+        </div>
+        <div class="day-accordion-summary">Q&amp;A 2개 · 근황 2건</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--accent-light);">💬</div><div class="section-title">핵심 Q&amp;A</div></div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">로컬 자동화면 베이스 모델도 로컬(ollama)로 돌리시나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">멤버</span><span class="qa-answer-name">억지모드</span></div><p>새벽 12시 7분에 억지모드님이 <strong>“업그레이드 완료! 로컬의 힘”</strong>이라고 올리자, 같은 시각 8팔팔8님이 <strong>“ollama 쓰시나요??”</strong>라고 물었어요. 새벽 12시 8분엔 <strong>“자동화 끌리네요”</strong>라고 덧붙였고요.</p><p>새벽 12시 8분에 억지모드님이 구조를 갈라 줬어요. <strong>“베이스는 클코 입니다”</strong>, <strong>“이미지와, 동영상 이 로컬인걱느”</strong> 새벽 12시 9분엔 <strong>“베이스는 로컬 못써요 절대 대기업 못 따라갑니다”</strong>라고 못 박았어요. 지시를 받는 베이스는 클로드 코드를 쓰고, 이미지와 동영상 생성만 내 컴퓨터에서 돌린다는 얘기예요. 베이스까지 로컬 모델로 바꾸는 건 아직 대기업 모델을 못 따라간다는 뜻이고요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">클로드 코드랑 영상 생성, 토큰 비용이 얼마나 드나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">멤버</span><span class="qa-answer-name">억지모드</span></div><p>새벽 12시 9분에 8팔팔8님이 <strong>“토큰녹진않으신가요?”</strong>라고 물었어요. 새벽 12시 10분엔 <strong>“제미나이 무료 몇번 써봤는데 대화몇번하고 끝나네요”</strong>라고 했고요.</p><p>새벽 12시 11분에 억지모드님이 답했어요. <strong>“클코요? 클코는 맥스 씁니다 100달러 하루 5,6개는 충분히 만드는거 같아요”</strong> 클로드 코드는 100달러짜리 맥스 요금제로 쓰고, 그걸로 하루 5~6개는 넉넉히 만든다는 얘기예요.</p><p>돈이 크게 나가는 쪽은 따로 있었어요. 새벽 12시 12분에 8팔팔8님이 <strong>“카페보면 막 영상 1000개이상 만들었다는 얘기도 있어서 어떻게한건지”</strong>라고 하자, 억지모드님이 <strong>“이미지, 동영상 토근이 죽는거죠 저 3일만에 10만원 나요고 바로 로컬로 공부했습니다”</strong>라고 했어요. 8팔팔8님이 <strong>“토큰이 어마어마하게들었을텐데”</strong>, 새벽 12시 13분 <strong>“ai영상 생성하는데 토큰이 많이 드는 모양인가보네요”</strong>라고 받자, 새벽 12시 14분에 <strong>“네 영상 토큰이 어마 어마 합니다 한번에 되는것도 아니니 몇번 반복하면 1분 쇼츠 하나에 2만원 뚝딱이에요”</strong>라고 했고요. 영상 생성은 한 번에 안 돼서 몇 번 다시 뽑다 보면 1분 쇼츠 하나에 2만 원까지 나가고, 그래서 이미지·영상은 로컬로 옮겼다는 얘기예요.</p><p>새벽 12시 15분에 8팔팔8님이 <strong>“정치나 해외짜집기 영드짜 같이 이미 있는 영상가지고 만드는 걸로하면 토큰이 좀 절약될거같기도하네요”</strong>라고 정리했어요. 새로 생성하지 않고 이미 있는 영상을 잘라 쓰는 카테고리면 토큰이 덜 든다는 뜻이에요.</p></div></div>
+            </div>
+          </div>
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--green-light);">🎉</div><div class="section-title">근황</div></div>
+            <div class="insight-card">
+              <div class="insight-emoji">🌏</div>
+              <div class="insight-body"><h3>“내일은 외국인들 한국 여행온거 국뽕 롱폼 해보려고요” — 억지모드님 다음 계획</h3><p>로컬 업그레이드를 마친 억지모드님이 새벽 12시 16분에 다음에 할 것도 밝혔어요. <strong>“네 내일은 외국인들 한국 여행온거 국뽕 롱폼 해보려고요”</strong> 같은 시각 8팔팔8님이 <strong>“홧팅입니다”</strong>라고 응원했고요.</p><span class="insight-tag tag-tip">근황</span></div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">💸</div>
+              <div class="insight-body"><h3>“요즘 아스트라도 난리던데 먼저 알아보셔요” — 아스트라 얘기</h3><p>새벽 12시 25분에 억지모드님이 <strong>“네네 감사합니다 요즘 아스트라도 난리던데 먼저 알아보셔요~~~”</strong>라고 했어요. 새벽 12시 26분에 8팔팔8님이 <strong>“아스트라 성능 좋은데 토큰 녹는 속도 어마어마하다고하더라구요”</strong>, <strong>“시간지나서 토큰값좀 내리면 쓸만할거같아요”</strong>라고 받았고요. 성능은 좋다는데 토큰이 빨리 닳아서, 값이 내려가면 써 볼 만하겠다는 얘기예요.</p><span class="insight-tag tag-tip">근황</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="day-accordion fade-in" data-day-id="0910">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">9/10 (목)</span>
         </div>
         <div class="day-accordion-summary">근황 3건</div>
       </button>
