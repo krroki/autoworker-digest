@@ -444,11 +444,11 @@
     }
   ],
   "live": {
-    "checkedAt": "2026-09-11T09:30:07+09:00",
-    "totalCount": 8330,
+    "checkedAt": "2026-09-11T10:30:07+09:00",
+    "totalCount": 8329,
     "rooms": {
-      "sashalook": 3125,
-      "lululalalily": 2428,
+      "sashalook": 3122,
+      "lululalalily": 2430,
       "yunabi": 2777
     }
   },
