@@ -720,6 +720,8 @@
       function shownDelta(history, shownCount, recordedDelta) {
         if (!data.live) return recordedDelta;
         if (!Array.isArray(history) || history.length < 2) return null;
+        var latest = history[history.length - 1], previous = history[history.length - 2];
+        if (latest.roomKeys && JSON.stringify(latest.roomKeys) !== JSON.stringify(previous.roomKeys)) return null;
         return shownCount - Number(history[history.length - 2].count);
       }
 
