@@ -703,11 +703,11 @@
     }
   ],
   "live": {
-    "checkedAt": "2026-09-16T09:30:07+09:00",
-    "totalCount": 8663,
+    "checkedAt": "2026-09-16T10:30:07+09:00",
+    "totalCount": 8671,
     "rooms": {
-      "sashalook": 3056,
-      "lululalalily": 2710,
+      "sashalook": 3055,
+      "lululalalily": 2719,
       "yunabi": 2782,
       "hanam-dinosaur": 115
     }
