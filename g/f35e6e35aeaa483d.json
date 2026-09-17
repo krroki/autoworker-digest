@@ -764,13 +764,13 @@
     }
   ],
   "live": {
-    "checkedAt": "2026-09-18T01:30:07+09:00",
-    "totalCount": 9696,
+    "checkedAt": "2026-09-18T02:30:07+09:00",
+    "totalCount": 9710,
     "rooms": {
       "sashalook": 3026,
-      "lululalalily": 3189,
+      "lululalalily": 3202,
       "yunabi": 2779,
-      "hanam-dinosaur": 115,
+      "hanam-dinosaur": 116,
       "woleoknam": 587
     }
   },
