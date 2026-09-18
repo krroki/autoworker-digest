@@ -323,8 +323,10 @@ async function readPublished(){
 }
 async function startRefresh(){
  const b=$('refresh');if(b.disabled)return;
- const previous=d;let pending=pendingRefresh(),completed=false,confirmedFailure=false;
+ const previous=d,previousChanges=shownChanges;let pending=pendingRefresh(),completed=false,confirmedFailure=false;
  b.disabled=true;b.setAttribute('aria-busy','true');$('refresh-label').textContent='갱신하는 중';refreshStep(0);
+ // 이전 비교 결과를 이번 갱신의 완료 결과로 오해하지 않도록 진행 중에는 접는다.
+ $('update-changes').hidden=true;
  $('refresh-status').textContent=pending?'진행 중인 갱신을 확인하고 있어요.':'시트·카페·톡방의 새 자료 수집을 요청하고 있어요.';
  try{
   let result=null;
@@ -367,6 +369,7 @@ async function startRefresh(){
  }catch(error){
   console.warn('회원 자료 갱신 확인 실패',error.name,error.message);
   if(d!==previous){d=previous;s=d.summary;chrome();overview();render();sourceClock()}
+  showChanges(previousChanges,previousChanges?.context||'previous');
   $('sync-steps').hidden=true;
   $('refresh-status').textContent=confirmedFailure?'갱신하지 못했어요. 기존 자료를 유지해요. 다시 눌러 주세요.':pending?'갱신 결과를 아직 확인하지 못했어요. 다시 누르면 이어서 확인해요.':'자료를 불러오지 못했어요. 기존 자료를 유지해요. 다시 눌러 주세요.';
  }finally{
