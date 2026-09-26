@@ -587,7 +587,7 @@
   <div class="stats-bar fade-in">
     <div class="stat-pill"><span class="num">8/5</span><span class="label">정리 시작</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--green);">2기</span><span class="label">현재 기수</span></div>
-    <div class="stat-pill"><span class="num" style="color:var(--purple);">326</span><span class="label">누적 Q&amp;A</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--purple);">338</span><span class="label">누적 Q&amp;A</span></div>
   </div>
 
   <div class="tab-bar fade-in" id="tabBar">
@@ -596,14 +596,563 @@
   </div>
 
   <div id="tab-daily" class="tab-content active">
-    <section class="day-accordion fade-in open" data-day-id="0923">
+    <section class="day-accordion fade-in open" data-day-id="0926">
       <button class="day-accordion-header" type="button" aria-expanded="true" onclick="toggleAccordion(this.parentElement)">
         <div class="day-accordion-left">
           <span class="day-accordion-arrow">▼</span>
-          <span class="day-accordion-date">9/23 (수)</span>
+          <span class="day-accordion-date">9/26 (토)</span>
           <span class="day-accordion-badge">최신</span>
         </div>
-        <div class="day-accordion-summary">영상 퀄리티를 높이니 시청 지속률이 크게 올랐다는 미미르님 이야기 · 한국을 겨냥한 경제 채널을 동남아에서 만들기도 한다는 조교 답과 신고 이야기 · 재사용 콘텐츠로 수창이 정지된 채널이 항소 영상을 공개로 올린 것 같다는 이야기 · 클로드 코드 오푸스 5.5 업데이트 명령과 무료 초기화 소식 · 60분 롱폼 세컨드 채널을 반자동으로 준비했다는 근황 · 시청자 유입 분석은 Data API 키 받는 곳에서 키를 받아 준다는 수강생 답 · 명절 전 바쁜 근황과 새벽·아침 카페 글 공유 · 저녁 7시 야담 특강 줌 링크와 야담은 전체 대상이라는 조교 안내 · 야담 스킬은 아직 안 나왔다는 조교 답 · 튜브워커 오류는 대본에 공백(엔터)이 많으면 뜰 수 있다는 조교 답 · 야담 스토리보드 프롬프트 오류는 껐다 켜니 됐다는 이야기와 문의용 오픈채팅 안내 · 한 줄 들어 본 목소리와 대본 전체 음성이 다르다는 고민에 조교님이 EL 무료 크레딧 테스트를 권한 이야기 · 후파 조교님의 자주 묻는 질문 모음 페이지와 브루 자동줄바꿈 프로그램 공유 · 로봇청소기·간식 잡담과 저녁 카페 글·챌린지 인증 · 베낌 여부와 분석 API 이름, 경제 채널 목소리 추천은 답변 대기</div>
+        <div class="day-accordion-summary">오토K 설치는 초반 아이디 연동이 조금 어렵고 설명서대로 천천히 하면 된다는 수강생 경험 · 오토워커 2기 시작 뒤 한 번도 안 한 분이 507명이라는 조교 이야기 · 아는아이 서포터즈님의 팩트 피드백과 수창 이야기 · 버터떡 조교님의 야담 튜토리얼 고민 · 작업실 선 정리 사진 · 챌린지 인증과 카페 글 공유 · 챌린지를 다시 시작하면 어디부터 카페에 올리는지는 답변 대기</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">🧩</div>
+              <div class="section-title">오토K 설치 · 야담</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">오토K 설치는 쉬운가요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>새벽 2시 50분 필드야님이 오토K 설치가 쉽냐고 묻자, 미미르님은 살짝 이해하기 어려울 수 있다고 했어요. 플로우플로우처럼 연동하면서 씬 추출, 프롬프트 확인, 생성까지 가는 건 쉬운데, 아이디 연동부터 초반 작업이 조금 어려울 수 있다고 했어요.</p>
+                  <p>2시 52분에는 qwen 아이디를 엑셀이나 메모장 등에 넣어 두고 하나하나 입력하거나, 양식지를 받아 클로드(원문 「끌로」)에게 입력해 달라고 하면 정리해 주니 그걸로 넣어도 된다고 했어요. 연결을 위해 「verw?」 연동도 해야 한다고 했는데, 무엇을 가리키는지는 원문만으로 분명하지 않아요.</p>
+                  <p>필드야님이 설명서에 다 나와 있냐고 묻자, 미미르님은 설명서에 다 나와 있으니 천천히 하나씩 하면 되고, 막히면 이야기해 달라고 했어요. 미미르님은 오토K를 만들어 보니 확장프로그램마다 특성이 다 다르다고 했고, 필드야님은 qwen 아이디를 7개 만들었는데 더 만들어야겠다고 했어요. 밤 9시 12분 미미르님은 qwen 아이디를 정리할 때도 클로드가 엄청 빠르더라고 했어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📜</div>
+              <div class="insight-body">
+                <h3>버터떡 조교님은 야담 튜토리얼을 어떻게 만들지 고민 중이라고 했어요</h3>
+                <p>새벽 2시 48분 필드야님이 야담을 만들어 봤냐고 묻자, 미미르님은 아니라며 이제 강의를 듣고 있다고 했어요. 필드야님도 강의를 다시 들어 보고 시도해야겠다고 했어요.</p>
+                <p>밤 9시 58분 버터떡 조교님은 「야담 튜토리얼」을 어떻게 만들어야 할지 감도 안 온다고 했어요. 튜토리얼이 언제 나오는지는 대화에 나오지 않았어요.</p>
+                <span class="insight-tag tag-tool">야담</span>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--green-light);">💡</div>
+              <div class="section-title">참여 현황 · 피드백 이야기</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📋</div>
+              <div class="insight-body">
+                <h3>버터떡 조교님은 오토워커 2기 시작 뒤 한 번도 안 한 분이 507명이라고 했어요</h3>
+                <p>밤 9시 13분 버터떡 조교님은 한 번이라도 하신 분들은 명단에 없다고 했고, 소금별님은 다행이라고 했어요. 이어 오토워커 2기를 시작하고 한 번도 안 한 분이 507명이라고 했어요. 무엇을 한 번도 안 했는지와 어떤 명단인지는 이 앞 대화가 자료에 없어 분명하지 않아요.</p>
+                <p>수익요정님은 「244번」이라며 아쉬워했고, 어제부터 강의를 정주행하고 있다고 했어요. 소금별님은 노트북이 안 돼서 영상도 못 치고 있어 답답하다고 했어요. 미미르님은 조교 톡방에서 요주의 인물로 찍혔을 것 같다고 했어요.</p>
+                <span class="insight-tag tag-caution">참여</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🎯</div>
+              <div class="insight-body">
+                <h3>아는아이 서포터즈님의 팩트 피드백을 받은 분들이 수익 창출을 했다고 해요</h3>
+                <p>밤 9시 23분 버터떡 조교님은 멱살반이 시작되면 미미르님이 아는아이님께 「단전까지 쓱삭」당할 것 같다고 했어요. 아는아이님은 부모님뻘 수강생분들도 팩트 폭격으로 수창(수익 창출)시켜 줬고, 말할 틈을 안 주고 팩트로 「순살」을 만들어서 결국 아는아이님 피드백을 집중적으로 받은 분들이 수창했다고 했어요.</p>
+                <p>9시 25분에는 1기에서도 개발만 열심히 하다가 수창을 못 하던 분들이 정신을 털리고 수창했다고 했어요. 미미르님은 아무것도 모르니 이것저것 실험하다가 헛다리 짚는 것보다 팩폭이 낫다고 했고, 자기는 개발도 아니고 유튜브 실험만 열심히 했다고 했어요. 멱살반이 언제 시작하는지는 대화에 나오지 않았어요.</p>
+                <span class="insight-tag tag-revenue">피드백</span>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--orange-light);">🔥</div>
+              <div class="section-title">방 소식</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🖥️</div>
+              <div class="insight-body">
+                <h3>버터떡 조교님이 선 정리를 끝낸 작업실 사진을 올렸어요</h3>
+                <p>밤 9시 15분 버터떡 조교님은 사진 2장을 올리며 선 정리를 이만하면 됐다고 했어요. 핑크님은 꿈의 인테리어라고 했고, 미미르님은 방송 세팅이 어마어마하다며 크로마키까지 있는 걸 보면 마스코트용인 것 같다고 했어요. 버터떡 조교님은 집에서 일하는 사람의 집이라며, 정리 전 사진을 보여 주고 정리하느라 너무 힘들었다고 했어요. 핑크님이 로봇 팔이 있다고 하자 조명이라고 답했어요.</p>
+                <p>눙이님은 이제 쉬고 뭐 좀 드시라고 했고, 핑크님은 팔뚝만 한 김밥이나 비쵸비만 드시지 말라고 했어요. 눙이님과 소금별님은 미미르님이 채팅방 분위기 메이커라고 했고, 미미르님은 원래 짜증 마왕인데 그래서 짜증을 잘 못 부린다고 했어요. 미미르님은 채널을 갈아타라는 말에 마음이 상했었다고 했어요.</p>
+                <p>9시 28분 아는아이 서포터즈님은 고양이 영상을 보는 중이라고 했고, 미미르님은 완결 소설을 4시간째 읽는 중이라고 했어요. 버터떡 조교님은 자기 집 로봇청소기가 고양이보다 더 말썽이라고 했어요. 9시 38분 미미르님은 아는아이님도 놀라게 했다며 「노출도가 왜 오르냐고」라고 했는데, 무엇의 노출도인지는 대화에 나오지 않았어요.</p>
+                <span class="insight-tag tag-tip">방 분위기</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📎</div>
+              <div class="insight-body">
+                <h3>새벽과 밤에 카페 글 링크와 챌린지 인증이 이어졌어요</h3>
+                <p>새벽 4시 1분 이파라파냐무냐무님은 챌린지 25/55일차를 「끌루야 똑바로 안할래 ?」라는 제목으로, 밤 9시 42분 비브온님은 챌린지 28/55일차를 「얼른 집에 와서 내일꺼 예약!!」이라는 제목으로 인증했어요.</p>
+                <p>무무즈님은 전날 축하 인사에 감사하다며, 째바오님은 심각한 얘기 중에 조심히 지나가겠다며 올렸어요. 나머지는 설명 없이 링크만 올라왔어요.<br><a href="https://cafe.naver.com/dinohighclass/411227" target="_blank" rel="noopener">새벽 0시 5분 무무즈님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/411256" target="_blank" rel="noopener">새벽 0시 43분 강한별이님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/411274" target="_blank" rel="noopener">새벽 1시 18분 달달한밤님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/411363" target="_blank" rel="noopener">아침 8시 46분 쇼츠드리머님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/411828" target="_blank" rel="noopener">밤 9시 26분 째바오님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/411854" target="_blank" rel="noopener">밤 9시 50분 Hjjj님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/411841" target="_blank" rel="noopener">밤 9시 52분 오토리치님 카페 글 보기</a></p>
+                <span class="insight-tag tag-tool">공유 자료</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🙋</div>
+              <div class="insight-body">
+                <h3>답변 대기</h3>
+                <p>이날 정리는 새벽 0시 5분부터 아침 8시 46분까지, 밤 9시 12분부터 9시 58분까지의 대화를 바탕으로 했어요. 아침 8시 47분부터 밤 9시 11분 사이 대화는 담긴 자료가 없어 빠져 있고, 밤 9시 58분 이후 대화는 아직 담기지 않았어요.</p>
+                <p>밤 9시 31분 joan님이 챌린지를 하다 말았는데, 새로 시작한 부분부터 카페에 다 올려야 하냐고 물었어요. 담긴 대화에는 아직 답이 없어요.</p>
+                <p>9/25 정리의 「칩섭」이 무엇인지, 오토K가 1기 튜브워크와 무엇이 달라졌는지도 이날 담긴 대화에서 확인되지 않았어요.</p>
+                <span class="insight-tag tag-caution">확인 필요</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="day-accordion fade-in" data-day-id="0925">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">9/25 (금)</span>
+        </div>
+        <div class="day-accordion-summary">버터떡 조교님의 오토K 사용법 영상과 1기 튜브워크와 달라진 부분은 튜토리얼로 따로 준다는 안내 · 공지방 스톡 파일 다운 기간이 지나 카페 강의자료로 정리한 스톡 이미지/영상 스위칭 확장프로그램 · 클로드 유료 구독자 클라우드 세션 무료 크레딧은 웹에서 GitHub를 연결해야 받는다는 이야기 · 지금이라도 프반을 들어도 된다는 조교 답 · 유튜브가 흔들릴 때 다른 수익화 루트로 전자책을 쓰라는 조교 이야기와 텀블벅·브랜딩 경험 · qwen 워터마크는 거의 안 나오고 프레임 레이어로 가릴 수 있다는 이야기와 메타 AI 워터마크 · 1시간 영상에 qwen 아이디 100개 이야기 · 새벽 고양이 사진과 선착순 선물게임 · 추석 근황과 챌린지 인증·카페 글 공유 · 50개 만들기와 칩섭은 답변 대기</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">📢</div>
+              <div class="section-title">오토K 사용법 · 스톡 스위칭 확장프로그램</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🎥</div>
+              <div class="insight-body">
+                <h3>버터떡 조교님이 오토K 사용법 영상을 올렸어요</h3>
+                <p>밤 9시 버터떡 조교님이 「오토K 사용법」이라며 라이브 영상 링크를 올렸어요. 1기 때 쓰던 튜브워크와 좀 달라진 부분이 있어서, 자세한 튜토리얼은 나중에 다시 주겠다고 했어요.<br><a href="https://www.youtube.com/live/xVT6Q5brShY?si=UNGbPsiNLbg68Rel" target="_blank" rel="noopener">오토K 사용법 영상 열기</a></p>
+                <p>무엇이 달라졌는지는 이날 담긴 대화에 나오지 않았어요.</p>
+                <span class="insight-tag tag-tool">오토K</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🧩</div>
+              <div class="insight-body">
+                <h3>스톡 이미지/영상 스위칭 확장프로그램 파일과 튜토리얼이 카페 강의자료로 올라왔어요</h3>
+                <p>밤 9시 1분 후파 조교님 계정이 오토워커 카페 새 글 「[오토워커 강의자료] 스톡 이미지/영상 스위칭 확장프로그램」(작성 버터떡 조교님)을 알렸어요. 9시 2분 버터떡 조교님은 확장프로그램 파일과 튜토리얼을 같이 올려 뒀다고 전체에게 알렸어요. 공지방에 올린 스톡 파일은 다운 기간이 지났고, 사용 방법을 묻는 분들이 있어서 정리했다고 했어요.</p>
+                <p>9시 3분에는 플로우로 이미지를 만들 때 스톡을 쓰기 어려운 부분을 보완해 주는 확장프로그램이라고 했어요.<br><a href="https://cafe.naver.com/autoworker2/204" target="_blank" rel="noopener">스톡 이미지/영상 스위칭 확장프로그램 글 열기</a></p>
+                <p>미줌마 파워님은 멋지다고 했고, 장이수님은 감사하다며 풍요로운 추석 연휴를 보내라고 인사했어요. 버터떡 조교님은 「버터할매냐고요」라며 웃었고, 장이수님은 용돈을 달라고 받았어요.</p>
+                <span class="insight-tag tag-tool">확장프로그램</span>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--purple-light);">🤖</div>
+              <div class="section-title">클로드 클라우드 세션 무료 크레딧</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">클로드 유료 구독자에게 주는 클라우드 세션 무료 크레딧은 어떻게 받나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>밤 9시 40분 후파 조교님이 다른 방에서 얻어 온 정보라며 꼭 받으라고 안내했어요. Max는 250달러, Pro는 100달러이고 10/7까지 받아야 한다며, 「claude.ai/code/claim-credit/10」에 접속해 GitHub를 연결하면 끝이라고 했어요. 메시지 뒷부분은 자료에서 잘려 있어요.</p>
+                  <p>금액과 기한은 받기 전에 직접 확인해 보세요.<br><a href="https://x.com/ClaudeDevs/status/2102871550974427462?s=20" target="_blank" rel="noopener">무료 크레딧 안내 게시물 열기</a></p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>9시 49분 헐랭흐님은 웹에서 해야 되고 Git을 연결해야 지급된다고 했어요. 미미르님은 「천사님」이 이미 뿌려 준 정보라고 했어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--green-light);">💡</div>
+              <div class="section-title">프반 · 전자책 수익화</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">지금이라도 프반을 들어도 되나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>밤 9시 8분 장이수님이 지금이라도 프반을 들어도 되냐고 묻자, 버터떡 조교님은 물론이라며 이번 기수 프반이 「ㄹㅇ 꿀」이라고 했어요. 제우스님·다람님·노마드되고파님이 제공하는 프로그램에 쇼폭님 특강까지 있다고 했어요.</p>
+                  <p>9시 10분에는 「전 기수 고수특강」이 정말 좋은 정보라고 했고, 미줌마님 전자책 특강은 자기만 보고 싶다고 했어요. 가격이나 신청 방법은 대화에 나오지 않았어요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>장이수님은 「구글놈이 허위를 주네요」라며 이번 기수 프반이 좋을 것 같다고, 내일 아내와 상의해서 정하겠다고 했어요. 힉스님은 수익을 내서 프반에 가고 싶다고 했어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📘</div>
+              <div class="insight-body">
+                <h3>버터떡 조교님은 유튜브가 흔들릴 때 다른 수익화 루트로 전자책을 이야기했어요</h3>
+                <p>밤 9시 17분 버터떡 조교님은 유튜브가 허위 변수를 줄 때 다른 수익화 루트라며 전자책 이야기를 꺼냈어요. 9시 20분에는 「디하클 무강자료급으로 개판인 전자책」이 49만 9천 원인데 펀딩 3억을 넘긴 걸 보고 미줌마님이 뒷목을 잡았다고 했어요. 무강 보너스 프로그램이 나쁘다는 게 아니라, 받는 금액에 비해 성의가 없다는 뜻이라고 덧붙였어요.</p>
+                <p>클로드로 여러분도 쓸 수 있다며, 미줌마님은 명리학·타로 쪽으로 썼다고 했어요. 9시 21분에는 요즘 사람들이 「ㅈㄷㅎ」에 빠져 있어서, 바이브코딩을 잘하는 분들은 그쪽을 건드려 쓰면 대박일 것 같다고 했어요.</p>
+                <p>9시 25분 미미르님은 크몽도 유튜브도 태반이 「ㅈㄷㅎ」라고 했고, 9시 26분 헐랭흐님은 스레드도 스레드 자동화를 40만 원에 판다며 오푸스 5.5면 다 된다고 했어요. 그것도 다 마케팅을 잘하는 거라고 덧붙였어요. 미줌마 파워님은 노쌤한테 배운 거면 다 할 수 있다고 했어요.</p>
+                <span class="insight-tag tag-revenue">전자책</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🛒</div>
+              <div class="insight-body">
+                <h3>헐랭흐님은 텀블벅을 두 번 해 봤고, 미줌마 파워님은 초반 브랜딩이 중요하다고 했어요</h3>
+                <p>밤 9시 35분 헐랭흐님은 미줌마님 덕에 텀블벅을 2개 진행했는데, 하나는 망했고 하나는 나쁘지 않다고 했어요. 찍어내는 사람도 몇몇 있더라고 했어요. 미줌마 파워님은 브랜딩이 정말 중요하다며 초반 브랜딩만 잘해 두면 좋다고 했어요.</p>
+                <p>미미르님은 요즘 유튜브로 전자책을 홍보하는 사람도 많다고 했고, 9시 38분 헐랭흐님은 팔로워가 적어도 다들 인스타는 필수로 운영하더라고 했어요. 미미르님이 「그놈의 인스타」라고 하자, 헐랭흐님은 다 하면 된다며 경계를 그어 놓으면 할 게 없다고 했어요. 버터떡 조교님은 두 분이 콜라보하면 얼마나 잘 팔지 감도 안 온다고 했어요.</p>
+                <span class="insight-tag tag-tip">브랜딩</span>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">🖼️</div>
+              <div class="section-title">qwen 아이디 · 워터마크</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">qwen으로 만들면 워터마크가 나온다던데 괜찮나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>밤 9시 57분 버터떡 조교님이 qwen은 워터마크가 나온다던데 괜찮냐고 묻자, 9시 59분 영상부자가즈아님은 나오다 안 나오다 하는데 거의 안 나온다고 했어요. 10시 11분 업고기님도 나오다 안 나오다 하는 것 같다며, 한두 번 우연히 봤는데 지금은 계속 안 보인다고 했어요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>9시 59분 버터떡 조교님은 워터마크 위치를 절묘하게 가리는 프레임을 만들어 캡컷이나 프프(프리미어 프로)에 레이어로 덧씌워도 될 것 같다고 했어요. 미미르님은 이번에 만든 캡컷 자동화에 마스코트를 박아 버려도 괜찮겠다고 했어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🔢</div>
+              <div class="insight-body">
+                <h3>미미르님은 1시간짜리 영상에 qwen 아이디 100개는 있어야 할 것 같다고 했어요</h3>
+                <p>밤 9시 51분 미미르님이 qwen 아이디 100개는 빠듯할 것 같다고 했고, 9시 54분에는 1시간짜리 영상을 만들려면 100개는 보유해야 한다고 했어요. 로컬로 하려니 4070ti 그래픽카드가 좀 버벅여서 이쪽으로 바꾸려 한다며, 오늘 훅이랑 1장만 만들어 보고 새 채널들은 월요일부터 올릴 생각이라고 했어요.</p>
+                <p>10시 1분 영상부자가즈아님은 초반 40개만 영상으로 하고 나머지는 2개씩 영상으로 하니 아이디 50개 정도면 된다고 했어요. 미미르님은 풀영상으로 한다면 이야기가 다르다고 했고, 10시 4분에는 오토워커 연동형이라 프롬프트를 따로 뜯어서 넣어야겠다고 했어요.</p>
+                <span class="insight-tag tag-tip">qwen</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">⚠️</div>
+              <div class="insight-body">
+                <h3>메타 AI는 한국 공식 출시 뒤 워터마크가 생겼다고 해요</h3>
+                <p>밤 10시 버터떡 조교님은 메타 AI가 원래 워터마크가 없어서 좋았는데, 한국에 공식 출시하면서 워터마크를 박아 버렸다고 했어요. 10시 5분 핑크님이 구독한 거냐고 묻자 무료라고 답했고, 10시 6분에는 영상 생성도 안 된다고 했어요. 핑크님과 눙이님은 워터마크가 심하다고 했어요.</p>
+                <p>미미르님은 개발자 모드로 들어가서 받으면 피할 수 있다는 이야기가 있다고 했는데, 직접 해 봤다는 말은 없었어요. 10시 32분 헐랭흐님은 「칩섭」을 쓰면 구글 플로우 워터마크가 안 나온다고 했고, 10시 47분 운영휴님이 칩섭이 뭐냐고 물었어요. 다음 날 새벽 2시 48분 미미르님은 플로우는 자기는 이상 없다고 했어요.</p>
+                <span class="insight-tag tag-caution">워터마크</span>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--orange-light);">🔥</div>
+              <div class="section-title">방 소식</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🎁</div>
+              <div class="insight-body">
+                <h3>새벽에는 버터떡 조교님의 고양이 사진과 선착순 선물게임이 있었어요</h3>
+                <p>새벽 0시 4분 Yum님이 버터떡 조교님이 애기 같다고 하자, 조교님은 단 것만 좋아하고 귀여운 걸 보면 사족을 못 쓴다고 했어요. 0시 6분에는 사진 7장을 올리며 고양이를 잘 아는 사람이 만든 것 같다고, 고양이들이 다 병맛이라 더 귀엽다고 했어요. 아는아이 서포터즈님은 냥이 표정이 버터떡 조교님(원문 「벌떡님」)과 닮은 것 같다고 했어요.</p>
+                <p>0시 10분 버터떡 조교님이 선착순 선물게임을 열었고 Yum님, 째바오님, 월천축하님, 머니토리님, 숏쟁이님이 당첨됐어요. Yum님과 째바오님은 처음 성공해 봤다고 했고, 버터떡 조교님은 즐거운 한가위 되라고 인사했어요. 0시 35분 오토리치님은 버터떡 조교님 때문에 비쵸비를 사서 먹어 봐야겠다고 했어요.</p>
+                <span class="insight-tag tag-tip">방 분위기</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🌕</div>
+              <div class="insight-body">
+                <h3>추석 아침과 저녁에는 연휴 근황과 강의 이야기가 오갔어요</h3>
+                <p>새벽 4시 59분 미미르님은 어제 기절했었다고 했어요. 아침 8시 38분에는 연휴라 푹 쉬니 뇌가 맑아진다며, 다채널 구성안과 기획서를 다 써 놨는데 관리자가 없다며 얼른 세컨드브레인을 적용해야겠다고 했어요. 하남부자님은 오랜만에 영화를 한 편 봤는데 무서워서 겨우 잤다며, 고향에 안 내려가니 명절 분위기가 덜 나고 서울 도로가 휑하다고 했어요. 서울본프리티님은 새벽에 시골에 내려왔다고 했어요.</p>
+                <p>저녁 8시 54분 미미르님은 이제 미줌마님 강의를 들으려고 준비 중이라고 했고, 핑크님은 자기도 다시 들어야 하는데 계속 허덕이는 중이라고 했어요. 미줌마 파워님은 하다가 모르는 건 언제든 물어보면 다 알려 주겠다고 했어요. 8시 57분 서울본프리티님이 「드디어」라며 축하하자 월천다이브님은 이 기세로 다음 영상을 고민 중이라고 했는데, 무엇을 축하한 건지는 앞 대화가 자료에 없어 분명하지 않아요.</p>
+                <p>밤 9시 7분 미줌마 파워님은 다들 쉬는 날인데 왜 이렇게 활동적이냐고 했고, 버터떡 조교님은 자기는 오늘 휴무가 아니라고 했어요. 9시 8분 미줌마 파워님은 알림이 다 음소거인데 버터떡 조교님의 공지 문자만 소리가 나서 일어났다고 했어요. 버터떡 조교님은 꿀잠을 깨워 미안하다며 「이 정책은 파훼법이 없어서」 속상하다고 했고, 미줌마 파워님은 덕분에 지각을 면했다고 했어요. 9시 51분 미줌마 파워님이 다들 추석 가족 모임 중 아니냐고 묻자, 미미르님은 지금 집에 다 모여 노는 중이라고 했어요.</p>
+                <span class="insight-tag tag-tip">방 분위기</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📎</div>
+              <div class="insight-body">
+                <h3>새벽과 밤에 카페 글 링크와 챌린지 인증이 이어졌어요</h3>
+                <p>새벽 1시 4분 챨쓰님은 챌린지 27/55일차를 「모든 정보를 미리 알려주면 안되겠구나~!」라는 제목으로, 4시 43분에는 다시 27/55일차로 「오늘 영상 두 개 올립니다.」라는 제목의 글을 인증했어요. 4시 58분 미국뉴욕커님은 챌린지 30/55를 「어느덧 챌린지 1달」이라는 제목으로 인증했어요. 밤 11시 3분 챨쓰님은 챌린지 27/55일차를 「내일 영상 업로딩 예약」이라는 제목으로 인증했어요.</p>
+                <p>강한별이님은 추석 잘 보내라며, 오토리치님은 한가위 인사와 함께, 포토락님과 다이렉트콜님은 잠시 지나간다며, 무럭무럭님은 즐겁고 평안한 추석 연휴 되라며, 밤 11시 9분 무무즈님은 조교님과 동기님들께 즐거운 명절 되라며 올렸어요. 장이수님은 무무즈님께 축하한다고 했어요. 나머지는 설명 없이 링크만 올라왔어요.<br><a href="https://cafe.naver.com/dinohighclass/410364" target="_blank" rel="noopener">새벽 0시 1분 강한별이님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/410215" target="_blank" rel="noopener">새벽 0시 35분 오토리치님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/410434" target="_blank" rel="noopener">새벽 1시 34분 정신차린웨이드님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/410451" target="_blank" rel="noopener">새벽 2시 27분 무무즈님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/410486" target="_blank" rel="noopener">새벽 5시 8분 요래님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/410490" target="_blank" rel="noopener">새벽 5시 20분 포토락님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/410501" target="_blank" rel="noopener">아침 6시 17분 무럭무럭님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/410505" target="_blank" rel="noopener">아침 6시 58분 규돌이님 카페 글 보기</a><br><a href="https://naver.me/xEXdBkoM" target="_blank" rel="noopener">밤 9시 6분 다이렉트콜님 네이버 단축 링크 열기</a><br><a href="https://cafe.naver.com/dinohighclass/411114" target="_blank" rel="noopener">밤 11시 9분 무무즈님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/411221" target="_blank" rel="noopener">밤 11시 59분 울봄이님 카페 글 보기</a></p>
+                <span class="insight-tag tag-tool">공유 자료</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🙋</div>
+              <div class="insight-body">
+                <h3>답변 대기</h3>
+                <p>이날 정리는 새벽 0시 1분부터 아침 8시 49분까지, 저녁 8시 54분부터 밤 11시 59분까지의 대화를 바탕으로 했어요. 아침 8시 50분부터 저녁 8시 53분 사이 대화는 담긴 자료가 없어 빠져 있어요.</p>
+                <p>밤 9시 미미르님이 우주님 말씀대로 50개를 만드는 중이고 30개는 셋업까지 끝냈다고 했는데, 무엇을 50개 만드는지는 대화에 나오지 않았어요. 밤 10시 47분 운영휴님이 헐랭흐님이 말한 「칩섭」이 뭐냐고 물었는데, 담긴 대화에는 답이 없어요. 오토K가 1기 튜브워크와 무엇이 달라졌는지와 자세한 튜토리얼도 아직 나오지 않았어요.</p>
+                <p>이 페이지 9/24 정리의 과학 채널 TTS 추천, 구글 계정 번호 인증과 채널 2단계 인증, 월억님 강의대로 안 만들어진다는 물음, 계정 전환 때 채널이 안 뜨는지에 대한 답은 이날 담긴 대화에서도 확인되지 않았어요.</p>
+                <span class="insight-tag tag-caution">확인 필요</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="day-accordion fade-in" data-day-id="0924">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">9/24 (목)</span>
+        </div>
+        <div class="day-accordion-summary">클로드 결과물 파일이 어느 프로그램에서 열리는지는 연결 프로그램 설정에 달렸다는 답 · 조회수 몇백~천 대여도 2~3일 간격으로 꾸준히 올리면 된다는 서포터즈·수강생 답과 클릭률 확인 · 1만 조회수가 나오면 그 주제로 한 번 더 가 보라는 조언 · 구독자가 270명에서 안 는다는 미줌마 파워님 채널 이야기 · 채널 갈아타기 고민과 채널이 초기화되면 바로 올려도 된다는 서포터즈 답 · 애드센스를 가족 명의로 만들 때 주소를 완전히 같게 하지 말라는 답 · 플로우플로우 에러는 새 링크로 다시 해 보니 됐다는 이야기 · 후파봇 키워드 안내와 /리스트 명령어 · 마스코트 인트로를 만들다 플로우플로우·그록그록으로 돌아왔다는 미미르님 · 10만 축하와 추석 인사, 카페 글 공유 · 과학 채널 TTS 추천과 구글 계정 번호 인증은 답변 대기</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">📂</div>
+              <div class="section-title">클로드 결과물 파일 열기</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">강의를 따라 하다 Output에서 파일이 열렸는데, 코드가 아니라 일반 클로드에서 열려요. 맞나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>새벽 1시 58분 리치영님이 2강 부분을 따라 하는 중이라며, 작업이 끝났는지 Output에서 파일이 열렸는데 그 파일이 코드가 아니라 일반 클로드에서 열린다고 사진 3장과 함께 물었어요. 같은 시각 후파 조교님 계정이 자주 묻는 질문 모음 페이지 안내를 올렸어요.</p>
+                  <p>2시 1분 화난밤에님은 연결 프로그램을 무엇으로 설정했냐에 따라 다르다고 답했어요. 자기는 보통 대본.txt 파일은 메모장으로, md 파일은 노트패드로 본다고 했어요. 딜리씨씨님은 역시 똑똑하시다고 했어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--purple-light);">📈</div>
+              <div class="section-title">조회수 · 업로드 간격</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">조회수가 200~1,500 정도 나와요. 2~3일 간격으로 계속 올려도 될까요, 채널을 바꿔야 할까요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>밤 9시 13분 대니님이 조회수가 200, 500, 1500, 200 정도이고 2~3일 간격으로 올리는데, 채널을 바꾼다는 이야기도 들어서 언제까지 올려 봐야 할지 물었어요. 9시 24분 아는아이 서포터즈님은 꼭 1일 1영상이 아니어도 꾸준히 올리면 된다고 답했어요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>9시 55분 달빛님은 그 정도 조회수면 노출은 훨씬 더 많을 테니 채널은 정상이라며, 클릭률이 낮으면 소재 선택과 썸네일을 개선해 보라고 했어요. 영상을 더 쌓아 보라며 채널을 옮길 필요는 없어 보인다고 했고, 자기도 노출이 5일 넘게 한 자리였다가 개선하며 올라간 적이 많다고 했어요. 미줌마 파워님은 자기라면 매일 1일 1영상을 하겠다고 했어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🎯</div>
+              <div class="insight-body">
+                <h3>1만 조회수가 나오면 그 주제로 한 번 더 가 보라는 조언이 있었어요</h3>
+                <p>새벽 1시 1분 감동리포트님이 자기도 이제 1만 조회수가 나왔다며 이제 뚫고 가겠냐고 하자, 1시 5분 하나뿐인숟가락님은 뚫고 가고 잘 나오면 그 주제로 한 번 더 가 보라고 했어요. 1시 51분 챨쓰님은 「세 번 째 1만 조회수 달성했어요」라는 제목의 카페 글을 알렸어요.</p>
+                <span class="insight-tag tag-tip">조회수</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📊</div>
+              <div class="insight-body">
+                <h3>미줌마 파워님은 최근 영상이 다 만 뷰를 넘는데 구독자가 270명에서 안 는다고 했어요</h3>
+                <p>밤 9시 1분 미줌마 파워님은 한 채널이 꾸준히 잘 가는 것 같다며, 최근 올린 10개가 다 아주 천천히 올라가 모두 만 뷰를 넘었다고 했어요. 그런데 구독자가 270명에서 안 오른다며, 보통 경제는 터지면 구독자 천 명이 그냥 는다고 했어요.</p>
+                <p>미미르님은 크게 될 것 같다며, 지금은 신규 시청자가 채워지지 않을 뿐 이미 보는 시청자들은 꾸준히 영상을 봐 주는 느낌이라고 했어요. 미줌마 파워님은 일단 끝까지 열심히 해 봐야겠다며 채널을 많이 만들어 내고 있다고 했어요.</p>
+                <span class="insight-tag tag-tip">채널 지표</span>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--green-light);">🔄</div>
+              <div class="section-title">채널 노출 · 채널 초기화</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🧭</div>
+              <div class="insight-body">
+                <h3>미미르님은 노출이 안 되는 채널 대신 갈아탈 채널을 만들고 있다고 했어요</h3>
+                <p>저녁 8시 48분 미미르님이 조교님들이 채널을 다 갈아타라고 한다고 하자, 8시 50분 아는아이 서포터즈님은 여러 번 갈아타라고 한 게 아니라 지금 채널이 노출이 안 되는 문제를 여러 조교님이 같이 이야기한 거라고 했어요. 미미르님은 노출이 안 되는 게 맞다고 했고, 눙이님은 계속 노출이 안 되면 조교님 말씀대로 해야 한다고 했어요.</p>
+                <p>8시 52분 미미르님은 예비용 채널을 새로 파는 게 아니라 갈아탈 채널을 하나 만들고 있다며 그래도 마음이 편치 않다고 했어요. 8시 54분에는 이러다 10만 뷰 하나를 떡하니 들고 올지도 모른다고 했어요.</p>
+                <span class="insight-tag tag-caution">노출</span>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">콘텐츠를 삭제해 채널을 초기화했으면 며칠 있다가 다시 올려야 하나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>저녁 8시 55분 미미르님이 아는아이 서포터즈님께 콘텐츠를 삭제하고 며칠은 있다가 다시 올리라고 했던 게 맞냐고 물었어요. 9시 25분 서포터즈님은 아니라며, 채널이 초기화되면 바로 올려도 되고 어떤 식으로 하는지가 중요할 거라고 답했어요.</p>
+                  <p>9시 26분 미미르님이 알려 준 콘텐츠 삭제로 가서 다 삭제된 걸 확인했다고 하자, 서포터즈님은 채널이 남아 있냐고 물었어요. 미미르님은 로그인해서 들어가면 채널이 없어졌다고 나오고, 홈 피드도 깨끗하며, 검색해도 안 뜬다고 했어요. 서포터즈님은 채널 연결이 끊긴 것 같은데 채널명이 있는지가 중요하다고 했고, 9시 36분에는 계정 전환할 때 채널이 아예 안 뜨는 거냐고 다시 물었어요. 이 물음에 대한 답은 이날 담긴 대화에 나오지 않았어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--orange-light);">💰</div>
+              <div class="section-title">애드센스 주소</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">애드센스를 남편 명의로 만들려는데, 주소가 저와 같아도 괜찮나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>밤 11시 18분 오케이올님이 애드센스를 「신랑 걸로」 만들려는데 주소가 자기와 같아도 상관없냐고 물었어요. 같은 시각 후파 조교님 계정이 자주 묻는 질문 모음 페이지 안내를 올렸어요. 11시 19분 아는아이 서포터즈님은 완전히 똑같으면 좋지 않다며, 구주소나 동호수를 좀 바꿔서 해 보라고 답했어요.</p>
+                  <p>11시 21분 오케이올님이 집 주소가 아니라 상가 주소 같은 것도 괜찮냐고 묻자, 서포터즈님은 우편물을 실제로 받을 수 있으면 된다고 답했어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--purple-light);">🎨</div>
+              <div class="section-title">플로우플로우 에러</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">플로우플로우가 계정을 바꿔도 에러가 나요. 저만 그런가요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge sub">조교</span>
+                  </div>
+                  <p>밤 10시 17분 핑크님이 계정을 바꿔도 플로우플로우 에러가 난다고 묻자, 10시 41분 봄동 조교님은 지금 해 보니 문제가 없다고 했고 후파 조교님은 플로우 공유 도구 링크를 올렸어요.<br><a href="https://labs.google/fx/tools/flow/shared/tool/a05673cf-9200-43f5-8c66-dd9c921f8ab0" target="_blank" rel="noopener">밤 10시 41분 후파 조교님이 올린 플로우 공유 도구 링크 열기</a></p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge">서포터즈</span>
+                    <span class="qa-answer-name">아는아이</span>
+                  </div>
+                  <p>10시 42분 아는아이 서포터즈님은 구버전 같다고 했고, 핑크님은 구버전을 쓰고 있었다고 했어요.</p>
+                </div>
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>10시 42분 핑크님은 다시 해 보니 된다고 했어요. 서버 에러인가 싶어 몇 시간을 헤매며 한 장씩 수동으로도 만들어 봤다고 했고, 이 링크는 확장을 재설치하지 않고 링크로 열린다고 했어요. 구버전 때문이었는지 플로우 쪽 일시 문제였는지는 분명하지 않아요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">🔎</div>
+              <div class="section-title">후파봇 키워드 안내 · 명령어</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">⌨️</div>
+              <div class="insight-body">
+                <h3>후파봇이 키워드에 반응해 자주 묻는 질문 모음 페이지를 올렸고, 「/리스트」를 치면 나온다는 안내가 있었어요</h3>
+                <p>저녁 8시 42분 후파 조교님 계정이 자주 묻는 질문 모음 페이지 안내를 올리자, 후파 조교님은 「키워드 발동!」이라고 했어요. 미미르님은 「살아난 후파」라고 받았고, 후파 조교님은 이게 되네 하며 놀랐어요. 미줌마 파워님이 「/채널지표」와 「/채널 지표」를, 후파 조교님이 「야담플로우」를 치는 사이 같은 안내가 두 번 더 올라왔어요.</p>
+                <p>8시 44분 미줌마 파워님이 「수익창출」을 치고 달달3님이 여기에는 안 나오더라고 하자, 후파 조교님은 「/리스트」를 치면 나올 거라며 명령어라고 했어요. 8시 45분 미줌마 파워님이 「이지워커」라고 치자 후파 조교님이 이지워커 배포 페이지 링크를 올렸어요. 어떤 말이 안내를 부르는지 정확한 키워드 목록은 대화에 나오지 않았어요.<br><a href="https://limbj1218-cyber.github.io/chatlog/faq/" target="_blank" rel="noopener">오토워커 2기 자주 묻는 질문 모음 열기</a><br><a href="https://limbj1218-cyber.github.io/hoopa-ez-dist/index.html?t=11" target="_blank" rel="noopener">이지워커 배포 페이지 열기</a></p>
+                <span class="insight-tag tag-tool">명령어</span>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--green-light);">🧸</div>
+              <div class="section-title">마스코트 인트로</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🎬</div>
+              <div class="insight-body">
+                <h3>미미르님은 마스코트가 소개하는 인트로를 만들다 결국 플로우플로우·그록그록으로 돌아왔다고 했어요</h3>
+                <p>아침 6시 48분 미미르님은 마스코트 뽑는 것도 일이라고 했어요. 하남부자님이 영상에 넣을 거냐고 묻자, 6시 52분 미미르님은 영상 시작 전에 마스코트가 소개하는 듯한 영상으로 시작하려 한다고 했어요. 7시 3분에는 로컬로만 하려다 보니 이것저것 힘만 든다고 했어요.</p>
+                <p>하남부자님이 무엇으로 만드냐고 묻자, 7시 45분 미미르님은 「Compy」라고 답했어요. 7시 57분에는 이것저것 시도해 봤을 뿐 결국 플로우플로우와 그록그록으로 돌아왔다고 했어요. 하남부자님은 조회수는 덜 나와도 매일 하니 매일 조금은 발전한 거라고 생각한다고 했어요.</p>
+                <span class="insight-tag tag-tool">마스코트</span>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="section-header">
+              <div class="section-icon" style="background:var(--orange-light);">🔥</div>
+              <div class="section-title">방 소식</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🎉</div>
+              <div class="insight-body">
+                <h3>새벽에는 10만 축하와 추석 인사가 이어졌어요</h3>
+                <p>새벽 0시 2분 무럭무럭님이 카페 글을 올린 뒤 미미르님, 헐랭흐님, 루리리라님이 10만을 축하했고, 무럭무럭님은 한 분씩 감사 인사와 함께 즐거운 연휴를 보내라고 했어요. 새벽 2시 5분 삐댕님은 유튜브 게시물 링크를 올리며 「여기도 날아갔네요」라고 했는데, 어떤 채널 이야기인지는 설명이 없었어요. 2시 42분 미줌마 파워님은 비쵸비 대신 초코파이라고 했고, 4시 56분 미미르님은 강남에는 초코와 딸기뿐이라고 했어요.</p>
+                <p>아침 6시 43분 미미르님은 다들 행복한 추석 보내고 영상이 더 떡상하길 바란다고 했어요. 하남부자님은 추석은 없고 영상만 있을 뿐이라며, 오전 업로드를 마저 하고 연휴에 밀린 노쌤 강의를 다시 봐야겠다고 했어요. 미미르님은 이미 퇴근했다며 밀린 강의를 봐야겠다고 했어요.</p>
+                <span class="insight-tag tag-tip">방 분위기</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">😄</div>
+              <div class="insight-body">
+                <h3>저녁과 밤에는 사투리·농담과 야담 만들기 근황이 오갔어요</h3>
+                <p>저녁 8시 41분 미줌마 파워님은 남편이 부산 사람인데 영어를 잘하고 음률에 부산이 묻어난다고 했고, 떡상러님은 어딜 가든 결론은 노쌤이냐고 했어요. 앞 대화는 자료에 없어요. 8시 48분 대니님은 클로드 코드로 만든 것을 인사 겸 올린다고 했고, 눙이님은 귀엽다고, 미미르님은 자기는 이런 센스가 부족해 못 만든다고 했어요. 9시 18분 천억부자님이 아는아이 서포터즈님(원문 「아아쌤」)이 남자였냐며 여자라고 생각해 왔다고 하자, 떡상러님은 섬세한 참한 남자라고 했고 서포터즈님은 버터떡 조교님은 남자라고 생각했냐고 되물었어요.</p>
+                <p>밤 10시 57분 화풍혈해님이 오토워커로 천만 조회수 대박이라고 하자 미줌마 파워님이 누가 냈냐고 물었고, 화풍혈해님은 올해 안에는 되겠다며 후킹은 이렇게 하는 것 같다고, 농담이었다고 했어요. 11시 6분 아이린파파님은 추석 연휴에 야담을 만드는 게 전래동화를 만드는 것처럼 재밌다며, 들으면서 자기가 자게 생겼다고 했어요. 후파 조교님은 야담 재밌다고 받았어요.</p>
+                <span class="insight-tag tag-tip">방 분위기</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📎</div>
+              <div class="insight-body">
+                <h3>새벽·아침과 밤에 카페 글 링크와 챌린지 인증이 이어졌어요</h3>
+                <p>아침 7시 33분 이파라파냐무냐무님은 챌린지 23/55일차를 「핀셋 ! 컨셉을 딱 고정을 해야하는ㄷ ㅔ」라는 제목으로 인증했어요.</p>
+                <p>무럭무럭님과 미줌마 파워님은 지나간다며, 다이렉트콜님과 비욘드정님은 풍성한 한가위 되라며, 럭키루키님은 지나간다며 올렸어요. 나머지는 설명 없이 링크만 올라왔어요.<br><a href="https://cafe.naver.com/dinohighclass/409484" target="_blank" rel="noopener">새벽 0시 2분 무럭무럭님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/409521" target="_blank" rel="noopener">새벽 0시 39분 울봄이님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/409523" target="_blank" rel="noopener">새벽 0시 47분 강한별이님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/409524" target="_blank" rel="noopener">새벽 0시 48분 스톤님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/409527" target="_blank" rel="noopener">새벽 0시 53분 오토리치님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/409518?tc=shared_link" target="_blank" rel="noopener">새벽 0시 59분 감동리포트님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/409552" target="_blank" rel="noopener">새벽 1시 39분 사람은님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/409594" target="_blank" rel="noopener">새벽 3시 10분 17님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/409630" target="_blank" rel="noopener">아침 7시 9분 나츠님 카페 글 보기</a><br><a href="https://naver.me/Fae2JDJy?tc=shared_link" target="_blank" rel="noopener">아침 7시 31분 미줌마 파워님 네이버 단축 링크 열기</a><br><a href="https://cafe.naver.com/dinohighclass/409660" target="_blank" rel="noopener">아침 8시 42분 요래님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/410095" target="_blank" rel="noopener">저녁 8시 54분 다이렉트콜님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/410126" target="_blank" rel="noopener">밤 9시 28분 수선화에게님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/410163" target="_blank" rel="noopener">밤 10시 한네기님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/410134" target="_blank" rel="noopener">밤 10시 4분 바질그린님 카페 글 보기</a><br><a href="https://naver.me/GprKIDwt" target="_blank" rel="noopener">밤 10시 11분 비욘드정님 네이버 단축 링크 열기</a><br><a href="https://cafe.naver.com/dinohighclass/410330" target="_blank" rel="noopener">밤 11시 48분 태쭈리님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/410335" target="_blank" rel="noopener">밤 11시 50분 럭키루키님 카페 글 보기</a></p>
+                <span class="insight-tag tag-tool">공유 자료</span>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">🙋</div>
+              <div class="insight-body">
+                <h3>답변 대기</h3>
+                <p>이날 정리는 새벽 0시 2분부터 아침 8시 42분까지, 저녁 8시 41분부터 밤 11시 50분까지의 대화를 바탕으로 했어요. 아침 8시 43분부터 저녁 8시 40분 사이 대화는 담긴 자료가 없어 빠져 있어요.</p>
+                <p>아침 8시 22분 Daehanworker님이 과학 채널 TTS는 무엇으로 하면 좋을지, 다른 채널들은 다 중저음 비슷한 목소리인데 찾지 못하겠다고 물었어요. 이 물음 뒤 대화가 자료에 없어 답은 확인되지 않았어요.</p>
+                <p>저녁 8시 41분 달달3님이 구글 계정을 만들 때는 아무 번호로 인증하고 채널 2단계 인증은 새 번호로 제대로 하는 개념이냐고 물었는데, 답은 나오지 않았어요. 눙이님은 답을 못 하는 걸 보니 월억쌤 애드센스 특강(원문 「애센특강」)을 다시 복습해야겠다고 했어요. 8시 45분 달달3님이 월억님 강의대로 만들어지지 않는다고 하자 미미르님과 눙이님이 어떤 부분이냐고 물었는데, 그 뒤 설명은 나오지 않았어요.</p>
+                <p>밤 9시 36분 아는아이 서포터즈님이 미미르님께 계정 전환할 때 채널이 아예 안 뜨는 거냐고 물은 데 대한 답은 나오지 않았어요. 새벽 1시 14분 성비님이 「이걸 못 찾겠네요」라고 했는데, 무엇을 찾는지는 대화에 나오지 않았고 답도 없었어요.</p>
+                <span class="insight-tag tag-caution">확인 필요</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="day-accordion fade-in" data-day-id="0923">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">9/23 (수)</span>
+        </div>
+        <div class="day-accordion-summary">영상 퀄리티를 높이니 시청 지속률이 크게 올랐다는 미미르님 이야기 · 한국을 겨냥한 경제 채널을 동남아에서 만들기도 한다는 조교 답과 신고 이야기 · 재사용 콘텐츠로 수창이 정지된 채널이 항소 영상을 공개로 올린 것 같다는 이야기 · 클로드 코드 오푸스 5.5 업데이트 명령과 무료 초기화 소식 · 60분 롱폼 세컨드 채널을 반자동으로 준비했다는 근황 · 시청자 유입 분석은 Data API 키 받는 곳에서 키를 받아 준다는 수강생 답 · 명절 전 바쁜 근황과 새벽·아침 카페 글 공유 · 저녁 7시 야담 특강 줌 링크와 야담은 전체 대상이라는 조교 안내 · 야담 스킬은 아직 안 나왔다는 조교 답 · 튜브워커 오류는 대본에 공백(엔터)이 많으면 뜰 수 있다는 조교 답 · 야담 스토리보드 프롬프트 오류는 껐다 켜니 됐다는 이야기와 문의용 오픈채팅 안내 · 한 줄 들어 본 목소리와 대본 전체 음성이 다르다는 고민에 조교님이 EL 무료 크레딧 테스트를 권한 이야기 · 후파 조교님의 자주 묻는 질문 모음 페이지와 브루 자동줄바꿈 프로그램 공유 · 그록그록 야담 업데이트를 써 보고 알려 달라는 조교 안내 ·500명 뒤 PIN 번호는 3주~한 달은 걸린다는 수강생 답 · 쇼츠로 홍보하면 오히려 안 좋다고 들었다는 이야기 · 로봇청소기·간식 잡담과 저녁·밤 카페 글·챌린지 인증 ·베낌 여부와 분석 API 이름, 경제 채널 목소리 추천은 답변 대기</div>
       </button>
       <div class="day-accordion-body">
         <div class="day-accordion-content">
@@ -743,6 +1292,7 @@
               <div class="insight-body">
                 <h3>밤 9시 43분 후파 조교님이 이지워커 야담용 그록그록 업데이트를 알렸어요</h3>
                 <p>후파 조교님은 「이지워커 야담을 위한 그록그록 업데이트 완료」라고 올렸어요. 무엇이 바뀌었는지는 이날 담긴 대화에 나오지 않았어요.</p>
+                <p>밤 11시 20분 후파 조교님은 이 업데이트를 써 보고 이상한 점이 있으면 알려 달라고 했어요.</p>
                 <span class="insight-tag tag-tool">그록그록</span>
               </div>
             </div>
@@ -853,6 +1403,44 @@
           </div>
           <div class="section">
             <div class="section-header">
+              <div class="section-icon" style="background:var(--accent-light);">📮</div>
+              <div class="section-title">PIN 번호 · 쇼츠 홍보</div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">500명이 되고 오는 PIN 번호가 12일째 안 와요. 다시 신청해야 하나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>밤 11시 36분 하나뿐인숟가락님이 500명이 되고 오는 PIN 번호가 12일 정도 지났는데 안 오면 다시 신청하냐고 물었어요. 11시 37분 규돌이님은 3주는 봐야 할 거라며 빨리 안 온다고 했고, 미미르님은 늦으면 한 달 정도 걸리지 않겠냐고 했어요.</p>
+                  <p>다시 신청하라는 답은 나오지 않았어요. 하나뿐인숟가락님은 감사하다고 했어요.</p>
+                </div>
+              </div>
+            </div>
+            <div class="qa-card" onclick="toggleQa(this)">
+              <div class="qa-header">
+                <div class="qa-q-icon">Q</div>
+                <div class="qa-question">쇼츠를 올려서 홍보하는 분도 있나요?</div>
+                <div class="qa-toggle">▾</div>
+              </div>
+              <div class="qa-body">
+                <div class="qa-answer">
+                  <div class="qa-answer-header">
+                    <span class="qa-answer-badge member">수강생</span>
+                  </div>
+                  <p>밤 11시 38분 하나뿐인숟가락님이 「그 쇼츠」도 올려서 홍보하는 분이 있냐고 물었어요. 11시 46분 미미르님은 하지 말라고 하셔서 안 하는 중이라고 했고, 하면 안 좋냐는 물음에 11시 58분 오히려 안 좋다고 하시더라고 답했어요.</p>
+                  <p>누가 그렇게 말했는지, 「그 쇼츠」가 어떤 쇼츠인지는 대화에 나오지 않았어요. 롱폼을 잘라 하이라이트 쇼츠로 올리는 것에 대한 서포터즈 답은 이 페이지 자주 묻는 질문의 「롱폼과 쇼츠를 한 채널에 같이 올려도 되나요?」 항목에 있어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="section-header">
               <div class="section-icon" style="background:var(--orange-light);">🔥</div>
               <div class="section-title">방 소식</div>
             </div>
@@ -888,7 +1476,7 @@
               <div class="insight-emoji">📎</div>
               <div class="insight-body">
                 <h3>오후와 밤에도 카페 글 링크가 이어졌어요</h3>
-                <p>럭키루키님과 오토리치님은 후딱 지나간다고, 째바오님은 지나간다고 했어요. 나머지는 설명 없이 링크만 올라왔어요.<br><a href="https://cafe.naver.com/dinohighclass/408943" target="_blank" rel="noopener">오후 4시 54분 핑크님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/408990" target="_blank" rel="noopener">오후 5시 44분 수선화에게님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/408966" target="_blank" rel="noopener">저녁 6시 12분 헤즐넛님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/409046" target="_blank" rel="noopener">저녁 6시 44분 모오님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/409056" target="_blank" rel="noopener">저녁 7시 3분 럭키루키님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/409201" target="_blank" rel="noopener">밤 9시 31분 오토리치님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/409041" target="_blank" rel="noopener">밤 9시 41분 째바오님 카페 글 보기</a></p>
+                <p>럭키루키님과 오토리치님은 후딱 지나간다고, 째바오님과 제이제이29님은 지나간다고, 포토락님은 수업 중에 잠시 지나간다고, 땡큐엄마님은 「뻥조회수야 고마워~」라고 했어요. 나머지는 설명 없이 링크만 올라왔어요.<br><a href="https://cafe.naver.com/dinohighclass/408943" target="_blank" rel="noopener">오후 4시 54분 핑크님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/408990" target="_blank" rel="noopener">오후 5시 44분 수선화에게님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/408966" target="_blank" rel="noopener">저녁 6시 12분 헤즐넛님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/409046" target="_blank" rel="noopener">저녁 6시 44분 모오님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/409056" target="_blank" rel="noopener">저녁 7시 3분 럭키루키님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/409201" target="_blank" rel="noopener">밤 9시 31분 오토리치님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/409041" target="_blank" rel="noopener">밤 9시 41분 째바오님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/408658?tc=shared_link" target="_blank" rel="noopener">밤 9시 58분 땡큐엄마님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/409245" target="_blank" rel="noopener">밤 10시 4분 쇼츠드리머님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/409239" target="_blank" rel="noopener">밤 10시 4분 포토락님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/409288" target="_blank" rel="noopener">밤 10시 30분 쏭지님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/409300" target="_blank" rel="noopener">밤 10시 42분 한네기님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/409324" target="_blank" rel="noopener">밤 11시 8분 청주입장알림님 카페 글 보기</a><br><a href="https://cafe.naver.com/dinohighclass/409418" target="_blank" rel="noopener">밤 11시 37분 제이제이29님 카페 글 보기</a></p>
                 <span class="insight-tag tag-tool">공유 자료</span>
               </div>
             </div>
@@ -896,7 +1484,7 @@
               <div class="insight-emoji">🙋</div>
               <div class="insight-body">
                 <h3>답변 대기</h3>
-                <p>이날 정리는 새벽 0시 1분부터 아침 8시 40분까지, 오후 4시 54분부터 밤 9시 43분까지의 대화를 바탕으로 했어요. 아침 8시 41분부터 오후 4시 53분 사이 대화는 담긴 자료가 없어 빠져 있고, 밤 9시 43분 이후 대화는 아직 담기지 않았어요. 전날 밤 9시 9분 이후부터 밤 11시 59분 전까지의 대화도 담긴 자료가 없어 빠져 있어요.</p>
+                <p>이날 정리는 새벽 0시 1분~아침 8시 40분, 오후 4시 54분~밤 9시 43분, 밤 9시 58분~11시 59분 대화를 바탕으로 했어요. 그 사이 대화와 전날 밤 9시 9분~11시 59분 대화는 담긴 자료가 없어 빠져 있어요.</p>
                 <p>오후 4시 55분 둥둥맘님이 경제 채널 목소리로 「태형」 말고 추천할 만한 게 있냐고 물었어요. 올릴 때마다 목소리가 거슬린다는 댓글이 달린다고 했는데, 이 물음에 대한 답은 나오지 않았어요. 5시 3분 삐댕님이 첫 계정이라며 중급 기능을 열 때 쓴 번호를 써도 되냐고 물은 데 대한 답도 나오지 않았어요. 앞 대화가 자료에 없어 어떤 계정 이야기인지도 분명하지 않아요.</p>
                 <p>핑크님이 미줌마 파워님께 베낌을 당했냐고 물은 데 대한 답은 나오지 않았어요. 미미르님이 말한 「애널리스트」가 정확히 어떤 API인지도 확인되지 않았어요.</p>
                 <p>이 페이지 9/22 정리의 1:1 피드백 시간 기준, 썸네일 카피 신고 결과, 노출·CTR 급감 원인, 어사이드 결제를 막는 방법과 그보다 앞선 날짜의 답변 대기 항목은 이날 담긴 대화에서도 답이 확인되지 않았어요.</p>
@@ -18536,7 +19124,7 @@
             <div class="qa-answer-header">
               <span class="qa-answer-badge sub">조교</span>
             </div>
-            <p>카페 게시판이 아니라 공지 카톡에 있다고 해요.<br>어느 공지 글인지까지는 방 대화에서 확인되지 않았으니, 공지 카톡을 먼저 확인해 보세요.</p>
+            <p>카페 게시판이 아니라 공지 카톡에 있다고 해요.<br>어느 공지 글인지까지는 방 대화에서 확인되지 않았으니, 공지 카톡을 먼저 확인해 보세요.<br>9/25 밤 버터떡 조교님은 공지방에 올렸던 스톡 파일은 다운 기간이 지났다고 했어요. 그때 카페 강의자료로 정리한 확장프로그램은 아래 「스톡 이미지/영상 스위칭 확장프로그램은 어디서 받나요?」 항목을 보세요.</p>
           </div>
         </div>
       </div>
@@ -19581,7 +20169,7 @@
             <div class="qa-answer-header">
               <span class="qa-answer-badge sub">조교</span>
             </div>
-            <p>다른 계정으로 이어서 해 보세요. 조교님도 같은 오류로 실패해서 다른 계정에서 이어서 하고 있다고 했어요.<br>다만 이전에 쓰던 엑셀 파일을 그대로 올려도 같은 에러가 난다는 이야기도 있어서, 프롬프트 문제만은 아닐 수 있어요.</p>
+            <p>다른 계정으로 이어서 해 보세요. 조교님도 같은 오류로 실패해서 다른 계정에서 이어서 하고 있다고 했어요.<br>다만 이전에 쓰던 엑셀 파일을 그대로 올려도 같은 에러가 난다는 이야기도 있어서, 프롬프트 문제만은 아닐 수 있어요.<br>9/24 밤 플로우플로우가 계정을 바꿔도 에러가 난다던 분은 구버전을 쓰고 있었어요. 봄동 조교님이 해 봤을 때는 문제가 없었고, 후파 조교님이 올린 링크로 다시 해 보니 됐다고 해요.<br><a href="https://labs.google/fx/tools/flow/shared/tool/a05673cf-9200-43f5-8c66-dd9c921f8ab0" target="_blank" rel="noopener">플로우 공유 도구 링크 열기</a></p>
           </div>
         </div>
       </div>
@@ -21262,10 +21850,211 @@
           </div>
         </div>
       </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">500명이 되고 오는 PIN 번호가 12일째 안 와요</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>3주는 봐야 하고, 늦으면 한 달 정도 걸린다는 답이 있었어요. 빨리 오지 않는다고 해요.<br>다시 신청하라는 답은 나오지 않았어요.<br>9/23 밤 수강생들이 답한 내용이에요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">클로드 작업 결과 파일이 코드가 아니라 일반 클로드에서 열려요. 괜찮나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>파일이 어느 프로그램에서 열리는지는 연결 프로그램을 무엇으로 설정했냐에 따라 달라요.<br>보통 대본.txt 파일은 메모장으로, md 파일은 노트패드로 본다는 수강생 답이 있었어요.<br>9/24 새벽 2강을 따라 하다 Output 파일이 일반 클로드에서 열린다는 물음에 나온 답이에요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">조회수가 몇백~천 대인데 2~3일 간격으로 계속 올려도 될까요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge">서포터즈</span>
+              <span class="qa-answer-name">아는아이</span>
+            </div>
+            <p>꼭 1일 1영상이 아니어도 꾸준히 올리면 돼요.<br>9/24 밤 조회수가 200~1,500 정도 나와 채널을 바꿔야 할지 고민하던 수강생에게 한 답이에요.</p>
+          </div>
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>그 정도 조회수면 노출은 훨씬 더 많을 테니 채널은 정상이라는 답이 있었어요. 클릭률을 보고, 낮으면 소재 선택과 썸네일을 개선해 보세요.<br>영상이 몇 개 없을 때는 채널을 옮기기보다 영상을 더 쌓아 보라는 경험담이에요. 노출이 5일 넘게 한 자리였던 채널도 계속 개선하니 올라가는 시기가 왔다고 해요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">콘텐츠를 삭제해 채널을 초기화했으면 며칠 있다가 다시 올려야 하나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge">서포터즈</span>
+              <span class="qa-answer-name">아는아이</span>
+            </div>
+            <p>아니요, 채널이 초기화되면 바로 올려도 돼요. 어떤 식으로 올리는지가 중요해요.<br>채널 연결이 끊긴 것처럼 보이면 채널명이 남아 있는지, 계정 전환할 때 채널이 아예 안 뜨는지를 확인해 보라고 했어요.<br>9/24 밤 노출 문제로 갈아탈 채널을 만들던 수강생에게 한 답이에요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">애드센스를 가족 명의로 만들 때 주소가 제 것과 같아도 되나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge">서포터즈</span>
+              <span class="qa-answer-name">아는아이</span>
+            </div>
+            <p>완전히 똑같으면 좋지 않아요. 구주소나 동호수를 좀 바꿔서 해 보세요.<br>집 주소가 아니라 상가 주소도 우편물을 실제로 받을 수 있으면 돼요.<br>9/24 밤 남편 명의로 애드센스를 만들려는 수강생에게 한 답이에요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">사담방 명령어는 어떻게 찾아보나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>「/리스트」를 치면 나올 거라고 해요.<br>후파 조교님 계정(후파봇)은 일부 키워드에 반응해 자주 묻는 질문 모음 페이지 안내를 올려요. 「이지워커」를 치자 이지워커 배포 페이지 링크가 올라온 적도 있어요. 정확한 키워드 목록은 대화에 나오지 않았어요.<br>9/24 저녁 후파 조교님이 알려 준 내용이에요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">오토K 사용법은 어디서 보나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>버터떡 조교님이 사용법 라이브 영상을 공유했어요.<br>1기 때 쓰던 튜브워크와 좀 달라진 부분이 있어서, 자세한 튜토리얼은 나중에 다시 준다고 했어요.<br>9/25 밤 공유된 영상이에요.<br><a href="https://www.youtube.com/live/xVT6Q5brShY?si=UNGbPsiNLbg68Rel" target="_blank" rel="noopener">오토K 사용법 영상 열기</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">스톡 이미지/영상 스위칭 확장프로그램은 어디서 받나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>오토워커 카페 강의자료 글에 확장프로그램 파일과 튜토리얼이 같이 올라와 있어요.<br>플로우로 이미지를 만들 때 스톡을 쓰기 어려운 부분을 보완해 주는 확장프로그램이라고 해요. 공지방에 올렸던 스톡 파일은 다운 기간이 지났다고 했어요.<br>9/25 밤 버터떡 조교님이 사용법 문의가 있어서 정리했다며 알린 글이에요.<br><a href="https://cafe.naver.com/autoworker2/204" target="_blank" rel="noopener">스톡 이미지/영상 스위칭 확장프로그램 글 열기</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">클로드 유료 구독자 클라우드 세션 무료 크레딧은 어떻게 받나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>「claude.ai/code/claim-credit/10」에 접속해 GitHub를 연결하면 된다는 안내가 공유됐어요.<br>Max는 250달러, Pro는 100달러이고 10/7까지 받아야 한다고 해요. 후파 조교님이 다른 방에서 얻어 온 정보라, 금액과 기한은 직접 확인해 보세요.<br>9/25 밤 공유된 안내예요.<br><a href="https://x.com/ClaudeDevs/status/2102871550974427462?s=20" target="_blank" rel="noopener">무료 크레딧 안내 게시물 열기</a></p>
+          </div>
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>웹에서 해야 되고, Git을 연결해야 지급된다고 해요.<br>9/25 밤 수강생 경험이에요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">지금이라도 프반을 들어도 되나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>물론이에요. 이번 기수 프반이 알차다고 해요.<br>제우스님·다람님·노마드되고파님이 제공하는 프로그램에 쇼폭님 특강까지 있다고 했어요. 가격이나 신청 방법은 대화에 나오지 않았어요.<br>9/25 밤 버터떡 조교님이 답한 내용이에요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">qwen으로 만들면 워터마크가 나오나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>나오다 안 나오다 하는데 거의 안 나온다고 해요.<br>9/25 밤 수강생 두 분의 경험이에요.</p>
+          </div>
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge sub">조교</span>
+            </div>
+            <p>워터마크 위치를 가리는 프레임을 만들어 캡컷이나 프리미어 프로에 레이어로 덧씌워도 될 것 같다고 했어요.<br>9/25 밤 버터떡 조교님 의견이에요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="qa-card" onclick="toggleQa(this)">
+        <div class="qa-header">
+          <div class="qa-q-icon">Q</div>
+          <div class="qa-question">오토K 설치는 어렵나요?</div>
+          <div class="qa-toggle">▾</div>
+        </div>
+        <div class="qa-body">
+          <div class="qa-answer">
+            <div class="qa-answer-header">
+              <span class="qa-answer-badge member">수강생</span>
+            </div>
+            <p>플로우플로우처럼 연동해서 씬 추출, 프롬프트 확인, 생성까지 가는 건 쉬운데 아이디 연동 같은 초반 작업이 조금 어려울 수 있다고 해요.<br>qwen 아이디를 엑셀이나 메모장에 모아 두고 하나씩 넣거나, 양식지를 받아 클로드에게 정리해 달라고 해서 넣어도 된다고 했어요. 설명서에 다 나와 있으니 천천히 하나씩 하면 된다고 해요.<br>9/26 새벽 수강생 경험이에요.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="updated-at">마지막 업데이트: 2026-09-23</div>
+  <div class="updated-at">마지막 업데이트: 2026-09-26</div>
 </div>
 
 <button class="fab-top" id="fabTop" type="button" aria-label="맨 위로" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
