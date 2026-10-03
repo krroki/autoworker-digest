@@ -1194,13 +1194,13 @@
     }
   ],
   "live": {
-    "checkedAt": "2026-10-03T23:24:59+09:00",
-    "totalCount": 12407,
+    "checkedAt": "2026-10-03T23:31:26+09:00",
+    "totalCount": 12408,
     "rooms": {
       "sashalook": 3049,
-      "lululalalily": 3914,
+      "lululalalily": 3913,
       "yunabi": 2626,
-      "hanam-dinosaur": 1808,
+      "hanam-dinosaur": 1810,
       "woleoknam": 1000,
       "nyami-naver-clip": 10
     }
