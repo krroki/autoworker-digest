@@ -76,6 +76,7 @@
     text-align: left;
     transition: background 0.25s ease;
     font-family: inherit;
+    color: inherit;
   }
   .day-accordion-header:hover { background: var(--accent-light); }
   .day-accordion.open .day-accordion-header {
@@ -121,7 +122,7 @@
     transition: max-height 0.45s cubic-bezier(0.4,0,0.2,1);
     background: var(--card);
   }
-  .day-accordion.open .day-accordion-body { max-height: 10000px; }
+  .day-accordion.open .day-accordion-body { max-height: none; }
   .day-accordion-content { padding: 24px 22px; }
 
   /* Stats bar */
@@ -165,7 +166,7 @@
   .qa-toggle { color: var(--sub); font-size: 16px; transition: transform 0.3s; flex-shrink: 0; margin-top: 3px; user-select: none; }
   .qa-card.open .qa-toggle { transform: rotate(180deg); }
   .qa-body { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), padding 0.3s; }
-  .qa-card.open .qa-body { max-height: 700px; padding: 0 20px 16px; }
+  .qa-card.open .qa-body { max-height: none; padding: 0 20px 16px; }
   .qa-answer { background: #f8f9fb; border-radius: 12px; padding: 14px 16px; margin-left: 40px; margin-top: 6px; }
   .qa-answer-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
   .qa-answer-badge { font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; background: var(--accent); color: #fff; }
@@ -572,24 +573,18 @@
 </style>
 </head>
 <body>
-<style>
-  /* 쇼츠포뮬러 2기 전용(2026-10-12): 공용 CSS 의 펼침 높이 상한(답변 700px · 날짜 10000px)에서 긴 답변·긴 날짜가 잘려 상한만 올린다.
-     실측(폭 360px): 가장 긴 답변 3072px · 10/1 블록 답변 모두 펼침 24734px. 모양·동작은 공용 CSS 그대로. */
-  .qa-card.open .qa-body { max-height: 6000px; }
-  .day-accordion.open .day-accordion-body { max-height: 40000px; }
-</style>
 <div class="container">
   <div class="hero fade-in">
     <div class="hero-badge">📋 사담방 다이제스트</div>
     <h1>쇼츠포뮬러 2기<br>핵심 정리</h1>
-    <p>(사담방) 쇼츠포뮬러 2기 (레오96) · 6/23~10/13 개강 17주차</p>
+    <p>(사담방) 쇼츠포뮬러 2기 (레오96) · 6/23~10/17 개강 17주차</p>
   </div>
   <div class="notice-banner fade-in">
     <div class="nb-emoji">🤖</div>
     <div>지난 대화를 봇이 핵심만 추려 정리했어요.<br>잘못된 부분은 조교(운영진)께 알려주시면 바로 고칠게요!</div>
   </div>
   <div class="stats-bar fade-in">
-    <div class="stat-pill"><span class="num">6/23~10/13</span><span class="label">정리 기간</span></div>
+    <div class="stat-pill"><span class="num">6/23~10/17</span><span class="label">정리 기간</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--green);">4강</span><span class="label">정규강의 라이브</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--orange);">255</span><span class="label">핵심 Q&amp;A</span></div>
     <div class="stat-pill"><span class="num" style="color:var(--purple);">4</span><span class="label">운영 링크</span></div>
@@ -604,12 +599,37 @@
 
   <div id="tab-daily" class="tab-content active">
 
-    <section class="day-accordion fade-in open" data-day-id="1013">
+    <section class="day-accordion fade-in open" data-day-id="1017">
       <button class="day-accordion-header" type="button" aria-expanded="true" onclick="toggleAccordion(this.parentElement)">
         <div class="day-accordion-left">
           <span class="day-accordion-arrow">▼</span>
-          <span class="day-accordion-date">10/13 (화)</span>
+          <span class="day-accordion-date">10/17 (토)</span>
           <span class="day-accordion-badge">최신</span>
+        </div>
+        <div class="day-accordion-summary">근황 2건</div>
+      </button>
+      <div class="day-accordion-body">
+        <div class="day-accordion-content">
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--green-light);">🎉</div><div class="section-title">근황</div></div>
+            <div class="insight-card">
+              <div class="insight-emoji">🗓️</div>
+              <div class="insight-body"><h3>“딱 이렇게만 하니까 뚝딱 만들어주네요” — 억지모드님의 클로드 코드 바탕화면 체크리스트 위젯</h3><p>오전 10시 8분에 억지모드님이 <strong>“클코에 바탕화면에 위젯 만들어 달라고 하니까 편합니다”</strong>, <strong>“일정이나, 업로드 같은거 그냥 바탕화면에 만들어 놓고”</strong>, <strong>“오늘 했는지 체크하는데”</strong>, <strong>“간단하고 편한거 같아서 공유드려요”</strong>라며 클로드 코드에 넣은 요청 글을 그대로 올렸어요. 클코는 클로드 코드를 줄여 부르는 말이에요.</p><p>첫 번째로 넣은 글은 이래요. <strong>“혹시 바탕화면에 동작 가능한 위젯 만드는거 가능해?”</strong>, <strong>“위처럼 항목을 적어 놓고, 체크 박스를 오른쪽에 두어서 그 항목을 수행했는지 안했는지를 체크 하는거야”</strong>, <strong>“체크 한건 가운에 완료 줄이 쳐지고 완료 체크 표시가 되고”</strong>, <strong>“하단에는 추가 초기화 버튼이 있어서, 추가 클릭하면 항목을 추가 할 수 있고, 각 항목은 삭제 가능해”</strong>, <strong>“각 항목별 한줄씩(추가, 삭제 가능), 오른쪽에 체크 박스”</strong>, <strong>“전체 크기는 반응형으로 크기 조정이나 위치이동 가능한 위쳇”</strong>. 두 번째로 고쳐 넣은 글은 <strong>“항목추가와, 체크초기화 는 동일한 버튼 크기로 하고”</strong>, <strong>“설명줄은 지워죠”</strong>, <strong>“이렇게 앞에 뜨는 웹형태로 만들라는게 아니고, 바탕화면에 뒤에 띄어져 있는것 같은 위젯을 말한거야”</strong>였어요.</p><p>같은 시각 <strong>“딱 이렇게만 하니까 뚝딱 바탕화면에 만들어주네요”</strong>라고 하고, 오전 10시 9분에 완성된 위젯 사진을 올렸어요. 이어서 <strong>“필요하신 분들, 꼭 유툽 때문이 아니더라도, 일정관리판 하나 만들어서 사용하시면 좋을거 같아요 ^^”</strong>, 오전 10시 10분에 <strong>“잘 못알아 들으면 Rainmeter 형태의 바탕화면 위젯이야~ 라고 해주세요~~~”</strong>, <strong>“그럼 즐거운 주말들 되세요~”</strong>라고 했어요. 오전 10시 13분에 모락모락님이 <strong>“억지님! 오늘도 꿀팁 공유 감사합니다”</strong>, <strong>“매번 꿀팁 공유해주시니 항상 감사드리고 있어요”</strong>라고 답했어요.</p><span class="insight-tag tag-tip">꿀팁</span></div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📄</div>
+              <div class="insight-body"><h3>낮에 올라온 카페 글 한 건</h3><p>오후 1시 47분에 아랑이님이 카페 글 <a href="https://cafe.naver.com/dinohighclass/440904" target="_blank" rel="noopener">cafe.naver.com/dinohighclass/440904</a>를 올렸어요.</p><p>어떤 글인지는 방 대화에 제목이 남지 않았으니 링크에서 확인해 주세요.</p><span class="insight-tag tag-tool">자료</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="day-accordion fade-in" data-day-id="1013">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left">
+          <span class="day-accordion-arrow">▼</span>
+          <span class="day-accordion-date">10/13 (화)</span>
         </div>
         <div class="day-accordion-summary">Q&amp;A 5개 · 근황 3건</div>
       </button>
@@ -5389,7 +5409,7 @@
 
   <div class="page-footer fade-in">
     <div><span class="live-dot"></span>쇼츠포뮬러 2기 사담방</div>
-    <div class="updated-at">마지막 업데이트: 2026-10-13 21:40 KST</div>
+    <div class="updated-at">마지막 업데이트: 2026-10-17 21:40 KST</div>
   </div>
 </div>
 <button class="fab-top" id="fabTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
