@@ -1583,6 +1583,10 @@ async function requestRefresh() {
 function pickFirstRoom() {
   const all = rooms();
   if (!all.length) { setStreamNotice('색인에 방이 없어요.', ''); return; }
+  // 오픈채팅 현황판의 «톡방 원문 보기»가 `#room=<방 키>` 로 연다(2026-10-19). 없는 키면 평소처럼 가장 붐빈 방.
+  const wanted = new URLSearchParams(location.hash.slice(1)).get('room');
+  const linked = wanted && all.find(r => r.key === wanted);
+  if (linked) { selectRoom(linked, ''); return; }
   // 처음 열면 가장 최근에 가장 많이 오간 방을 보여 준다(3건짜리 공지방으로 시작하지 않게).
   const busiest = all.slice().sort((a, b) => {
     const an = (a.days || [])[0], bn = (b.days || [])[0];
