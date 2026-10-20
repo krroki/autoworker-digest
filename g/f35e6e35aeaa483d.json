@@ -1520,16 +1520,16 @@
     }
   ],
   "live": {
-    "checkedAt": "2026-10-20T20:30:09+09:00",
-    "totalCount": 18342,
+    "checkedAt": "2026-10-20T22:33:21+09:00",
+    "totalCount": 18332,
     "rooms": {
       "sashalook": 2884,
-      "lululalalily": 3881,
-      "yunabi": 2531,
+      "lululalalily": 3871,
+      "yunabi": 2533,
       "hanam-dinosaur": 2882,
       "woleoknam": 3379,
       "nyami-naver-clip": 10,
-      "keroro-ai": 2775
+      "keroro-ai": 2773
     }
   },
   "friendsSummary": {
