@@ -1573,19 +1573,6 @@
       "delta": -58
     }
   ],
-  "live": {
-    "checkedAt": "2026-10-23T11:30:07+09:00",
-    "totalCount": 18421,
-    "rooms": {
-      "sashalook": 2869,
-      "lululalalily": 3849,
-      "yunabi": 2519,
-      "hanam-dinosaur": 2843,
-      "woleoknam": 3555,
-      "nyami-naver-clip": 10,
-      "keroro-ai": 2776
-    }
-  },
   "friendsSummary": {
     "members": 18419,
     "named": 18419,
