@@ -3,13 +3,13 @@
   "title": "관찰대상방 인원 현황",
   "modeLabel": "발신 차단",
   "latestDate": "2026-10-24",
-  "capturedAt": "2026-10-24T09:30:07+09:00",
-  "generatedAt": "2026-10-24T09:30:07+09:00",
+  "capturedAt": "2026-10-24T17:17:49+09:00",
+  "generatedAt": "2026-10-24T17:17:49+09:00",
   "summary": {
-    "roomCount": 7,
-    "totalCount": 18439,
-    "totalDelta": 13,
-    "capacity": 28000,
+    "roomCount": 8,
+    "totalCount": 18441,
+    "totalDelta": null,
+    "capacity": 32000,
     "roomCapacity": 4000
   },
   "rooms": [
@@ -176,13 +176,13 @@
       "friends": {
         "members": 2866,
         "named": 2866,
-        "defaultCount": 559,
+        "defaultCount": 560,
         "counts": {
           "춘식이": 148,
           "라이언": 110,
           "어피치": 101,
+          "죠르디": 62,
           "프렌즈": 62,
-          "죠르디": 61,
           "스카피": 40,
           "앙몬드": 27,
           "제이지": 3,
@@ -356,12 +356,12 @@
       "friends": {
         "members": 3843,
         "named": 3843,
-        "defaultCount": 946,
+        "defaultCount": 947,
         "counts": {
-          "춘식이": 239,
-          "라이언": 229,
+          "춘식이": 238,
+          "라이언": 230,
           "어피치": 177,
-          "죠르디": 97,
+          "죠르디": 98,
           "프렌즈": 84,
           "스카피": 72,
           "앙몬드": 33,
@@ -537,8 +537,8 @@
         "named": 2519,
         "defaultCount": 655,
         "counts": {
-          "춘식이": 189,
-          "라이언": 133,
+          "춘식이": 188,
+          "라이언": 134,
           "어피치": 118,
           "죠르디": 70,
           "프렌즈": 58,
@@ -710,13 +710,13 @@
         }
       ],
       "friends": {
-        "members": 2828,
-        "named": 2828,
-        "defaultCount": 926,
+        "members": 2824,
+        "named": 2824,
+        "defaultCount": 923,
         "counts": {
-          "춘식이": 246,
+          "춘식이": 244,
           "라이언": 188,
-          "어피치": 178,
+          "어피치": 177,
           "죠르디": 106,
           "프렌즈": 86,
           "스카피": 62,
@@ -889,15 +889,15 @@
         }
       ],
       "friends": {
-        "members": 3589,
-        "named": 3589,
-        "defaultCount": 905,
+        "members": 3612,
+        "named": 3612,
+        "defaultCount": 915,
         "counts": {
-          "춘식이": 243,
-          "라이언": 217,
+          "춘식이": 245,
+          "라이언": 221,
           "어피치": 166,
-          "죠르디": 94,
-          "프렌즈": 70,
+          "죠르디": 96,
+          "프렌즈": 72,
           "스카피": 62,
           "앙몬드": 41,
           "무지": 4,
@@ -1163,23 +1163,44 @@
         }
       ],
       "friends": {
-        "members": 2778,
-        "named": 2778,
-        "defaultCount": 846,
+        "members": 2776,
+        "named": 2776,
+        "defaultCount": 845,
         "counts": {
-          "춘식이": 212,
+          "춘식이": 210,
           "라이언": 178,
           "어피치": 162,
           "죠르디": 92,
           "프렌즈": 85,
           "스카피": 65,
-          "앙몬드": 43,
+          "앙몬드": 44,
           "프로도": 2,
           "제이지": 2,
           "무지": 2,
           "튜브": 2,
           "네오": 1
         }
+      }
+    },
+    {
+      "key": "devnam-autoworker",
+      "name": "개발남 노씨와 오토워커 되기",
+      "shortName": "개발남노씨",
+      "capacity": 4000,
+      "currentCount": 2,
+      "delta": null,
+      "history": [
+        {
+          "date": "2026-10-24",
+          "count": 2,
+          "delta": null
+        }
+      ],
+      "friends": {
+        "members": 1,
+        "named": 1,
+        "defaultCount": 0,
+        "counts": {}
       }
     }
   ],
@@ -1578,7 +1599,7 @@
     },
     {
       "date": "2026-10-24",
-      "count": 18439,
+      "count": 18441,
       "roomKeys": [
         "sashalook",
         "lululalalily",
@@ -1586,36 +1607,38 @@
         "hanam-dinosaur",
         "woleoknam",
         "nyami-naver-clip",
-        "keroro-ai"
+        "keroro-ai",
+        "devnam-autoworker"
       ],
-      "delta": 13
+      "delta": null
     }
   ],
   "live": {
-    "checkedAt": "2026-10-24T16:30:09+09:00",
-    "totalCount": 18455,
+    "checkedAt": "2026-10-24T17:17:49+09:00",
+    "totalCount": 18457,
     "rooms": {
       "sashalook": 2866,
       "lululalalily": 3844,
       "yunabi": 2520,
       "hanam-dinosaur": 2825,
-      "woleoknam": 3614,
+      "woleoknam": 3613,
       "nyami-naver-clip": 10,
-      "keroro-ai": 2776
+      "keroro-ai": 2777,
+      "devnam-autoworker": 2
     }
   },
   "friendsSummary": {
-    "members": 18432,
-    "named": 18432,
-    "defaultCount": 4837,
+    "members": 18450,
+    "named": 18450,
+    "defaultCount": 4845,
     "counts": {
-      "춘식이": 1277,
-      "라이언": 1055,
-      "어피치": 902,
-      "죠르디": 520,
-      "프렌즈": 445,
+      "춘식이": 1273,
+      "라이언": 1061,
+      "어피치": 901,
+      "죠르디": 524,
+      "프렌즈": 447,
       "스카피": 351,
-      "앙몬드": 225,
+      "앙몬드": 226,
       "무지": 16,
       "프로도": 15,
       "튜브": 14,
