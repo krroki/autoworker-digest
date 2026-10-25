@@ -1664,21 +1664,6 @@
       "delta": null
     }
   ],
-  "live": {
-    "checkedAt": "2026-10-25T23:30:10+09:00",
-    "totalCount": 20492,
-    "rooms": {
-      "sashalook": 2854,
-      "lululalalily": 3831,
-      "yunabi": 2519,
-      "hanam-dinosaur": 2815,
-      "woleoknam": 3606,
-      "nyami-naver-clip": 10,
-      "keroro-ai": 2778,
-      "devnam-autoworker": 4,
-      "caravan-ai": 2075
-    }
-  },
   "friendsSummary": {
     "members": 19769,
     "named": 19769,
