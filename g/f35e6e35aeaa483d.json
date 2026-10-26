@@ -3,13 +3,13 @@
   "title": "관찰대상방 인원 현황",
   "modeLabel": "발신 차단",
   "latestDate": "2026-10-26",
-  "capturedAt": "2026-10-26T09:30:08+09:00",
-  "generatedAt": "2026-10-26T09:30:08+09:00",
+  "capturedAt": "2026-10-26T22:20:45+09:00",
+  "generatedAt": "2026-10-26T22:20:45+09:00",
   "summary": {
-    "roomCount": 9,
-    "totalCount": 20504,
-    "totalDelta": 727,
-    "capacity": 36000,
+    "roomCount": 10,
+    "totalCount": 20561,
+    "totalDelta": null,
+    "capacity": 40000,
     "roomCapacity": 4000
   },
   "rooms": [
@@ -1267,6 +1267,27 @@
           "프로도": 1
         }
       }
+    },
+    {
+      "key": "eungonju-shorts",
+      "name": "은곤쥬와 프리하게 쇼츠 자동화하기",
+      "shortName": "은곤쥬",
+      "capacity": 4000,
+      "currentCount": 57,
+      "delta": null,
+      "history": [
+        {
+          "date": "2026-10-26",
+          "count": 57,
+          "delta": null
+        }
+      ],
+      "friends": {
+        "members": 56,
+        "named": 56,
+        "defaultCount": 0,
+        "counts": {}
+      }
     }
   ],
   "totalHistory": [
@@ -1670,7 +1691,7 @@
     },
     {
       "date": "2026-10-26",
-      "count": 20504,
+      "count": 20561,
       "roomKeys": [
         "sashalook",
         "lululalalily",
@@ -1680,29 +1701,31 @@
         "nyami-naver-clip",
         "keroro-ai",
         "devnam-autoworker",
-        "caravan-ai"
+        "caravan-ai",
+        "eungonju-shorts"
       ],
-      "delta": 727
+      "delta": null
     }
   ],
   "live": {
-    "checkedAt": "2026-10-26T21:30:51+09:00",
-    "totalCount": 20833,
+    "checkedAt": "2026-10-26T22:20:45+09:00",
+    "totalCount": 20923,
     "rooms": {
-      "sashalook": 2841,
+      "sashalook": 2839,
       "lululalalily": 3816,
-      "yunabi": 2509,
-      "hanam-dinosaur": 2805,
-      "woleoknam": 3580,
+      "yunabi": 2508,
+      "hanam-dinosaur": 2803,
+      "woleoknam": 3576,
       "nyami-naver-clip": 10,
       "keroro-ai": 2782,
-      "devnam-autoworker": 18,
-      "caravan-ai": 2472
+      "devnam-autoworker": 24,
+      "caravan-ai": 2508,
+      "eungonju-shorts": 57
     }
   },
   "friendsSummary": {
-    "members": 20521,
-    "named": 20521,
+    "members": 20577,
+    "named": 20577,
     "defaultCount": 5462,
     "counts": {
       "춘식이": 1434,
