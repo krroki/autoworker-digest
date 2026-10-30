@@ -1810,18 +1810,18 @@
     }
   ],
   "live": {
-    "checkedAt": "2026-10-30T22:30:19+09:00",
-    "totalCount": 21252,
+    "checkedAt": "2026-10-31T01:30:08+09:00",
+    "totalCount": 21245,
     "rooms": {
       "sashalook": 2769,
-      "lululalalily": 4010,
-      "yunabi": 2489,
-      "hanam-dinosaur": 2760,
-      "woleoknam": 3633,
+      "lululalalily": 4007,
+      "yunabi": 2488,
+      "hanam-dinosaur": 2758,
+      "woleoknam": 3635,
       "nyami-naver-clip": 12,
       "keroro-ai": 2771,
-      "devnam-autoworker": 295,
-      "caravan-ai": 2426,
+      "devnam-autoworker": 297,
+      "caravan-ai": 2421,
       "eungonju-shorts": 87
     }
   },
