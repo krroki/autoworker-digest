@@ -1886,7 +1886,7 @@
     }
   ],
   "live": {
-    "checkedAt": "2026-11-03T04:32:30+09:00",
+    "checkedAt": "2026-11-03T05:32:34+09:00",
     "totalCount": 21311,
     "rooms": {
       "sashalook": 2743,
@@ -1897,8 +1897,8 @@
       "nyami-naver-clip": 12,
       "keroro-ai": 2777,
       "devnam-autoworker": 383,
-      "caravan-ai": 2330,
-      "eungonju-shorts": 207
+      "caravan-ai": 2324,
+      "eungonju-shorts": 213
     }
   },
   "friendsSummary": {
