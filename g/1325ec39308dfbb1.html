@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>천상계영드 3기 사담방 핵심 정리</title>
+<style>
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #f7f8fa; --card: #fff; --text: #191f28; --sub: #6b7684;
+    --accent: #3182f6; --accent-light: #e8f3ff;
+    --green: #20c997; --green-light: #e3faf1;
+    --orange: #f97316; --orange-light: #fff4e6;
+    --red: #ef4444; --red-light: #fee2e2;
+    --purple: #8b5cf6; --purple-light: #ede9fe;
+    --border: #e5e8eb; --radius: 16px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.06);
+    --shadow-hover: 0 2px 8px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.1);
+  }
+  body {
+    font-family: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 80px; }
+
+  /* Hero */
+  .hero { text-align: center; padding: 48px 0 28px; }
+  .hero-badge {
+    display: inline-block; background: var(--accent-light); color: var(--accent);
+    font-size: 13px; font-weight: 600; padding: 6px 14px; border-radius: 20px; margin-bottom: 16px;
+  }
+  .hero h1 { font-size: 28px; font-weight: 800; line-height: 1.3; letter-spacing: -0.5px; }
+  .hero p { color: var(--sub); font-size: 15px; margin-top: 8px; }
+
+  /* Tabs */
+  .tab-bar {
+    display: flex; gap: 6px; margin-bottom: 24px; background: var(--card);
+    border-radius: 14px; padding: 4px; border: 1px solid var(--border);
+    overflow-x: auto; scrollbar-width: none;
+  }
+  .tab-bar::-webkit-scrollbar { display: none; }
+  .tab-btn {
+    flex: 1; min-width: 80px; padding: 10px 14px; border: none; background: transparent;
+    border-radius: 10px; font-size: 14px; font-weight: 600; color: var(--sub);
+    cursor: pointer; transition: all 0.25s; white-space: nowrap; font-family: inherit;
+  }
+  .tab-btn.active { background: var(--accent); color: #fff; box-shadow: 0 2px 8px rgba(49,130,246,0.3); }
+  .tab-btn:hover:not(.active) { background: var(--accent-light); color: var(--accent); }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; animation: fadeUp 0.4s cubic-bezier(0.16,1,0.3,1); }
+  .tab-content.digest-source { display: none !important; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+  .day-accordion {
+    margin-bottom: 14px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--card);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+  }
+  .day-accordion-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 18px 20px;
+    border: none;
+    background: var(--card);
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.25s ease;
+    font-family: inherit;
+    color: inherit;
+  }
+  .day-accordion-header:hover { background: var(--accent-light); }
+  .day-accordion.open .day-accordion-header {
+    background: var(--accent-light);
+    border-bottom: 1px solid var(--border);
+  }
+  .day-accordion-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+  }
+  .day-accordion-arrow {
+    font-size: 14px;
+    color: var(--sub);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+  }
+  .day-accordion.open .day-accordion-arrow { transform: rotate(180deg); }
+  .day-accordion-date {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+  }
+  .day-accordion-badge {
+    flex-shrink: 0;
+    font-size: 10px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--accent);
+    border-radius: 999px;
+    padding: 4px 8px;
+  }
+  .day-accordion-summary {
+    font-size: 12px;
+    color: var(--sub);
+    font-weight: 600;
+    text-align: right;
+  }
+  .day-accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s cubic-bezier(0.4,0,0.2,1);
+    background: var(--card);
+  }
+  .day-accordion.open .day-accordion-body { max-height: none; }
+  .day-accordion-content { padding: 24px 22px; }
+
+  /* Stats bar */
+  .stats-bar { display: flex; gap: 8px; margin-bottom: 28px; overflow-x: auto; scrollbar-width: none; }
+  .stats-bar::-webkit-scrollbar { display: none; }
+  .stat-pill {
+    flex-shrink: 0; background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 14px 18px; min-width: 120px; text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .stat-pill:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+  .stat-pill .num { font-size: 22px; font-weight: 800; color: var(--accent); display: block; }
+  .stat-pill .label { font-size: 12px; color: var(--sub); margin-top: 2px; }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; padding: 0 4px; }
+  .section-icon {
+    width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center;
+    justify-content: center; font-size: 18px; flex-shrink: 0;
+  }
+  .section-title { font-size: 18px; font-weight: 700; letter-spacing: -0.3px; }
+
+  /* Q&A Card */
+  .qa-card {
+    background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+    margin-bottom: 10px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; cursor: pointer;
+  }
+  .qa-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+  .qa-header { padding: 16px 20px; display: flex; align-items: flex-start; gap: 12px; }
+  .qa-q-icon {
+    width: 28px; height: 28px; background: var(--accent-light); color: var(--accent);
+    border-radius: 8px; display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 14px; flex-shrink: 0; margin-top: 1px;
+  }
+  .qa-question { font-size: 15px; font-weight: 600; line-height: 1.5; flex: 1; }
+  .qa-count {
+    font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 10px;
+    background: var(--orange-light); color: var(--orange); flex-shrink: 0; margin-top: 2px; white-space: nowrap;
+  }
+  .qa-toggle { color: var(--sub); font-size: 16px; transition: transform 0.3s; flex-shrink: 0; margin-top: 3px; user-select: none; }
+  .qa-card.open .qa-toggle { transform: rotate(180deg); }
+  .qa-body { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), padding 0.3s; }
+  .qa-card.open .qa-body { max-height: none; padding: 0 20px 16px; }
+  .qa-answer { background: #f8f9fb; border-radius: 12px; padding: 14px 16px; margin-left: 40px; margin-top: 6px; }
+  .qa-answer-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+  .qa-answer-badge { font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; background: var(--accent); color: #fff; }
+  .qa-answer-badge.sub { background: var(--green); }
+  .qa-answer-badge.member { background: var(--sub); }
+  .qa-answer-name { font-size: 13px; font-weight: 600; color: var(--sub); }
+  .qa-answer p { font-size: 14px; line-height: 1.7; color: #333d4b; }
+
+  /* Insight card */
+  .insight-card {
+    background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+    padding: 20px 22px; margin-bottom: 10px; display: flex; gap: 14px; align-items: flex-start;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .insight-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+  .insight-emoji { font-size: 26px; flex-shrink: 0; line-height: 1; margin-top: 2px; }
+  .insight-body h3 { font-size: 15px; font-weight: 700; margin-bottom: 5px; }
+  .insight-body p { font-size: 14px; color: var(--sub); line-height: 1.6; }
+  .insight-tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 6px; margin-top: 6px; }
+  .tag-revenue { background: var(--green-light); color: #0ca678; }
+  .tag-caution { background: var(--orange-light); color: #e8590c; }
+  .tag-tip { background: var(--purple-light); color: var(--purple); }
+  .tag-tool { background: var(--accent-light); color: var(--accent); }
+
+  /* Timeline */
+  .timeline { position: relative; padding-left: 24px; }
+  .timeline::before { content: ''; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; background: var(--border); border-radius: 1px; }
+  .tl-item { position: relative; margin-bottom: 16px; padding-left: 16px; }
+  .tl-item::before {
+    content: ''; position: absolute; left: -20px; top: 8px; width: 10px; height: 10px;
+    border-radius: 50%; background: var(--accent); border: 2px solid var(--card); box-shadow: 0 0 0 2px var(--accent-light);
+  }
+  .tl-time { font-size: 12px; color: var(--sub); font-weight: 500; margin-bottom: 3px; }
+  .tl-text { font-size: 14px; font-weight: 500; line-height: 1.5; }
+
+  /* Quote card */
+  .quote-card {
+    background: linear-gradient(135deg, #1b1d1f, #26292d); border-radius: var(--radius);
+    padding: 26px 24px; margin-bottom: 10px; position: relative; overflow: hidden;
+  }
+  .quote-card::before { content: '"'; position: absolute; top: -10px; left: 14px; font-size: 80px; color: rgba(255,255,255,0.06); font-family: Georgia, serif; }
+  .quote-text { font-size: 16px; font-weight: 600; color: #fff; line-height: 1.6; position: relative; z-index: 1; }
+  .quote-author { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 10px; position: relative; z-index: 1; }
+
+  /* Glossary */
+  .glossary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px; }
+  .glossary-card {
+    background: var(--card); border-radius: 14px; padding: 16px 18px; border: 1px solid var(--border);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .glossary-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+  .glossary-term { font-size: 15px; font-weight: 700; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+  .glossary-term .emoji { font-size: 18px; }
+  .glossary-def { font-size: 13px; color: var(--sub); line-height: 1.5; }
+
+  /* FAQ bar chart */
+  .faq-bar-list { list-style: none; }
+  .faq-bar-item { margin-bottom: 10px; }
+  .faq-bar-label { font-size: 13px; font-weight: 600; margin-bottom: 4px; display: flex; justify-content: space-between; }
+  .faq-bar-label .cnt { color: var(--accent); font-weight: 800; }
+  .faq-bar-track { height: 8px; background: #edf0f3; border-radius: 4px; overflow: hidden; }
+  .faq-bar-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--accent), #60a5fa); transition: width 1s cubic-bezier(0.16,1,0.3,1); width: 0; }
+
+  /* Zoom card */
+  .zoom-card {
+    background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+    margin-bottom: 14px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .zoom-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+  .zoom-card-header { padding: 20px 22px 16px; }
+  .zoom-date {
+    font-size: 12px; font-weight: 600; color: var(--accent);
+    background: var(--accent-light); display: inline-block;
+    padding: 3px 10px; border-radius: 8px; margin-bottom: 10px;
+  }
+  .zoom-title { font-size: 17px; font-weight: 700; line-height: 1.4; margin-bottom: 6px; }
+  .zoom-desc { font-size: 14px; color: var(--sub); line-height: 1.5; }
+  .zoom-info { padding: 0 22px 18px; display: flex; flex-direction: column; gap: 8px; }
+  .zoom-info-row { display: flex; align-items: center; gap: 10px; font-size: 13px; }
+  .zoom-info-row .zl { color: var(--sub); min-width: 65px; flex-shrink: 0; font-weight: 500; }
+  .zoom-info-row .zv { font-weight: 600; word-break: break-all; }
+  .zoom-info-row .zv a { color: var(--accent); text-decoration: none; }
+  .zoom-info-row .zv a:hover { text-decoration: underline; }
+  .zoom-actions {
+    border-top: 1px solid var(--border); padding: 14px 22px; display: flex; gap: 10px;
+  }
+  .zoom-btn {
+    flex: 1; padding: 12px; border: none; border-radius: 12px;
+    font-size: 14px; font-weight: 700; cursor: pointer; font-family: inherit;
+    transition: all 0.2s; text-decoration: none; text-align: center; display: block;
+  }
+  .zoom-btn.primary { background: var(--accent); color: #fff; }
+  .zoom-btn.primary:hover { background: #1b6ef3; }
+  .zoom-btn.secondary { background: #f2f4f6; color: var(--text); }
+  .zoom-btn.secondary:hover { background: #e5e8eb; }
+  .zoom-card.past { position: relative; }
+  .zoom-card.past .zoom-card-header { opacity: 0.45; }
+  .zoom-card.past .zoom-info { opacity: 0.45; }
+  .zoom-card.past:hover .zoom-card-header,
+  .zoom-card.past:hover .zoom-info { opacity: 0.75; }
+  .zoom-card.past .zoom-actions { opacity: 0.6; }
+  .zoom-stamp {
+    position: absolute; top: 20px; right: 20px; z-index: 2;
+    font-size: 14px; font-weight: 800; color: var(--red); padding: 6px 14px;
+    border: 3px solid var(--red); border-radius: 10px;
+    transform: rotate(12deg); letter-spacing: 2px; opacity: 0.7;
+    background: rgba(255,255,255,0.85);
+  }
+  .past-badge {
+    font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px;
+    background: var(--red-light); color: var(--red); margin-left: 8px;
+  }
+  .zoom-bulk-copy {
+    display: block; width: 100%; padding: 14px; border: 2px dashed var(--border);
+    border-radius: 14px; background: transparent; font-size: 14px; font-weight: 600;
+    color: var(--accent); cursor: pointer; font-family: inherit;
+    transition: all 0.2s; margin-top: 12px; text-align: center;
+  }
+  .zoom-bulk-copy:hover { border-color: var(--accent); background: var(--accent-light); }
+
+  /* Link status badges */
+  .link-status {
+    font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 6px;
+    flex-shrink: 0; margin-left: auto;
+  }
+  .link-status.ok { background: var(--green-light); color: var(--green); }
+  .link-status.outdated { background: var(--orange-light); color: var(--orange); }
+  .link-status.broken { background: var(--red-light); color: var(--red); }
+  .link-card.is-broken { opacity: 0.55; border-style: dashed; }
+  .link-card.is-broken:hover { opacity: 0.8; }
+  .link-card.is-outdated { border-left: 3px solid var(--orange); }
+  .notice-banner {
+    background: #fffbe6; border: 1px solid #ffe58f; border-radius: 14px;
+    padding: 16px 18px; margin-bottom: 24px; display: flex; gap: 12px;
+    align-items: flex-start; font-size: 14px; line-height: 1.6; color: #7c6a0a;
+  }
+  .notice-banner .nb-emoji { font-size: 22px; flex-shrink: 0; }
+  .toast {
+    position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(80px);
+    background: #333d4b; color: #fff; padding: 12px 24px; border-radius: 12px;
+    font-size: 14px; font-weight: 600; opacity: 0;
+    transition: all 0.3s cubic-bezier(0.16,1,0.3,1); z-index: 100; pointer-events: none;
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  /* Footer */
+  .page-footer { text-align: center; padding: 28px 0; color: var(--sub); font-size: 13px; border-top: 1px solid var(--border); margin-top: 20px; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+  .live-dot { display: inline-block; width: 8px; height: 8px; background: var(--green); border-radius: 50%; margin-right: 6px; animation: pulse 2s infinite; }
+
+  /* Scroll animate */
+  .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.5s cubic-bezier(0.16,1,0.3,1), transform 0.5s cubic-bezier(0.16,1,0.3,1); }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* Sticky tab bar */
+  .tab-bar { position: sticky; top: 0; z-index: 50; }
+
+  /* Q&A answer hint */
+  .qa-hint { font-size: 12px; color: var(--sub); margin-top: 2px; flex-shrink: 0; }
+
+  /* Quote copy button */
+  .quote-copy {
+    position: absolute; top: 12px; right: 14px; z-index: 2;
+    background: rgba(255,255,255,0.12); border: none; color: rgba(255,255,255,0.5);
+    border-radius: 8px; padding: 6px 10px; font-size: 12px; cursor: pointer;
+    font-family: inherit; transition: all 0.2s;
+  }
+  .quote-copy:hover { background: rgba(255,255,255,0.25); color: #fff; }
+
+  /* Glossary search */
+  .glossary-search {
+    width: 100%; padding: 12px 16px 12px 42px; border: 1px solid var(--border);
+    border-radius: 12px; font-size: 14px; font-family: inherit; outline: none;
+    background: var(--card) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='%236b7684' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3C/svg%3E") 14px center no-repeat;
+    transition: border-color 0.2s, box-shadow 0.2s; margin-bottom: 16px;
+  }
+  .glossary-search:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-light); }
+  .glossary-card.hidden { display: none; }
+
+  /* Share FAB */
+  .fab-share {
+    position: fixed; bottom: 24px; right: 24px; z-index: 90;
+    width: 52px; height: 52px; border-radius: 50%; border: none;
+    background: var(--accent); color: #fff; font-size: 22px;
+    box-shadow: 0 4px 16px rgba(49,130,246,0.35);
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: all 0.3s; font-family: inherit;
+  }
+  .fab-share:hover { transform: scale(1.08); box-shadow: 0 6px 24px rgba(49,130,246,0.45); }
+  .fab-share:active { transform: scale(0.95); }
+
+  /* Back to top FAB */
+  .fab-top {
+    position: fixed; bottom: 86px; right: 24px; z-index: 90;
+    width: 44px; height: 44px; border-radius: 50%; border: none;
+    background: var(--card); color: var(--sub); font-size: 18px;
+    box-shadow: var(--shadow); cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.3s; opacity: 0; pointer-events: none; font-family: inherit;
+  }
+  .fab-top.show { opacity: 1; pointer-events: auto; }
+  .fab-top:hover { color: var(--accent); box-shadow: var(--shadow-hover); }
+
+  /* MVP card */
+  .mvp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .mvp-card {
+    background: var(--card); border-radius: 14px; padding: 16px; border: 1px solid var(--border);
+    text-align: center; transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .mvp-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+  .mvp-avatar { font-size: 32px; margin-bottom: 8px; }
+  .mvp-name { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+  .mvp-desc { font-size: 12px; color: var(--sub); line-height: 1.4; }
+
+  /* Nav link */
+  .page-nav {
+    display: flex; gap: 8px; justify-content: center; margin-bottom: 16px; flex-wrap: wrap;
+  }
+  .page-nav a {
+    font-size: 13px; font-weight: 600; color: var(--accent); text-decoration: none;
+    padding: 6px 14px; border-radius: 10px; background: var(--accent-light);
+    transition: all 0.2s;
+  }
+  .page-nav a:hover { background: var(--accent); color: #fff; }
+
+  /* Updated timestamp */
+  .updated-at { font-size: 11px; color: var(--sub); text-align: center; margin-top: 4px; }
+
+  /* Links collection */
+  .link-card {
+    background: var(--card); border-radius: 12px; padding: 14px 16px;
+    border: 1px solid var(--border); margin-bottom: 8px;
+    display: flex; align-items: center; gap: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .link-card:hover { transform: translateY(-1px); box-shadow: var(--shadow-hover); }
+  .link-icon { font-size: 20px; flex-shrink: 0; }
+  .link-body { flex: 1; min-width: 0; }
+  .link-title { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+  .link-url { font-size: 12px; color: var(--accent); word-break: break-all; }
+  .link-url a { color: var(--accent); text-decoration: none; }
+  .link-url a:hover { text-decoration: underline; }
+
+  /* === Enhancement 1: Hero visual === */
+  .hero {
+    position: relative; overflow: hidden;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    margin: -24px -16px 24px; padding: 56px 24px 36px;
+    border-radius: 0 0 32px 32px;
+  }
+  .hero h1 { color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.15); }
+  .hero p { color: rgba(255,255,255,0.8); }
+  .hero-badge { background: rgba(255,255,255,0.2); color: #fff; backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.25); }
+
+  /* Animated mesh blobs */
+  .hero::before, .hero::after {
+    content: ''; position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.4;
+    animation: blobFloat 8s ease-in-out infinite alternate;
+  }
+  .hero::before {
+    width: 300px; height: 300px; top: -80px; right: -60px;
+    background: rgba(255,255,255,0.3);
+  }
+  .hero::after {
+    width: 250px; height: 250px; bottom: -60px; left: -40px;
+    background: rgba(96,165,250,0.35);
+    animation-delay: -4s; animation-duration: 10s;
+  }
+  .hero > * { position: relative; z-index: 1; }
+  @keyframes blobFloat {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(30px, -20px) scale(1.15); }
+  }
+
+  /* Floating particles in hero */
+  .hero-particle {
+    position: absolute; z-index: 0; pointer-events: none;
+    width: var(--sz); height: var(--sz); border-radius: 50%;
+    background: rgba(255,255,255,0.25);
+    animation: particleRise var(--dur) linear infinite;
+    animation-delay: var(--delay);
+  }
+  @keyframes particleRise {
+    0% { transform: translateY(0) scale(0); opacity: 0; }
+    15% { opacity: 1; transform: scale(1); }
+    85% { opacity: 0.6; }
+    100% { transform: translateY(-180px) scale(0.3); opacity: 0; }
+  }
+
+  /* === Enhancement 3: MVP medal shine === */
+  .mvp-avatar { position: relative; display: inline-block; }
+  @keyframes medalShine {
+    0%, 80%, 100% { filter: brightness(1); transform: scale(1); }
+    90% { filter: brightness(1.4); transform: scale(1.15); }
+  }
+  .mvp-card:nth-child(1) .mvp-avatar { animation: medalShine 4s ease infinite 0s; }
+  .mvp-card:nth-child(2) .mvp-avatar { animation: medalShine 4s ease infinite 0.5s; }
+  .mvp-card:nth-child(3) .mvp-avatar { animation: medalShine 4s ease infinite 1s; }
+
+  /* === Enhancement 4: Q&A staggered slide-in === */
+  .qa-card.fade-in-qa {
+    opacity: 0; transition: opacity 0.5s cubic-bezier(0.16,1,0.3,1), transform 0.5s cubic-bezier(0.16,1,0.3,1);
+  }
+  .qa-card.fade-in-qa:nth-child(odd) { transform: translateX(-30px); }
+  .qa-card.fade-in-qa:nth-child(even) { transform: translateX(30px); }
+  .qa-card.fade-in-qa.visible { opacity: 1; transform: translateX(0); }
+
+  /* === Enhancement 6: Confetti particles === */
+  .confetti-particle {
+    position: fixed; pointer-events: none; z-index: 200;
+    font-size: 16px; animation: confettiFall 1s cubic-bezier(0.25,0.46,0.45,0.94) forwards;
+  }
+  @keyframes confettiFall {
+    0% { opacity: 1; transform: translate(0, 0) rotate(0deg) scale(1); }
+    100% { opacity: 0; transform: translate(var(--cx), var(--cy)) rotate(var(--cr)) scale(0.3); }
+  }
+
+  /* === Enhancement 7: Scroll progress bar === */
+  .scroll-progress {
+    position: fixed; top: 0; left: 0; height: 3px; z-index: 200;
+    background: linear-gradient(90deg, #3182f6, #60a5fa, #8b5cf6);
+    width: 0; transition: none;
+  }
+
+  /* === Enhancement 8: Tab bar glassmorphism === */
+  .tab-bar {
+    background: rgba(255,255,255,0.72);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* === Enhancement 9: Timeline pulse === */
+  @keyframes tlPulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 2px var(--accent-light); }
+    50% { transform: scale(1.6); box-shadow: 0 0 8px 3px rgba(49,130,246,0.4); }
+  }
+  .tl-item.tl-pulse::before { animation: tlPulse 0.6s ease; }
+
+  /* === Enhancement 10: FAQ bar tooltip === */
+  .faq-bar-item { position: relative; }
+  .faq-tooltip {
+    position: absolute; top: -8px; right: 0; transform: translateY(-100%);
+    background: #333d4b; color: #fff; font-size: 12px; font-weight: 600;
+    padding: 4px 10px; border-radius: 6px; white-space: nowrap;
+    pointer-events: none; opacity: 0; transition: opacity 0.2s;
+    z-index: 10;
+  }
+  .faq-tooltip::after {
+    content: ''; position: absolute; bottom: -4px; right: 16px;
+    width: 8px; height: 8px; background: #333d4b;
+    transform: rotate(45deg);
+  }
+  .faq-bar-item:hover .faq-tooltip { opacity: 1; }
+
+  /* Enhancement 11 merged into hero particles above */
+
+  /* === Enhancement 12: Dark mode === */
+  .dark-toggle {
+    position: fixed; top: 16px; right: 16px; z-index: 150;
+    width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border);
+    background: var(--card); color: var(--text); font-size: 20px;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    box-shadow: var(--shadow); transition: all 0.3s;
+    font-family: inherit; line-height: 1;
+  }
+  .dark-toggle:hover { box-shadow: var(--shadow-hover); transform: scale(1.08); }
+
+  body.dark {
+    --bg: #1a1b1e; --card: #25262b; --text: #c9cdd1; --sub: #8b949e;
+    --border: #373a40; --shadow: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-hover: 0 2px 8px rgba(0,0,0,0.4);
+  }
+  body.dark .tab-bar { background: rgba(37,38,43,0.82); }
+  body.dark .day-accordion-header { background: var(--card); }
+  body.dark .day-accordion.open .day-accordion-header { background: rgba(49,130,246,0.1); }
+  body.dark .qa-answer { background: #1e1f23; }
+  body.dark .qa-answer p { color: var(--text); }
+  body.dark .faq-bar-track { background: #373a40; }
+  body.dark .glossary-search { background-color: var(--card); color: var(--text); }
+  body.dark .zoom-btn.secondary { background: #373a40; color: var(--text); }
+  body.dark .notice-banner { background: #332d1a; border-color: #5c4f1f; color: #d4c56a; }
+  body.dark .stat-pill { background: var(--card); border-color: var(--border); }
+  body.dark .insight-card { background: var(--card); }
+  body.dark .insight-body p { color: var(--sub); }
+  body.dark .hero { background: linear-gradient(135deg, #3b4fa8 0%, #4a3080 50%, #7c3d8f 100%); }
+
+  /* === Enhancement 5: Quote typing cursor === */
+  .quote-text.typing-active::after {
+    content: '|'; animation: blink 0.7s step-end infinite; margin-left: 1px;
+  }
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+  @media (max-width: 720px) {
+    .day-accordion-header {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 8px;
+      padding: 16px 16px 14px;
+    }
+    .day-accordion-left { width: 100%; }
+    .day-accordion-summary { text-align: left; }
+    .day-accordion-content { padding: 20px 16px; }
+    .day-accordion-date { font-size: 15px; }
+  }
+.insight-body,.qa-question,.qa-answer p,.section li,.day-accordion-summary{min-width:0;overflow-wrap:anywhere;}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="hero fade-in">
+    <div class="hero-badge">📋 사담방 다이제스트</div>
+    <h1>천상계영드 3기<br>핵심 정리</h1>
+    <p>(사담방) 천상계영드 3기 1~3기 통합방 · 11/2~11/6 누적 정리</p>
+  </div>
+  <div class="notice-banner fade-in">
+    <div class="nb-emoji">🤖</div>
+    <div>지난 대화를 봇이 핵심만 추려 정리했어요.<br>잘못된 부분은 조교님께 알려주시면 바로 고칠게요!</div>
+  </div>
+  <div class="stats-bar fade-in">
+    <div class="stat-pill"><span class="num">11/2~11/6</span><span class="label">정리 기간</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--green);">5</span><span class="label">정리한 날</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--orange);">73</span><span class="label">핵심 Q&amp;A</span></div>
+    <div class="stat-pill"><span class="num" style="color:var(--purple);">19</span><span class="label">공유 링크</span></div>
+  </div>
+  <div class="tab-bar-wrap fade-in" id="tabBarWrap">
+    <div class="tab-bar" id="tabBar">
+      <button class="tab-btn active" onclick="switchTab('daily')">📅 일자별</button>
+      <button class="tab-btn" onclick="switchTab('links')">🔗 링크 모음</button>
+    </div>
+  </div>
+  <div id="tab-daily" class="tab-content active">
+    <section class="day-accordion fade-in open" data-day-id="1106">
+      <button class="day-accordion-header" type="button" aria-expanded="true" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left"><span class="day-accordion-arrow">▼</span><span class="day-accordion-date">11/6 (금)</span><span class="day-accordion-badge">최신</span></div>
+        <div class="day-accordion-summary">한드짜 스킬 카페 업로드 · 그래픽카드 제작 오류 1.2.6에서 수정 예정 · OTT 광고연계 신청</div>
+      </button>
+      <div class="day-accordion-body"><div class="day-accordion-content">
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--orange-light);">📢</div><div class="section-title">공지 · 안내</div></div>
+            <div class="insight-card">
+              <div class="insight-emoji">📢</div>
+              <div class="insight-body"><h3>1주차 과제 제출·조회수 이벤트·강의자료 PDF 안내</h3><p>1주차 과제 제출 안내와 단일영상 조회수·48시간 조회수 인즈 이벤트 글이 카페에 올라왔어요. 1주차 강의자료 PDF도 카페에 올라와 있어요. 사담방에서는 1주차 과제 제출 릴레이(선착순 20명 커피 기프티콘)도 진행해요.</p><p style="margin-top:6px;"><a href="https://cafe.naver.com/skymovie3/18" target="_blank" rel="noopener">🔗 https://cafe.naver.com/skymovie3/18</a></p><p style="margin-top:6px;"><a href="https://cafe.naver.com/skymovie3/17" target="_blank" rel="noopener">🔗 https://cafe.naver.com/skymovie3/17</a></p><p style="margin-top:6px;"><a href="https://cafe.naver.com/skymovie3/19" target="_blank" rel="noopener">🔗 https://cafe.naver.com/skymovie3/19</a></p><span class="insight-tag tag-tip">디하클 스태프 · 둘리</span></div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📢</div>
+              <div class="insight-body"><h3>한드짜 스킬 카페 게시판 업로드</h3><p>한드짜 스킬이 카페 게시판에 올라왔어요. 새벽에 올린 스킬은 내리고 수정해서 다시 올렸으니 게시판의 최신본을 받으세요. 코덱스 유저도 쓸 수 있게 계속 업데이트하고 있고, 나머지 스킬도 하나씩 올릴 예정이에요.</p><p style="margin-top:6px;"><a href="https://cafe.naver.com/skymovie3/23" target="_blank" rel="noopener">🔗 https://cafe.naver.com/skymovie3/23</a></p><span class="insight-tag tag-tip">강사 · 아모르</span></div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📢</div>
+              <div class="insight-body"><h3>OTT 광고연계 채널 등록 신청</h3><p>영드짜·예짜로 OTT 광고를 받고 싶으면 신청 폼에 채널을 등록해 주세요. 채널에 영상이 어느 정도 올라와 있는 게 좋아요. 채널이 여러 개면 채널마다 따로 신청하면 돼요. 신청하면 담당자가 보고 연락을 준다고 해요.</p><p style="margin-top:6px;"><a href="https://docs.google.com/forms/d/1ONYTuquJU-Ou1JqxJRcVRNn-oMpK7xYPlRQn-p5D6Yg/edit" target="_blank" rel="noopener">🔗 https://docs.google.com/forms/d/1ONYTuquJU-Ou1JqxJRcVRNn-oMpK7xYPlRQn-p5D6Yg/edit</a></p><span class="insight-tag tag-tip">강사 · 아모르</span></div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📢</div>
+              <div class="insight-body"><h3>강의 관련 요청게시판 개설</h3><p>천상계코드·꿀통레이더 관련 문의를 뺀 강의 문의는 새로 만든 강의 관련 요청게시판에 남겨 주세요. 순차적으로 해결해 준다고 해요. 천상계코드·꿀통레이더 문의는 프로그램 안에 오류제보 게시판을 만드는 중이니 조금만 기다려 주세요.</p><span class="insight-tag tag-tip">강사 · 아모르</span></div>
+            </div>
+          </div>
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--green-light);">💬</div><div class="section-title">핵심 Q&amp;A (15)</div></div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">제작 중 오류가 나거나 «만들기» 단계에서 1시간 넘게 멈추면 어떻게 하나요? <span style="color:var(--sub);font-weight:500;">(6명 질문)</span></div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">나물쓰</span></div><p>오류 제보가 뜨면 눌러서 캡처와 관련 내용을 함께 보내 주세요. 확인된 원인으로는 클로드 5시간 한도 소진, 내장 인텔 그래픽카드만 있는 PC, gtx 10xx 세대 그래픽카드가 있었어요. 그래픽카드 문제는 1.2.6 버전에서 고칠 예정이고, 10xx 세대는 cpu로 진행하도록 바뀌어 속도가 느려요. 업데이트가 나오면 작업을 그대로 두었다가 «이어서 만들기»를 누르면 된다고 해요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">어제 강의 다시보기는 언제 어디에 올라오나요? <span style="color:var(--sub);font-weight:500;">(4명 질문)</span></div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge " style="">강사</span><span class="qa-answer-name">아모르 · 해피응디(조교) · 둘리(디하클 스태프) · 나물쓰(조교)</span></div><p>다시보기는 카페에 올라가고, 올라가면 공지로 알려준다고 해요. 보통 강의 하루 뒤에 올라가는데, 이날 오후에 강사가 1강을 카페에 올리는 중이라고 했어요. 1주차 강의자료 PDF는 이미 카페에 올라와 있어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">직접 고른 작품이나 특정 화만 골라서 만들 수 있나요? <span style="color:var(--sub);font-weight:500;">(4명 질문)</span></div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">나물쓰 · 아모르(강사)</span></div><p>지금 천상계코드에서는 목록에 있는 작품만 만들 수 있어요. 직접 고른 작품으로 만드는 기능은 구현되어 있지만, 결에 안 맞는 소재를 고를 때 생기는 문제 때문에 테스트를 더 한 뒤 열어 줄 예정이에요. 특정 화만 지정하는 기능은 아직 없고, 스킬을 넣고 AI에 «~화만 만들어줘»라고 시키면 된다고 해요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">맥에서는 천상계코드를 언제 쓸 수 있나요? <span style="color:var(--sub);font-weight:500;">(4명 질문)</span></div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">나물쓰</span></div><p>아직 맥 버전은 따로 공지되지 않았으니 조금 기다려 주세요. 맥 버전은 준비됐지만 테스트가 더 필요하고, 맥에서 생기는 잠금 버그를 고치는 중이에요. 새 버전이 나오면 프로그램 안에서 업데이트한 뒤 «이어서 만들기»를 누르면 돼요. 한 멤버는 맥용으로 테스트 제작을 해 봤다고 했어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">클로드 요금제는 무엇으로 시작하고, 몇 편 정도 만들 수 있나요? <span style="color:var(--sub);font-weight:500;">(3명 질문)</span></div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">갓대두 · 냐밍(조교) · 아모르(강사)</span></div><p>채널을 많이 운영하지 않으면 맥스로도 충분해요. 맥스로 쓰다가 모자라면 차액만 결제하고 업그레이드할 수 있어요. 강사 PC 기준으로 울트라에서 한 편에 주간 한도의 약 0.7~2%를 써서, 리필 없이 일주일에 대략 50편 이상으로 보면 된다고 해요. 소재와 재시도 횟수에 따라 달라지는 값이에요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">천상계코드를 쓰려면 클로드 말고 무엇을 결제하거나 받아 둬야 하나요? <span style="color:var(--sub);font-weight:500;">(3명 질문)</span></div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">갓대두 · 아모르(강사) · 나물쓰(조교)</span></div><p>클로드는 API 없이 로그인 연결만 하면 되고, API는 사용되지 않아요. 목소리 프로그램으로는 타입캐스트 API 요금제를 추천하며, 천상계코드에 연결할 수 있어요. 목소리 없이도 제작은 가능하고, 목소리 서비스는 하나만 써도 돼요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">유튜브 링크를 넣었는데 «원본 준비» 단계에서 넘어가지 않으면 어떻게 하나요? <span style="color:var(--sub);font-weight:500;">(2명 질문)</span></div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">나물쓰</span></div><p>원본 영상을 따로 다운로드해서 원본 폴더에 넣어 주세요. «원본 준비»는 유튜브에서 원본 영상을 받는 단계인데, 봇 차단 때문에 받는 중에 막힐 수 있어요. 랭킹형이나 특정 프로그램이라서 안 되는 것은 아니고, 고치는 버전을 준비 중이에요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">자막(SRT)은 영상에 포함해서 받나요, 따로 받아서 어떻게 넣나요? <span style="color:var(--sub);font-weight:500;">(2명 질문)</span></div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">갓대두 · 아모르(강사)</span></div><p>자막은 SRT로 따로 받는 것을 추천해요. 한국어 SRT를 받되 FORCED 자막은 절대 쓰지 마세요. SRT 파일이 있어야 시간과 토큰을 아낄 수 있다고 해요. 멤버 안내로는 mp4 옆에 같은 이름의 srt를 두면 돼요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">천상계코드로 영상 한 편을 만드는 데 시간이 얼마나 걸리나요? <span style="color:var(--sub);font-weight:500;">(2명 질문)</span></div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">나물쓰 · 아모르(강사)</span></div><p>한 편에 1시간 내외로 보면 돼요. 소재와 프리셋에 따라 다르고, 퀄리티가 미흡하면 수정 작업이 들어가 시간과 토큰이 더 들 수 있어요. 사용자 PC 환경에 따라서도 변수가 있어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">새벽에 올라온 한드짜 스킬과 새로 올라온 스킬 중 무엇을 써야 하나요? <span style="color:var(--sub);font-weight:500;">(2명 질문)</span></div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge " style="">강사</span><span class="qa-answer-name">아모르</span></div><p>카페 한드짜 스킬 게시판에 있는 최신본을 받아 쓰세요. 새벽에 올린 스킬은 내리고 수정해서 다시 올렸으니, 새벽 파일을 받았다면 지우고 새 파일로 다시 설치하면 돼요. 예전 무료판 한드짜 스킬은 라이트 버전이라 버려도 돼요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">드라마는 전 회차를 다 받아서 넣나요, 한 화씩 넣나요? <span style="color:var(--sub);font-weight:500;">(2명 질문)</span></div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge " style="">강사</span><span class="qa-answer-name">아모르 · 나물쓰(조교)</span></div><p>모든 회차를 다 받아서 넣으면 돼요. 처음 분석은 시간이 좀 더 걸리지만 넓은 범위에서 흐름을 잡기에 유리해요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">트래픽을 먹고 영상을 삭제하는 «먹고 빠지기»는 채널에 문제가 없나요? <span style="color:var(--sub);font-weight:500;">(2명 질문)</span></div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge " style="">강사</span><span class="qa-answer-name">아모르</span></div><p>트래픽이 끝난 뒤에 영상을 삭제하면 돼요. 트래픽은 보통 1~2주 안에 끝나서, 2주 정도 올린 뒤 삭제하는 방식이라고 해요. 트래픽이 한창 돌 때 지우면 채널 전체 트래픽에 좋지 않아요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">OTT 유료 다운로드는 안내된 사이트에 전부 가입해야 하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">시지지 · 아모르(강사)</span></div><p>전부 가입할 필요 없이 골라서 쓰면 돼요. 넷플릭스만 할 거면 플릭시캠, 여러 OTT를 할 거면 클레버겟올인원을 추천했어요. 자동화에는 OTT 구독과 클레버겟 올인원 조합이 좋고, IDM은 SRT를 못 받는다고 해요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">천상계코드 구글 계정과 클로드 구글 계정이 같아야 연결되나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">나물쓰</span></div><p>같지 않아도 돼요. 다른 계정으로 결제했어도 그대로 쓰면 되고, 핀트는 기존에 쓰던 계정으로 진행하면 돼요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">영상 작업 중 모니터가 절전모드로 바뀌어도 제작이 계속되나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">나물쓰</span></div><p>절전모드에서는 안 되니 꺼 두세요. 영상 제작은 서버가 아니라 내 PC에서 돌아가기 때문이에요.</p></div></div>
+            </div>
+          </div>
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--purple-light);">⏳</div><div class="section-title">답변 대기 (6)</div></div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">3개월 무료 사용이 끝나면 비용은 얼마인가요? <span style="color:var(--sub);font-weight:500;">(2명 질문)</span></div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">답변 대기</span><span class="qa-answer-name">아직 답이 없어요</span></div><p>이 날 대화에서는 답이 달리지 않았어요. 같은 문제를 겪고 계시면 조교님께 다시 여쭤 주세요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">이번에 추가된 캡컷 내보내기는 클립별로 나뉜 프로젝트가 아니라 완성본 하나가 들어가는 형태인가요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">답변 대기</span><span class="qa-answer-name">아직 답이 없어요</span></div><p>이 날 대화에서는 답이 달리지 않았어요. 같은 문제를 겪고 계시면 조교님께 다시 여쭤 주세요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">광고건처럼 나눠져서 오는 20분 미만 영상은 제작이 안 된다고 나오는데 해결 방법이 있나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">답변 대기</span><span class="qa-answer-name">아직 답이 없어요</span></div><p>이 날 대화에서는 답이 달리지 않았어요. 같은 문제를 겪고 계시면 조교님께 다시 여쭤 주세요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">컴퓨터를 바꾼다면 천상계코드를 문제없이 쓸 수 있는 사양은 무엇인가요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">답변 대기</span><span class="qa-answer-name">아직 답이 없어요</span></div><p>이 날 대화에서는 답이 달리지 않았어요. 같은 문제를 겪고 계시면 조교님께 다시 여쭤 주세요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">클로드 코드에서 한드짜 스킬로 만드는 것과 천상계코드 프로그램으로 만드는 것은 무엇이 다른가요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">답변 대기</span><span class="qa-answer-name">아직 답이 없어요</span></div><p>이 날 대화에서는 답이 달리지 않았어요. 같은 문제를 겪고 계시면 조교님께 다시 여쭤 주세요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">같은 영화로 만들기를 여러 번 누르면 다른 장면으로 나오고, 횟수 제한이 있나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">답변 대기</span><span class="qa-answer-name">아직 답이 없어요</span></div><p>이 날 대화에서는 답이 달리지 않았어요. 같은 문제를 겪고 계시면 조교님께 다시 여쭤 주세요.</p></div></div>
+            </div>
+          </div>
+      </div></div>
+    </section>
+    <section class="day-accordion fade-in" data-day-id="1105">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left"><span class="day-accordion-arrow">▼</span><span class="day-accordion-date">11/5 (목)</span></div>
+        <div class="day-accordion-summary">정규강의 1강 개강 · 천상계코드 설치 오류 해결(Git·그래픽카드·백신) · 클로드 요금제 Q&amp;A</div>
+      </button>
+      <div class="day-accordion-body"><div class="day-accordion-content">
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--orange-light);">📢</div><div class="section-title">공지 · 안내</div></div>
+            <div class="insight-card">
+              <div class="insight-emoji">📢</div>
+              <div class="insight-body"><h3>정규강의 1강 Zoom 링크와 시작 시간</h3><p>천상계영드 3기 정규강의 1강은 7시에 시작했고, 시작 10분 전에 사담방에 Zoom 링크가 올라왔어요. 회의 ID는 882 8989 8180, 암호는 151833이에요. 쉬는 시간이 끝난 뒤에도 같은 링크로 다시 들어오라는 안내가 있었어요.</p><p style="margin-top:6px;"><a href="https://us06web.zoom.us/j/88289898180?pwd=m0IEtmi4o9InsVasbDrkZanyt07Np2.1" target="_blank" rel="noopener">🔗 https://us06web.zoom.us/j/88289898180?pwd=m0IEtmi4o9InsVasbDrkZanyt07Np2.1</a></p><span class="insight-tag tag-tip">디하클 스태프 · 둘리</span></div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📢</div>
+              <div class="insight-body"><h3>프로그램 설치는 내일 해도 돼요</h3><p>강의 시간에는 강의에 집중해 달라고 했어요.</p><span class="insight-tag tag-tip">디하클 스태프 · 둘리</span></div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📢</div>
+              <div class="insight-body"><h3>모자라면 게릴라 강의를 계속 열어 줘요</h3><p>정규강의만으로 모자라다 싶으면 강사님이 게릴라 강의를 계속 열어 주신다고 했어요. 조교님들이 초보반으로 대기하고 있어서 누구나 따라올 수 있게 돕는다고 했어요. 그러니 걱정하지 않아도 된다는 안내였어요.</p><span class="insight-tag tag-tip">강사 · 아모르</span></div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📢</div>
+              <div class="insight-body"><h3>천상계코드는 초기 버전이라 업데이트로 대응해요</h3><p>천상계코드는 초기 버전이라 문제가 있을 수 있고, 최대한 빨리 버전 업데이트로 대응한다고 했어요.</p><span class="insight-tag tag-tip">조교 · 나물쓰</span></div>
+            </div>
+          </div>
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--green-light);">💬</div><div class="section-title">핵심 Q&amp;A (15)</div></div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">[다시 시도]를 여러 번 눌러도 계속 막히고 멈추면 어떻게 하나요? <span style="color:var(--sub);font-weight:500;">(3명 질문)</span></div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">나물쓰</span></div><p>백신의 «웹 보호/HTTPS 검사»나 VPN을 잠깐 끄고 [다시 시도]를 눌러 보세요. 그래도 안 되면 클로드코드에게 물어보라고 했어요. 한 수강생은 막힌 화면을 클로드에 캡처해 보여 주니 방법을 알려 줘서 해결했다고 공유했어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">설치 점검에서 «그래픽카드 없음» 메시지가 나오는데 설치가 안 되는 건가요, E드라이브에 설치해서 그런 건가요? <span style="color:var(--sub);font-weight:500;">(2명 질문)</span></div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">나물쓰</span></div><p>«그래픽카드 없음»은 설치가 안 된다는 오류가 아니라 주의 문구예요. 그래픽카드가 없어도 설치는 되도록 만들어져 있고, 영상이 만들어지는 속도가 느려질 수 있다는 뜻이에요. C드라이브가 아닌 E드라이브에 설치한 것과는 상관없어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">아스트라를 쓰고 있는데 영드짜에는 클로드코드가 더 나은가요? <span style="color:var(--sub);font-weight:500;">(2명 질문)</span></div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge " style="">강사</span><span class="qa-answer-name">아모르 · 로뵤표쵸(조교)</span></div><p>둘 다 쓸 수 있지만 클로드코드를 더 추천해요. 아스트라는 결과물이 빨리 나오지만 퀄리티가 좀 아쉽고, 클로드코드는 검수를 빡세게 해서 결과물은 늦어도 퀄리티가 괜찮다고 해요. 조교님도 아스트라는 퀄리티를 수정하느라 시간이 걸린다며 클로드코드를 추천했어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">강의 전에 클로드에 먼저 가입해야 하나요? <span style="color:var(--sub);font-weight:500;">(2명 질문)</span></div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">로뵤표쵸</span></div><p>네, 강의 전에 클로드에 가입해 두면 더 좋아요. 아스트라와 클로드 둘 다 가능하지만 클로드를 더 추천한다는 안내였어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">1강은 몇 시에 시작하나요, 7시간 진행인가요? <span style="color:var(--sub);font-weight:500;">(2명 질문)</span></div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge " style="background:var(--orange);">디하클 스태프</span><span class="qa-answer-name">둘리</span></div><p>1강은 저녁 7시에 시작했어요. «7시간이냐»는 질문에 스태프가 시작 시각이 7시라고 바로잡아 줬어요. 줌 링크는 시작 10분 전에 사담방에 올라온다고 안내됐어요. 강의 길이는 대화에서 따로 확인되지 않았어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">«Git Bash / Git for Windows 를 설치해 주세요» 메시지가 나오는데 설명서 3번 설치 매뉴얼이 따로 있나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">나물쓰</span></div><p>인터넷 창에서 git-scm.com/install/windows 를 열어 Git을 설치하면 돼요. «Click here to download»를 눌러 받은 파일을 실행하고, 설치 창은 바꿀 것 없이 [Next]만 계속 누르다 마지막에 [Install] → [Finish]를 누르면 돼요. 그다음 천상계코드에서 설정 › 점검 › [다시 확인]을 누르고, 안 바뀌면 천상계코드를 껐다 켜요. 이번 버전에서는 자동 다운로드에서 빠져 있고 다음 버전에 포함된다고 해요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">pint.kr 다운로드 페이지에서 로그인과 수강생 인증은 어떻게 하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">나물쓰</span></div><p>구글로 가입한 뒤 로그인하면 되고, 요금제 결제는 따로 안 해도 돼요. 수강생 인증은 닉네임과 실명으로 하면 돼요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">클로드에 가입했는데 맥스와 울트라 중 어느 요금제로 업그레이드해야 하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">갓대두</span></div><p>처음이라면 울트라까지는 안 해도 돼요. 맥스를 쓰다가 나중에 울트라로 올려도 차액만 내면 된다고 해요. 한 수강생은 많이 만들려면 100달러 이상은 써야 하고, 맛만 볼 거면 20달러로 시작해도 되며 사용량 차이가 크다고 경험을 공유했어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">제작기는 꼭 다운로드해야 하나요, 사이트 방문만으로도 쓸 수 있나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">나물쓰</span></div><p>제작기는 다운로드해야 사용할 수 있어요. 조교님이 다운로드를 받아야 제작기 사용이 가능하다고 답했어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">작업 경로를 구글 드라이브로 잡으면 속도 차이가 많이 나나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">나물쓰</span></div><p>구글 드라이브로 하면 속도가 느려질 수 있어요. 조교님은 외장하드보다 구글 드라이브가 더 느린 걸로 알고 있다고 했고, 주고받는 데 시간이 걸리기 때문이라고 해요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">천상계코드에서 캡컷 내보내기는 못 하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">나물쓰</span></div><p>아직 천상계코드에서는 캡컷 내보내기를 할 수 없고, 곧 구현될 예정이에요. 강의에서 강사님이 보여 준 캡컷 내보내기는 별도 프로그램이 맞다는 답이었어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">클로드는 핸드폰보다 노트북으로 쓰는 게 좋은가요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">갓대두</span></div><p>작업은 무조건 노트북(PC)에서 해야 해요. 밖에 나가 있을 때 핸드폰으로 확인하고 지시하는 건 가능하지만, 실제 작업은 컴퓨터에서 진행된다고 이해하면 돼요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">클로드와 줌을 설치했으면 수업 준비는 된 건가요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">냐밍</span></div><p>네, 클로드와 줌을 설치했으면 일단 수업 준비는 된 거예요. 조교님이 그렇게 확인해 줬어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">줌 강의에서 서로 얼굴이 보이나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">로뵤표쵸</span></div><p>줌에서 카메라 끄기를 하면 돼요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">채널에 수익 창출 X라고 적고 쿠팡 제휴도 안 걸었으면 정말 수익 창출을 안 하는 건가요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">냐밍</span></div><p>쇼핑 태그가 있냐 없냐로는 수익 창출 여부를 구분하기 어려워요. 그렇게 써 놓았을 뿐 다들 수익 창출을 하고 있고, 조회수 수익은 받고 있을 거라고 해요. 쇼핑은 걸든 안 걸든 자유라서 안 걸어도 괜찮아요.</p></div></div>
+            </div>
+          </div>
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--purple-light);">⏳</div><div class="section-title">답변 대기 (5)</div></div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">제작이 멈추거나 «확인이 필요한 영상»으로 나와 재시작해도 안 될 때 무엇을 확인해야 하나요? <span style="color:var(--sub);font-weight:500;">(2명 질문)</span></div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">답변 대기</span><span class="qa-answer-name">아직 답이 없어요</span></div><p>이 날 대화에서는 답이 달리지 않았어요. 같은 문제를 겪고 계시면 조교님께 다시 여쭤 주세요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">강의 중에 클로드코드로 바로 실습하나요, 미리 결제해 둬야 하나요? <span style="color:var(--sub);font-weight:500;">(2명 질문)</span></div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">답변 대기</span><span class="qa-answer-name">아직 답이 없어요</span></div><p>이 날 대화에서는 답이 달리지 않았어요. 같은 문제를 겪고 계시면 조교님께 다시 여쭤 주세요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">프로그램을 다운로드해 설치하려니 메시지가 뜨면서 설치가 안 되는데 어떻게 하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">답변 대기</span><span class="qa-answer-name">아직 답이 없어요</span></div><p>이 날 대화에서는 답이 달리지 않았어요. 같은 문제를 겪고 계시면 조교님께 다시 여쭤 주세요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">클로드·지피티·제미나이를 다 쓰고 있는데 오르카로 분배해 처리하는 게 나을까요, 영드짜만 클로드 단독으로 처리하는 게 나을까요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">답변 대기</span><span class="qa-answer-name">아직 답이 없어요</span></div><p>이 날 대화에서는 답이 달리지 않았어요. 같은 문제를 겪고 계시면 조교님께 다시 여쭤 주세요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">알뜰폰에 가입할 때 전부 제 명의로 하는 건가요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">답변 대기</span><span class="qa-answer-name">아직 답이 없어요</span></div><p>이 날 대화에서는 답이 달리지 않았어요. 같은 문제를 겪고 계시면 조교님께 다시 여쭤 주세요.</p></div></div>
+            </div>
+          </div>
+      </div></div>
+    </section>
+    <section class="day-accordion fade-in" data-day-id="1104">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left"><span class="day-accordion-arrow">▼</span><span class="day-accordion-date">11/4 (수)</span></div>
+        <div class="day-accordion-summary">1강 전 준비 글·보너스 프로그램 공유 · 영상 소스 받는 법 정리 · 디즈니플러스 광고는 1강 후 구글폼 신청</div>
+      </button>
+      <div class="day-accordion-body"><div class="day-accordion-content">
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--orange-light);">📢</div><div class="section-title">공지 · 안내</div></div>
+            <div class="insight-card">
+              <div class="insight-emoji">📢</div>
+              <div class="insight-body"><h3>3기 강의 일정·카페·닉네임 규칙 공지</h3><p>정규강의는 매주 목요일 19시이고, 다시보기는 금요일 낮에 올라오며 1년 이상 무제한으로 제공돼요. 초보반 특강은 토요일 오후 2시, 천상계반 모닝 피드백 특강은 11/8(일)·11/29(일) 오전 11시, 기획확장특강은 12/13(일)·12/20(일) 오후 2시, 초청특강은 평일 오후 7시이고 일정은 바뀔 수 있어요. 카페 닉네임은 닉네임만 쓰고, 닉네임을 바꾸면 반드시 디하클 채널톡에 알려야 해요. 강사나 운영진의 허락 없는 수강생 간 개인 연락·모임·거래는 금지되며, 어기면 경고 없이 추방될 수 있어요.</p><p style="margin-top:6px;"><a href="https://cafe.naver.com/f-e/cafes/31811029/menus/35" target="_blank" rel="noopener">🔗 https://cafe.naver.com/f-e/cafes/31811029/menus/35</a></p><p style="margin-top:6px;"><a href="https://cafe.naver.com/skymovie3" target="_blank" rel="noopener">🔗 https://cafe.naver.com/skymovie3</a></p><span class="insight-tag tag-tip">강사 · 아모르</span></div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📢</div>
+              <div class="insight-body"><h3>정규강의 전 할 일·영상 다운로드 안내 글 공유</h3><p>정규강의 시작 전에 해야 할 일과 영상을 빠르게 다운받는 방법을 정리한 글이 공유됐어요.</p><p style="margin-top:6px;"><a href="https://naver.me/GB31TntO?tc=shared_link" target="_blank" rel="noopener">🔗 https://naver.me/GB31TntO?tc=shared_link</a></p><p style="margin-top:6px;"><a href="https://naver.me/51u2Penz?tc=shared_link" target="_blank" rel="noopener">🔗 https://naver.me/51u2Penz?tc=shared_link</a></p><span class="insight-tag tag-tip">조교 · 시지지</span></div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📢</div>
+              <div class="insight-body"><h3>천상계영드 3기 보너스프로그램이 카페에 올라왔어요</h3><p>천상계영드 3기 보너스프로그램이 네이버 카페에 업로드됐어요. 정규강의에서는 이 버전이 아니라 다른 버전으로 배포할 예정이라고 조교가 안내했어요.</p><p style="margin-top:6px;"><a href="https://cafe.naver.com/skymovie3/16" target="_blank" rel="noopener">🔗 https://cafe.naver.com/skymovie3/16</a></p><span class="insight-tag tag-tip">디하클 스태프 · 둘리</span></div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📢</div>
+              <div class="insight-body"><h3>디즈니플러스 신작 광고 신청은 1강 이후 구글폼으로 받아요</h3><p>디즈니플러스 신작 광고를 원하는 수강생은 1강이 끝난 뒤 바로 올라오는 구글폼으로 신청하면 돼요. 신작 광고는 앞으로도 계속 들어올 예정이라고 해요.</p><span class="insight-tag tag-tip">강사 · 아모르</span></div>
+            </div>
+          </div>
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--green-light);">💬</div><div class="section-title">핵심 Q&amp;A (13)</div></div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">영상 소스는 노제휴 P2P 사이트 중 어디서 어떻게 받으면 되나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge " style="">강사</span><span class="qa-answer-name">아모르</span></div><p>검색해서 나오는 노제휴 P2P 사이트를 쓰면 돼요. 강사님은 지니파일(월 구독 5500원, 노제휴는 무제한 다운로드지만 없는 작품도 은근 많음)과 파일썬을 주로 쓰고, 거기 없는 건 OTT에서 찾았대요. 지니파일에 있는 건 구독으로 받고 나머지는 파일썬 포인트를 충전해 받는 방식을 강사님도 쓰고 있어요. 가성비 순위는 IDM, 노제휴 P2P, OTT 구독 후 오캠 녹화, OTT 구독 후 클레버겟 혹은 Flicicam 순이에요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">영상을 비공개로 돌리고 수익창출을 신청하면 비공개 영상도 심사하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge " style="">강사</span><span class="qa-answer-name">아모르</span></div><p>비공개로 돌려도, 안 돌려도 크게 상관없을 거라고 해요. 다만 비공개 영상은 수창 신청 때 유효 조회수·시청시간으로 쳐주지 않아요. 조회수나 시청시간이 모자라면 먼저 수창을 신청해 승인받은 뒤에 비공개로 돌리세요. 영상에 가치가 담겨 있으면 괜찮을 거라는 의견이에요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">구글 드라이브에 갖고 있는 영화 파일을 소스로 써도 되나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge " style="">강사</span><span class="qa-answer-name">아모르</span></div><p>네, 써도 돼요. 영화·드라마 소스는 각자 직접 받아서 준비해야 해요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">자동화 프로그램에서 폰트와 TTS는 내 마음대로 바꿀 수 있나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge " style="">강사</span><span class="qa-answer-name">아모르</span></div><p>네, 폰트와 TTS를 포함해 다 커스텀할 수 있어요. 강사님은 필요한 것으로 바이브코딩 프로그램과 타입캐스트 API 구독 정도를 꼽았어요. 타입캐스트 API 구독이 기존 타캐 구독보다 훨씬 싸다고 해요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">비드아이큐는 유료 버전을 써야 하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge " style="">강사</span><span class="qa-answer-name">아모르 · 로뵤표쵸(조교)</span></div><p>유료는 안 써도 돼요. 확장 프로그램은 모두 무료 버전을 쓰면 된다고 조교도 안내했어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">영상 다운로드 안내 글이 너무 어려운데 지금 무엇부터 하면 되나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">냐밍</span></div><p>지금은 그런 사이트에서 받는 방법이 있다는 정도로만 알아 두고, 자세한 건 강의를 보면 더 이해하기 쉬워요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">수업 전에 줌을 설치해야 하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">갓대두</span></div><p>네, 수업은 줌으로 진행하니 미리 설치해 두세요. 강의 시작 전에 설치를 마쳐 두면 돼요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">카페에 올라온 보너스 프로그램을 정규 수업에서도 쓰나요, 아니면 다른 버전이 있나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">시지지</span></div><p>정규강의에서는 보너스 프로그램이 아닌 다른 버전으로 배포할 예정이에요. 미리 봐 두는 게 도움이 되는지에 대한 답은 따로 없었어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">지금 2기 콘텐츠를 볼 수 있나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">냐밍</span></div><p>사전 결제로 결제한 분만 2기 콘텐츠를 볼 수 있어요. 사전 결제자라면 디하클 톡으로 메시지를 보내면 2기 카페 링크를 안내받을 수 있어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">카페 닉네임에 특수문자가 안 들어가는데 어떻게 하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">해피응디</span></div><p>카페 닉네임은 특수문자 없이 닉네임만 입력하면 돼요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">링링권법으로 수익창출을 해 본 적이 있나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">시지지</span></div><p>시지지 조교는 아직 링링권법으로 해 보지 않았어요. 전자책은 구매했고, 한다면 자연 트래픽으로 1차 수창을 한 뒤 해 볼 생각이라고 해요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">보이스복스는 타입캐스트보다 싼가요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member" style="">멤버</span><span class="qa-answer-name">바글바글 · 수강생 답변(운영진 확인 전)</span></div><p>보이스복스는 무료예요. 클코한테 설치해 달라고 하면 설치해서 무료로 클로닝할 수 있고, 내 목소리도 된다고 해요. 짧게 쓰기에는 쓸 만했다는 멤버 경험담이고, 강사나 조교의 확인은 없었어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">기존 쇼츠가 몇 개 있는 채널에 그대로 두고 드짜로 채워도 괜찮나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member" style="">멤버</span><span class="qa-answer-name">단티 · 수강생 답변(운영진 확인 전)</span></div><p>기존 쇼츠는 그대로 두고 드짜로 채워도 괜찮다는 멤버 답이 있었어요. 강사나 조교의 확인은 아직 없어요.</p></div></div>
+            </div>
+          </div>
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--purple-light);">⏳</div><div class="section-title">답변 대기 (5)</div></div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">목요일에 프로그램은 몇 시에 배포되나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">답변 대기</span><span class="qa-answer-name">아직 답이 없어요</span></div><p>이 날 대화에서는 답이 달리지 않았어요. 같은 문제를 겪고 계시면 조교님께 다시 여쭤 주세요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">천상계 코드를 얼리버드로 먼저 쓸 수는 없나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">답변 대기</span><span class="qa-answer-name">아직 답이 없어요</span></div><p>이 날 대화에서는 답이 달리지 않았어요. 같은 문제를 겪고 계시면 조교님께 다시 여쭤 주세요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">지니파일 정기결제가 5500원은 없고 9900원으로 나오는데 이게 맞나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">답변 대기</span><span class="qa-answer-name">아직 답이 없어요</span></div><p>이 날 대화에서는 답이 달리지 않았어요. 같은 문제를 겪고 계시면 조교님께 다시 여쭤 주세요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">채널을 막 시작한 사람은 구독자가 얼마나 있어야 광고를 받을 수 있나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">답변 대기</span><span class="qa-answer-name">아직 답이 없어요</span></div><p>이 날 대화에서는 답이 달리지 않았어요. 같은 문제를 겪고 계시면 조교님께 다시 여쭤 주세요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">보너스 프로그램을 조교님이 먼저 써 보셨다면 사용 후기를 들을 수 있을까요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">답변 대기</span><span class="qa-answer-name">아직 답이 없어요</span></div><p>이 날 대화에서는 답이 달리지 않았어요. 같은 문제를 겪고 계시면 조교님께 다시 여쭤 주세요.</p></div></div>
+            </div>
+          </div>
+      </div></div>
+    </section>
+    <section class="day-accordion fade-in" data-day-id="1103">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left"><span class="day-accordion-arrow">▼</span><span class="day-accordion-date">11/3 (화)</span></div>
+        <div class="day-accordion-summary">11/5(목) 19시 정규 1강 시작 · 카페 가입·다시보기 안내 · 아스트라·클코 선택 Q&amp;A</div>
+      </button>
+      <div class="day-accordion-body"><div class="day-accordion-content">
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--orange-light);">📢</div><div class="section-title">공지 · 안내</div></div>
+            <div class="insight-card">
+              <div class="insight-emoji">📢</div>
+              <div class="insight-body"><h3>3기 정규강의·특강 일정과 다시보기 안내</h3><p>정규강의는 매주 목요일 19시(일반반+천상계반)에 열려요. 초보반 특강은 토요일 오후 2시, 초청특강은 평일 오후 7시예요. 천상계반은 모닝 피드백 특강(11/8(일), 11/29(일) 오전 11시)과 기획확장특강(12/13(일), 12/20(일) 오후 2시)이 추가로 있어요. 다시보기는 금요일 낮에 올라오고 1년 이상 무제한으로 볼 수 있으며, 초청 특강 일정과 커리큘럼 순서는 바뀔 수 있어요.</p><p style="margin-top:6px;"><a href="https://cafe.naver.com/skymovie3" target="_blank" rel="noopener">🔗 https://cafe.naver.com/skymovie3</a></p><span class="insight-tag tag-tip">운영진 · 유랑</span></div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📢</div>
+              <div class="insight-body"><h3>닉네임 양식 통일·질문 게시판·개인 연락 금지</h3><p>카톡방 닉네임은 공지 예시처럼 이름 뒤 괄호에 닉네임을 붙이는 양식으로 통일하고, 카페 닉네임은 닉네임만 써요. 닉네임은 되도록 바꾸지 말고, 바꿀 때는 꼭 디하클 채널톡에 알려야 해요. 질문은 카페 Q&amp;A 질문 게시판을 이용하세요. 강사나 운영진 허락 없이 수강생끼리 개인 연락·모임·거래를 하면 경고 없이 추방될 수 있어요.</p><p style="margin-top:6px;"><a href="https://cafe.naver.com/f-e/cafes/31811029/menus/35" target="_blank" rel="noopener">🔗 https://cafe.naver.com/f-e/cafes/31811029/menus/35</a></p><span class="insight-tag tag-tip">운영진 · 유랑</span></div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📢</div>
+              <div class="insight-body"><h3>숙제는 1주차 강의에서 안내돼요</h3><p>숙제는 목요일 1주차 강의에서 안내될 예정이에요.</p><span class="insight-tag tag-tip">디하클 스태프 · 둘리</span></div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📢</div>
+              <div class="insight-body"><h3>아모르 강사 3기 인사와 진행 방향</h3><p>3기에서는 AI로 영상을 만드는 데서 한 발 더 나아가 차별화하는 방법과, 내 단계에 맞는 단계별 트래픽 전략을 알려준다고 해요. 조회수가 나오도록 검수를 빡빡하게 하다 보니 아직은 AI로 영상을 만드는 데 시간이 꽤 걸린다고 해요. 코덱스 아스트라는 더 빠르고 클로드 코드(Opus 5.5)는 조금 느린 편이라, 상황에 맞게 고를 수 있도록 둘 다 알려준다고 했어요.</p><span class="insight-tag tag-tip">강사 · 아모르</span></div>
+            </div>
+          </div>
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--green-light);">💬</div><div class="section-title">핵심 Q&amp;A (15)</div></div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">아스트라와 클로드(클로드 코드) 중 무엇을 써야 하고, 같은 영상을 만들 때 사용량은 얼마나 차이 나나요? <span style="color:var(--sub);font-weight:500;">(2명 질문)</span></div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">냐밍 · 둘리(디하클 스태프)</span></div><p>원하는 쪽을 써도 돼요. 2기 때 강사님께 여쭤봤더니 어차피 둘 다 쓸 수 있다고 하셨다고 해요. 스태프 설명으로는 성능은 클코가 더 좋고, 속도는 아스트라가 더 빨라요. 같은 영상 기준 사용량 차이는 구체적인 답이 나오지 않았어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">3기 카페는 어떻게 가입하나요? 주소로 들어가도 안 나와요.</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">냐밍</span></div><p>이 톡방에 초대받았던 메시지에 카페 초대장이 같이 있으니 그걸로 가입하세요. 그 메시지는 디하클 채널톡(<a href="http://pf.kakao.com/_EJixlG)에서" target="_blank" rel="noopener">http://pf.kakao.com/_EJixlG)에서</a> 찾으면 돼요. 가입 신청 후에는 스태프가 확인하고 승인과 등업을 해 줘요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">정규강의나 특강을 라이브로 못 보면 녹화본으로 볼 수 있고, 내용이 잘리지는 않나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge " style="background:var(--orange);">디하클 스태프</span><span class="qa-answer-name">둘리 · 로뵤표쵸(조교)</span></div><p>다시보기로 볼 수 있어요. 녹화본(VOD)을 다음 날 올려 주고, 라이브 내용이 잘려서 올라가는 일은 없다고 해요. Q&amp;A까지 다 녹화해서 준다고 했어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">정규강의 첫 수업은 언제인가요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">갓대두</span></div><p>첫 정규 수업은 11/5 목요일이에요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">특강 마지막에 받은 2기 수업 파일을 못 찾겠는데 다시 받을 수 있나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">냐밍</span></div><p>따로 챙기지 않아도 돼요. 무강 배포 자료는 3기 카페에 모두 올라올 예정이에요. 정규강의에서도 수강생용으로 다시 준다고 해요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">클로드에 유튜브 링크를 주면 영상 내용을 읽지 못한다고 하는데 어떻게 해야 하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge " style="background:var(--orange);">디하클 스태프</span><span class="qa-answer-name">둘리</span></div><p>일반 채팅이 아니라 &#x27;코드&#x27;로 바꿔서 쓰세요. 화면 왼쪽 위에서 채팅이 아니라 코드가 선택돼 있는지 확인하면 돼요. 스태프도 일반 채팅으로 하면 그 기능을 쓰는 게 아니라고 확인했어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">3기 일반반에서 천상계반으로 올리려면 어떻게 하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">시지지</span></div><p>디하클 1:1 고객센터(<a href="http://pf.kakao.com/_EJixlG)로" target="_blank" rel="noopener">http://pf.kakao.com/_EJixlG)로</a> 문의하세요. 강의 수강 관련 문의는 이곳에 남기면 된다고 해요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">유튜브도 컴퓨터도 처음인데 강의 전에 무엇을 준비해야 하나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">시지지</span></div><p>라이브로 참여하려면 줌을 설치해 두세요. 왕초보반도 준비돼 있고 채팅방에 조교들이 상주하니, 막히면 언제든 질문하면 돼요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">계정관리 부분은 정규강의 커리큘럼에 없나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">냐밍</span></div><p>계정관리는 초보강의에서 배울 수 있어요. 정규 커리큘럼에 안 보여도 초보강의에서 다룬다고 조교가 답했어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">클로드 코드의 환경변수가 무엇인지, API 저장고라고 생각하면 되나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">냐밍</span></div><p>환경변수는 Claude Code가 켜질 때 읽는 설정값 목록(이름 = 값)이라고 보면 돼요. 창을 열 때마다 그 값이 적용돼요. 조교가 자기 클코에 물어본 설명을 옮겨 준 답이에요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">영드짜에 쓸 영상은 어디서 받는 게 좋나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">시지지</span></div><p>보통 클레버겟이나 p2p 사이트에서 받아요. 클레버겟은 처음 구독료가 부담되는 편이라(조교는 대충 20만원 정도 결제했다고 해요) 연습용이라면 p2p 고화질로 해 봐도 좋아요. 자세한 방법은 강의 때 강사님이 알려준다고 해요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">구매한 계정이 정지되는 문제가 요즘은 좀 나아졌나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">냐밍</span></div><p>요즘도 비슷하다고 해요. 수익이 정지됐던 채널도 수익창출 조건(시청시간, 구독자)을 충족한 상태라면 수창 재신청이 가능해요. 요즘은 자수창으로 준비하는 분들이 많다고 해요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">특강의 캡컷 실습 부분이 너무 어려웠는데 괜찮을까요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">냐밍</span></div><p>너무 걱정하지 않아도 돼요. 캡컷은 카페에 따로 강의가 올라오고, 앞으로 많이 쓸 일은 없을 것 같다고 해요. 실습은 똑같이 따라 하기보다 강사님이 어떤 근거와 판단 규칙으로 덜어내고 남기고 확대하는지를 중점적으로 보라는 멤버 조언도 있었어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">이번 무강 때 강사님이 공개한 채널이 무엇이었나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member" style="">멤버</span><span class="qa-answer-name">kokoro · 수강생 답변(운영진 확인 전)</span></div><p>멤버 답으로는 &#x27;후킹타임&#x27;이었어요. 조교·스태프 확인은 없었어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">영드짜 자동화에 필요한 유료 프로그램은 무엇인가요? (지금 캡컷과 챗GPT plus를 쓰는 중)</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member" style="">멤버</span><span class="qa-answer-name">양봉여리 · 수강생 답변(운영진 확인 전)</span></div><p>클로드가 있으면 될 거라는 멤버 답이 있었어요. 조교·스태프 확인은 없었어요.</p></div></div>
+            </div>
+          </div>
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--purple-light);">⏳</div><div class="section-title">답변 대기 (2)</div></div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">목요일 첫 강의 때 프로그램을 바로 제공해 주나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">답변 대기</span><span class="qa-answer-name">아직 답이 없어요</span></div><p>이 날 대화에서는 답이 달리지 않았어요. 같은 문제를 겪고 계시면 조교님께 다시 여쭤 주세요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">지피티가 코덱스와 한도를 합친다는데, 제미나이도 한도를 합쳐 주나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">답변 대기</span><span class="qa-answer-name">아직 답이 없어요</span></div><p>이 날 대화에서는 답이 달리지 않았어요. 같은 문제를 겪고 계시면 조교님께 다시 여쭤 주세요.</p></div></div>
+            </div>
+          </div>
+      </div></div>
+    </section>
+    <section class="day-accordion fade-in" data-day-id="1102">
+      <button class="day-accordion-header" type="button" aria-expanded="false" onclick="toggleAccordion(this.parentElement)">
+        <div class="day-accordion-left"><span class="day-accordion-arrow">▼</span><span class="day-accordion-date">11/2 (월)</span></div>
+        <div class="day-accordion-summary">닉네임 양식 변경·오픈프로필 닫기 요청 · 카페 승인·등업은 화요일 오후 2시 이후 · 천상계반 업그레이드 안내</div>
+      </button>
+      <div class="day-accordion-body"><div class="day-accordion-content">
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--orange-light);">📢</div><div class="section-title">공지 · 안내</div></div>
+            <div class="insight-card">
+              <div class="insight-emoji">📢</div>
+              <div class="insight-body"><h3>닉네임 양식 변경·오픈채팅 프로필 닫기 요청</h3><p>공지방·사담방·프리미엄방 모두에서 채널톡으로 안내받은 양식에 맞게 닉네임을 정확히 바꿔 달라고 했어요. 양식은 실명 일부를 가린 이름 뒤에 괄호로 닉네임을 붙이는 형식이에요. 오픈채팅 프로필도 안내 이미지를 참고해 닫아 주세요. 양식대로 바꾸지 않으면 톡방에서 나갔다가 다시 들어와야 할 수 있어요.</p><span class="insight-tag tag-tip">디하클 스태프 · 소다</span></div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📢</div>
+              <div class="insight-body"><h3>3기 카페 승인·등업은 화요일 오후 2시 이후</h3><p>3기 카페 승인과 등업은 디하클에서 처리하고, 화요일 오후 2시 이후에 진행돼요. 그 전까지 카페 승인이 안 된 상태라면 기다리면 돼요.</p><span class="insight-tag tag-tip">디하클 스태프 · 둘리</span></div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-emoji">📢</div>
+              <div class="insight-body"><h3>1:1 디하클 고객센터 안내</h3><p>강의 수강 관련 문의는 1:1 디하클 고객센터로 남기면 돼요.</p><p style="margin-top:6px;"><a href="http://pf.kakao.com/_EJixlG" target="_blank" rel="noopener">🔗 http://pf.kakao.com/_EJixlG</a></p><span class="insight-tag tag-tip">조교 · 시지지</span></div>
+            </div>
+          </div>
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--green-light);">💬</div><div class="section-title">핵심 Q&amp;A (15)</div></div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">3기 강의 일정과 커리큘럼은 어디서 보고, 첫 수업은 언제인가요? <span style="color:var(--sub);font-weight:500;">(4명 질문)</span></div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">시지지</span></div><p>조교가 사담방에 올린 강의일정·커리큘럼 이미지를 확인하면 돼요. 이미지 내용은 이 정리에서 볼 수 없으니 해당 이미지를 직접 확인해 주세요. 대화에서는 수업이 화요일이 아니라 목요일에 시작하고, 이번 주 목요일 7시가 첫 강이라고 수강생들이 이야기했어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">천상계반은 무엇이고, 추가 비용을 내고 업그레이드하면 되나요? <span style="color:var(--sub);font-weight:500;">(2명 질문)</span></div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">시지지</span></div><p>업그레이드는 추가 비용을 내는 방식이 맞고, 디하클 채널톡(1:1 디하클 고객센터)에 업그레이드 문의를 남기면 돼요. 천상계반은 프리미엄반 같은 구성이에요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">아모르 강사의 프로그램(픽셀링·볼케이노 포함)은 언제부터 쓸 수 있나요? <span style="color:var(--sub);font-weight:500;">(2명 질문)</span></div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">냐밍 · 로뵤표쵸(조교)</span></div><p>프로그램 관련 내용은 따로 공지가 나올 예정이니 공지를 기다리면 돼요. 수강생 명단 취합도 필요하다고 했어요. 목요일부터 쓸 수 있느냐는 질문에는 조교가 그럴 것 같다고만 답해서 아직 확정된 내용은 아니에요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">어제 무료강의를 놓쳤는데 어디서 다시 볼 수 있고, 3기 카페 승인은 언제 되나요? <span style="color:var(--sub);font-weight:500;">(2명 질문)</span></div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">시지지 · 냐밍(조교) · 둘리(디하클 스태프)</span></div><p>어제 무료강의는 수강생 카페에 올라올 예정이니 카페 승인을 기다리면 돼요. 3기 카페 승인과 등업은 디하클에서 처리하고 화요일 오후 2시 이후부터 진행돼요. 앵콜특강은 카페에 올라오지 않으니 들으려면 앵콜에 직접 참여해야 해요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">천상계반의 영드계 AI자동화와 일반반 제작 프로그램은 어떤 차이가 있나요? <span style="color:var(--sub);font-weight:500;">(2명 질문)</span></div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">갓대두</span></div><p>프로그램은 일반반과 천상계반에 동일하게 제공되는 것으로 알고 있다고 조교가 답했어요. 천상계반(프리미엄반)은 추가 기획 특강에서 강사가 프로그램을 만든 배경지식을 자세히 공유해, 프로그램을 직접 만들거나 커스텀할 수 있을 만큼 깊은 지식을 전하려는 것 같다고 했어요. 명확한 답은 아모르 강사가 해 줄 것이라고 덧붙였어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">클로드코드로 영상을 만들려면 월 200달러 플랜을 구독해야 하나요? <span style="color:var(--sub);font-weight:500;">(2명 질문)</span></div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">나물쓰</span></div><p>작업량과 패턴에 따라 다르지만, 200달러 플랜을 써야 주간 한도 안에서 1주일 동안 1일 1영상이 가능할 거라고 조교가 답했어요. 이미 깍아 놓은 것을 그대로 쓰면 더 많이 쓸 수 있을 것 같다고도 했어요. 수강생 사이에서는 100달러 플랜으로 시작해 부족하면 업그레이드하자는 의견도 나왔어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">프리미엄방에는 어떻게 들어가고, 일반반은 프리미엄방이 없는 게 맞나요? <span style="color:var(--sub);font-weight:500;">(2명 질문)</span></div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">냐밍</span></div><p>프리미엄방 링크는 이 사담방·공지방 초대 링크를 받은 디하클 톡 메시지에 함께 들어 있어요. 천상계반을 신청했다면 그 메시지에서 사담방·공지방·천상계반 링크를 받았을 거예요. 일반반은 프리미엄방 톡방이 없는 게 정상이에요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">사담방에서 다른 사람을 @로 태그해서 대화를 걸어도 되나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge " style="background:var(--orange);">디하클 스태프</span><span class="qa-answer-name">둘리</span></div><p>네, 사담방에서 @로 태그해도 돼요. 다만 밤 11시 이후에는 태그를 피해 달라고 했어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">강의 시작 전에 준비해 두어야 할 필수 프로그램은 무엇인가요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">시지지</span></div><p>라이브 수강 전에 zoom을 다운로드해 두고, 클로드 PC 버전을 설치해 두면 좋아요. 강의에서 클로드 코드를 주로 쓰는데 웹버전으로는 어렵기 때문이에요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">오픈채팅 프로필을 닫으려면 카카오프렌즈 캐릭터로 바꾸면 되나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">나물쓰 · 냐밍(조교) · 시지지(조교)</span></div><p>네, 프로필설정에서 카카오프렌즈를 눌러 기본 이미지로 바꾸면 돼요. 카카오프렌즈 프로필을 쓰면 오픈 프로필은 알아서 닫혀요. 조교가 올린 안내 사진 중 두 번째 캡처를 보면 더 쉽다고 했어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">클로드 AI를 결제하려는데 프로 플랜으로도 괜찮을까요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">냐밍</span></div><p>먼저 프로로 써 보고 부족하면 업그레이드해도 돼요. 영상 작업에는 프로가 조금 모자랄 수 있어요. 업그레이드할 때는 차액만 결제하면 된다고 안내했어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">클코 한 계정으로 노트북과 컴퓨터 둘 다 쓸 수 있나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">시지지</span></div><p>네, 한 계정으로 노트북과 컴퓨터 모두 쓸 수 있어요. 다만 로컬 기반인 것은 다른 기기로 옮겨가지 않아요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">쇼폭님의 볼케이노는 쇼폭님이 깍아 놓은 것으로 쓰는 건가요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">시지지</span></div><p>볼케이노는 쇼폭쌤 쪽에 따로 볼케이노 서버가 있고, 거기에 클로드코드를 연결해서 쓰는 방식이라고 조교가 답했어요. 사용 기한은 따로 문의한 뒤 알려 주기로 했어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">강의에서 수창이나 애드센스 같은 것도 처음부터 다 알려주나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge sub" style="">조교</span><span class="qa-answer-name">냐밍</span></div><p>왕초보반이 준비되어 있다고 조교가 답했어요. 수창·애드센스를 구체적으로 어디까지 다루는지는 대화에 나오지 않았어요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">아모르 강사의 칼럼은 어디서 볼 수 있나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member" style="">멤버</span><span class="qa-answer-name">리암 · 수강생 답변(운영진 확인 전)</span></div><p>아모르 강사의 칼럼은 다하클 카페에 있어요. 수강생이 답한 내용이에요.</p></div></div>
+            </div>
+          </div>
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--purple-light);">⏳</div><div class="section-title">답변 대기 (3)</div></div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">클로드코드 개인 플랜에 프리·프로·맥스 및 울트라($110)만 보이는데, 110을 먼저 구독해야 업그레이드되나요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">답변 대기</span><span class="qa-answer-name">아직 답이 없어요</span></div><p>이 날 대화에서는 답이 달리지 않았어요. 같은 문제를 겪고 계시면 조교님께 다시 여쭤 주세요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">모르쌤이 깍아 놓은 스킬(엠디)로 만들어야 모르쌤 방식의 영상이 나오고, 빈 클코에서 하면 빈 도화지에서 시작하는 건가요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">답변 대기</span><span class="qa-answer-name">아직 답이 없어요</span></div><p>이 날 대화에서는 답이 달리지 않았어요. 같은 문제를 겪고 계시면 조교님께 다시 여쭤 주세요.</p></div></div>
+            </div>
+            <div class="qa-card">
+              <div class="qa-header" onclick="toggleQa(this.parentElement)"><div class="qa-q-icon">Q</div><div class="qa-question">볼케이노는 2개월이 지나면 월 이용료를 내고 쓰는 건가요?</div><div class="qa-hint">답변 보기</div><div class="qa-toggle">▼</div></div>
+              <div class="qa-body"><div class="qa-answer"><div class="qa-answer-header"><span class="qa-answer-badge member">답변 대기</span><span class="qa-answer-name">아직 답이 없어요</span></div><p>이 날 대화에서는 답이 달리지 않았어요. 같은 문제를 겪고 계시면 조교님께 다시 여쭤 주세요.</p></div></div>
+            </div>
+          </div>
+      </div></div>
+    </section>
+  </div>
+  <div id="tab-links" class="tab-content">
+          <div class="section fade-in">
+            <div class="section-header"><div class="section-icon" style="background:var(--accent-light);">🔗</div><div class="section-title">공유된 링크 (19)</div></div><ul style="padding-left:18px;"><li style="margin:8px 0;"><a href="https://cafe.naver.com/skymovie3/23" target="_blank" rel="noopener">한드짜 스킬 게시판(최신본)</a> <span style="color:var(--sub);font-size:12px;">— 아모르 · 11/6</span></li><li style="margin:8px 0;"><a href="https://cafe.naver.com/skymovie3/19" target="_blank" rel="noopener">천상계영드 3기 1주차 강의자료 PDF</a> <span style="color:var(--sub);font-size:12px;">— 둘리 · 11/6</span></li><li style="margin:8px 0;"><a href="https://cafe.naver.com/skymovie3/18" target="_blank" rel="noopener">1주차 과제 제출 안내</a> <span style="color:var(--sub);font-size:12px;">— 둘리 · 11/6</span></li><li style="margin:8px 0;"><a href="https://cafe.naver.com/skymovie3/17" target="_blank" rel="noopener">천상계영드 3기 단일영상 조회수 &amp; 48시간 조회수 인즈 이벤트</a> <span style="color:var(--sub);font-size:12px;">— 둘리 · 11/6</span></li><li style="margin:8px 0;"><a href="https://docs.google.com/forms/d/1ONYTuquJU-Ou1JqxJRcVRNn-oMpK7xYPlRQn-p5D6Yg/edit" target="_blank" rel="noopener">OTT 광고연계 채널 등록 신청 폼</a> <span style="color:var(--sub);font-size:12px;">— 아모르 · 11/6</span></li><li style="margin:8px 0;"><a href="https://cafe.naver.com/skymovie3/22" target="_blank" rel="noopener">1주차 과제 제출 릴레이 게시물</a> <span style="color:var(--sub);font-size:12px;">— 빠숑집사 · 11/6</span></li><li style="margin:8px 0;"><a href="https://www.youtube.com/watch?v=FtlwsrfQTWk&amp;t=1192s" target="_blank" rel="noopener">같은 소재 영상을 비트는 방법(19분 20초부터)</a> <span style="color:var(--sub);font-size:12px;">— 아모르 · 11/6</span></li><li style="margin:8px 0;"><a href="https://us06web.zoom.us/j/88289898180?pwd=m0IEtmi4o9InsVasbDrkZanyt07Np2.1" target="_blank" rel="noopener">천상계영드3기[아모르] 정규강의1강 Zoom 회의 링크</a> <span style="color:var(--sub);font-size:12px;">— 둘리 · 11/5</span></li><li style="margin:8px 0;"><a href="https://pint.kr/maker/download" target="_blank" rel="noopener">로그인·수강생 인증 후 받는 다운로드 페이지</a> <span style="color:var(--sub);font-size:12px;">— 유튭킹 · 11/5</span></li><li style="margin:8px 0;"><a href="git-scm.com/install/windows" target="_blank" rel="noopener">Git for Windows 설치 페이지(천상계코드 점검용)</a> <span style="color:var(--sub);font-size:12px;">— 나물쓰 · 11/5</span></li><li style="margin:8px 0;"><a href="https://cafe.naver.com/skymovie3" target="_blank" rel="noopener">천상계영드 3기 네이버 카페</a> <span style="color:var(--sub);font-size:12px;">— 아모르 · 11/4</span></li><li style="margin:8px 0;"><a href="https://cafe.naver.com/f-e/cafes/31811029/menus/35" target="_blank" rel="noopener">Q&amp;A 질문 게시판</a> <span style="color:var(--sub);font-size:12px;">— 아모르 · 11/4</span></li><li style="margin:8px 0;"><a href="https://naver.me/GB31TntO?tc=shared_link" target="_blank" rel="noopener">정규강의 시작 전 해야 할 일</a> <span style="color:var(--sub);font-size:12px;">— 시지지 · 11/4</span></li><li style="margin:8px 0;"><a href="https://naver.me/51u2Penz?tc=shared_link" target="_blank" rel="noopener">영상 빠르게 다운받기</a> <span style="color:var(--sub);font-size:12px;">— 시지지 · 11/4</span></li><li style="margin:8px 0;"><a href="https://cafe.naver.com/skymovie3/16" target="_blank" rel="noopener">천상계영드 3기 보너스프로그램</a> <span style="color:var(--sub);font-size:12px;">— 둘리 · 11/4</span></li><li style="margin:8px 0;"><a href="http://pf.kakao.com/_EJixlG" target="_blank" rel="noopener">디하클 채널톡(1:1 고객센터, 강의 수강 관련 문의)</a> <span style="color:var(--sub);font-size:12px;">— 냐밍 · 11/3</span></li><li style="margin:8px 0;"><a href="https://cafe.naver.com/dinohighclass/468259" target="_blank" rel="noopener">설명 없음</a> <span style="color:var(--sub);font-size:12px;">— 시지지 · 11/3</span></li><li style="margin:8px 0;"><a href="https://naver.me/GB31dwPK" target="_blank" rel="noopener">설명 없음</a> <span style="color:var(--sub);font-size:12px;">— 아모르 · 11/3</span></li><li style="margin:8px 0;"><a href="https://cafe.naver.com/f-e/cafes/30819883/articles/467116?boardtype=L&amp;menuid=42&amp;referrerAllArticles=false" target="_blank" rel="noopener">천상계반 자세한 안내 카페 글</a> <span style="color:var(--sub);font-size:12px;">— 시지지 · 11/2</span></li></ul>
+          </div>
+  </div>
+  <p style="text-align:center;color:var(--sub);font-size:12px;margin-top:24px;">마지막 갱신 11/06 17:23</p>
+</div>
+<script>
+function switchTab(id) {
+  document.querySelectorAll('.tab-content').forEach(function(el) { el.classList.remove('active'); });
+  document.querySelectorAll('.tab-btn').forEach(function(el) { el.classList.remove('active'); });
+  var tab = document.getElementById('tab-' + id); if (tab) tab.classList.add('active');
+  var idx = ['daily', 'links'].indexOf(id); var btns = document.querySelectorAll('.tab-btn'); if (idx >= 0 && btns[idx]) btns[idx].classList.add('active');
+  document.querySelectorAll('#tab-' + id + ' .fade-in').forEach(function(el) { el.classList.add('visible'); });
+}
+function toggleAccordion(panel) { var next = !panel.classList.contains('open'); panel.classList.toggle('open', next); var h = panel.querySelector('.day-accordion-header'); if (h) h.setAttribute('aria-expanded', String(next)); }
+function toggleQa(card) { card.classList.toggle('open'); }
+var observer = new IntersectionObserver(function(entries) { entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.08 });
+document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+</script>
+</body>
+</html>
