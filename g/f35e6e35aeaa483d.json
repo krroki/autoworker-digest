@@ -2045,8 +2045,8 @@
     }
   ],
   "live": {
-    "checkedAt": "2026-11-10T06:30:07+09:00",
-    "totalCount": 10362,
+    "checkedAt": "2026-11-10T07:30:07+09:00",
+    "totalCount": 10366,
     "rooms": {
       "sashalook": 2700,
       "lululalalily": 3958,
@@ -2057,7 +2057,7 @@
       "keroro-ai": 10,
       "devnam-autoworker": 530,
       "caravan-ai": 6,
-      "eungonju-shorts": 658
+      "eungonju-shorts": 662
     }
   },
   "friendsSummary": {
