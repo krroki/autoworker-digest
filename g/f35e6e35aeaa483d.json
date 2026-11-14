@@ -2134,6 +2134,22 @@
       "delta": -33
     }
   ],
+  "live": {
+    "checkedAt": "2026-11-14T15:30:09+09:00",
+    "totalCount": 24466,
+    "rooms": {
+      "sashalook": 2681,
+      "lululalalily": 3947,
+      "yunabi": 2443,
+      "hanam-dinosaur": 2578,
+      "woleoknam": 3652,
+      "nyami-naver-clip": 25,
+      "keroro-ai": 2757,
+      "devnam-autoworker": 620,
+      "caravan-ai": 2172,
+      "eungonju-shorts": 3591
+    }
+  },
   "friendsSummary": {
     "members": 24493,
     "named": 24493,
