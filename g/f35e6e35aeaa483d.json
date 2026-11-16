@@ -3,13 +3,13 @@
   "title": "관찰대상방 인원 현황",
   "modeLabel": "발신 차단",
   "latestDate": "2026-11-16",
-  "capturedAt": "2026-11-16T09:30:16+09:00",
-  "generatedAt": "2026-11-16T09:30:16+09:00",
+  "capturedAt": "2026-11-16T15:02:22+09:00",
+  "generatedAt": "2026-11-16T15:02:22+09:00",
   "summary": {
-    "roomCount": 10,
-    "totalCount": 24383,
-    "totalDelta": -47,
-    "capacity": 40000,
+    "roomCount": 11,
+    "totalCount": 26093,
+    "totalDelta": null,
+    "capacity": 44000,
     "roomCapacity": 4000
   },
   "rooms": [
@@ -1680,6 +1680,29 @@
           "프로도": 1
         }
       }
+    },
+    {
+      "key": "sidonam-shorts",
+      "name": "시도남과 쇼츠로 첫 수익 만들기",
+      "shortName": "시도남",
+      "capacity": 4000,
+      "currentCount": 1710,
+      "delta": null,
+      "history": [
+        {
+          "date": "2026-11-16",
+          "count": 1710,
+          "delta": null
+        }
+      ],
+      "friends": {
+        "members": 5,
+        "named": 5,
+        "defaultCount": 2,
+        "counts": {
+          "어피치": 2
+        }
+      }
     }
   ],
   "totalHistory": [
@@ -2157,7 +2180,7 @@
     },
     {
       "date": "2026-11-16",
-      "count": 24383,
+      "count": 26093,
       "roomKeys": [
         "sashalook",
         "lululalalily",
@@ -2168,35 +2191,20 @@
         "keroro-ai",
         "devnam-autoworker",
         "caravan-ai",
-        "eungonju-shorts"
+        "eungonju-shorts",
+        "sidonam-shorts"
       ],
-      "delta": -47
+      "delta": null
     }
   ],
-  "live": {
-    "checkedAt": "2026-11-16T14:30:14+09:00",
-    "totalCount": 24339,
-    "rooms": {
-      "sashalook": 2669,
-      "lululalalily": 3947,
-      "yunabi": 2449,
-      "hanam-dinosaur": 2561,
-      "woleoknam": 3644,
-      "nyami-naver-clip": 39,
-      "keroro-ai": 2752,
-      "devnam-autoworker": 645,
-      "caravan-ai": 2147,
-      "eungonju-shorts": 3486
-    }
-  },
   "friendsSummary": {
-    "members": 24373,
-    "named": 24373,
-    "defaultCount": 6147,
+    "members": 24378,
+    "named": 24378,
+    "defaultCount": 6149,
     "counts": {
       "춘식이": 1687,
       "라이언": 1319,
-      "어피치": 1198,
+      "어피치": 1200,
       "죠르디": 639,
       "프렌즈": 561,
       "스카피": 398,
