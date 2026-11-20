@@ -2310,7 +2310,7 @@
     }
   ],
   "live": {
-    "checkedAt": "2026-11-21T04:30:09+09:00",
+    "checkedAt": "2026-11-21T05:30:09+09:00",
     "totalCount": 28309,
     "rooms": {
       "sashalook": 2625,
@@ -2323,8 +2323,8 @@
       "devnam-autoworker": 674,
       "caravan-ai": 2099,
       "eungonju-shorts": 3513,
-      "sidonam-shorts": 2149,
-      "ringbab-link": 1988
+      "sidonam-shorts": 2148,
+      "ringbab-link": 1989
     }
   },
   "friendsSummary": {
