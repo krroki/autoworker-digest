@@ -2310,8 +2310,8 @@
     }
   ],
   "live": {
-    "checkedAt": "2026-11-21T01:30:09+09:00",
-    "totalCount": 28317,
+    "checkedAt": "2026-11-21T02:30:11+09:00",
+    "totalCount": 28313,
     "rooms": {
       "sashalook": 2625,
       "lululalalily": 3947,
@@ -2321,10 +2321,10 @@
       "nyami-naver-clip": 1,
       "keroro-ai": 2739,
       "devnam-autoworker": 674,
-      "caravan-ai": 2101,
+      "caravan-ai": 2100,
       "eungonju-shorts": 3514,
-      "sidonam-shorts": 2153,
-      "ringbab-link": 1989
+      "sidonam-shorts": 2151,
+      "ringbab-link": 1988
     }
   },
   "friendsSummary": {
